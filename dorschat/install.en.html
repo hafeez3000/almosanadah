@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+       "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <title>Install</title>
+  <link href="../../style/install.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body xml:lang="en">
+<h2>Install</h2>
+
+<p>To install phpFreeChat you need:</p>
+<ul>
+  <li>A Web server (Apache, IIS, Xitami ...) with PHP (4 or 5) (in some
+    cases, <code>safe_mode=On</code> makes problems)</li>
+  <li>Write access on the Web server (SSH, FTP, or other)</li>
+</ul>
+
+<p>By default, you don't need a Mysql database because the system uses files
+to store messages and nicknames.</p>
+
+<div class="toc">
+<ul>
+  <li><a href="#quickstart">Quick start</a></li>
+  <li><a href="#advanced-config">Advanced configuration</a></li>
+</ul>
+</div>
+
+<div class="section">
+<h3 id="quickstart">Quick start</h3>
+
+<p>Using the setup (the easy way): <em style="color: #FF2020">(not available
+for 1.0-betaX)</em></p>
+<ol>
+  <li>Download the auto-extractible setup script: <a
+    href="../../download.en.html">phpfreechat-x.x-setup.php</a> (replace x.x
+    by the lastest version)</li>
+  <li>Upload the setup script on your server into a browsable directory
+    (public directory)</li>
+  <li>Browse the script with your personnal browser, it should launch a
+    setup, then follow the steps !
+    <p>Tip: remove the setup when the install is finished for security
+    reason.</p>
+  </li>
+</ol>
+
+<p>Using the ziped archives (for those who haven't gzip module in their
+php):</p>
+<ol>
+  <li>Download the zip (or tar.gz for linux users) archive: <a
+    href="../../download.en.html">phpfreechat-x.x.zip</a> (replace x.x by
+    lastest version)</li>
+  <li>Unzip the archive localy then upload the <code>phpfreechat-x.x</code>
+    directory on your server into a browsable directory (public directory).
+    <p>Tip: if you have a SSH access, I suggest to untar the archives
+    directly on the server usign <code>tar xzf phpfreechat-x.x.tar.gz</code>
+    command.</p>
+  </li>
+  <li>Give the write rights to <code>phpfreechat-x.x/data/public</code> and
+    <code>phpfreechat-x.x/data/private</code> directories.
+    <p>If you are using FTP:</p>
+    <pre>CHMOD 777 phpfreechat-x.x/data/private
+CHMOD 777 phpfreechat-x.x/data/public</pre>
+    <p>If you are using SSH:</p>
+    <pre>chmod a+w phpfreechat-x.x/data/*</pre>
+  </li>
+  <li>Browse the <code>phpfreechat-x.x</code> directory with your browser and
+    enjoy !</li>
+</ol>
+
+<p>Now you need surely to customize your chat. You can take a look at the
+example scripts in the <code>phpfreechat-x.x/demo</code> directory.</p>
+
+<p>Here is the minimum script required for your chat to work (inspired from
+demo1):</p>
+<pre>&lt;?php
+
+<strong>require_once "src/phpfreechat.class.php"; // adjust to your own path
+$params["serverid"] = md5(__FILE__); // used to identify the chat
+$chat = new phpFreeChat($params);</strong>
+
+?&gt;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv="content-type" content="text/html; charset=utf-8" /&gt;
+    &lt;title&gt;phpFreeChat demo&lt;/title&gt;
+    <strong>&lt;?php $chat-&gt;printJavascript(); ?&gt;</strong>
+    <strong>&lt;?php $chat-&gt;printStyle(); ?&gt;</strong>
+  &lt;/head&gt;
+  &lt;body&gt;
+    <strong>&lt;?php $chat-&gt;printChat(); ?&gt;</strong>
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
+
+<div class="section">
+<h3 id="advanced-config">Advanced configuration</h3>
+
+<p>The chat is usable using the default configuration but a lot of options
+can be tweaked to customize the chat. For exemple, to change the refresh
+speed to 2 seconds, copy/paste this piece of code:</p>
+<pre>&lt;?php
+
+require_once "src/phpfreechat.class.php"; // adjust to your own path
+$params["serverid"]      = md5(__FILE__);
+<strong>$params["refresh_delay"] = 2000; // 2000ms = 2s</strong>
+$chat = new phpFreeChat($params);
+
+?&gt;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv="content-type" content="text/html; charset=utf-8" /&gt;
+    &lt;title&gt;phpFreeChat demo&lt;/title&gt;
+    &lt;?php $chat-&gt;printJavascript(); ?&gt;
+    &lt;?php $chat-&gt;printStyle(); ?&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;?php $chat-&gt;printChat(); ?&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+
+<p>Another example, to set the initial nickname to "guest" (this can be
+useful when the chat is integrated into a portal or a forum which provides
+the login/password), copy/paste this piece of code:</p>
+<pre>&lt;?php
+
+require_once "src/phpfreechat.class.php"; // adjust to your own path
+$params["serverid"] = md5(__FILE__);
+<strong>$params["nick"]     = "guest"; // it can be useful to take nicks from a database</strong>
+$chat = new phpFreeChat($params);
+
+?&gt;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv="content-type" content="text/html; charset=utf-8" /&gt;
+    &lt;title&gt;phpFreeChat demo&lt;/title&gt;
+    &lt;?php $chat-&gt;printJavascript(); ?&gt;
+    &lt;?php $chat-&gt;printStyle(); ?&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;?php $chat-&gt;printChat(); ?&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+
+<p>Thanks to these two example, you should understand how to pass parameters
+to the chat: <code>$params["param-name"] = "param-value";</code></p>
+
+<p>Now for the full parameters list <span style="color: #FF0000">(only for
+0.x versions, wait for 1.0-final release for complete
+documentation)</span>:</p>
+<dl class="pfc_params">
+  <dt><code class="pfc_param" id="param-serverid">serverid</code></dt>
+    <dd>This is the only mandatory parameter. It is the chat server id, "its
+      IP" (comparable to the server host in IRC) used to identify the chat.
+      Two chat must have different <code>serverid</code>. If you don't know
+      what to write, just try : <code>$params["serverid"] =
+      md5(__FILE__);</code></dd>
+  <dt><code class="pfc_param" id="param-nick">nick</code></dt>
+    <dd>If you have already identified the user (forum, portal...) you can
+      force the user's nickname here, this will skip the "Please enter your
+      nickname" popup.</dd>
+    <dd><span style="text-decoration: underline">Warning :</span> Nicknames
+      must be encoded in UTF-8. For example, if you get nicks from a
+      databases where they are ISO-8859-1 encoded, you must ocnvert it:
+      <code>$params["nick"] = iconv("ISO-8859-1", "UTF-8",
+      $bdd_nickname);</code> (of course, change the $bdd_nickname parameter
+      for your needs)</dd>
+    <dd><p>(<code>""</code> value by default, means users must choose a
+      nickname when s/he connect)</p>
+    </dd>
+  <dt><code class="pfc_param" id="param-title">title</code></dt>
+    <dd>Used to change the chat title that is visible just above the messages
+      list.
+      <p>(<code>"My phpFreeChat"</code> by default)</p>
+    </dd>
+  <dt><code class="pfc_param" id="param-channel">channel</code></dt>
+    <dd>Used to create a room. Technicaly this parameter is used to choose
+      the data (messages + nicknames) storage destination. For a better
+      explaination, see <a href="/faq.en.html#multiple-channels">this FAQ
+      entry</a>.
+      <p>(auto-generated string based on the title parameter by default)</p>
+    </dd>
+  <dt><code class="pfc_param" id="param-frozen_nick">frozen_nick</code></dt>
+    <dd>Setting this to true will forbid the user to change his/her nickname
+      later.
+      <p>(<code>false</code> value by default)</p>
+    </dd>
+  <dt><code class="pfc_param" id="param-max_nick_len">max_nick_len</code></dt>
+    <dd>This is the maximum nickname length, a longer nickname is forbidden.
+      <p>( <code>15</code> caracteres by default)</p>
+    </dd>
+  <dt><code class="pfc_param" id="param-max_text_len">max_text_len</code></dt>
+    <dd>This is the maximum message length, a longer message is forbidden.
+      <p>( <code>250</code> characters by default)</p>
+    </dd>
+  <dt><code class="pfc_param"
+  id="param-refresh_delay">refresh_delay</code></dt>
+    <dd>This is the time to wait between two refreshes. A refresh is a HTTP
+      request which asks the server if there are new messages to display. If
+      there are no new messages, then a empty HTTP response is returned.
+      <p>( <code>5000</code> by default, 5000ms = 5s)</p>
+    </dd>
+  <dt><code class="pfc_param" id="param-timeout">timeout</code></dt>
+    <dd>This is the time of inactivity to wait before to considere to
+      disconnecte user (in milliseconds). A user is inactive only if he
+      closed his chat windows. A user with a open chat window is not inactive
+      because he sends each <code>refresh_delay</code> a HTTP request.
+      <p>( <code>20000</code> by default, 20000ms = 20s)</p>
+    </dd>
+  <dt><code class="pfc_param" id="param-max_msg">max_msg</code></dt>
+    <dd>This is the message history length. When a user connects, he can see
+      the history. The number of messages s/he can see is defined by this
+      <p>(<code>20</code> lines by default)</p>
+    </dd>
+  <dt><code class="pfc_param"
+  id="param-quit_on_closedwindow">quit_on_closedwindow</code></dt>
+    <dd>Setting this to <code>true</code> will send a <code>/quit</code>
+      command when the user close his window (doesn't work on Firefox). This
+      parameter isn't <code>true</code> by default because on IE and
+      Konqueror/Safari, reloading the window (F5) will generate the same
+      event as closing the window which can be annoying.
+      <p>(<code>false</code> value by default)</p>
+    </dd>
+  <dt><code class="pfc_param"
+  id="param-focus_on_connect">focus_on_connect</code></dt>
+    <dd>Setting this to true will give the focus to the input text box when
+      connecting to the chat. It can be usefull not touch the focus when
+      integrating the chat into an existing website because when the focus is
+      changed, the viewport follows the focus location.
+      <p>(<code>true</code> value by default)</p>
+    </dd>
+  <dt><code class="pfc_param"
+  id="param-connect_at_startup">connect_at_startup</code></dt>
+    <dd>Setting this to false will oblige user to click on the connect button
+      if s/he wants to chat.
+      <p>(<code>true</code> value by default, means when the chat web page is
+      open, a connection to the chat is automaticaly performed)</p>
+    </dd>
+  <dt><code class="pfc_param">start_minimized</code></dt>
+    <dd>Setting it to <code>true</code> will start the chat minimized.
+      <p>(<code>false</code> value by default)</p>
+    </dd>
+  <dt><code class="pfc_param">height</code></dt>
+    <dd>Height of the chat area.
+      <p>(<code>"440px"</code> by default)</p>
+    </dd>
+  <dt><code class="pfc_param">width</code></dt>
+    <dd>Width of the chat area.
+      <p>(<code>""</code> by default, means it's given by the CSS)</p>
+    </dd>
+  <dt><code class="pfc_param" id="param-shownotice">shownotice</code></dt>
+    <dd>Setting this to 0 will show nothing. Setting it to 1 will show
+      nicknames changes. Setting it to 2 will show connect/disconnect
+      notifications. Setting it to 3 (1+2) will show nicknames and
+      connect/disconnect notifications.
+      <p>(<code>3</code> by default)</p>
+    </dd>
+  <dt><code class="pfc_param">nickmarker</code></dt>
+    <dd>Setting it to false will disable nickname colorization.
+      <p>(<code>true</code> value by default)</p>
+    </dd>
+  <dt><code class="pfc_param">clock</code></dt>
+    <dd>Setting it to false will hide the date/hour column.
+      <p>(<code>true</code> value by default)</p>
+    </dd>
+  <dt><code class="pfc_param">openlinknewwindow</code></dt>
+    <dd>Setting it to <code>true</code> will add the
+      <code>target="_blank"</code> into parsed links. This attribute is used
+      to open the followed link in a new window.
+      <p>(<code>true</code> value by default)</p>
+    </dd>
+  <dt><code class="pfc_param">showwhosonline</code></dt>
+    <dd>Used to show/hide online users at startup.
+      <p>(<code>true</code> value by default)</p>
+    </dd>
+  <dt><code class="pfc_param">showsmileys</code></dt>
+    <dd>Used to show/hide the smiley list at startup.
+      <p>(<code>true</code> value by default)</p>
+    </dd>
+  <dt><code class="pfc_param">btn_sh_whosonline</code></dt>
+    <dd>Used to display or not the showwhosonline button.
+      <p>(<code>true</code> value by default)</p>
+    </dd>
+  <dt><code class="pfc_param">btn_sh_smileys</code></dt>
+    <dd>Used to display or not the showsmileys button.
+      <p>(<code>true</code> value by default)</p>
+    </dd>
+  <dt><code class="pfc_param">themeurl</code></dt>
+    <dd>Used to specify the theme root url (useful for url rewriting)
+      <p>(this parameter is automaticaly calculated by default)</p>
+    </dd>
+  <dt><code class="pfc_param">themepath</code></dt>
+    <dd>The absolute theme directory path. Sub directories must contains
+      themes directories.
+      <p>(<code>dirname(__FILE__)."/../themes"</code> by default)</p>
+    </dd>
+  <dt><code class="pfc_param">theme</code></dt>
+    <dd>This parameter specifies which theme this chat will use.
+      <p>(<code>"default"</code> by default)</p>
+    </dd>
+  <dt><code class="pfc_param">language</code></dt>
+    <dd>Used to specify the chat labels language. Accepted values are
+      <code>i18n/*</code> sub directories names.
+      <p>(by default this is the local server language)</p>
+    </dd>
+  <dt><code class="pfc_param">output_encoding</code></dt>
+    <dd>Useful to set a sepcific encoding for chat labels. This is really
+      useful when the Web page embedding the chat is not UTF-8 encoded. This
+      parameter should be the same as the chat web page.
+      <p>(UTF-8 by default )</p>
+    </dd>
+  <dt><code class="pfc_param">container_type</code></dt>
+    <dd>Used to specify the used container. For the moment, only a file
+      container has been written but in the future several containers (mysql,
+      irc, msn, jabber...) will surely be available.
+      <p>(<code>"File"</code> by default)</p>
+    </dd>
+  <dt><code class="pfc_param">server_script_path</code> and <code
+  class="pfc_param">server_script_url</code></dt>
+    <dd>Used to specify the script which will handle asynchronous request.
+      Very useful when the chat (client) script is resource consuming (ex:
+      forum or portal chat integration). <code>server_script_url</code> must
+      point to the server script browable url (useful when using url
+      rewriting).
+      <p>(by default these parameters are auto-calculated)</p>
+    </dd>
+  <dt><code class="pfc_param">client_script_path</code> and <code
+  class="pfc_param">client_script_url</code></dt>
+    <dd>Used to specify the script path which display the chat and load every
+      JavaScript libraries (the client side). Useful when the php
+      configuration is uncommon, this option can be used to force the
+      automatic detection process. <code>client_script_url</code> must point
+      to the client script browable url (useful when using url rewriting).
+      <p>(by default these parameters are auto-detected)</p>
+    </dd>
+  <dt><code class="pfc_param">useie7</code></dt>
+    <dd>Setting this to false will disable <a
+      href="http://dean.edwards.name/IE7/">IE7</a> scripts used to improve
+      display for the crappy Internet Explorer.
+      <p>(<code>true</code> value by default)</p>
+    </dd>
+  <dt><code class="pfc_param">ie7path</code></dt>
+    <dd>Specify the IE7 path. It's useful if you allready have a IE7 library
+      installed and you want to save bytes on your server.
+      <p>(<code>dirname(__FILE__)."/../lib/IE7_X_X"</code> by default)</p>
+    </dd>
+  <dt><code class="pfc_param" id="param-jspath">jspath</code></dt>
+    <dd>Specify the javascript libraries path (md5, cookie ...).
+      <p>(<code>dirname(__FILE__)."/../lib/javascript"</code> by default)</p>
+    </dd>
+  <dt><code class="pfc_param" id="param-usecsstidy">usecsstidy</code></dt>
+    <dd>Setting this to <code>false</code> will disable CSSTidy library, css
+      optimisation (output size) will be disabled.
+      <p>(<code>false</code> value by default because it make problems on
+      strange server configurations)</p>
+    </dd>
+  <dt><code class="pfc_param" id="param-csstidypath">csstidypath</code></dt>
+    <dd>Specify the <a href="http://csstidy.sourceforge.net/index.php">CSS
+      Tidy</a> library path. It's useful if you allready have a Smarty
+      library installed and you want to save bytes on your server.
+      <p>(<code>dirname(__FILE__)."/../lib/csstidy-X.X"</code> by default)</p>
+    </dd>
+  <dt><code class="pfc_param" id="param-xajaxpath">xajaxpath</code></dt>
+    <dd>Specify the <a href="http://www.xajaxproject.org/">xajax</a> path.
+      It's useful if you allready have a xajax library installed and you want
+      to save bytes on your server.
+      <p>(<code>dirname(__FILE__)."/../lib/xajax_X.X"</code> by default);</p>
+    </dd>
+  <dt><code class="pfc_param"
+  id="param-data_private_path">data_private_path</code></dt>
+    <dd>Used by the filesystem container to store chat data. Used by smarty
+      to store compiled templates. Tip: you can optimize your chat
+      performances, see <a href="/faq.en.html#tmpfs">this FAQ entry</a>.
+      (<code>dirname(__FILE__)."/../data/private"</code> by default)</dd>
+  <dt><code class="pfc_param"
+  id="param-data_public_path">data_public_path</code> and <code
+  class="pfc_param" id="param-data_public_url">data_public_url</code></dt>
+    <dd>This path must be reachable by your web server. IE7 scripts and xajax
+      JS compiled scripts will be stored here. <code>data_public_url</code>
+      parameter can be specified to help when url rewriting is used.
+      (<code>dirname(__FILE__)."/../data/public"</code> by default)</dd>
+  <dt><code class="pfc_param" id="param-debug">debug</code></dt>
+    <dd>For developers, setting it to true will activate logging and debuging
+      console.
+      <p>(<code>false</code> value by default)</p>
+    </dd>
+  <dt><code class="pfc_param" id="param-debugxajax">debugxajax</code></dt>
+    <dd>For developers, setting it to true will activate xajax js popup used
+      to trace communication between client and server during ajax requests.
+      Useful to discover hidden bugs like php warnings on a ajax request.
+      <p>(<code>false</code> value by default)</p>
+    </dd>
+  <dt><code class="pfc_param" id="param-prefix">prefix</code></dt>
+    <dd>Used to prefix all javascript functions, css ids and css class in
+      order to avoid variables overlaps.
+      <p>(<code>"pfc_"</code> by default)</p>
+    </dd>
+</dl>
+</div>
+</body>
+</html>

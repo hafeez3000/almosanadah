@@ -1,0 +1,204 @@
+/*devises */
+#offers-noh .prix-noh.EUR {
+    font-size:2.8em;
+}
+#offers-noh .prix-noh.IDR, #offers-noh .prix-noh.PLN, #offers-noh .prix-noh.CHF, #offers-noh .prix-noh.JPY,#offers-noh .prix-noh.ZAR, #offers-noh .prix-noh.GBP, #offers-noh .prix-noh.AUD, #offers-noh .prix-noh.BRL, #offers-noh .prix-noh.NZD {
+    font-size:1.8em;
+}
+/* bonsplan */
+		body{
+			background:none;
+			width:276px;
+			padding-bottom:0;
+		}
+		#bonsPlans-noh{
+			background:url("/imagerie/home/bg_bons-plans.gif") no-repeat left bottom;
+			width:276px;
+		}
+		#bonsPlans-noh h2 {
+			background:url("/imagerie/home/bg_titre-bloc_vert.gif") no-repeat left top;
+			padding: 6px 15px 7px 15px;
+			color:white;
+			font-weight:bold;
+			font-size:1.2em;
+            height:18px;
+		}
+        #bonsPlans-noh h2 a:hover{
+            text-decoration:none;
+        }
+
+		/* offers */
+
+				#offers-noh {
+					position:relative;
+					height:191px;
+					z-index:10;
+                    margin-left:3px;width:271px;
+                    overflow:hidden;
+				}
+				
+						#scrollZone {
+							width:271px;min-height:191px;
+						}
+								#scrollZone a{
+									display:block;overflow:hidden;cursor:pointer;
+								}
+
+								#scrollZone.js ul{
+								
+									position:absolute;
+                                    z-index:15;
+								}
+								#scrollZone ul {
+									min-height:191px;
+									width:271px;     
+								}
+
+									#scrollZone.js li{
+										position:absolute;float:none;left:-10000px;top:0px;
+									}
+						
+						#navCaroussel-noh #prev {
+							background:url("/imagerie/home/carrousel/carouselGauche.gif") no-repeat  left top;
+							width:20px;
+							height:56px;
+							position:absolute;
+							left:0;
+							bottom:0;
+						}
+						#navCaroussel-noh #next {
+							position:absolute;
+							background:url("/imagerie/home/carrousel/carouselDroite.gif") no-repeat  left top;
+							width:20px;
+							height:56px;
+							right:0;
+							bottom:0;
+						}
+								#offers-noh span {
+									position:absolute;
+								}
+						
+						#offers-noh  #navCaroussel-noh {
+							position:absolute;
+							bottom:3px;
+							z-index:100;
+							width:271px;
+							left:3px;
+						}
+						
+						 #navCaroussel-noh {
+							position:absolute;
+							bottom:3px;
+							z-index:100;
+							width:271px;
+							left:3px;
+						}
+						#offers-noh .carousel-noh {
+							padding-left:3px;
+							width:271px;
+							height:188px;
+							overflow:hidden;
+							position:relative;
+							z-index:5;
+						}
+						#offers-noh .carousel-noh img{
+							width:271px;
+							height:131px;
+						}
+						#offers-noh .carousel-noh li {
+							position:relative;
+							z-index:4;
+							display:block;
+							height:201px;
+						}
+						
+						#offers-noh .info-noh {
+							position:absolute;
+							z-index:15;
+							top:0;
+							left:0;
+							width:272px;
+							height:56px;
+						}
+						
+						#offers-noh  #navCaroussel-noh a{
+							display:block;
+						}
+                         #offers-noh  a, #offers-noh  a:hover{
+                            text-decoration:none;
+						}
+							#offers-noh  a img{
+								width:271px;
+								height:131px;
+							}
+										#offers-noh .carousel-noh .picture-noh {
+											float:left;
+											padding-right:20px;
+										}
+												#offers-noh .carousel-noh .picture-noh a {
+													padding:0;
+													background:none;
+												}
+												#offers-noh .carousel-noh .picture-noh img {
+													background-color:#fff;
+													padding-right:1px;
+												}
+										#offers-noh .carousel-noh a {
+											background: url("/imagerie/commun/puce_fleche_bleu.gif") no-repeat left center; 
+											padding-left:8px;
+											font-weight:bold;
+											position:absolute;
+											right:35px;
+											bottom:5px;
+										}						
+						#offers-noh .ville-noh{
+							position:absolute;
+							/*top:10px;*/
+							top:140px;
+							bottom:20px;
+							left:25px;
+							color:#005B93;
+							font-size:1.3em;
+							font-weight:bold;
+							color:#005B93;
+						}	
+						
+						#offers-noh .pays-noh{
+							position:absolute;
+							top:155px;
+							left:25px;
+							color:#005B93;
+						}	
+                        
+                        #offers-noh .seeMore-noh{
+							position:absolute;
+							/*top:10px;*/
+							top:172px;
+							left:25px;
+							color:#005B93;
+							font-size:0.8em;
+							font-weight:bold;
+							color:#005B93;
+                            background: url("/imagerie/commun/puce_fleche_bleu.gif") no-repeat left center; 
+							padding-left:8px;
+						}	
+                        
+                           #offers-noh .from-noh{
+							font-size:1em;
+							top:140px;
+							right:30px;
+							color:#005B93;
+                            font-style:italic;
+						}			
+
+								
+						#offers-noh .prix-noh{
+							font-size:2.8em;
+							font-weight:bold;
+							position:absolute;
+							top:150px;
+							right:30px;
+							color:#005B93;
+                            letter-spacing:-1px;     
+						}			
+

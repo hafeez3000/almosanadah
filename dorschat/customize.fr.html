@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html lang="fr">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+  <title>Personnalisation</title>
+</head>
+
+<body>
+
+<h2>Paramétrage et personnalisation</h2>
+
+<p>phpFreeChat a été développé avec un objectif de simplicité et de
+flexibilité.</p>
+
+<p>La mise en oeuvre est relativement simple car tous les paramètres sont
+centralisés dans un tableau et passé en paramètre au moment de
+l'initialisation de l'instance de l'objet phpFreeChat.</p>
+
+<h3 id="cust-theme">Paramétrer l'apparence (couleurs, tailles ...)</h3>
+
+<p>Pour cela, vous devez créer un nouveau thème que vous allez
+personnaliser (par exemple appelez le <code>montheme</code>) :</p>
+<ol>
+  <li>Créez un répertoire : <code>phpfreechat/themes/montheme/</code>
+        </li>
+  <li>Créez une nouvelle feuille de style CSS :
+    <code>phpfreechat/themes/montheme/templates/style.css.tpl.php</code>
+        </li>
+  <li>Insérez les règles CSS que vous voulez dans ce fichier. Par exemple
+    pour changer la couleur de la date et de l'heureen rouge red :
+    <pre>span.&lt;?php echo $prefix; ?&gt;heure, span.&lt;?php echo $prefix; ?&gt;date {
+  color: red;
+}</pre>
+    <p>
+            <span style="text-decoration: underline">Remarque :</span> utilisez
+    <code>&lt;?php echo $prefix; ?&gt;</code> pour préfixer toutes les
+    classes et ids car le prefix peut être amené à changer dans le
+    future.</p>
+  </li>
+  <li>Réglez le paramètre <code>theme</code> dans votre chat :
+    <pre>$params["theme"] = "montheme";</pre>
+  </li>
+</ol>
+
+<p>Je vous conseil de regarder les exemples (surtout le code source) suivant
+pour mieux comprendre : <a href="../../demo/pfc/demo/demo28_blune_theme.php">1</a>, <a href="../../demo/pfc/demo/demo28_mini_blune_theme.php">2</a>
+      </p>
+<hr/>
+
+<p>La version française n'est pas encore écrite, veuillez vous reporter à
+la <a href="../../customize.en.html">version anglaise.</a>
+      </p>
+
+<p>
+        <br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</p>
+</body>
+</html>

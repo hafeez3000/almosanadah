@@ -1,0 +1,11 @@
+@import url("profil-global-couleur.css");
+
+#page input{border:1px solid white;}
+
+/** cadre iframe Login **/
+.contour-double-small{
+		background:transparent url(../images/profil/contour-double-small.png) no-repeat scroll left bottom;
+	}
+.contour-double-top-small{
+		background:transparent url(../images/profil/contour-double-top-small.png) no-repeat scroll left bottom;
+	}

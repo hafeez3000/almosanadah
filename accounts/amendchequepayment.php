@@ -1,0 +1,632 @@
+<?
+session_cache_limiter('must-revalidate');
+include ("header.php");
+$vy=$vm=$vd=0;
+$vy1=$vm1=$vd1=0;
+$vy2=$vm2=$vd2=0;
+
+$voc_t = $_GET["voc_type"];
+
+$voc_no = $_GET["voc_no"];
+
+
+$q_hotel_pe ="select typeofv,vounum,paidto,dbamt,description,voudate,inw,chequeno,chequedate,chequeissue,bankname,bank_acccode  from chequevou where typeofv='$voc_t' and vounum='$voc_no'";
+
+$res_hotel_pe = pg_query($conn, $q_hotel_pe);
+
+if (!$res_hotel_pe) {
+echo "An error occured.\n";
+exit;
+		}
+
+while ($rows_pe = pg_fetch_array($res_hotel_pe)){
+
+$s_typeofv = $rows_pe["typeofv"];    
+$s_vounum = $rows_pe["vounum"];     
+$s_paidto = $rows_pe["paidto"];     
+$s_dbamt = $rows_pe["dbamt"];      
+$s_description = $rows_pe["description"];
+$s_voudate = $rows_pe["voudate"];    
+$s_chequeno = $rows_pe["chequeno"];
+$s_inw = $rows_pe["inw"];        
+$s_chequedate = $rows_pe["chequedate"];        
+$s_chequeissue = $rows_pe["chequeissue"];        
+$s_bankname = $rows_pe["bankname"];        
+$s_bank_acccode = $rows_pe["bank_acccode"];        
+}
+
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+$_SESSION['bank_acccode'] = $s_bank_acccode;
+
+$vy=date('Y', strtotime($s_voudate));
+$vm=date('m', strtotime($s_voudate));
+$vd=date('d', strtotime($s_voudate));
+
+$vy1=date('Y', strtotime($s_chequedate));
+$vm1=date('m', strtotime($s_chequedate));
+$vd1=date('d', strtotime($s_chequedate));
+
+$vy2=date('Y', strtotime($s_chequeissue));
+$vm2=date('m', strtotime($s_chequeissue));
+$vd2=date('d', strtotime($s_chequeissue));
+
+
+
+$q_hotel_sel ="select voctype, vocno,acccode  from vocmast where voctype='$voc_t' and vocno='$voc_no'  and cramt=0";
+
+$res_hotel_sel = pg_query($conn, $q_hotel_sel);
+
+$rows_hotels = pg_num_rows($res_hotel_sel);
+
+if (!$res_hotel_sel) {
+echo "An error occured.\n";
+exit;
+		}
+while ($rows_sel = pg_fetch_array($res_hotel_sel)){
+
+$acccode_s = $rows_sel["acccode"];
+
+}
+
+
+$_SESSION['a_acccode'] = $acccode_s;
+
+$array_acc_name = array();
+$array_acccode = array();
+
+$query_hotel ="select acccode,acc_name from accmast ORDER BY acc_name";
+
+$result_hotel = pg_query($conn, $query_hotel);
+
+if (!$result_hotel) {
+	echo "An error occured.\n";
+	exit;
+	}
+while ($rows_hotel = pg_fetch_array($result_hotel)){
+
+$array_acc_name[] = $rows_hotel["acc_name"];
+$array_acccode[] = $rows_hotel["acccode"];
+
+}
+
+pg_free_result($result_hotel);
+
+
+$array_acc_name_b = array();
+$array_acccode_b = array();
+
+$query_hotel_b ="select acccode,acc_name from accmast where parent_acc='101100' ORDER BY acccode";
+
+$result_hotel_b = pg_query($conn, $query_hotel_b);
+
+if (!$result_hotel_b) {
+	echo "An error occured.\n";
+	exit;
+	}
+while ($rows_hotel_b = pg_fetch_array($result_hotel_b)){
+
+$array_acc_name_b[] = $rows_hotel_b["acc_name"];
+$array_acccode_b[] = $rows_hotel_b["acccode"];
+
+}
+
+pg_free_result($result_hotel_b);
+
+
+?>
+<script src="../javascripts/cBoxes.js"></script>
+
+<script>
+document.title= '<? echo $company_name . " ERP - Acounts - Amend Cheque Payment Voucher"; ?>';
+</script>
+
+<html>
+<link rel="stylesheet" type="text/css" href="../calendar/css.css" />
+
+<body  leftmargin="0" topmargin="0" rightmargin="0"  >
+<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-bottom: 1px solid #999999 ;border-left: 3px solid #006600;border-right: 3px solid #006600"><tr>
+    <td bgcolor="#CCCCCC"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;You 
+      are here: Home</font></td>
+  </tr></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-bottom: 1px solid #999999 ;border-left: 3px solid #006600;border-right: 3px solid #006600"><tr>
+    <td ><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><?include ("../dticker/uhome.php"); ?></td>
+  </tr></table>
+  
+<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-bottom: 3px solid #006600; border-right: 3px solid #006600;border-left: 3px solid #006600 ">
+  <tr>
+    <td width="20%" style="border-right: 1px solid #999999" valign="top"> <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td valign="top"><div align="left"> 
+              <?include ("umenu.php"); ?>
+            </div></td>
+        </tr>
+      </table></td>
+    <td width="80%" valign="top"  > <table width="100%" border="0" cellpadding="0" cellspacing="1">
+        <tr>
+          <td valign="top"> 
+        
+		   
+
+
+		 <form name="selhotel" method="post" action="amendchequepaymenta.php" onSubmit="return fun2(this)">
+	
+	<table style="border: 1px solid red" width="100%" >
+	 <tr>
+
+                                  <td bgcolor="#FFDFDF">&nbsp;<strong>Amend Cheque Payment Voucher</strong>                                 </td>
+                                </tr>
+       <tr><td align="center"><img src="../images/letterheadb.jpg"></td></tr>
+
+	 <tr>
+      <td align="center"><font size="3" face="Arial,Verdana,Helvetica, sans-serif"><strong>Cheque Payment Voucher</strong></font>                                 <br><br></td>
+     </tr>
+	
+
+	<tr>
+	  <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Voucher Type</font>
+	    <input type="text" id="voutype" name="voutype" size="1" value=<? echo $s_typeofv ?> maxlength="2" readonly > 
+	    &nbsp;&nbsp;<font size="2" face="Verdana, Arial, Helvetica, sans-serif">Voucher No</font><input type="text" id="vouno" name="vouno" value=<? echo $s_vounum ?> size="10" >   
+		
+		
+		
+		
+		</td>
+    
+	  </tr>
+	<tr>
+	  <td><table align="left">
+   <tr> 
+      <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Voucher Date</font></td>
+      <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+        <select name="dDay" class="selBox">
+        </select>
+        </font></td>
+      <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+        <select name="dMonth" class="selBox">
+        </select>
+        </font></td>
+      <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+        <select name="dYear" class="selBox">
+        </select>
+        </font></td>
+
+		   <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&nbsp; Issue Date</font></td>
+      <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+        <select name="dDay2" class="selBox">
+        </select>
+        </font></td>
+      <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+        <select name="dMonth2" class="selBox">
+        </select>
+        </font></td>
+      <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+        <select name="dYear2" class="selBox">
+        </select>
+        </font></td>
+    </tr> 
+  </table> </td>
+
+	  </tr>
+
+	
+	<tr><td style="border-bottom: 1px solid red">  <font size="2" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;Cheque Date</font>
+      <font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+        <select name="dDay1" class="selBox">
+        </select>
+        </font>
+      <font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+        <select name="dMonth1" class="selBox">
+        </select>
+        </font>
+      <font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+        <select name="dYear1" class="selBox">
+        </select>
+        </font>
+
+
+<font size="2" face="Verdana, Arial, Helvetica, sans-serif">Cheque No</font> <input type="text" id="refno" name="refno" value="<? echo $s_chequeno; ?>" size="6" >
+
+		</td></tr>
+
+<tr>
+ <script>
+	function accvb(){
+      var c_val =document.getElementById("acname_b").options[document.getElementById("acname_b").selectedIndex].firstChild.nodeValue;
+      
+	  var word = c_val.split("-");
+	  
+
+	   document.getElementById("bankname").value = word[0]; 
+	  }
+	</script>
+
+<td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Select Bank:<select id="acname_b" name="acname_b" onChange="accvb();" >
+
+       
+        <?
+		for($i=0;$i<count($array_acccode_b);$i++){
+   if($s_bank_acccode==$array_acccode_b[$i]){
+   echo  "<option value=\"$array_acccode_b[$i]\">$array_acc_name_b[$i] - Our Account No $array_acccode_b[$i]</option>";
+	}
+		}
+
+		for($i=0;$i<count($array_acccode_b);$i++){
+
+ 
+
+
+   echo  "<option value=\"$array_acccode_b[$i]\">$array_acc_name_b[$i] - Our Account No $array_acccode_b[$i]</option>";
+
+		}
+
+	?>
+    </select></font></td>
+
+</tr>
+
+  <tr><td>
+		<font size="2" face="Verdana, Arial, Helvetica, sans-serif">Bank Name & Branch</font> <input type="text" id="bankname" name="bankname" value="<? echo $s_bankname ?>" size="70" >
+
+		</td></tr>
+
+
+	<tr><td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Paid to:</font> <input type="text" id="paidto" name="paidto" value="<? echo $s_paidto ?>" size="85" >	  </td></tr>	
+	
+	<tr><td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Being :&nbsp; </font> <textarea id="beingp" name="beingp" cols="65" rows="3" ><? echo $s_description; ?></textarea>	  </td></tr>	  
+
+<script>
+
+// Removes leading whitespaces
+function LTrim( value ) {
+	
+	var re = /\s*((\S+\s*)*)/;
+	return value.replace(re, "$1");
+	
+}
+
+// Removes ending whitespaces
+function RTrim( value ) {
+	
+	var re = /((\s*\S+)*)\s*/;
+	return value.replace(re, "$1");
+	
+}
+
+function trim( value ) {
+	
+	return LTrim(RTrim(value));
+	
+}
+
+
+function regular(string) {
+if (!string) return false;
+var Chars = "0123456789.";
+
+for (var i = 0; i < string.length; i++)
+{ if (Chars.indexOf(string.charAt(i)) == -1)
+return false;
+}
+return true;
+} 
+
+
+function isInt(myNum) {
+alert(myNum.indexOf("."));	 
+			   
+      /*   if () {
+                 return true;
+         } else {
+                 return false;
+         }
+		 */
+}
+
+
+var Suffix = new Array('units',
+  'Thousand', 'Million', 'Billion', 'Tera', 'Peta', 'Exa')
+var Name = new Array
+  ('Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six',
+  'Seven', 'Eight', 'Nine', 'Ten', 'Eleven', 'Twelve',
+  'Thirteen', 'Fourteen', 'Fifteen',  'Sixteen', 'Seventeen',
+  'Eighteen', 'Nineteen')
+var Namety = new Array('Twenty', 'Thirty', 'Forty',
+  'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety')
+
+var TryNo = 0, Tries = new Array('0', '1', '3', '14',
+  '27', '100', '103', '567', '1000', '1005')
+
+
+  function Small(TC, J, K) {
+  if (J==0) return TC
+  if (J>999) return ' Internal ERROR: J = ' + J + ' (>999)'
+  var S = TC
+  if (J>99) { S += Name[Math.floor(J/100)] + ' Hundred ' ; J %= 100
+    if (J>0) S += 'and '
+    }
+    else if ((S>'') && (J>0) && (K==0)) S += 'AND '
+  if (J>19) { S += Namety[Math.floor(J/10)-2] ; J %= 10 ;
+    S += ( J>0 ? '-' : ' ') }
+  if (J>0) S += Name[J] + ' '
+  if (K>0) S += Suffix[K] + ' '
+  return S }
+
+function TextCash(L, K) {
+  if (L==0) return (K>0 ? '' : 'Zero ')
+  return Small(TextCash(Math.floor(L/1000), K+1), L%1000, K) }
+
+function DoIt() { with (document.selhotel) { 
+	
+    var SVAL = +camt.value;
+      SVAL +='';  
+ 
+   var isf=SVAL.indexOf(".");
+  
+  var Q = 0; 
+  var R = 0; 
+  
+
+   if(isf>=0){
+   var word = SVAL.split(".");     
+    Q = parseInt(word[0]);
+	var sR = word[1];
+       sR = trim(sR);
+    R = parseInt(sR);  
+   }
+   else {
+	 var Q = parseInt(SVAL);  
+   }
+   
+  // var Q = parseIN(SVAL);
+  //var Q = +camt.value;
+
+
+    var v1  =  isNaN(Q) ? 'NaN' :
+    Q<0 ? 'Neg' :
+    TextCash(Q, 0) + 'Saudi Riyal' + (Q==1?'':'s') 
+
+ 
+   var v2  =  isNaN(R) ? 'NaN' :
+    R<0 ? 'Neg' :
+    TextCash(R, 0) + 'Halala' + (R==1?'':'s') 
+
+   if(isf>=0){
+   inw.value = v1.concat(' and '+v2);
+   }
+   else {
+	inw.value = v1;
+   }
+   	   
+   
+   } }
+
+
+
+
+function TryVal() {
+  document.selhotel.camt.value = Tries[TryNo++]
+  TryNo %= Tries.length }
+
+
+ </script>
+
+
+
+	<tr><td><br><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Amount:</font> <input type="text" id="camt" name="camt" value="<? echo $s_dbamt; ?>" size="5" onKeyUp="if (regular(this.value)) { DoIt() } else { alert('Not Valid') }" onFocus="if (regular(this.value)) { DoIt() } else { alert('Not Valid') }" onBlur="if (regular(this.value)) { DoIt() } else { alert('Not Valid') }">	  /-</td></tr>	
+
+	<tr> 
+            
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">In words:</font><input type="text" id="inw" name="inw" size="80"></td>
+          </tr>
+
+	<tr>
+
+	<tr>
+<td style="border-top: 1px solid red"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Debiting Account Deatils</font></td>
+</tr>
+    <script>
+	function acc(){
+       document.getElementById("acname").value=document.getElementById("accode").value;
+	  }
+	</script>
+
+<script type="text/javascript">
+      function OpenWindow(){
+          if ((document.selhotel.saccode.value== null) || ((document.selhotel.saccode.value).length==0))
+   {
+      alert ("Sorry, But enter Account Name to find Account");
+	  document.selhotel.saccode.focus();
+   }
+   else {
+			
+		var rr = "accountsearch.php?hn="+document.selhotel.saccode.value;
+		
+        var winPop = window.open(rr,"winPop",'menubar=yes,scrollbars=yes,toolbar=no,resizable=yes,width=700,height=300, top='+10+',left='+10+' ').focus();
+      }
+
+
+} 
+    </script>
+	  <td ><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> Enter A/c Code : <input type="text" id="accode" name="accode" value="<? echo $acccode_s ?>" size="2" onKeyUp="acc()"  onFocus="acc()" onBlur="acc()">
+	    or Search for A/c:<input type="text" id="saccode" name="saccode" size="20"> <input type="button" id="searchacc" name="searchacc" value="Search" onClick="OpenWindow()"></font></td>
+	  </tr>
+	 
+    
+	 <script>
+	function accv(){
+       document.getElementById("accode").value=document.getElementById("acname").value;
+	  }
+	</script>
+
+
+	<td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Select A/C Name:<select id="acname" name="acname" onChange="accv();">
+        <option value="select">Select Account Name...</option>
+       
+        <?
+
+		for($i=0;$i<count($array_acccode);$i++){
+       
+   echo  "<option value=\"$array_acccode[$i]\">$array_acc_name[$i] - $array_acccode[$i]</option>";
+
+		}
+
+	?>
+    </select></font></td></tr>
+	  
+	  
+<tr><td align="right">
+<input type="submit" value="Post & Print Voucher" id="Submit" />
+</td></tr>
+
+
+
+
+
+
+</td>
+	  </tr></table>
+
+		 </form>
+	
+			 
+    
+			 </td>
+        </tr>
+      </table></td></tr>
+	  
+	  
+      </table> 
+</table>	
+	
+	
+
+	</tr></table>
+</body>				
+</html>
+
+
+
+
+
+
+<script>
+
+	var tdddate = new Date();
+ 
+    var dvy = <?php echo $vy; ?>; if (dvy==0) dvy=tdddate.getYear()
+	var dvm = <?php echo $vm; ?>; if (dvm==0) dvm=tdddate.getMonth()
+	var dnd = <?php echo $vd; ?>; if (dnd==0) dnd=tdddate.getDate()
+
+   if (dvy < 2000) dvy += 1900;	
+
+
+	var now_date = new Date(dvy,dvm-1,dnd);
+    now_date.setDate(now_date.getDate()+0) 
+    
+	var now_day = now_date.getDate();
+	var now_month = now_date.getMonth();
+	var now_year = now_date.getYear();
+
+
+	var d1 = new dateObj(document.selhotel.dDay, document.selhotel.dMonth, document.selhotel.dYear);
+	initDates(dvy-1, dvy+1, dvy, now_month, now_day, d1);
+
+
+	var dvy1 = <?php echo $vy1; ?>; if (dvy1==0) dvy1=tdddate.getYear()
+	var dvm1 = <?php echo $vm1; ?>; if (dvm1==0) dvm1=tdddate.getMonth()
+	var dnd1 = <?php echo $vd1; ?>; if (dnd1==0) dnd1=tdddate.getDate()
+
+    if (dvy1 < 2000) dvy1 += 1900;
+
+
+	var now_date1 = new Date(dvy1,dvm1-1,dnd1);
+	now_date1.setDate(now_date1.getDate()) 
+
+	var now_day1 = now_date1.getDate();
+	var now_month1 = now_date1.getMonth();
+	var now_year1 = now_date1.getYear();
+
+
+	   	var d2 = new dateObj(document.selhotel.dDay1, document.selhotel.dMonth1, document.selhotel.dYear1);
+	initDates(dvy1-1, dvy1+1, dvy1, now_month1, now_day1, d2);
+ 	
+
+var dvy2 = <?php echo $vy2; ?>; if (dvy2==0) dvy2=tdddate.getYear()
+	var dvm2 = <?php echo $vm2; ?>; if (dvm2==0) dvm2=tdddate.getMonth()
+	var dnd2 = <?php echo $vd2; ?>; if (dnd2==0) dnd2=tdddate.getDate()
+
+    if (dvy2 < 2000) dvy2 += 1900;
+
+
+	var now_date2 = new Date(dvy2,dvm2-1,dnd2);
+	now_date2.setDate(now_date2.getDate()) 
+
+	var now_day2 = now_date2.getDate();
+	var now_month2 = now_date2.getMonth();
+	var now_year2 = now_date2.getYear();
+
+
+	   	var d3 = new dateObj(document.selhotel.dDay2, document.selhotel.dMonth2, document.selhotel.dYear2);
+	initDates(dvy2, dvy2+1, dvy2, now_month2, now_day2, d3);
+
+</script>
+<script>
+
+
+function fun2(theForm){
+
+
+if((document.getElementById('vouno').value).length==0){
+document.getElementById('vouno').focus();
+alert("Sorry, But Enter the Voucher Number");
+return false;
+}
+
+if((document.getElementById('refno').value).length==0){
+document.getElementById('refno').focus();
+alert("Sorry, But Enter the Statement Number");
+return false;
+}
+
+if((document.getElementById('bankname').value).length==0){
+document.getElementById('bankname').focus();
+alert("Sorry, But Enter the Bank Name and Branch Address");
+return false;
+}
+
+
+
+if((document.getElementById('paidto').value).length==0){
+document.getElementById('paidto').focus();
+alert("Sorry, But Enter the details to whom you are paying");
+return false;
+}
+
+if((document.getElementById('beingp').value).length==0){
+document.getElementById('beingp').focus();
+alert("Sorry, But Enter the details of Being paid ");
+return false;
+}
+
+if((document.getElementById('camt').value).length==0){
+document.getElementById('camt').focus();
+alert("Sorry, But Enter the Amount");
+return false;
+}
+
+if((document.getElementById('accode').value).length==0 || (document.getElementById('accode').value).length<6){
+document.getElementById('accode').focus();
+alert("Sorry, But Enter the account code");
+return false;
+}
+
+   
+
+}
+
+DoIt()
+acc()
+</script>

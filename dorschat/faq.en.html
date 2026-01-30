@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+       "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <title>FAQ</title>
+  <link href="../../style/faq.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h2>Frequently Asked Questions (FAQ)</h2>
+
+<div class="toc">
+<ul>
+  <li><a href="#free-sessions">Why does phpFreeChat not work using Free.fr
+    internet provider ?</a></li>
+  <li><a href="#tmpfs">My filesystem is slow, how can I improve performance ?
+    (for Linux users)</a></li>
+  <li><a href="#multiple-channels">How to create multiple channels (rooms) ?
+    (only for 0.x branche)</a></li>
+  <li><a href="#rehash">How to rehash the chat ? (only for 1.x
+  branche)</a></li>
+  <li><a href="#setup-admins">How to change the chat admin password ? (only
+    for 1.x branche)</a></li>
+</ul>
+</div>
+
+<div class="section">
+<h3 id="free-sessions" class="query">Why does phpFreeChat not work using
+Free.fr internet provider ?</h3>
+
+<div class="answer">
+<p>The chat uses sessions. To make sessions work with Free.f,r users should
+create a folder named <code>sessions</code> on the root of their site.</p>
+
+<p>Use the ftp command <code>mkdir sessions</code> to create the folder.</p>
+</div>
+</div>
+
+<div class="section">
+<h3 id="tmpfs" class="query">My filesystem is slow, how can I improve
+performance ? (for Linux users)</h3>
+
+<div class="answer">
+<p>For windows users, have a look to <a
+href="http://www.jurixt.com/xp/xp_18.htm">this link</a> or <a
+href="http://www.generation-nt.com/astuces/imprimer/124/">this link</a>.</p>
+
+<p>By default, the chat data (messages and nicknames) are stored into
+<code>phpfreechat/data/private/chat/</code> but this path is customizable.</p>
+
+<p>On linux it exists an interesting feature which will improve drastically
+the filesystem performances, this is <em>tmpfs</em>. In fact, it is a memory
+based filesystem, the read/write access will be very fast but your data will
+be lost on the next reboot.</p>
+
+<p>On my Linux box (debian, kernel-2.6.x), a default <em>tmpfs</em>
+filesystem is mounted on <code>/dev/shm</code> so I suggest to configure
+phpfreechat to store chat data into this directory. To do that, just add this
+parameter :</p>
+<pre>$params["serverid"] = md5(__FILE__);
+<strong>$params["data_private_path"] = "/dev/shm/mychat";</strong>
+$chat = new phpFreeChat($params);
+[...]</pre>
+
+<p>For your information, I did a benchmark test :</p>
+<dl>
+  <dt>Without tmpfs (HD) :</dt>
+    <dd><ul>
+        <li>10000 writes = <strong>9.07 sec (82.49%)</strong></li>
+        <li>10000 reads = 0.38 sec (3.49%)</li>
+        <li>10000 removes = 0.31 sec (2.84%)</li>
+      </ul>
+    </dd>
+  <dt>With tmpfs (RAM) :</dt>
+    <dd><ul>
+        <li>10000 writes = <strong>0.70 sec (6.37%)</strong></li>
+        <li>10000 reads = 0.40 sec (3.64%)</li>
+        <li>10000 removes = 0.12 sec (1.16%)</li>
+      </ul>
+    </dd>
+</dl>
+</div>
+</div>
+
+<div class="section">
+<h3 id="multiple-channels" class="query">How to create multiple channels
+(rooms) ? (only for 0.x branche)</h3>
+
+<div class="answer">
+<p>By default, the <code>channel</code> parameter is auto-generated (based on
+the <code>title</code> parameter), but it's possible to specify it in order
+to create totaly independants channels.</p>
+
+<p>To handle multiple independant channels into one script passing the
+channel name by URL, just configure the chat like this :</p>
+<pre>$params["serverid"] = md5(__FILE__);
+<strong>$params["channel"] = $_GET["channel"];</strong>
+$chat = new phpFreeChat($params);
+[...]</pre>
+
+<p>When browsing the script, for exemple
+<code>http://.../mychat.php?channel=myroom</code>, a totaly private chat will
+be created and data will be stored into
+<code>phpfreechat/data/private/chat/myroom/</code>.</p>
+</div>
+</div>
+
+<div class="section">
+<h3 id="rehash" class="query">How to rehash the chat ? (only for 1.x
+branche)</h3>
+
+<div class="answer">
+<p>Rehash is needed when you change a value in your parameter list. If you
+don't rehash the chat, the old value will be used because the chat uses a
+cache. </p>
+
+<p>To rehash the chat, you just have to run:</p>
+<pre>/rehash</pre>
+
+<p>However, you must be admin to run this command. To identify yourself as an
+admin, by default (if you didn't change the admin password) you just have to
+run these commands:</p>
+<pre>/nick admin
+/identify</pre>
+
+<p>(by default, the admin user don't have any password, but you can <a
+href="#setup-admins">change it</a>)</p>
+</div>
+</div>
+
+<div class="section">
+<h3 id="setup-admins" class="query">How to change the chat admin password ?
+(only for 1.x branche)</h3>
+
+<div class="answer">
+<p>Administrators (user/password) are defined in the <code>admins</code>
+parameter array.</p>
+
+<p>Example: suppose I want to make <code>bob</code> and <code>boby</code>
+admins with <code>bob1</code> and <code>boby1</code> as paswords. I just have
+to add this parameter:</p>
+<pre>$params['admins'] = array('bob'  =&gt; 'bob1',
+                          'boby' =&gt; 'boby1');</pre>
+
+<p>(don't forget to <a href="#rehash">rehash</a> your chat)</p>
+</div>
+</div>
+
+<p></p>
+</body>
+</html>

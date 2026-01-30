@@ -1,0 +1,9 @@
+/* Page Identification */
+#page #profil-titre-page{
+	background: url(/fr/images/profil/titre-page-identification.gif) no-repeat;
+	width: 127px;
+}
+
+#page.pro #profil-titre-page{
+	background: url(/fr/images/profil/titre-page-identification-pro.gif) no-repeat;
+}

@@ -1,0 +1,15 @@
+@import url("/css-v60b/autocompletion-common.css");
+/* surcharge etp */
+#hotel_ou_ville1_update{z-index:100; width:184px;}
+
+#hotel_ou_ville1_update {
+    overflow-y:auto !important;
+    overflow-x:hidden !important;
+}
+#hotel_ou_ville1_update ul{
+   width:100% !important;
+   z-index:auto !important;
+}
+#hotel_ou_ville1_update  ul.liste_dest li {
+   width:100% !important;
+}

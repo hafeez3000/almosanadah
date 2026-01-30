@@ -1,0 +1,1059 @@
+1,1110111,Single / City View,City View,1,Standard
+2,1110112,Double / City View,City View,2,"Double Bed, Standard"
+3,1110113,Twin / City View,City View,2,"Twin, Double Bed, Standard"
+4,1110114,Triple / City View,City View,3,Double Bed + Extra Bed Standard
+5,1110115,Single / Haram View,Haram View,1,Standard
+6,1110116,Double / Haram View,Haram View,2,"Double Bed, Standard"
+7,1110117,Twin / Haram View,Haram View,2,"Twin, Double Bed, Standard"
+8,1110118,Executive Suite / City View,City View,4,2 Bed Room + 1 living Room + 3 Toilet + 1 Kitchen
+9,1110119,Deluxe Suite / City View,City View,2,1 Bed Room + 1 Living Room + 2 Toilet + 1 Kitchen
+10,1110120,Diplamatic  Suite / City View,City View,4,2 Bed Room + 1 living Room + 3 Toilet + 1 Kitchen
+11,1110121,Amiri Suite / City View,City View,6,3 Bed Room + 1 living Room + 5 Toilet + 1 Kitchen
+12,1110122,Presidential Suite / City View,City View,8,4 Bed Room + 1 living Room Large + 6 Toilet + 1 Kitchen
+13,1110123,Junior Suite / Haram View,Haram View,2,1 Bed Room + 1 Living Room + 2 Toilet + 1 Kitchen
+14,1110124,Executive Suite / Haram View,Haram View,4,2 Bed Room + 1 Living + 3 Toilet + 1 kitchen
+15,1110125,Deluxe Suite / Haram View,Haram View,2,1 Bed Room + 1 living Room + 2 Toilet + 1 Kitchen
+16,1110126,Diplamatic Suite / Haram View,Haram View,4,2 Bed Room + 1 living Room + 3 Toilet + 1 Kitchen
+17,1110127,Amiri Suite / Haram View,Haram View,6,3 Bed Room + 1 living Room + 5 Toilet + 1 Kitchen
+18,1110128,Presidential Suite / Haram View,Haram View,8,4 Bed Room + 1 living Room Large + 6 Toilet + 1 Kitchen
+19,1110211,Single / City View,City View,1,Standard
+20,1110212,Double / City View,City View,2,"Standard,  2 Bed Room"
+21,1110213,Twin / City View,City View,2,"Standard,  Twin Bed Room"
+22,1110214,Triple / City View,City View,3,2 Bed Room + 1 Extra Bed
+23,1110215,Roshan / City View,City View,3,Large Room accommodating up to 3 persons with an Arabic Living area
+24,1110216,Single / Haram View,Haram View,1,Standard
+25,1110217,Double / Haram View,Haram View,2,"Standard, 2 Bed Room"
+26,1110218,Twin / Haram View,Haram View,2,"Standard, Twin Bed Room"
+27,1110219,Single / Superior View,Superior View,1,Standard
+28,1110220,Double / Superior View,Superior View,2,"Standard,  2 Bed Room"
+29,1110221,Twin / Superior View,Superior View,2,"Twin Bed Room, Standard"
+30,1110222,Tower Suite,City View,2,1 Bed Room + 1 Seating Room + 1 Toilet
+31,1110223,King One Suite,Haram View,2,1 Bed Room + 2 Toilet
+32,1110224,King Two Suite,Haram View,4,2 Bed Room + 3 Toilet
+33,1110225,Executive Suite,Haram View,2,1 Bed Room + 1 Seating Room + 2 Toilet
+34,1110226,Penta Suite,Haram View,4,"2 Bed Room + 1 Seating + 1 Dining Room+3 Toilet, IInd floor"
+35,1110227,Royal Suite,Haram View,4,"2 Bed Room + 1 Seating + 1 Dining Room+3 Toilet, IInd floor"
+36,1110311,Single / Non View,Non View,1,Standard
+37,1110312,Double / Non View,Non View,2,Standard
+38,1110313,Triple / Non View,Non View,3,Standard
+39,1110314,Family Room / Non View,Non View,4,Quite A Big Room for 4 to 6 paxs
+40,1110315,Amiry Suite / Non View,Non View,4, 2 Bed Room + Seating + 1 Dining Hall + 1 Kitchen + 4 toilet + 1 room for house maid
+41,1110316,Single / City View,City View,1,Standard
+42,1110317,Double / City View,City View,2,Standard
+43,1110318,Twin / City View,City View,2,Standard
+44,1110319,Triple / City View,City View,3,Standard
+45,1110320,Family Room / City View,City View,4,Quite A Big Room for 4 to 6 paxs
+46,1110321,Amiry Suite / City View,City View,4, 2 Bed Room + Seating + 1 Dining Hall + 1 Kitchen + 4 toilet + 1 room for house maid
+47,1110322,Royal Suite / City View,City View,6,3 Bed Room + 1 Seating + 1 Dining Hall + 1 Kitchen+ 4 toilet + room with bathroom for house maid
+48,1110323,Single / Haram View,Haram View,1,Standard
+49,1110324,Double / Haram View,Haram View,2,Standard
+50,1110325,Twin / Haram View,Haram View,2,Standard
+51,1110326,Triple / Haram View,Haram View,3,1 Bed + 1 Extra bed few rooms facing Haram
+52,1110327,Family Room / Haram View,Haram View,4,Quite A Big Room for 4 to 6 paxs
+53,1110328,Junior Suite / Haram View,Haram View,2,1 Bed Room + 1 Seating +1 Dining Hall + 1 Kitchen room with + 04 Toilet
+54,1110329,Amiry Suite / Haram View,Haram View,4,2 Bed Room + Seating + 1 Dining Hall + 1 Kitchen + 4 toilet + 1 room for house maid
+55,1110330,Royal Suite / Haram View,Haram View,6,3 Bed Room + 1 Seating + 1 Dining Hall + 1 Kitchen+ 4 toilet + room with bathroom for house maid
+56,1110331,Single / Executive  View,Superior View,1,Standard
+57,1110332,Double / Executive View,Superior View,2,Standard
+58,1110333,Twin / Executive View,Superior View,2,Standard
+59,1110334,Triple / Executive View,Superior View,3,Standard
+60,1110411,Single,City View,1,Classis Room
+61,1110412,Double,City View,2,Classis Room
+62,1110413,Twin,City View,2,Classis Room
+63,1110414,Triple,City View,3,Classis Room
+64,1110415,Junior Suite,City View,2,1 Bed Room+ 1 Toilet + 1 Sitting Room + Kitchenette
+65,1110416,Diplomatic Suite,City View,4,2 Bed Rooms + 1 Sitting Room + 2 Toilet + Kitchenette
+66,1110417,Royal Suite,City View,6,3 Bed Rooms + 1 Sitting Room + 3 Toilets
+67,1110511,Single / City View,City View,1,Normal
+68,1110512,Double / City View,City View,2,Normal
+69,1110513,Twin / City View,City View,2,Normal
+70,1110514,Triple / City View,City View,3,Normal
+71,1110515,Quard / City View,City View,4,Normal
+72,1110611,Single,City View,1,Standard
+73,1110612,Double,City View,2,Standard
+74,1110613,Twin,City View,2,Standard
+75,1110614,Triple,City View,3,1 Twin Bed + 1 Extra bed
+76,1110615,Suite City view,City View,2,1 Bedroom + 1 Leaving Room + 1 Toilet   (  02 paxs )
+77,1110616,Suite Haram,Haram View,2,1 Bedroom + 1 Leaving Room + 1 Toilet   (  02 paxs )
+78,1110617,Royal Suite,City View,4,2 Bedroom + 1 Sitting + 1 Kitchen + 2  Toilet - (04 paxs)
+79,1110618,Royal Apartment,City View,10,5 Bedroom + 1 Sitting + 1 Kitchen + 05 Toilet - (10 paxs)
+80,1110619,Royal Villa,City View,10,5 Bedroom + 3 Sitting + 1 Kitchen + 1 Dining+ 7 Toilets
+81,1110711,Small Studio / Back View,Back View,2,2 to 3 paxs
+82,1110712,Small Studio / Haram View,Haram View,2,2 to 3 paxs
+83,1110713,Small Studio / Kaaba View,Kaaba View,2,2 to 3 paxs
+84,1110714,Large Studio / Back  View,Back View,2,3 to 5 paxs
+85,1110715,Large Studio / Haram View,Haram View,2,3 to 5 paxs
+86,1110716,Large Studio / Kaaba View,Kaaba View,2,3 to 5 paxs
+87,1110717,Duplex (S/H + L/B),S/ H  + L / B,4,1 Small / Haram + 1 Large / Back 2 room one room with internal stairs having small table with 3 seat sofas in the large rooms
+88,1110718,Villa 2 Room Back View,Back View,4,2 Rooms Villa 1 Bed Room + 1 Sitting Room + Maid Room + Kitchen +2 Bathroom
+89,1110719,Villa 2 Room Haram View,Haram View,4,2 Rooms Villa 1 Bed Room + 1 Sitting Room + Maid Room + Kitchen +2 Bathroom
+90,1110720,Villa 3 Room Back View,Back View,6,3 Rooms Villa +2 Bed Room + 1 Sitting Room + 1 Maid Room +2 Bathroom
+91,1110721,Villa 4 Room Back View,Haram View,8,4 Rooms Villa+2 Bed Room + 1 Sitting Room + 1 Dining Room+Maid Room + Kitchen + 4 Bath Rooms
+92,1110722,Villa 4 Room Haram View,Haram View,8,4 Rooms Villa+2 Bed Room + 1 Sitting Room + 1 Dining Room+Maid Room + Kitchen + 4 Bath Rooms
+93,1110723,Upper Suite Haram View,Haram View,4,2 Bedrooms + 1 Sitting Room + Dining Room+Maid room + Kitchen + 3 Bath rooms
+94,1110724,Upper Suite Kaaba View,Kaaba View,4,2 Bedrooms + 1 Sitting Room + Dining Room+Maid room + Kitchen + 3 Bath rooms
+95,1110725,Royal Suite / Haram View,Haram View,6,3 Bedrooms + 1 Sitting Room + 1 Dining Room+ Kitchen + 3 Bathrooms
+96,1110726,Royal Suite / Kaaba View,Kaaba View,6,3 Bedrooms + 1 Sitting Room + 1 Dining Room+ Kitchen + 3 Bathrooms
+97,1110727,Royal Suite Deluxe,Haram View,6,3 Bedrooms + 1 Sitting Room + 1 Dining Room+ Kitchen + 3 Bathrooms
+98,1110728,Penta House Haram View,Haram View,8,4 Bedrooms + 2 Sitting Rooms + 1 Dining Room+maid room + Washing room + Kitchen + 6 Bathrooms
+99,1110729,Penta House Kaaba View,Kaaba View,8,4 Bedrooms + 2 Sitting Rooms + 1 Dining Room+maid room + Washing room + Kitchen + 6 Bathrooms
+100,1110811,Single / City View,City View,1,Normal
+101,1110812,Double / City View,City View,2,Normal
+102,1110813,Twin / City View,City View,2,Normal
+103,1110814,Triple / City View,City View,3,Normal
+104,1110815,Regency Suite,City View,2,1 Bedroom + 1 Setting Room + 1 Toilet for 2 paxs
+105,1110816,Diplomatic Suite,City View,2,1 Bedroom + 1 Setting Room + 1 Toilet for 2 paxs
+106,1110911,Small Apartment,City View,4,2 Bedroom + 1 Sitting Room + 1 Kitchen + 2 Toilet
+107,1110912,Large Apartment,City View,8,4 Bedroom + 1 Seating Room + 1 Kitchen + 3 Toilet
+108,1111011,Single / City View,City View,1,Normal
+109,1111012,Double / City View,City View,2,Normal
+110,1111013,Twin / City View,City View,2,Normal
+111,1111014,Triple / City view,City View,3,Normal
+112,1111015,Jonior Suite,City View,2,1 Bed + 1 Living Room+1 Kitchen + 1 Toilet
+113,1111016,Exexutive Suite,City View,4, 2 Bed  + 1 Living Room+1 Kitchen + 2 Toilet
+114,1111017,Finest Suite,City View,6, 3 Bed  + 1 Living Room+1 Kitchen +2 Toilet
+115,1111111,Single / City View,City View,1,Normal
+116,1111112,Double / City View,City View,2,Normal
+117,1111113,Twin / City View,City View,2,Normal
+118,1111114,Triple / City View,City View,3,Normal
+119,1111211,Double / City View,City View,2,Room with Double Bed
+120,1111212,Twin / City View,City View,2,Room with Twin Bed
+121,1111213,Triple / City View,City View,3,Room with  Twin Bed + Extra Bed
+122,1111214,Qaurd,City View,4,"Room with Quard, Twin bed"
+123,1111215,Normal Suite,City View,5,1 Sgl + Qaurd B/R + 1 Living + Sofa Slepper
+124,1111216,Al Rawasi Suite,City View,5,1 Sgl + Qaurd B/R + 1 Living + Sofa Slepper +1 Kitchen
+125,1111311,Single,City View,1,Normal
+126,1111312,Double,City View,2,Normal
+127,1111313,Twin,City View,2,Normal
+128,1111314,Triple,City View,3,Normal
+129,1111315,Suite 4 Paxs,City View,4,04 paxs
+130,1111316,Suite 5 Paxs,City View,5,05 paxs
+131,1111317,Jonior Suite,City View,2,1 Bed Room + 1 Living Room
+132,1111318,Exexutive Suite,City View,2,1 Bed Rooms + 1 Living Room
+133,1111319,Deluxe Suite,City View,6,3 Bed Rooms + 1 Living room
+134,1111320,Superior Villa,City View,8,4 Bed Rooms + 1 Living Room
+135,1111321,Royal Villa,City View,10,5 Bed Rooms + 2 Living Room
+136,1111411,Double,City View,2,Normal
+137,1111412,Twin,City View,2,Normal
+138,1111413,Triple,City View,3,Normal
+139,1111414,Quard,City View,4,Normal
+140,1111511,Single / City View,City View,1,Standard
+141,1111512,Double / City View,City View,2,Standard
+142,1111513,Twin / City View,City View,2,Standard
+143,1111514,Triple / City View,City View,3,Standard
+144,1111515,Suite 2 Paxs,City View,2,02 paxs
+145,1111516,Suite 5 Paxs,City View,5,05 paxs
+146,1111611,Double / City View,City View,2,Normal
+147,1111612,Twin / City View,City View,2,Normal
+148,1111613,Double / Haram  View,Haram View,2,Normal
+149,1111614,Twin / Haram View,Haram View,2,Normal
+150,1111615,Triple / City View,City View,3,Normal
+151,1111616,Triple / Haram View,Haram View,3,Normal
+152,1111711,Double / City View,City View,2,Normal
+153,1111712,Twin / City View,City View,2,Normal
+154,1111713,Triple / City View,City View,3,Normal
+155,1111714,Quard,City View,4,Normal
+156,1111811,Single,City View,1,Normal
+157,1111812,Double,City View,2,Normal
+158,1111813,Twin,City View,2,Normal
+159,1111814,Triple,City View,3,Normal
+160,1111815,Quard,City View,4,Normal
+161,1111911,Single / City View,City View,1,Normal
+162,1111912,Double / City View,City View,2,Normal
+163,1111913,Twin / City View,City View,2,Normal
+164,1111914,Triple / City View,City View,3,Normal
+165,1111915,Quard,City View,4,Normal
+166,1111916,Suite,City View,2,Normal
+167,1112011,Single /  City View,City View,1,Normal
+168,1112012,Double / City View,City View,2,Normal
+169,1112013,Twin / City View,City View,2,Normal
+170,1112014,Triple / City View,City View,3,Normal
+171,1112111,Single / City View,City View,1,Standard
+172,1112112,Double / City View,City View,2,Standard
+173,1112113,Twin / City View,City View,2,Standard
+174,1112114,Triple / City View,City View,3,Standard
+175,1112115,Quard / City View,City View,4,Standard
+176,1112116,Suite,City View,2,Standard
+177,1112211,Single / City View,City View,1,Standard
+178,1112212,Double / City View,City View,2,Standard
+179,1112213,Twin / City View,City View,2,Standard
+180,1112214,Triple / City View,City View,3,Standard
+181,1112215,Double / Haram  View,Haram View,2,Standard
+182,1112216,Junior Suite / Haram View,Haram View,2,1 Bed Room + 1 Sitting Room
+183,1112217, Senior Suite / Haram View,Haram View,4,2 Bed Room + 1 Sitting Room
+184,1112218,Senior Suite / City View,City View,4,2 Bed Room + 1 Sitting Room
+185,1112311,Single / City View,City View,1,Normal
+186,1112312,Double / City View,City View,2,Normal
+187,1112313,Twin / City View,City View,2,Normal
+188,1112314,Triple / City View,City View,3,Normal
+189,1112315,Quard / City View,City View,4,Normal
+190,1112411,Double / City View,City View,2,Normal
+191,1112412,Twin / City View,City View,2,Normal
+192,1112413,Triple / City View,City View,3,Normal
+193,1112414,Quard / City View,City View,4,Normal
+194,1112511,Single / City View,City View,1,Normal
+195,1112512,Double / City View,City View,2,Normal
+196,1112513,Twin / City View,City View,2,Normal
+197,1112514,Triple / City View,City View,3,Normal
+198,1112515,Quard / City view,City View,4,2 Twin Bed
+199,1112516,Quintuple / City View,City View,5,05 paxs
+200,1112611,Single,City View,1,Normal
+201,1112612,Double,City View,2,Normal
+202,1112613,Twin,City View,2,Normal
+203,1112614,Triple,City View,3,Normal
+204,1112615,Quard,City View,4,Normal
+205,1112711,Single / City View,City View,1,Normal
+206,1112712,Double / City View,City View,2,Normal
+207,1112713,Twin / City View,City View,2,Normal
+208,1112714,Triple / City View,City View,3,Normal
+209,1112811,Single,City View,1,Normal
+210,1112812,Double,City View,2,Normal
+211,1112813,Twin,City View,2,Normal
+212,1112814,Triple,City View,3,Normal
+213,1112815,Quard,City View,4,Normal
+214,1112911,Small Suite,City View,4,2 Room + 4 Bed  + Hall + Toilet + Kitchen
+215,1112912,Medium Suite,City View,5,2 Room  5  Bed  + Hall + Toilet + Kitchen
+216,1112913,Large Suite,City View,6,2 Room  6  Bed  + Hall + Toilet + Kitchen
+217,1113011,Double / City View,City View,2,Normal
+218,1113012,Twin / City View,City View,2,Normal
+219,1113013,Triple / City View,City View,3,Normal
+220,1113014,Quard / City View,City View,4,Normal
+221,1113111,Double / City View,City View,2,Normal
+222,1113112,Twin / City View,City View,2,Normal
+223,1113113,Triple / City View,City View,3,Normal
+224,1113114,Quard / City View,City View,4,Normal
+225,1113211,Double / City View,City View,2,Normal
+226,1113212,Twin / City View,City View,2,Normal
+227,1113213,Triple / City View,City View,3,Normal
+228,1113214,Quard / City View,City View,4,Normal
+229,1113311,Double / City View,City View,2,Normal
+230,1113312,Twin / City View,City View,2,Normal
+231,1113313,Triple / City View,City View,3,Normal
+232,1113314,Quard / City View,City View,4,Normal
+233,1113411,Double / City View,City View,2,Normal
+234,1113412,Twin / City View,City View,2,Normal
+235,1113413,Triple / City View,City View,3,Normal
+236,1113414,Quard / City View,City View,4,Normal
+237,1113511,Double / City View,City View,2,Normal
+238,1113512,Twin / City View,City View,2,Normal
+239,1113513,Triple / City View,City View,3,Normal
+240,1113514,Quard / City View,City View,4,Normal
+241,1113611,Single / City view,City View,1,Normal
+242,1113612,Double / City view,City View,2,Normal
+243,1113613,Twin / City view,City View,2,Normal
+244,1113614,Triple / City view,City View,3,Normal
+245,1113615,Quard / City View,City View,4,Normal
+246,1113616,Double / Haram view,Haram View,2,Normal
+247,1113711,Single / City view,City View,1,Normal
+248,1113712,Double / City view,City View,2,Normal
+249,1113713,Twin / City view,City View,2,Normal
+250,1113714,Triple / City view,City View,3,Normal
+251,1113715,Quard / City View,City View,4,Normal
+252,1113716,Single / Haram view,Haram View,1,Normal
+253,1113717,Double / Haram view,Haram View,2,Normal
+254,1113718,Twin / Haram view,Haram View,2,Normal
+255,1113719,Triple / Haram view,Haram View,3,Normal
+256,1113720,Quard / Haram View,Haram View,4,Normal
+257,1113811,Single / City view,City View,1,Normal
+258,1113812,Double / City view,City View,2,Normal
+259,1113813,Twin / City view,City View,2,Normal
+260,1113814,Triple / City view,City View,3,Normal
+261,1113911,Single / City view,City View,1,Normal
+262,1113912,Double / City view,City View,2,Normal
+263,1113913,Twin / City view,City View,2,Normal
+264,1113914,Triple / City view,City View,3,Normal
+265,1113915,Small Suite,City View,2,Normal
+266,1113916,Exexutive Suite,City View,2,Normal
+267,1114011,Double / City view,City View,2,Normal
+268,1114012,Twin / City view,City View,2,Normal
+269,1114013,Triple / City view,City View,3,Normal
+270,1114111,Single,City View,1,Normal
+271,1114112,Double,City View,2,Normal
+272,1114113,Twin,City View,2,Normal
+273,1114114,Triple,City View,3,Normal
+274,1114115,Quard,City View,4,Normal
+275,1210111,Single / City View,City View,1,Standard
+276,1210112,Double / City View,City View,2,Standard
+277,1210113,Twin / City View,City View,2,Standard
+278,1210114,Triple / City View,City View,3,1 Bed + 1 Extra bed
+279,1210115,Single / Haram,Haram View,1,
+280,1210116,Double / Haram,Haram View,2,
+281,1210117,Twin  / Haram,Haram View,2,
+282,1210118,Junior Suite,City View,2,
+283,1210119,Single Studio,City View,2,
+284,1210120,Double Studio,City View,2,
+285,1210121,Executive Suite,City View,4,
+286,1210122,Royal Suite,City View,3,
+287,1210123,Large Royal Sutie / City View,City View,4,
+288,1210124,Large Royal Sutie / Haram View,Haram View,4,
+289,1210211,Single / City View,City View,1,Standard
+290,1210212,Double / City View,City View,2,Standard
+291,1210213,Twin / City View,City View,2,Standard
+292,1210214,Triple / City View,City View,3,Standard
+293,1210215,Quard / City view,City View,4,Standard
+294,1210311,Single / City View,City View,1,Standard
+295,1210312,Double / City View,City View,2,Standard
+296,1210313,Twin / City View,City View,2,Standard
+297,1210314,Triple / City View,City View,3,Standard
+298,1210411,Single / City View,City View,1,Standard
+299,1210412,Double / City View,City View,2,Standard
+300,1210413,Twin / City View,City View,2,Standard
+301,1210414,Triple / City View,City View,3,Standard
+302,1210511,Single / City View,City View,1,Standard
+303,1210512,Double / City View,City View,2,Standard
+304,1210513,Twin / City View,City View,2,Standard
+305,1210514,Triple / City View,City View,3,Standard
+306,1210611,Single / City View,City View,1,Standard
+307,1210612,Double / City View,City View,2,Standard
+308,1210613,Twin / City View,City View,2,Standard
+309,1210614,Triple / City View,City View,3,Standard
+310,1210615,Quard / City View,City View,4,Maxi  .. 4 Paxs only
+311,1210711,Single / City View,City View,1,Standard
+312,1210712,Double / City View,City View,2,Standard
+313,1210713,Twin / City View,City View,2,Standard
+314,1210714,Triple / City View,City View,3,Standard
+315,1210715,Quard / City View,City View,4,Standard
+316,1210811,Single / City View,City View,1,Standard
+317,1210812,Double / City View,City View,2,Standard
+318,1210813,Twin / City View,City View,2,Standard
+319,1210814,Triple / City View,City View,3,Standard
+320,1210815,Quard / City view,City View,4,Standard
+321,1210911,Single / City View,City View,1,Standard
+322,1210912,Double / City View,City View,2,Standard
+323,1210913,Twin / City View,City View,2,Standard
+324,1210914,Triple / City View,City View,3,Standard
+325,1210915,Business Suite,City View,2,Standard
+326,1210916,Large Sutie,City View,4,Standard
+327,1210917,Amiri Suite,City View,4,Standard
+328,1210918,Royal Suite,City View,4,Standard
+329,1210919,Large Royal Suite,City View,4,Standard
+330,1211011,Single,City View,1,Standard
+331,1211012,Double,City View,2,Standard
+332,1211013,Twin,City View,2,Standard
+333,1211014,Triple,City View,3,Standard
+334,1211015,Quard,City View,4,Standard
+335,1211111,Single,City View,1,Standard
+336,1211112,Double,City View,2,Standard
+337,1211113,Twin,City View,2,Standard
+338,1211114,Triple,City View,3,Standard
+339,1211115,Quard,City View,4,Standard
+340,1211211,Single,City View,1,
+341,1211212,Double,City View,2,
+342,1211213,Twin,City View,2,
+343,1211214,Triple,City View,3,
+344,1211215,Quard,City View,4,
+345,1211216,Suite,City View,2,
+346,1211311,Single Deluxe,City View,1,
+347,1211312,Double Deluxe,City View,2,
+348,1211313,Twin Deluxe,City View,2,
+349,1211314,Triple Deluxe,City View,3,
+350,1211315,Executive Suite,City View,2,1 BedRoom
+351,1211316,Amiri Suite,City View,4,2 BedRoom
+352,1211317,Diplomatic Suite,City View,4,2 BedRoom
+353,1211411,Single,City View,1,Standard
+354,1211412,Twin,City View,2,Standard
+355,1211413,Double,City View,2,Standard
+356,1211414,Triple,City View,3,Standard
+357,1211415,Quard,City View,4,Standard
+358,1211511,Single / City,City View,1,Standard
+359,1211512,Double / City,City View,2,Standard
+360,1211513,Twin / City View,City View,2,Standard
+361,1211514,Single / Haram,City View,1,Standard
+362,1211515,Double / Haram,City View,2,Standard
+363,1211516,Twin / Haram,City View,2,Standard
+364,1211517,Suite,City View,2,Normal Suite
+365,1211615,Single,City View,1,Standard
+366,1211611,Double,City View,2,Standard
+367,1211612,Twin,City View,2,Standard
+368,1211613,Triple,City View,3,Standard
+369,1211614,Suite,City View,2,One Bed Room + Living Room + Two Bath Room + Small Kitchenet
+370,1211711,Single,City View,1,Standard
+371,1211712,Double,City View,2,Standard
+372,1211713,Twin,City View,2,Standard
+373,1211714,Triple,City View,3,Standard
+374,1211715,Suite,City View,2,One Bed Room + Living Room + 1 Bath Room
+375,1211811,Single,City View,1,Normal
+376,1211812,Double,City View,2,Normal
+377,1211813,Twin,City View,2,Normal
+378,1211814,Triple,City View,3,Normal
+379,1211815,Quard,City View,4,Normal
+380,1211911,Single / City View,City View,1,Normal
+381,1211912,Double / City View,City View,2,Normal
+382,1211913,Twin / City View,City View,2,Normal
+383,1211914,Triple / City View,City View,3,Normal
+384,1211915,Quard / City View,City View,4,Normal
+385,1212011,Single,City View,1,Normal
+386,1212012,Double,City View,2,Normal
+387,1212013,Twin,City View,2,Normal
+388,1212014,Triple,City View,3,Normal
+389,1212015,Suite A,City View,4,Normal
+390,1212016,Suite B,City View,6,Normal
+391,1212017,Suite C,City View,8,Normal
+392,1212111,Suite A,City View,4,2 Bedroom +  1 Kitchen + 1 Bathroom
+393,1212112,Suite B,City View,6,3 Bedroom + 1 Kitchen + 2 Bathroom
+394,1212113,Suite C  City View,City View,8,4 Bedroom +  1 Kitchen + 2 Bathroom
+395,1212114,Suite C Haram View,Haram View,8,4 Bedroom + 1 Kitchen + 2 Bathroom
+396,1212211,Suite B,City View,4,2 Bedroom + 1 Kitchen + 2 Bathroom
+397,1212212,Suite C,City View,6,3 Bedroom +  1 Kitchen + 2 Bathroom
+398,1212213,Suite Cs,City View,6,3 Bedroom + 1 Living Room+1 Kitchen + 2 Bathroom
+399,1212214,Suite D City View,City View,8,4 Bedroom + 1 Kitchen + 2 Bathrooms
+400,1212215,Suite D Haram View,Haram View,8,4 Bedroom + 1 Kitchen + 2 Bathrooms
+401,1212311,Single,City View,1,Normal
+402,1212312,Double,City View,2,Normal
+403,1212313,Twin,City View,2,Normal
+404,1212314,Triple,City View,3,Normal
+405,1212315,Quard,City View,4,Suite with two bed room
+406,1212316,Penta Room,City View,4,Suite with two bed room ( double + triple) + 1 Bothroom
+407,1212317,Suite,City View,2,1 Bedroom + Living Room+1 Bath Room
+408,1212414,Suite A West Tower,West Tower,5,2 Bedroom with 5 Beds City view
+409,1212415,Suite A + West Tower Haram View,West Tower,5,2 Bedroom with 5 Beds City view  - Haram View
+410,1212411,Suite B West Tower,West Tower,7,3 Bedroom with 7 Beds City view
+411,1212412,Suite B + Haram West Tower,West Tower,8,3 Bedroom with 8 Beds Haram view
+412,1212413,Suite C + West Tower Haram View,West Tower,9,4 Bedroom with 9 Beds Haram view
+413,1212511,Suite A East Tower,East Tower,2,1 Bedroom with 2 Beds City view + Lounge + toilet + kitchen (non view)
+414,1212512,Suite B   East Tower,East Tower,5,2 Bedroom with 4 Beds + Lounge +  2 Toilet + Kitchen ( City View)
+415,1212513,Suite B + East Tower Haram View,East Tower,4,2 Bedroom with 4 Beds + Lounge + 2 toilet + kitchen ( Haram View )
+416,1212514,Suite C  East Tower,East Tower,6,3 Bedroom with 6 Beds + Lounge + 2 Toilet + Kitchen ( City View )
+417,1212515,Suite C + East Tower Haram View,East Tower,6,3 Bedroom with 6 Beds + 2 Lounge + 3 Toilet + Kitchen ( Haram View )
+418,1212516,Suite D East Tower  Haram View,East Tower,8,4 BedRoom with 8 Beds + 2 Lounge + House mate room + 5 toilets + kitchen ( Haram View )
+419,1212517,Suite E East Tower Haram View,East Tower,10,5 Bedroom with 10 Beds + 2 Lounge + House mate room + 4 Toilets + Kitchen ( Haram View )
+420,1212611,Single,City View,1,Standard
+421,1212612,Double,City View,2,Standard
+422,1212613,Twin,City View,2,Standard
+423,1212614,Triple,City View,3,Standard
+424,1212615,Quard ( Suite ),City View,4,
+425,1212711,Single / City View,City View,1,
+426,1212712,Double / City View,City View,2,
+427,1212713,Twin / City View,City View,2,
+428,1212714,Triple / City View,City View,3,
+429,1212715,Executive Suite,City View,2,
+430,1212716,Royal Suite,City View,2,
+431,1212811,Single / City View,City View,1,Normal
+432,1212812,Double / City View,City View,2,Normal
+433,1212813,Twin / City View,City View,2,Normal
+434,1212814,Triple / City View,City View,3,Normal
+435,1212815,Quard / City View,City View,4,Normal
+436,1212911,Single / City View,City View,1,Standard
+437,1212912,Double / City View,City View,2,Standard
+438,1212913,Twin / City View,City View,2,Standard
+439,1212914,Triple / City View,City View,3,Standard
+440,1213011,Single,City View,1,Standard
+441,1213012,Double,City View,2,Standard
+442,1213013,Twin,City View,2,Standard
+443,1213014,Triple,City View,3,Standard
+444,1213015,Quard,City View,4,Standard
+445,1213111,Single / City View,City View,1,Standard
+446,1213112,Double / City View,City View,2,Standard
+447,1213113,Twin / City View,City View,2,Standard
+448,1213114,Triple / City View,City View,3,Standard
+449,1213115,Quard / City View,City View,4,Standard
+450,1213211,Single,City View,1,Normal
+451,1213212,Double,City View,2,Normal
+452,1213213,Triple,City View,3,Normal
+453,1213214,Quard,City View,4,Normal
+454,1410111,Single Deluxe/ City View,City View,1,Standard
+455,1410112,Double Deluxe / City View,City View,2,Standard
+456,1410113,Twin Deluxe / City View,City View,2,Standard
+457,1410114,Triple Deluxe / City View,City View,3,Standard
+458,1410115,Single Business / Sea View,City View,1,Standard
+459,1410116,Double Business / Sea View,City View,2,Standard
+460,1410117,Twin Business / Sea View,City View,2,Standard
+461,1410118,Triple Business / Sea View,City View,3,Standard
+462,1410119,Single Executive Room,City View,1,Standard
+463,1410120,Double Executive Room,City View,2,Standard
+464,1410121,Twin Executive Room,City View,2,Standard
+465,1410122,Triple Executive Room,City View,3,Standard
+466,1410123,Al-Diwan  Suite,City View,2,1 Bedroom + 1 Sofa bed + 1 Bathroom + 2 Balcony
+467,1410124,Junior Suite,City View,2,1 Bedroom + 1 Living Room + 1 Sofabed + 2 Balcony+ 1 Extra Bed  + 2 Bath Room
+468,1410125,Amiri Suite,City View,2,1 Bedroom + 1 Living + 2 Bathroom
+469,1410126,Al-Sultan Suite,City View,2,1 Bedroom + 1 Living Room + 1 Sofabed + 2 Bathroom
+470,1410127,Royal Suite,City View,4,2 Big Room + 1 Living Room + 1 Sofa Bed+ 1 Kitchen + 4 Bathroom + 4 Balcony
+471,1410211,Single Standard,City View,1,Standard
+472,1410212,Double Standard,City View,2,Standard
+473,1410213,Twin Standard,City View,2,Standard
+474,1410214,Triple Standard,City View,3,Standard
+475,1410215,Business Suite,City View,2,1 Bedroom + 1 Living Room + 2 Bath Room
+476,1410216,Diplomatic Suite,City View,2,1 Bedroom + 1 Big Living Room + 2 Bathroom
+477,1410217,Executive Suite,City View,4,2 Bedroom + 1 Living Room + 2 Bathroom
+478,1410218,Royal Suite,City View,4,2 Bedroom + 1 Living Room + 1 Dining Room  + 2 Bathroom+ Jacusi
+479,1410219,Single /  Club,City View,1,Club Room
+480,1410220, Double / Club,City View,2,Club Room
+481,1410221,Twin / Club,City View,2,Club Room
+482,1410222,Triple /Club,City View,3,Club Room
+483,1410223,Business Suite,City View,2,1 Bedroom + 1 Living + 2 Bathroom -Club Type
+484,1410224,Diplomatic Suite,City View,2,1 Bedroom + 1 Big Living Room + 2 Bathroom -Club Type
+485,1410225,Executive Suite,City View,2,
+486,1410311,Single  Deluxe,City View,1,Standard
+487,1410312,Double Deluxe,City View,2,Standard
+488,1410313,Twin Deluxe,City View,2,Standard
+489,1410314,Triple Deluxe,City View,3,Standard
+490,1410411,Single Standard ( Nakheel Wing),City View,1,Standard Room - Nakeel Executive Wing
+491,1410412,Double Standard ( Nakheel Wing),City View,2,Standard Room - Nakeel Executive Wing
+492,1410413,Twin Standard ( Nakheel Wing),City View,2,Standard Room - Nakeel Executive Wing
+493,1410414,Triple Standard ( Nakheel Wing),City View,3,Standard Room - Nakeel Executive Wing
+494,1410415,Single Deluxe,Sea View,1,Deluxe Room
+495,1410416,Double Deluxe,Sea View,2,Deluxe Room
+496,1410417,Twin Deluxe,Sea View,2,Deluxe Room
+497,1410418,Triple Deluxe,Sea View,3,Deluxe Room
+498,1410419,Executive Suite,Sea View,2,Main Tower only
+499,1410420,Diplomatic Suite,Sea View,2,Main Tower only
+500,1410421,Amiri Suite,Sea View,2,Main Tower only
+501,1410422,Royal Suite,Sea View,2,Main Tower only
+502,1410511,Single Classic / City View,City View,1,Standard
+503,1410512,Double Classic / City View,City View,2,Standard
+504,1410513,Twin Classic / City View,City View,2,Standard
+505,1410514,Triple Classic / City View,City View,3,Standard
+506,1410515,Single Classic / Sea View,Sea View,1,Standard
+507,1410516,Double Classic / Sea View,Sea View,2,Standard
+508,1410517,Twin Classic / Sea View,Sea View,2,Standard
+509,1410518,Triple Classic / Sea View,Sea View,3,Standard
+510,1410519,Junior Suite Single,City View,2,Standard
+511,1410520,Junior Suite Double,City View,2,Standard
+512,1410521,Junior Suite Twin,City View,2,Standard
+513,1410522,Junior Suite Triple,City View,3,Standard
+514,1410523,Executive Suite Single,City View,1,Standard
+515,1410524,Executive Suite Double,City View,2,Standard
+516,1410525,Executive Suite Twin,City View,2,Standard
+517,1410526,Executive Suite Triple,City View,3,Standard
+518,1410527,Classic Suite / City View,City View,2,1 Bed Room
+519,1410528,Classic Suite / Sea View,Sea View,2,1 Bed Room
+520,1410529,Diplomatic Suite / City View,City View,4,2 Bed Room
+521,1410530,Diplomatic Suite / Sea View,Sea View,4,2 Bed Room
+522,1410611,Single Deluxe,City View,1,Standard
+523,1410612,Double Deluxe,City View,2,Standard
+524,1410613,Twin  Deluxe,City View,2,Standard
+525,1410614,Triple Deluxe,City View,3,Standard
+526,1410711,Single,City View,1,Standard
+527,1410712,Double,City View,2,Standard
+528,1410713,Twin,City View,2,Standard
+529,1410714,Triple,City View,3,Standard
+530,1410715,Single Club,City View,1,Club
+531,1410716,Double Club,City View,2,Club
+532,1410717,Twin Club,City View,2,Club
+533,1410811,Single Standard,City View,1,Standard
+534,1410812,Double Standard,City View,2,Standard
+535,1410813,Twin Standard,City View,2,Standard
+536,1410814,Triple Standard,City View,3,Standard
+537,1410815,Single Superior Deluxe,City View,1,Superior Deluxe
+538,1410816,Double Superior Deluxe,City View,2,Superior Deluxe
+539,1410817,Twin Superior Deluxe,City View,2,Superior Deluxe
+540,1410818,Triple Superior Deluxe,City View,3,Superior Deluxe
+541,1410911,Single,City View,1,Standard
+542,1410912,Double,City View,2,Standard
+543,1410913,Twin,City View,2,Standard
+544,1410914,Triple,City View,3,Standard
+545,1410915,Suite,City View,2,1 Bedroom  + 1 Living  Rooms + 2 Bathroom
+546,1411011,Single,City View,1,Standard
+547,1411012,Double,City View,2,Standard
+548,1411013,Twin,City View,2,Standard
+549,1411014,Triple,City View,3,Standard
+550,1411015,Junior  Suite,City View,2,1 Bedroom + 1 Livingroom + 1 Bathroom
+551,1411016,Terrce  Suite,City View,4,2 Bedroom + 1 Livingroom + 2 Bathroom
+552,1411111,Single,City View,1,Standard
+553,1411112,Double,City View,2,Standard
+554,1411113,Twin,City View,2,Standard
+555,1411114,Triple,City View,3,Standard
+556,1411211,Single,City View,1,Normal
+557,1411212,Double,City View,2,Normal
+558,1411213,Twin,City View,2,Normal
+559,1411214,Triple,City View,3,Normal
+560,1411215,Bunglow,City View,2,like Suite 1 Bed Room + 1 bathroom
+561,1411311,Single,City View,1,Standard
+562,1411312,Double,City View,2,Standard
+563,1411313,Twin,City View,2,Standard
+564,1411314,Triple,City View,3,Standard
+565,1411411,Single,City View,1,Normal
+566,1411412,Double,City View,2,Normal
+567,1411413,Twin,City View,2,Normal
+568,1411414,Triple,City View,3,Normal
+569,1411415,Suite,City View,4,2 Bedroom + 1 Livingroom + 2 Bathrooms
+570,1411511,Single,City View,1,Standard
+571,1411512,Double,City View,2,Standard
+572,1411513,Twin,City View,2,Standard
+573,1411514,Triple,City View,3,Standard
+574,1411611,Single,City View,1,Standard
+575,1411612,Double,City View,2,Standard
+576,1411613,Twin,City View,2,Standard
+577,1411614,Executive Suite,City View,4,2 Bedroom + 1 Livingroom + 1 Sitting + 2 Bathroom
+578,1411711,Single,City View,1,Normal
+579,1411712,Double,City View,2,Normal
+580,1411713,Twin,City View,2,Normal
+581,1411714,Triple,City View,3,Normal
+582,1411715,Suite,City View,2,1 Bedroom + 1 Diningroom + 1 Kitchen + 1 Toilet
+583,1411811,Single,City View,1,Normal
+584,1411812,Double,City View,2,Normal
+585,1411813,Twin,City View,2,Normal
+586,1411814,Triple,City View,3,Normal
+587,1411815,Suite,City View,2,1 Bedroom + 1 Toilet
+588,1411911,Single,City View,1,Normal
+589,1411912,Double,City View,2,Normal
+590,1411913,Twin,City View,2,Normal
+591,1412011,Single,City View,1,Normal
+592,1412012,Duolbe,City View,2,Normal
+593,1412013,Twin,City View,2,Normal
+594,1412014,Suite,City View,2,1 Bedroom + 1Saloon + 1 Toilet
+595,1412111,Double,City View,2,1 Bedroom + 1 Bathroom
+596,1412112,Suite 2 paxs,City View,2,1 Bedroom  + 1 Kitchen + 1 Saloon + 1 Bathroom
+597,1412113,Apartment 2 B/R,City View,4,2 Bedroom + 1 Saloon + 1 Kitchen + 2 Bathroom - for 5 paxs
+598,1412114,Apartment 3 B/R,City View,6,3 Bedroom + 1 Saloon + 1 Kitchen + 3 Bathroom - for  8 paxs
+599,1412211,Plaza Suite,City View,1,1 Bedroom + 1 Bathroom + 1 Small Kitchen
+600,1412212,Executive Suite,City View,2,1 King Size Bedroom + 1 Saloon + 1 Family Bathroom+ 1 Kitchen
+601,1412213,Ambassador Suite,City View,2,1 Master BedRoom + 1 Kitchen Saloon +  1 Bathroom + 1 Sallon
+602,1412214,Diplomatic Suite,City View,2,1 Master BedRoom + Big Saloon + 1 Bathroom + 1 Kitchen
+603,1412215,Amiri Suite,City View,2,1 Master BedRoom +  +  2 Kingsize Bedroom+ Bathroom + 1 Kitchen + Big Saloon
+604,1412216,Royal Suite,City View,2,1 Master Bedroom + Bathroom + 1 Bedroom + 1 Kitchen + Big Saloon
+605,1412311,Single,City View,1,Normal
+606,1412312,Double,City View,2,Normal
+607,1412313,Twin,City View,2,Normal
+608,1412314,Triple,City View,3,Normal
+609,1412315,Junior Suite,City View,2,Normal
+610,1412411,Studio,City View,2,Capacity 2 Paxs
+611,1412412,Junior Suite,City View,4,Capacity 4 Paxs
+612,1412413,Deluxe Suite,City View,2,Capacity 2 Paxs
+613,1412414,Diplomatic Suite,City View,2,Capacity 2 Paxs
+614,1412415,Princely Suite,City View,4,Capacity 4 Paxs
+615,1412416,Dup. Queen Suite,City View,4,Capacity 4 Paxs
+616,1412417,Dup. King Suite,City View,6,Capacity 6 Paxs
+617,1412418,Royal Suite,City View,7,Capacity 7 Paxs
+618,1412419,Presidential Suite,City View,6,Capacity 6 Paxs
+619,1412420,PentHouse,City View,4,Capacity 4 Paxs
+620,1412421,Executive  Suite,City View,4,Capacity 4 Paxs
+621,1412422,VIP Suite,City View,2,Capacity 2 Paxs
+622,1412511,Single Bed Suite,City View,1,Normal
+623,1412512,Double Bed Suite,City View,2,Normal
+624,1412513,Twin Bed Suite,City View,2,Normal
+625,1412514,Triple Bed Suite,City View,3,Normal
+626,1412515,Royal Suite,City View,2,Normal
+627,1412611,Double / Sea view,Sea View,2,1 Bedroom + Bathroom
+628,1412612,Double / City view,City View,2,1 Bedroom + Bathroom
+629,1412613,Suite,City View,2,1 Bedroom + Bathroom + Living Room + Kitchen
+630,1412614,Bungalows,City View,2,1 Bedroom + Bathroom + Living Room + Kitchen
+631,1412615,Standard Suite,City View,2,1 Bedroom + 1 living / Dining + 1 Bathroom
+632,1412616,Diplomatic Suite,City View,4,2 Bedroom + 1 living / Dining + 2 Bathroom
+633,1412617,Royal Suite,City View,6,3 Bedroom + 1 living / Dining + 2 Bathroom
+634,1412711,Studio Suite,City View,2,1 Bed Room + Living Room + 1 Bathroom + Balcony
+635,1412712,Prince Suite,City View,2,1 Bed Room + Living Room + 1 Bathroom + Balcony
+636,1412713,Rotana Suite,City View,2,1 Bed Room + Living Room + 1 Bathroom + Balcony
+637,1412714,Royal Suite,City View,4,2 Bed Room + Living Room + 1 Bathroom + Balcony
+638,1412811,Small Suite,City View,2,Normal
+639,1412812,Business Suite,City View,2,Normal
+640,1412813,Amiri Suite,City View,2,Normal
+641,1412814,Royal Suite,City View,2,Normal
+642,1310111,Single Standard,City View,1,Standard
+643,1310112,Double Standard,City View,2,Standard
+644,1310113,Twin Standard,City View,2,Standard
+645,1310114,Single Superior King,City View,1,Superior King
+646,1310115,Double Superior King,City View,2,Superior King
+647,1310116,Twin Superior King,City View,2,Superior King
+648,1310117,Single Deluxe King,City View,1,Deluxe King
+649,1310118,Double Deluxe King,City View,2,Deluxe King
+650,1310119,Twin Deluxe King,City View,2,Deluxe King
+651,1310120,Four Seasons Executive Suite,City View,2,Executive Suite
+652,1310211,Single Superior,City View,1,Standard
+653,1310212,Double Superior,City View,2,Standard
+654,1310213,Twin Superior,City View,2,Standard
+655,1310214,Single Deluxe,City View,1,Deluxe
+656,1310215,Double Deluxe,City View,2,Deluxe
+657,1310216,Twin Deluxe,City View,2,Deluxe
+658,1310217,Junior Suite,City View,2,1 Bedroom + 1 Sittingroom + 1 Toilet
+659,1310218,Executive Suite,City View,2,1 Bedroom + 1 Sitting + 1 Toilet all is Big size
+660,1310311,Single Classic Rooms,City View,1,Classic room
+661,1310312,Double Classic Rooms,City View,2,Classic room
+662,1310313,Twin Classic Rooms,City View,2,Classic room
+663,1310314,Suite Classic Rooms,City View,2,Classic room
+664,1310315,Small Villa,City View,4,villa 2 Bedroom + 1 Dining  + 1 Living +1 Toilet
+665,1310316,Large Villa,City View,6,villa 3 Bedroom + 1 Dining  + 1 Living + 2 Toilet
+666,1310317,Royal Suite,City View,6,
+667,1310318,Single Club Rooms,City View,1,Club Room - only Sheraton Club Member
+668,1310319,Double Club Rooms,City View,2,Club Room - only Sheraton Club Member
+669,1310320,Twin Club Rooms,City View,2,Club Room - only Sheraton Club Member
+670,1310321,Suite Club Rooms,City View,2,Club Room - only Sheraton Club Member
+671,1310322,Single Towers Rooms,City View,1,Towers Room
+672,1310323,Double Towers Rooms,City View,2,Towers Room
+673,1310324,Twin Towers Rooms,City View,2,Towers Room
+674,1310325,Suite Towers Rooms,City View,2,Towers Room
+675,1310411,Single Deluxe,City View,1,Located in Main Building
+676,1310412,Double Deluxe,City View,2,Located in Main Building
+677,1310413,Twin Deluxe,City View,2,Located in Main Building
+678,1310414,Single Club,City View,1,Club Inter-Continental
+679,1310415,Double Club,City View,2,Club Inter-Continental
+680,1310416,Twin Club,City View,2,Club Inter-Continental
+681,1310417,Business Single Room,City View,1,Club Inter-Continental
+682,1310511,Single Standard,City View,1,Standard
+683,1310512,Double Standard,City View,2,Standard
+684,1310513,Twin Standard,City View,2,Standard
+685,1310514,Junior Suite,City View,2,1 Bedroom + Sitting Room +1 Toilet
+686,1310515,Large Suite,City View,4,2 Bedrooms King Size + Sitting Room +1 Toilet
+687,1310611,Single Standard,City View,1,Standard
+688,1310612,Double Standard,City View,2,Standard
+689,1310613,Twin Standard,City View,2,Standard
+690,1310614,Junior Suite,City View,2,Standard - 1 Bedroom + 1 Dinning + 2 Toilet
+691,1310615,Senior Suite,City View,2,
+692,1310616,Royal Suite,City View,2,Standard - 1 Bedroom + 1 Big Dinning + 1 Sitting rm + 1 Kitchen + 3 Toilet
+693,1310617,Single Executive  Room,City View,1,Executive
+694,1310618,Double Executive  Room,City View,2,Executive
+695,1310711,Standard Deluxe Single,City View,1,1 Bedroom + 1 Toilet
+696,1310712,Standard Deluxe Double,City View,2,
+697,1310713,Standard Deluxe Twin,City View,2,
+698,1310714,Standard Deluxe Triple,City View,3,
+699,1310715,Superior Deluxe Single,City View,1,
+700,1310716,Superior Deluxe Double,City View,2,
+701,1310717,Superior Deluxe Twin,City View,2,
+702,1310718,Superior Deluxe Triple,City View,3,
+703,1310719,Royal Club Single,City View,1,
+704,1310720,Royal Club Double,City View,2,
+705,1310721,Royal Club Twin,City View,2,
+706,1310722,Royal Club Triple,City View,3,
+707,1310723,Diplomatic Suite,City View,2,
+708,1310724,Royal Suite,City View,2,
+709,1310811,Single Deluxe,City View,1,Deluxe Room
+710,1310812,Double Deluxe,City View,2,Deluxe Room
+711,1310813,Twin Deluxe,City View,2,Deluxe Room
+712,1310814,Single Executive,City View,1,Executive Room
+713,1310815,Double Executive,City View,2,Executive Room
+714,1310816,Twin Executive,City View,2,Executive Room
+715,1310817,Junior Suite,City View,2,Suite
+716,1310818,Business Suite,City View,2,Suite
+717,1310819,Executive Suite,City View,2,Suite
+718,1310820,Royal Suite,City View,2,Suite
+719,1310911,Single,City View,1,Standard
+720,1310912,Double,City View,2,Standard
+721,1310913,Twin,City View,2,Standard
+722,1310914,Triple,City View,3,Standard
+723,1310915,Executive Suite,City View,2,1 Bedroom + 1 Meeting room + 2 Toilet
+724,1311011,Single Standard,City View,1,Standard
+725,1311012,Double Standard,City View,2,Standard
+726,1311013,Twin Standard,City View,2,Standard
+727,1311014,Suite Standard,City View,2,1 Bedroom + 1 Toilet
+728,1311015,Single Deluxe,City View,1,Deluxe
+729,1311016,Double Deluxe,City View,2,Deluxe
+730,1311017,Twin Deluxe,City View,2,Deluxe
+731,1311018,Suite Deluxe,City View,2,Deluxe
+732,1311019,Single Busines Man Room,City View,1,Business Man
+733,1311020,Double Business Man Room,City View,2,Business Man
+734,1311021,Twin Business Man Room,City View,2,Business Man
+735,1311022,Suite Business Man Room,City View,2,Business Man
+736,1311111,Single Classic Room,City View,1,Normal
+737,1311112,Double Classic Room,City View,2,Normal
+738,1311113,Twin Classic Rooms,City View,2,Normal
+739,1311114,Suite Classic Room,City View,2,1 Bedroom + 1 Sittingroom + 1 Toilet
+740,1311115, Single Executive Room,City View,1,
+741,1311116,Double Executive  Room,City View,2,
+742,1311117,Twin Executive Room,City View,2,
+743,1311118,Suite Executive Room,City View,2,
+744,1311211,Single Standard,City View,1,Standard
+745,1311212,Double Standard,City View,2,Standard
+746,1311213,Twin Standard,City View,2,Standard
+747,1311214,Single Executive,City View,1,Executive
+748,1311215,Double Executive,City View,2,Executive
+749,1311216,Twin Executive,City View,2,Executive
+750,1311217,Junior  Suite,City View,2,1 Bedroom + 1 Sitting + 1 Toilet
+751,1311218,Executive Suite,City View,2,1 Bedroom + 1 Sitting + 1 Toilet
+752,1311311,Single Executive,City View,1,Executive Rooms
+753,1311312,Double Executive,City View,2,Executive Rooms
+754,1311313,Executive Suite,City View,2,Executive Rooms
+755,1311411,Single,City View,1,Normal
+756,1311412,Double,City View,2,Normal
+757,1311413,Twin,City View,2,Normal
+758,1311414,Small Suite,City View,2,Normal
+759,1311415,Large Suite,City View,2,Normal
+760,1311416,Villa - Family,City View,3,Normal
+761,1311511,Single Standard,City View,1,Standard
+762,1311512,Double Standard,City View,2,Standard
+763,1311513,Twin Standard,City View,2,Standard
+764,1311514,Triple Standard,City View,3,Standard
+765,1311515,Suite Standard,City View,2,Standard
+766,1311516,Single VIP Room,City View,1,VIP Room
+767,1311517,Double VIP Room,City View,2,VIP Room
+768,1311518,Twin VIP Room,City View,2,VIP Room
+769,1311519,Triple VIP Room,City View,3,VIP Room
+770,1311520,Suite VIP Room,City View,2,VIP Room
+771,1311611,Single Studio,City View,1,Standard
+772,1311612,Double Studio,City View,2,Standard
+773,1311613,Executive Suite,City View,2,Standard
+774,1311614,Al-Khozama Suite,City View,2,Standard
+775,1311711,Single,City View,1,Standard
+776,1311712,Double,City View,2,Standard
+777,1311713,Twin,City View,2,Standard
+778,1311714,Single Suite,City View,1,Standard
+779,1311715,Double Suite,City View,2,Standard
+780,1311716,Large Single Suite,City View,1,Standard
+781,1311717,Large Double Suite,City View,2,Standard
+782,1311811,Single Standard,Standard,1,Standard
+783,1311812,Double Standard,Standard,2,Standard
+784,1311911,Al-Ofok Chalet ( Medium ),Sea View,2,Standard
+785,1311912,Al-Waha Chalet ( Big ),Sea View,3,Standard
+786,1311913,Al-Nakheel (2 Connected Chalets ),Sea View,2,Standard
+787,1311914,Royal Chalet,Sea View,4,Standard
+788,1311915,Royal Suite,Sea View,4,Standard
+789,1910111,Single,City View,1,Standard
+790,1910112,Double,City View,2,Standard
+791,1910113,Twin,City View,2,Standard
+792,1910114,Executive Suite,City View,2,1 Bed Room + 1 Sitting + 1 Kitchen + 1 Toilet
+793,1910115,Presidential Suite,City View,4,
+794,1910116,Royal Suite,City View,4,
+795,1910117,Villa 3 Bed Room,City View,6,3 Bed Room + 1 Kitchen + 1 laonch + 5 Toilet
+796,1910118,Villa 4 Bed Room,City View,8,4 Bed Room + 1 Kitchen + 2 laonch + 6 Toilet
+797,1910119,Villa 5 Bed Room,City View,10,5 Bed Room + 1 Kitchen + 2 laonch + 7 Toilet
+798,1910211,Single Deluxe,City View,1,Deluxe
+799,1910212,Double Deluxe,City View,2,Deluxe
+800,1910213,Junior Suite,City View,2,1 Bed Room + 1 Kitchen + 1 Bath Room
+801,1910214,Executive Suite,City View,2,1 Bed Room + large Balconie1 Kitchen + 1 Bath Room
+802,1910215,Royal Suite,City View,4,2 Bed Room connecting + 1 living Room + 1 Dinning Room + 1 Kitchen + 1 Master Bath Room + Jacuzzi
+803,1910311,Double,City View,2,Capacity of 2 Adults
+804,1910312,Junior Suite,City View,2,Capacity of 2 Adults +  Suite Type
+805,1910313,2 Bed Apartment,City View,4,2 Bed Room + Dining Room + 1 Bathroom  -  Capacity 4 Adults
+806,1910314,3 Bed Apartment,City View,6,3 Bed Room + Dining Room + 1 Bathroom - Capacity 6 Adults
+807,1910315,3 Bed Villa City view,City View,6,3 Bed Room + Dining Room + 1 Bathroom - Capacity 6 Adults
+808,1910316,3 Bed Villa Lake view,Lake View,6,3 Bed Room + Dining Room + 1 Bathroom - Capacity 6 Adults
+809,1910411,Studio Single Room,City View,1,Capacity Single Only
+810,1910412,Studio Double Room,City View,2,Capacity 2 Adults
+811,1910413,2 Bed Room Villa,City View,4,2 Bed Room + Dining Room + 1 Bathroom -- Capacity 4 Adults
+812,1910414,3 Bed Room Villa - Al Sooda,City View,2,
+813,1910511,Single Standard,Standard,1,Standard
+814,1910512,Double Standard,Standard,2,Standard
+815,1910513,Twin Standard,Standard,2,Standard
+816,1910514,Triple Standard,Standard,3,Standard
+817,1910515,Suite Standard,Standard,2,Standard
+818,1910611,Villa 3 Room,City View,6,3 Bed Room + 1 Dinning + 1 Kitchen + 1 Bathroom
+819,1910612,Large Villa 3 Room,City View,6,3 Bed Room + 1 Dinning + 1 Kitchen + 2 Bathroom + Balcony + Large Type
+820,1910613,Large Villa 4 Room,City View,8,4 Bed Room + 1 Dinning + 1 Kitchen + 2 Bathroom
+821,1510111,Single,City View,1,Standard
+822,1510112,Double,City View,2,Standard
+823,1510113,Twin,City View,2,Standard
+824,1510211,Single,City View,1,Standard
+825,1510212,Double,City View,2,Standard
+826,1510213,Twin,City View,2,Standard
+827,1510214,Famaily 2 Bed Room,City View,4,2 Bedroom + 1 Toilet
+828,1510215,Suite,City View,2,1 Bedroom + 1 Lobbe + 1 Toilet
+829,1510311,Single Classic Room,City View,1,Classic
+830,1510312,Double Classic Room,City View,2,Classic
+831,1510313,Twin Classic Room,City View,2,Classic
+832,1510314,Single Tower Room,City View,1,Towers
+833,1510315,Double Tower Room,City View,2,Towers
+834,1510316,Twin Tower Room,City View,2,Towers
+835,1510317,Junior Suite,City View,2,Suites
+836,1510318,Executive Suite,City View,2,Suites
+837,2010111,Single Standard,City View,1,Standard
+838,2010112,Double Standard,City View,2,Standard
+839,2010113,Twin Standard,City View,2,Standard
+840,2010114,Single Royal Club,City View,1,Royal Club
+841,2010115,Double Royal Club,City View,2,Royal Club
+842,2010116,Twin Royal Club,City View,2,Royal Club
+843,2010211,Junior Suite  Single Occupancy,City View,1,1 Bed Room + 1 Living Room
+844,2010212,Junior Suite  Double Occupancy,City View,2,1 Bed Room + 1 Living Room
+845,2010213,Diplomat Suite,Corniche View,4,2 Bed Room + 1 Living Room
+846,2010214,Deluxe Suite,Town View,4,2 Bed Room + 1 Living Room
+847,2010215,Superior Suite,Town View,4,2 Bed Room + 1 Living Room
+848,2010216,Executive Suite,Town View,4,2 Bed Room + Maid Room +  1 Living Room
+849,2010217,Regent Suite,Corniche View,4,2 Bed Room + Maid Room +  1 Living Room
+850,2010218,Majestic Suite,Corniche View,4,Bed Room + 1 Living Room
+851,2010311,Single / City View,City View,1,Normal
+852,2010312,Double / City View,City View,2,Normal
+853,2010313,Twin / City View,City View,2,Normal
+854,2010314,Business Suite,City View,2,Normal
+855,2010315,Deluxe Suite,City View,2,Normal
+856,2010411,Small Suite,City View,2,Dublex Kitchen  + Dining Table + Seating room+ 1 Bedroom + 1 Changing room ( 2nd floor )
+857,2010412,Medium Suite,city View,4,Dublex Kitchen  + Dining Table + Seating room+ 2 Bedroom + Saloon + 1 Changing room ( 2nd floor ) - villa
+858,2010413,Large Suite,city View,6,Dublex Kitchen  + Dining Table + Seating room+ 3 Bedroom + Big Saloon+ 1 Changing room ( 2nd floor ) - villa
+859,2010511,Single,City View,1,Standard
+860,2010512,Double,City View,2,Standard
+861,2010513,Twin,City View,2,Standard
+862,2010514,Suite,City View,2,Standard
+863,2010611,Single,City View,1,Standard
+864,2010612,Double,City View,2,Standard
+865,2010613,Twin,City View,2,Standard
+866,2010614,Small Suite,City View,2,1 Bedroom + 1 Sitting rm + 1 Toilet
+867,2010615,Large Suite,City View,2,1 Bedroom + 1 Sitting  + 2 Toilet
+868,2010711,Single,City View,1,Standard
+869,2010712,Double,City View,2,Standard
+870,2010713,Twin,City View,2,Standard
+871,2010714,Triple,City View,3,Standard
+872,2010715,Junior Suite,City View,2,1 Bedroom + 1 Toilet
+873,2010716,Executive Suite,City View,2,1 Bedroom + 1 Toilet
+874,1610111,Single  Standard,City View,1,Standard
+875,1610112,Double Standard,City View,2,Standard
+876,1610113,Twin Standard,City View,2,Standard
+877,1610114,Triple Standard,City View,3,Standard
+878,1610115,Executive Suite,City View,2,1 Bedroom + Dinning/setting Room 1 Kitchen+ 1 Balcony
+879,1610116,Royal Suite,City View,4,2 Bedroom + 2 Dinning/ Setting+1 Kitchen + Balcony
+880,1610117,Small Villa,City View,4,2 Bedroom + Office Room + Dinning Room+ Kitchen + 1 Balcony
+881,1610118,Large Villa,City View,8,4 Bedroom + Office Room + Dinning room+ Kitchen +  1 Balcony
+882,1610211,Single,City View,1,Standard
+883,1610212,Double,City View,2,Standard
+884,1610213,Twin,City View,2,Standard
+885,1610214,Executive Suite,City View,2,1 Bedroom with Toilet + 1 Sitting room with Toilet
+886,1610215,Royal Suite,City View,3,1 Big Sitting room + 3 Bedroom+ 1 Kitchen+ Office room + 03 Toilet
+887,1610216,VIP Villa,City View,10,5 Bedroom with Toilet + 1 Sitting Room + 2 Dinning+ 1 Office room
+888,1610311,Junior Suite,City View,2,1 Bedroom + 1Sitting + 1 Dinning room+ 1 Private Bath / Shower + Kitchen  (Average Capacity 1 to 2 paxs only)
+889,1610312,Executive Suite,City View,4,2 Bedroom + 1 Sitting room + 1 Dinning+ 2 Private Bath + 1 Kitchen (Average Capacity 3 to 4 paxs only)
+890,1610313,Deluxe Villa,City View,6,3 Bedroom + 1 Sitting room + 1 Dinning+ 3 Private Bath + 1 Kitchen (Average Capacity 6 to 7 paxs only)
+891,1610314,Royal Villas,City View,6,3 Bedroom + 1 Sitting room + 1 Dinning+ 3 Private Bath  + 1 Kitchen (Average Capacity 6to 7 paxs only)
+892,1610411,Single / City View,City View,1,Standard
+893,1610412,Double / City View,City View,2,Standard
+894,1610413,Twin / City View,City View,2,Standard
+895,1610414,Wing Room,City View,2,Standard
+896,1610511,Rooms,City View,2,Standard
+897,1610512,Studios,City View,2,Standard
+898,1610513,Suite Amiry,City View,2,Standard
+899,1610514,Suite Family,City View,2,Standard
+900,1610515,Villa,City View,6,Standard
+901,1610516,Large Villa,City View,6,Standard
+902,1610517,Royal Suite,City View,6,Standard
+903,1710111,Single,City View,1,Standard
+904,1710112,Double,City View,2,Standard
+905,1710113,Twin,City View,2,Standard
+906,1710211,Single / City View,City View,1,Standard
+907,1710212,Double / City View,City View,2,Standard
+908,1710213,Twin / City View,City View,2,Standard
+909,2310111,Single Standard Room,City View,1,Standard
+910,2310112,Double Standard Room,City View,2,Standard
+911,2310113,Twin Standard Room,City View,2,Standard
+912,2310114,Executive Suite,City View,3,Standard -1 Bed + 1 Extra Bed
+913,2310115,Presidental Suite,City View,2,Standard - 1 Bed room + 1 living rm + 1 Toilet
+914,2310116,Royal Suite,City View,2,Standard - 1 Bed room + 1 living rm + 1 Toilet
+915,2310117,Single Club Room,City View,1,Club Room
+916,2310118,Doulbe Club Room,City View,2,Club Room
+917,2310119,Twin Club Room,City View,2,Club Room
+918,2310120,Business Club Suite,City View,3,Club Room - 1 Bed + 1 Extra Bed
+919,2510111,Single Classic Room,City View,1,Classic
+920,2510112,Double Classsic Room,City View,2,Classic
+921,2510113,Business Suite,City View,2,Classic
+922,2510114,Single Executive Room,City View,1,Executive
+923,2510115,Double Executive Room,City View,2,Executive
+924,2510116,Executive Suite,City View,2,Executive
+925,2510211,Single Unites,City View,1,Standard
+926,2510212,Single Villa,City View,2,Standard
+927,2510213,Double Villa,City View,2,Standard
+928,2510214,Suite Ameeri,City View,2,Standard
+929,2510215,Royal Suite,City View,2,Standard
+930,2110111,Single / City View,City View,1,Standard
+931,2110112,Double / City View,City View,2,Standard
+932,2110113,Twin / City View,City View,2,Standard
+933,2110114,Junior Suite,City View,2,Standard
+934,2110115,Executive Suite,City View,2,Standard
+935,2110116,Royal Suite,City View,2,Standard
+936,2110211,Small Studio,City View,1,Small Room For 1 Pax + Kitchen + Bathroom
+937,2110212,Large Studio,City View,2,Large Room For 2 Paxs + Sitting Room + Bathroom +Kitchen
+938,2110213,Family Suite,City View,2,King Bedroom + Family Siitting Room + Kitchen + Bathroom
+939,2110214,Small Apartment,City View,4,2 Bedroom + Family Room + Kitchen + 2 Bathroom +Enough For 4 Paxs
+940,2110215,Large Apartment,City View,6,3 Bedroom + Family Room + Kitchen +2  Bathroom + Enough For 5 Paxs
+941,1810111,Single / City View,City View,1,Standard
+942,1810112,Double / City View,City View,2,Standard
+943,1810113,Twin / City View,City View,2,Standard
+944,1210125,Quard / City View,City View,4,Standard
+945,1114211,Single / City View,City View,1,"Standard
+"
+946,1114212,Double / City View,City View,2,Standard
+947,1114213,Triple / City View,City View,3,Standard
+948,1114311,Double / City View,City View,2,"Standard
+"
+949,1114312,Triple / City View,City View,3,Standard
+950,1114313,Quard / City View,City View,4,"Standard
+"
+951,2010316,Suite / 01 Bed Room,City View,2,"01 Bed Room Suite
+"
+952,2010317,Suite / 02 Bed Room,City View,4,"02 Bed Room Suite
+"
+953,1114411,Single / City View,City View,1,01 Bed Delexue Room
+954,1114412,Double / City View,City View,2,01 Bed Deluxe Room
+955,1114413,Twin / City View,City View,2,02 Bed Deluxe Room
+956,1114414,Single / Haram View,Haram View,1,01 Bed Deluxe Room
+957,1114415,Double / Haram View,Haram View,2,01 Bed Deluxe Room
+958,1114416,Twin / Haram View,Haram View,2,02 Bed Deluxe Room
+959,1114417,Double / Superior Haram View,Superior Haram View,2,01 Bed Superior Haram View Room
+960,1114418,Twin / Superior Haram View,Superior Haram View,2,02 Bed Superior Haram View Room
+961,1114419,Executive Suite,City View,3,01 Bed + One Living Room + One Bathroom
+962,1114420,Diplomatic Suite,City View,3,01 Bedroom + One Living Room  +  One Dining Room + 2 Bath Rooms
+963,1114421,Royal Suite,City View,4,02 Bedrooms + One Living room + One Dining Room + Kitchen + 2 Bathrooms
+964,1310418,Junior Suite,City View,2,"01 Bed Room
+"
+965,1114422,Triple / City View,City View,3,01 King Size Bed + 01 Extra Bed 
+966,1210415,Executive Suite,City View,4,2 Bed Room City View for 4 paxs
+967,1210315,Presidential Suite,Haram View,6,03  Bed Rooms + 1 Living Room 
+968,1210416,Suite 03 Bed Room / Haram View,Haram View,6,"03 Bed Room Suite
+"
+969,1412911,Single,City View,1,01 Standard King Size Bed
+970,1114423,Triple / Haram View,City View,3,01 King Size Bed + 01 Extra Bed 
+971,1412912,Double,City View,2,01 Standard King Size Bed
+972,1412913,Triple,City View,3,Standard
+973,1412914,Business Suite,City View,2,01 Standard Bed
+974,1412915,Deluxe Suite,City View,2,Large Standard Room 
+975,1210316,Executive Suite,Haram View,2,2 Bed Room Haram View + Living Room
+976,1112715,Quard,City View,4,Quard Room ( 4 paxs only)
+977,1210216,Presidential Suite,City View,4,02 Bed Room + 1 Living Room
+978,1213311,Single,City View,1,1 Bed Room
+979,1213312,Double,City View,2,1 Double Bed Room
+980,1213313,Triple,City View,3,Triple Bed Room
+981,1213314,Quard,City View,4,4 Bed Room
+982,1213411,Double,City View,2,1 Double Bed Room
+983,1213412,Triple,City View,3,1 Triple Bed Room 
+984,1213413,Quard,City View,4,1  4 bed room
+985,1213414,5 Beds,City View,5,1 5 bed room
+986,1213415,6 Beds,City View,6,6 Bed Room
+987,1114511,Double,City View,2,1 Doulbe Bed Room
+988,1114512,Triple,City View,3,1 Triple Bed Room
+989,1114513,Quard,City view,4,1 Four Bed Room
+990,1114611,Double,City View,2,2 Bed Room
+991,1114612,Triple,City View,3,3 Bed Room
+992,1114613,Quard,City View,4,4 Bed Room
+993,1114711,Double,City View,2,2 Bed Room
+994,1114712,Triple,City View,3,3 Bed Room
+995,1114713,Quard,City View,4,4 Bed Room
+996,1213511,Double,City View,2,2 Bed Room
+997,1213512,Triple,City View,3,3 Bed Room
+998,1213513,Quard,City View,4,4 Bed Room
+999,1114811,Triple,City View,3,3 Bed Room
+1000,1114812,Quard,City View,4,4 Bed Room
+1001,1114911,Triple,City View,3,3 Bed Room 
+1002,1114912,Quard,City View,4,4 Bed Room
+1003,1213611,Double,City View,2,2 Bed Room
+1004,1213612,Triple,City View,3,3 Bed Room
+1005,1213613,Quard,City View,4,4 Bed Room
+1006,1213712,Double,City View,2,2 Bed Room
+1007,1213713,Triple,City View,3,3 Bed Room
+1008,1213711,Quard,City View,4,4 Bed Room
+1009,1213811,Double,City View,2,2 Bed Room
+1010,1213812,Triple,City View,3,3 Bed Room
+1011,1213813,Quard,City View,4,4 Bed Room
+1012,1213911,Double,City View,2,2 Bed Room
+1013,1213912,Triple,City View,3,3 Bed Room
+1014,1213913,Quard,City View,4,4 Bed Room
+1015,1214011,Double,City View,2,2 Bed Room
+1016,1214012,Triple,City View,3,3 Bed Room
+1017,1214013,Quard,City View,4,4 Bed Room
+1018,1214111,Double,City View,2,2 Bed Room
+1019,1214112,Triple,City View,3,3 Bed Room
+1020,1214113,Quard,City View,4,4 Bed Room
+1021,1214211,Double,City View,2,2 Bed Room
+1022,1214212,Triple,City View,3,3 Bed Room
+1023,1214213,Quard,City View,4,4 Bed Room
+1024,1214311,Double,City View,2,2 Bed Room
+1025,1214312,Triple,City View,3,3 Bed Room
+1026,1214313,Quard,City View,4,4 Bed Room
+1027,1214411,2 Bed Room Suite,City View,4,2 Bed Room + 2 Bathrooms + 1 Kitchen
+1028,1214511,Single,City View,1,1 Bed Room
+1029,1214512,Double,City View,2,2 Bed Room
+1030,1214513,Triple,City View,3,3 Bed Room
+1031,1610611,Double Classic,City View,2,1 Double Bed room 
+1032,1214611,2 Bed Room Suite,City View,4,2 Bed Room Suite
+1033,1115011,Quard,City View,4,Quard Room
+1034,1110335,Quard City View,City View,4,Quard City View Room
+1035,1213116,Suite ( 2 Bed ),City View,4,2 Bed Room Suite
+1036,1214711,Triple,City View,3,3 Bed Room
+1037,1214712,Quard,City View,4,4 Bed Room
+1038,1115111,Single / City View,City View,1,1 Single Bed Room
+1039,1115112,Double /  City View,City View,2,1 Double Bed Room
+1040,1115113,Triple / City View,City View,3,1 Triple Bed Room
+1041,1115114,Single / Haram View,Haram View,1,1 Single Bed Room
+1042,1115115,Double / Haram View,Haram View,2,1 Double Bed Room
+1043,1115116,Triple / Haram View,Haram View,3,1 Triple / Haram View
+1044,1115117,Junior Suite / Haram View,Haram View,2,2 Bed Junior Suite / Haram View
+1045,1115211,Single,City View,1,1 Single Bed Room
+1046,1115212,Double,City View,2,2 Bed Room
+1047,1115213,Triple,City View,3,1 Triple Bed Room
+1048,1115214,Quard,City View,4,1 Quard Room
+1049,1213117,Single / Haram View,Haram View,1,1 Single Room
+1050,1213118,Double / Haram View,Haram View,2,1 Double Room
+1051,1210317,Double / Haram View,Haram View,2,"Standard
+"

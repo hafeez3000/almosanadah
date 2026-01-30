@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+       "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="fr">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <title>Historique des changements</title>
+</head>
+
+<body xml:lang="fr">
+<h2>Historique des changements</h2>
+
+<h3>1.x</h3>
+
+<h3>0.9.x</h3>
+<ul>
+  <li>Les répertoires et les fichiers sont maintenant créés avec les
+    droits 0700 (merci à Thomas Lußnig pour la remarque)</li>
+  <li>Nouvelle traduction Bulgare <code>bg_BG</code> (merci à Marko
+  Nikolov)</li>
+  <li>Bug fix : le parsing des URL était stoppé par la présence d'un
+    <code>':'</code> ou d'un <code>';'</code> (thanks to Shimodax)</li>
+</ul>
+
+<h3 id="v1.0-beta6">1.0-beta6 le 04/09/2006</h3>
+<ul>
+  <li>Rend possible l'utilisation de <code>frozen_nick</code> avec un
+    pseudonyme vide. Ainsi c'est possible de choisir son pseudo à la
+    première connexion et ensuite c'est impossible de le changer.</li>
+  <li>On peut maintenant forcer un utilisateur à changer de pseudo
+    dynamiquement (ex: si l'utilisateur change de pseudo dans le système
+    d'authentification hote). Pour cela il suffit d'assigner un nouveau nick
+    dans les parametres en plein milieu de l'execution. Bien sur
+    <code>frozen_nick</code> doit être activé!</li>
+  <li>Bug fix : the paramètre <code>width</code> ne fonctionnait pas.</li>
+  <li>Nouveau proxy <code>checktimeout</code> dont la fonction est de
+    déconnecter les utilisateurs qui sont en timeout.</li>
+  <li>Bug fix : la completion à l'aide de la touche TAB des pseudonymes ne
+    fonctionnait plus.</li>
+  <li>Bug fix : le caractere % n'était pas authorisé dans les urls ecrites
+    sur le chat.</li>
+  <li>Bug fix : les chemins à authoriser dans le proxy étaient mal
+    calculés.</li>
+  <li>Ajoute une nouvelle commande <code>/version</code> permettant
+    d'afficher le numéro de version de la version courante de
+  phpfreechat</li>
+  <li>Nouvelle commande <code>/help</code> permettant de lister les commandes
+    disponibles (dans le future elle permettra egalement de donner une
+    description de chaque commandes)</li>
+  <li>Bug fix : deux utilisateurs avec le même pseudo pouvaient parler
+    ensemble (merci à wjwlsn, SF bug <a
+    href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1555160&amp;group_id=158880&amp;atid=809601">1555160</a>)</li>
+  <li>Bug fix: sur certains serveurs (free.fr) la fonction php
+    <code>realpath()</code> ne retourne pas FALSE lorsque le fichier cible
+    n'existe pas.</li>
+  <li>Nouvelle fonctionnalité : lorsqu'un nouveau message est envoyé dans
+    une fenetre de chat inactive, le titre de cette fenetre est prefixé par
+    le nombre de nouveau messages envoyés (ce comportement peut etre
+    désactivé en mettant à false le paramètre
+  <code>notify_window</code>)</li>
+  <li>Bug fix : le parametre <code>max_text_len</code> ne fonctionnait pas
+    avec des chaines utf8 (non us-ascii).</li>
+  <li>Bug fix : ajout d'un compteur de references de facon a detecter
+    precisement lorsqu'un utilisateur est vraiment deconnect (fini les
+    '<code>* quit (timeout)</code>').</li>
+  <li>Retire le teste de fonctionnement de <code>rm_r</code> et
+    <code>copy_r</code> car depuis le refactoring, je ne copie plus de
+    repertoires entiers.</li>
+  <li>Bug fix : terminé les écrans blancs sous IE6!</li>
+  <li>Retire le parametre <code>frozen_channels</code> du cache. Il est ainsi
+    possible d'autoriser ou pas de rejoindre des salons en fonction de
+    parametres externes.</li>
+  <li>Refonte des command proxies : J'ai retire les parametre
+    '<code>proxy</code>'. J'ai ajoute le parametre '<code>skip_proxys</code>'
+    utilise pour desactive un proxy systeme (ex: <code>censor</code>). J'ai
+    ajoute le parametre '<code>post_proxys</code>' utilise pour ajouter a la
+    fin de la chaine son propre proxy. J'ai ajoute le parametre
+    '<code>pre_proxys</code>' utilise pour ajouter en debut de chaine son
+    propre proxy. J'ai ajoute le parametre '<code>proxys_path</code>' utilise
+    pour indiquer le repertoire ou se trouve vos proxy. J'ai finalement
+    ajoute la demo48 pour illustrer la puissance des proxy.</li>
+  <li>Maintenant les noms des commandes ne sont plus sensible à la
+  casse.</li>
+  <li>Grosse reorganisation des containers : ceci rend possible le travail
+    sur les metadonnees utilisateurs, regle un bug qui fesait que des
+    utilisateurs deconnectes en timeout n'etait pas correctement deconnecte
+    et resoud une fuitte de memoire dans le conteneur File.</li>
+  <li>Mise à jour de la traduction portugaise <code>pt_PT</code> (merci à
+    David Pinheiro)</li>
+  <li>Bug fix : le fichier proxy.php chargait très lentement les pages
+    lorsque gzhandler était active (merci à <a
+    href="http://www.freakboard.de">Alexander Blach et Andreas May</a>)</li>
+  <li>Nouveaux paramètres : '<code>max_channels</code>' permet de limiter
+    le nombre de channel qu'un utilisateur peut créer,
+    '<code>max_privmsg</code>' permet de limiter le nombre de messages
+    privés par utilisateur (sponsorisé par Johnny Philavanh : $30 USD)
+  [1h]</li>
+  <li>Renomme les nom des paramètres avec des fautes :
+    '<code>skip_proxys</code>' vers '<code>skip_proxies</code>',
+    '<code>post_proxys</code>' vers '<code>post_proxies</code>',
+    '<code>pre_proxys</code>' vers '<code>pre_proxies</code>',
+    '<code>proxys_cfg</code>' vers '<code>proxies_cfg</code>',
+    '<code>proxys_path</code>' vers '<code>proxies_path</code>', et
+    '<code>proxys_path_default</code>' vers
+    '<code>proxies_path_default</code>'.</li>
+  <li>Optimisation du CPU : depuis la mise en place du nouveau datamodel
+    certaines opérations n'étaient plus necessaire et consommaient du CPU
+    inutile.</li>
+  <li>Bug fix : la commande <code>/leave</code> ne fonctionnait plus</li>
+  <li>Amélioration du proxy noflood : maintenant il prend en compte le
+    nombre de caracteres postes ainsi que le nombre de messsages postes.</li>
+  <li>Ajout d'un bouton 'Envoyer' à droite de la boite de saisie des
+    messages (sponsorisé par Johnny Philavanh : $25 USD) [2h].</li>
+  <li>Optimisation de l'espace disque : lorsque le dernier utilisateur quitte
+    un salon ou un chat privé, l'historique des messages est automatiquement
+    effacé. [1h15]</li>
+  <li>Bug fix : lorsque un utilisateur est deconnecté par timeout a cause
+    de sa mauvaise connexion, ses metadonnees ne sont pas recrees car il ne
+    repasse pas par la commande /connect. La solution est d'appeler la
+    méthode /connect dans le cas ou l'on détecte que l'utilisateur n'est
+    plus online juste après sa deconnexion au moment du /update suivant.
+    [1h15]</li>
+  <li>Les couleurs BBCode sont maintenant plus flexibles : J'ai ajouté une
+    image transparente avec un fond de couleur variable. [45min]</li>
+</ul>
+
+<h3 id="v1.0-beta5">1.0-beta5 le 04/09/2006</h3>
+<ul>
+  <li>Gros refactoring :
+    <ul>
+      <li>Le paramètre <code>prefix</code> disparait. J'ai remplacé, pour
+        des raison de simplicité des développements futures, toutes les
+        variables <code>prefix</code> par la valeur <code>"pfc_"</code>.</li>
+      <li>Changement de façon pour gérer les ressources : les ressources
+        étaient copiés dans un répertoire public, maintenant elle sont
+        transmise par un fichier <code>proxy.php</code> au navigateur. Ce
+        fichier <code>proxy.php</code> est lui copié dans le répertoire
+        publique.</li>
+      <li>J'ai enlevé le code php dans les ressources javascript et css. De
+        cette façon on peut simplement include les fichier javascript dans
+        le html sans copier leur contenu dans le corps de la page. On gagne
+        en volume, et les pages sont ainsi plus légères -50% (de 80ko à
+        30ko).</li>
+      <li>Terminé les <code>chat-post.js.tpl.php</code>,
+        <code>chat-pre.js.tpl.php</code>, et
+        <code>pfcclient-custo.js.tpl.php</code>. Tous ces fichiers étaient
+        plus ou moins redondants, je les ai remplacé par un unique fichier :
+        <code>customize.js</code>.</li>
+      <li>La structure html du chat est maintenant générée par des
+        routines javascript en utilisant l'API du DOM.</li>
+    </ul>
+  </li>
+  <li>J'ai redessiné la skin par défault (nouveau fond et ajout de petite
+    pastilles). Je le trouve plus joli, vous aussi ?</li>
+  <li>Suppression du répertoire <code>contrib</code> juste avant de
+    générer l'archive, de façon à réduire la taille des archives zip et
+    tar.gz,</li>
+  <li>Bug fix : Lorsque la commande <code>/rehash</code> était lancée,
+    quelque fois, une alerte javascript montrant des erreurs d'include php
+    apparaissait.</li>
+  <li>Bug fix : la commande <code>/ban</code> ne fonctionnait plus (see, <a
+    href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1532838&amp;group_id=158880&amp;atid=809601">sourceforge
+    bug1532838</a>)</li>
+  <li>Mise à jour des traductions Russes (merci à Kamashev Maim)</li>
+  <li>Mise à jour des traductions Japonaises (merci à elf2000)</li>
+  <li>Bug fix : le parsing des URL était stoppé par la présence d'un
+    <code>':'</code> ou d'un <code>';'</code> (thanks to Shimodax)</li>
+  <li>Bug fix : les paramètres du proxy étaient passés avec le caractère
+    &amp; mais dans php il suffit de déclarer correctement le prototype de
+    la méthode pour initier un 'pass-by-reference'. (merci à John Mario
+    Cano pour le rapport)</li>
+  <li>Nouvelle traduction Polonaise <code>pl_PL</code> (merci à Pawel et
+    Jusuff)</li>
+  <li>Bug fix : the logo de phpfreechat ne s'affichait plus sous IE6</li>
+  <li>Ajout d'un message d'erreur en dure dans le code html qui reste
+    affiché si le chat ne se cree pas correctement (ex: problème de
+    chargement javascript). Si le chat se crée corectement, le message
+    d'erreur est simplement retiré par un appel javascript.</li>
+  <li>J'ai changé la valeur par défaut de <code>quit_on_closedwindow</code>
+    à <code>true</code>. Ceci peut être ennuyeux car à chaque rechargement
+    de page ou à chaque fermeture, une notice sera generée (mais il est
+    toujours possible de désactiver les notices avec le paramètre
+    <code>shownotice</code>).</li>
+  <li>Bug fix : l'encoding du pseudonyme n'était pas en accord avec le
+    paramètre <code>output_encoding</code> (cf demo8).</li>
+  <li>Bug fix: ne pas notifier les onglets (icones clignotante) lorsque l'on
+    reçoit les vieux messages (ceux venant de l'historique lors du premier
+    chargement).</li>
+  <li>Ajout d'un popup pour demander d'entrer du texte lorsque l'utilisateur
+    a selectionné un texte vide au moment d'appliquer un bbcode (merci à <a
+    href="http://www.phpfreechat.net/forum/viewtopic.php?id=532">Mephisto</a>).</li>
+  <li>Ajout d'un proxy (log) permettant d'archiver dans un fichier (chat.log)
+    toutes les convertations du chat.</li>
+  <li>Bug fix : résoud une boucle infinie sous windows lorsque je calculais
+    les chemins relatifs.</li>
+  <li>Bug fix : la liste des couleurs des pseudonymes n'était pas
+    correctement rechargée lorsqu'elle était vide.</li>
+  <li>Nouveaux paramèters permettant de personnaliser facilement la liste
+    des couleurs des pseudonymes et du texte (bbcode) :
+    <code>nickname_colorlist</code> and <code>bbcode_colorlist</code>.</li>
+  <li>Bug fix : dans le conteneur par défaut (file), les vieux messages
+    n'étaient jamais détruits. (merci à dan_m2k, thehermit et AkS pour le
+    rapport de bug)</li>
+  <li>Bug fix : toutes les commandes qui affichaient un message en retour
+    (<code>/identify</code>, <code>/rehash</code> ...) provoquaient
+    l'effacement de l'écran sous IE6. J'ai trouvé un moyen de contourner le
+    problème en affichant le message d'information dans la boite des
+  erreurs.</li>
+  <li>Bug fix : les caractères chinois provoquaient l'effacement des
+    messages du chat sous IE6. L'astuce consiste à forcer l'utilisation de
+    la famille de police serif (ou monospace) pour la zone de chat (la
+    famille sans-serif était la cause du problème).</li>
+  <li>Code cleaning : suppression de la librairie csstidy qui ne servait
+    plus.</li>
+  <li>Bug fix : si le module <code>preg_*</code> n'est pas compilé avec le
+    support utf8, un warning bloquant était généré.</li>
+  <li>Maintenant la documentation en ligne est automatiquement téléchargée
+    puis zipé par le scripte de génération des releases (fini les oublis
+    de mise à jour de la doc).</li>
+  <li>J'affiche maintenant des erreurs lorsque les messages ne peuvent pas
+    être écrits dans les fichiers du conteneur par défaut.</li>
+  <li>Remplacement de la fonction <code>utf8_substr</code> par du code venant
+    de typo3 moins dépendant du système, en particulier l'ancien code
+    dépendait de preg_match_all qui devait être compilé avec le support
+    utf8.</li>
+  <li>Ajout d'une vérification du type de tous les paramètres pendant la
+    phase d'initialisation du chat.</li>
+</ul>
+
+<h3 id="v1.0-beta4">1.0-beta4 le 01/08/2006</h3>
+<ul>
+  <li>Suppression des dépendances avec la librairie <a
+    href="http://prototype.conio.net/">prototype</a> car cette librairie
+    surcharge certains comportement par défaut de javascript (notament
+    Array) ce qui provoque des incompatibilitées avec d'autres librairies
+    javascript (exemple: ie7)</li>
+  <li>Nouveau proxy : le proxy <code>lock</code> permet de rediriger tous
+    les utilisateurs en lignes sur le chat vers une page (les paramètres
+    <code>$params["islocked"]</code> et <code>$params["lockurl"]</code> sont
+    à utiliser).</li>
+  <li>Bug fix : le parametre <code>admins</code> n'était pas dynamique</li>
+  <li>Bug fix : il était possible d'utiliser le paramètre
+    <code>frozen_nick</code> avec un pseudonyme vide.</li>
+  <li>Bug fix : le paramètre <code>nick</code> ne fonctionnait plus</li>
+  <li>Bug fix : les paramètres <code>connect_at_startup</code> et
+    <code>start_minimized</code> ne fonctionnaient plus</li>
+  <li>Bug fix : certains fichiers javascript étaient inclues incorrectement
+    - <a
+    href="https://sourceforge.net/support/tracker.php?aid=1523826">https://sourceforge.net/support/tracker.php?aid=1523826</a>
+    (merci à macinta)</li>
+  <li>Bug fix : certains chemins étaient mal calculés - <a
+    href="https://sourceforge.net/support/tracker.php?aid=1523821">https://sourceforge.net/support/tracker.php?aid=1523821</a>
+    (merci à macinta)</li>
+  <li>Bug fix : la commande <code>/identify</code> ne fonctionnait plus</li>
+  <li>Dans la page d'index du chat, tout le monde est maintenant
+    administrateur de façon à montrer plus facilement toutes les
+    fonctionnalitées du chat.</li>
+  <li>Refactoring + Bug fix : le paramètre <code>shownotice</code> ne
+    fonctionnait plus. J'ai changé la façon de passer les paramètres aux
+    commandes pour permettre de rajouter plus facilement un paramètre
+    supplementaire lorsque c'est nécessaire (exemple: le paramètre
+    <code>flag</code> de la commande <code>notice</code>).</li>
+</ul>
+
+<h3 id="v1.0-beta3">1.0-beta3 le 07/07/2006</h3>
+<ul>
+  <li>Bug fix : les bords de la liste des pseudonymes s'affichaient mal sous
+    IE6</li>
+  <li>Affiche les fichiers corrompus au début de la liste</li>
+  <li>Nouvelle API permettant de questionner le chat depuis des scriptes
+    exterieurs (ex: qui est en ligne, les derniers messages postés)</li>
+  <li>Optimisation : je ne traite plus les paramètres lorsque des données
+    dans le cache existes.</li>
+  <li>Bug fix : si l'utilisateur n'est pas présent dans le salon et que
+    celui ci reçoit une mise à jour alors on appel la fonction
+    <code>createNick</code> de façon à mettre à jour les metadonnées qui
+    sont peutêtre inexistantes (fini les utilisateurs invisibles).</li>
+  <li>Modifie les droits par défaut des répertoires créés à 755 pour que
+    le chat fonctionne sur les serveurs mal configurés.</li>
+  <li>Nouveau proxy : <code>censor</code> est un proxy qui permet de
+    censurer automatiquement des mots dans les messages postés.</li>
+  <li>Bug fix : la fonction javascript <code>displayMsg</code> ne
+    fonctionnait pas</li>
+  <li>Résoud une alerte javascript</li>
+  <li>Affiche systématiquement un message lorsque l'on rejoint un salon
+    (même lorsque l'on recharge la page)</li>
+  <li>Bug fix : On n'autorise pas l'envoi d'un message si on n'est pas
+    connecté.</li>
+  <li>Bug fix : Maintenant la commande <code>/quit</code> quitte
+    correctement les salons joints</li>
+  <li>Bug fix : après deux cliques sur des onglets, la page étaient
+    rechargée</li>
+  <li>Nouvelle traduction Hongroise <code>hu_HU</code> (merci à
+  Keratomi)</li>
+  <li>Verifie si le paramètre <code>channels</code> est bien comme attendu
+    un tableau de chaines de caractères.</li>
+  <li>Nouvelle commande : <code>/identify {password}</code> (utile pour
+    obtenir les droits administrateurs d'un salon)</li>
+  <li>Bug fix : la boite des smileys était caché au démarrage</li>
+  <li>Bug fix : maintenant les flooders sont kickés du salon</li>
+  <li>Bug fix : la fonction <code>copy_r</code> doit créer les fichiers
+    avec les droits unix 644</li>
+</ul>
+
+<h3 id="v1.0-beta2">1.0-beta2 le 17/06/2006</h3>
+<ul>
+  <li>Bug fix : les salons n'étaient pas joint dans l'ordre du tableau de
+    parametres.</li>
+  <li>Bug fix : la commande <code>/me</code> ne fonctionnait plus (merci à
+    Eury)</li>
+  <li>Bug fix : le style italique des commandes <code>/me</code> et
+    <code>/notice</code> ne fonctionnait plus.</li>
+  <li>Bug fix : Ajout d'un fichier de lock pour éviter les conflits lorsque
+    la commande <code>/rehash</code> est lancée.</li>
+  <li>Bug fix : Lors du rechargement de la page de chat, les salons
+    précédemment joint n'étaient pas rejoint comme attendu.</li>
+  <li>Supprime le curseur "croix" du theme par défaut (merci à mkoch pour
+    la suggestion).</li>
+  <li>Maintenant le premier utilisateur à se connecter obtient
+    automatiquement les droits administrateurs du chat.</li>
+  <li>Optimisations : maintenant le conteneur par défaut (système de
+    fichiers) utilise les nickid comme indicateurs dans les fichiers et
+    stoque les noms d'utilisateurs dans les méta données (merci à Thomas
+    Lußnig pour l'idée) et ajout d'un cache pour l'accès aux méta
+    données.</li>
+  <li>Bug fix : lorsqu'un nouveau message était reçu dans un onglet non
+    sélectionné, la barre de défilement n'était pas déplacée comme
+    attendue.</li>
+  <li>Ajout d'un test dans la phase d'initialisation pour être certains que
+    <code>copy_r</code> et <code>rm_r</code> fonctionnent.</li>
+</ul>
+
+<h3 id="v1.0-beta">1.0-beta le 14/06/2006</h3>
+<ul>
+  <li>Messages privés.</li>
+  <li>Salons multiples (commande <code>/join</code>).</li>
+  <li>Modération (commandes <code>/ban</code> et <code>/kick</code>)</li>
+  <li>Surbrillance des icones des onglets lorsqu'un évenement se produit
+    dans un onglet caché de façon à attirer l'attention.</li>
+  <li>Cliquer sur un pseudonyme dans la liste ajoute le pseudo + <code>',
+    '</code>dans la zone de texte (merci à void).</li>
+</ul>
+
+<h3 id="v0.9.3">0.9.3 le 28/04/2006</h3>
+<ul>
+  <li>Nouvelle traduction chinoise (traditionelle) <code>zh_TW</code> (merci
+    beaucoup à Alex Wu)</li>
+  <li>Bug fix : le style <code>oldmsg</code> n'était pas correctement
+    associé au vieux messages (la limite des vieux message est définie par
+    <code>max_msg</code>)</li>
+  <li>Bux fix : enleve le popup d'erreur http dans la version compressée du
+    code xajax : <code>xajax.js</code></li>
+  <li>Bug fix : des chemins d'inclusion étaient faux
+    (<code>chat-pre.js.tpl.php</code> et <code>chat-post.js.tpl.php</code>
+    n'étaient pas correctement inclus dans certains cas)</li>
+  <li>Bug fix : IE ne supporte pas la règle CSS
+    <code>white-space:pre</code>, une solution intermédiaire est d'utiliser
+    l'élement <code>&lt;nobr&gt;</code>. Ceci n'est pas valide au sens de
+    XHTML mais pour contrer les comportements étrange d'IE if faut tout
+    envisager (merci à Rhialto pour l'astuce)</li>
+</ul>
+
+<h3 id="v0.9.2">0.9.2 le 17/04/2006</h3>
+<ul>
+  <li>Nouvelle traduction turque <code>tr_TR</code> (merci beaucoup à
+  mesut)</li>
+  <li>Nouvelle traduction grèque <code>el_GR</code> (merci beaucoup à
+    Speedy)</li>
+  <li>Bug fix : un chemin était incompatible avec le safe_mode de php dans
+    la librairie xajax 0.2.3</li>
+  <li>Bug fix : le paramètre <code>openlinknewwindow</code> ne fonctionnait
+    plus sous Firefox</li>
+  <li>Bug fix : si un message aussi long que la limite max est écrit alors
+    le bbcode de la couleur courante était tronquée d'un caractère (merci
+    à Kachel pour le rapport)</li>
+  <li>Bug fix : le bug IE6 pour le dimensionnement des boites des smileys et
+    des pseudos est maintenant corrigé plus proprement un se basant sur la
+    fonction <code>document.recalc()</code> fourni par la librairie <a
+    href="http://dean.edwards.name/IE7/">ie7</a> <a>.</a></li>
+</ul>
+
+<h3 id="v0.9.1">0.9.1 le 03/04/2006</h3>
+<ul>
+  <li>Bug fix : Lorsque l'on entrait un texte vide, il était envoyé alors
+    qu'un message d'erreur aurait du être affiché.</li>
+  <li>Bug fix : L'auto-détection des liens ne fonctionnait plus</li>
+  <li>Bug fix : Maintenant le paramètre <code>openlinknewwindow</code> est
+    pris en compte pour le lien du logo de phpfreechat.</li>
+  <li>Bug fix : Lorsque la connexion est mauvaise, la vitesse de
+    rafraichissement est automatiquement ajustée (multipliée par 2 lors
+    d'un echec).</li>
+  <li>Bug fix : Si un message aussi long que la limite max est écrit alors
+    le bbcode de la couleur courante était tronquée.</li>
+  <li>Bug fix : Il n'y a pas de retours à la ligne lorsque des messages
+    sans espaces sont envoyés (ne fonctionne pas avec IE).</li>
+  <li>Bug fix : Ne pas envoyer les messages contenant seulement des
+  espaces.</li>
+  <li>Bug fix : Ne pas afficher l'ennuyeux message d'erreur "HTTP status
+    12002"</li>
+  <li>Bug fix : Indiquer le paramètre <code>width</code> n'est pas une
+    bonne idée car cela provoque un bug d'affichage sous IE6. J'ai donc
+    enlevé temporairement ce paramètre. Pour une astuce permettant de fixer
+    la largeur du chat, se référer au sujet suivant <a
+    href="../../forum/viewtopic.php?pid=867#p867">http://www.phpfreechat.net/forum/viewtopic.php?pid=867#p867</a></li>
+  <li>Bug fix : Mettre les deux paramètres <code>showsmileys</code> et
+    <code>btn_sh_smileys</code> à <code>false</code> ne fonctionnait pas
+    (merci à Yusuke pour le rapport de bug).</li>
+  <li>Amélioration du traitement des URL HTTP : maintenant les longues urls
+    sont tronqués avec des '...' (ne fonctionne pas avec IE6)</li>
+  <li>Maintenant <code>shownotice</code> utilise un système de drapeaux : 0
+    = ne montre rien, 1 = montre les changements de pseudonymes, 2 = montre
+    les connexions et déconnexions, 3 = (2+1) montre les changements de
+    pseudo et les connexion/déconnexions.</li>
+  <li>Nouveau paramètre <code>focus_on_connect</code>: Mettre ce parametre
+    à <code>true</code> permet de placer le curseur directement dans la zone
+    de saisie du chat après la connexion. Il peut être intéressant de
+    passer ce paramètre à false lorsque l'on intégre le chat dans un site
+    Web car lorsque le focus change, la vue de l'utilisateur dans la fenêtre
+    change aussi, elle suit le focus. Lorsque la page est grande la bar de
+    scroll peut alors se déplacer de façon involontaire.</li>
+  <li>Nouveau paramètre <code>quit_on_closedwindow</code> : Mettre ce
+    paramètre à true permet d'envoyer une commande <code>/quit</code>
+    lorsque l'utilisateur ferme sa fenêtre. Ce paramètre n'est pas a true
+    par défaut car sous IE, Safari et Konqueror : lorsque l'utilisateur
+    recharge sa fenêtre le même évenement est envoyé ce qui surcharge de
+    messages le chat.</li>
+  <li>Nouvelle traduction bosniaque <code>ba_BA</code> (merci beaucoup à
+    Emin Jasarevic)</li>
+</ul>
+
+<h3 id="v0.9">0.9 le 24/03/2006</h3>
+<ul>
+  <li>Traitement correct (multi-browser : FF, IE, Konqueror) de la touche
+    tabulation (TAB) pour compléter automatiquement les pseudonymes comme
+    sur IRC.</li>
+  <li>Il est maintenant possible de fixer la couleur d'écriture de façon
+    permanente (les couleurs bbcode sont en faite utilisées)</li>
+  <li>Bug fix : Sur IE6 lorsque l'on montre/cache la liste des smileys et la
+    liste des pseudonymes, ces zones disparaissaient mistérieusement. La
+    seule façon de résoudre le problème est de charger une image invisible
+    avec une url très longue (&gt;4550 caracteres). Pourquoi ? Bonne
+    question !</li>
+  <li>Bug fix : Internet Explorer plantait lorsque l'on laissait la fenêtre
+    de chat trop longtemps ouverte. Ceci était causé par une fuitte de
+    mémoire dans la librairie xajax v0.2. La mise à jour de cette librairie
+    résoud le problème.</li>
+  <li>Bug fix : Les pseudonymes était sensible à la casse, un pseudo "BOB"
+    était considéré comme différent de "bob".</li>
+  <li>Bug fix : les pseudonymes ne s'affichaient pas correctement dans
+    Firefox (la règle CSS nowrap permettant de prendre en compte les espaces
+    ne fonctionne pas), mais j'ai remarqué que la règle "white-space: pre"
+    fonctionne autant sous IE que FF. (thanks to JoeHaley for the report)</li>
+  <li>Bug fix : le tag bbcode [email] ne fonctionnait pas si le contenu
+    commencait par la lettre s.</li>
+  <li>Nouvelle traduction ukrainien <code>ua_UA</code> (merci à <a
+    href="http://www.relax-info.com">Ivan Kravets aka X-MAN</a>)</li>
+  <li>Nouvelle traduction allemande des pays bas <code>nl_NL</code> (merci
+    beaucoup à Robert de Ruiter)</li>
+  <li>Nouvelle traduction norvégienne <code>no_NO</code> (merci beaucoup à
+    Anders Bondehagen)</li>
+</ul>
+
+<h3 id="v0.8">0.8 le 03/03/2006</h3>
+<ul>
+  <li>Ajout de la notion de thèmes : un theme sera un répertoire contenant
+    toutes les ressources necessaire pour personnaliser completement
+    l'apparence, c'est à dire les templates, les images et les smileys. Bien
+    sur, si certains fichiers n'existent pas, les fichiers du theme par
+    defaut seront alors utilisés.</li>
+  <li>Maintenant une commande est identifiée par une classe placée dans un
+    fichier. Il est donc facile de définire ses propres commandes (voyez la
+    demo27 pour un exemple concret).</li>
+  <li>Bug fix : Spécifier la variable <code>prefix</code> posait des
+    problèmes de sessions.</li>
+  <li>Bug fix : La variable <code>clock</code> n'a aucune influence.</li>
+  <li>Bug fix : il était impossible de créer des salons en utilisant la
+    technique de l'URL comme décrit dans la FAQ car les variables
+    <code>server_script_url</code> et <code>client_script_url</code> ne
+    prennaient pas en compte les paramètres de l'URL.</li>
+  <li>Changement de nom pour tous les sous répertoires de i18n pour se
+    mettre aux normes des locales unix: fr_FR, en_US, ja_JP, ar_LB ...
+    N'oubliez pas de mettre a jour vos fichiers de configuration !</li>
+  <li>Nouvelle traduction portugais du brésil <code>pt_BR</code> (merci
+    beaucoup à fredcosta)</li>
+  <li>Nouvelle traduction japonnaise <code>ja_JP</code> (merci beaucoup à
+    elf2000)</li>
+  <li>Nouveau theme de smiley : phpbb2 + Eusa (merci à bsemf pour la
+    contribution)</li>
+  <li>Nouveau theme de smiley : cerutti (merci à Victor Cerutti pour la
+    contribution)</li>
+  <li>Bug fix : sur les serveur iis6/win2003, la variable WINDIR était
+    écrite en minuscule.</li>
+  <li>Ajout d'une démo pour expliquer comment utiliser les paramètres
+    <code>server_script_url</code>, <code>client_script_url</code> et
+    <code>smileyurl</code> très utiles pour certaines configurations
+    étranges.</li>
+  <li>Nouvelle traduction serbe / croate <code>sr_CS</code> (merci beaucoup
+    à Smilie)</li>
+  <li>Ajouter un paramètre <code>timeout</code> permettant de régler le
+    temps d'inactivité à attendre avant de déconnecter un utilisateur.</li>
+  <li>Optimisation de la bande passante : Laisser completement le client
+    lancer les rafraichissements.</li>
+  <li>Nouvelle traduction italienne <code>it_IT</code> (merci beaucoup à
+    bellakioma)</li>
+  <li>Refactoring du code Javascript (classe pfcClient) : le nouveau code est
+    maintenant basé sur la librairie <a
+    href="http://prototype.conio.net/">prototype</a>.</li>
+  <li>Nouvelle traduction espagnole <code>es_ES</code> (merci beaucoup à
+    drjoju)</li>
+  <li>Nouvelle traduction indonésienne <code>id_ID</code> (merci beaucoup à
+    Wendy Novianto)</li>
+  <li>Nouvelle traduction suédoise <code>sv_SE</code> (merci beaucoup à
+    Pär Smårs)</li>
+  <li>Paramètre <code>openlinknewwindow</code> ajouté. Mettre cette option
+    à <code>true</code> permettra d'ouvrire les liens des convertations dans
+    une nouvelle fenêtre.</li>
+  <li>Bug fix : L'utilisation d'un pseudo nommé <code>alt</code>,
+    <code>img</code> ou n'importe quoi étant un sous ensemble du code html
+    de l'image du smiley pose problème parce que lorsque l'on affiche un
+    smiley, la colorisation du message parse également le contenu de la
+    balise image.</li>
+  <li>Déplacement du parsing des smileys, des liens et de la surbrillance
+    des pseudonymes du coté client (les RegExp de javascript sont
+    utilisées).</li>
+  <li>Integration de la syntaxe bbcode. Utilisez <code>[b]texte[/b]</code>
+    pour mettre en gras votre texte, utilisez <code>[i]texte[/i]</code> pour
+    mettre en italique votre texte, utilisez <code>[u]texte[/u]</code> pour
+    souligner votre texte, utilisez <code>[s]texte[/s]</code> pour barrer
+    votre texte, utilisez <code>[email]monemail@mondomain.com[/email]</code>
+    ou <code>[email=monemail@mondomain.com]texte[/email]</code> pour afficher
+    un lien clickable sur un email, et utilisez
+    <code>[color=macouleur]texte[/color]</code> pour colorier votre text
+    (merci à Nemako pour sa contribution)</li>
+  <li>Paramètre <code>usecsstidy</code> ajouté. Mettre ce paramètre à
+    <code>true</code> permettra de produire un code CSS optimisé (en taille)
+    en utilisant la librarie CSSTidy (par défaut, ce paramètre est mis à
+    <code>false</code> car sur certains serveur la librarie CSSTidy pose des
+    problèmes).</li>
+  <li>Paramètre <code>showwhosonline</code> ajouté. Permet de
+    cacher/montrer la liste des personnes connectées. (merci à Nemako pour
+    la contribution)</li>
+  <li>Paramètre <code>showsmileys</code> ajouté. Permet de cacher/montrer
+    la liste des smileys. (merci à Nemako pour la contribution)</li>
+  <li>Bug fix: le paramètre <code>max_msg</code> possait problème avec des
+    valeur proche de zéro car ce paramètre était utilisé pour nettoyer le
+    fichier des historiques.</li>
+  <li>Nouvelle traduction russe <code>ru_RU</code> (merci beaucoup à
+    Stanislav Kondratyuk)</li>
+  <li>Bug fix : il était possible de prendre un pseudo de force alors qu'il
+    était deja utilisé par quelqu'un et il était possible de lire les
+    messages du chat alors que l'on avait pas choisi de pseudonyme (merci à
+    softwareNerd et à Nemako pour le rapport de bug détaillé)</li>
+  <li>Nouvelle traduction Portuguaise du Portugale <code>pt_PT</code> (merci
+    beaucoup à Paulo Bras)</li>
+  <li>Nouveau conteneur utilisant la mémoire partagée basé sur le package
+    PEAR::SharedMemory (merci beaucoup à Bernhard J. M. Grün pour cette
+    superbe contribution)</li>
+</ul>
+
+<h3 id="v0.7">0.7 le 15/02/2006</h3>
+<ul>
+  <li>Ajout d'un système d'internationnalisation (i18n) permettant de
+    traduire les messages du chat dans toutes les langues. Pour le moment il
+    existe les traductions en Français/Anglais de tous les messages (les <a
+    href="../../forum/">contributions</a> pour d'autres langues sont les
+    bienvenues).</li>
+  <li>Ajout de la traduction chinoise (merci à guoxianghao)</li>
+  <li>Ajout de la traduction formelle et informelle allemande (merci à <a
+    href="http://www.elvenstar.de/">bsemf</a>)</li>
+  <li>Ajout de la traduction arabe (merci à <a
+    href="http://www.zeitoun.net">sandra rizk</a>)</li>
+  <li>Bug fix : ajout de <code>dirname(__FILE__)</code> dans les
+    require_once de la librairie xajax pour éviter les problèmes de path
+    sur les serveurs ayant php mal configuré.</li>
+  <li>Inversion des icônes minimize et maximize.</li>
+  <li>Ajout d'un nouveau theme de smiley (phoenity) : Ces smiley ont été
+    developpés par Lim Chee Aun et portés pour phpFreeChat par Robin
+  Monks.</li>
+  <li>Ajout d'un test d'existance des fonctions utilisées dans la phase
+    d'initialisation. Le but étant de minimiser le risque que phpFreeChat se
+    lance sur des serveur mal configurés où n'ayant pas les fonctions
+    necessaires.</li>
+  <li>Ajout d'un nouveau theme de smiley (famfamfam) basé sur les icones <a
+    href="http://www.famfamfam.com/lab/icons/silk/">famfamfam</a> et porté
+    par Robin Monks pour phpfreechat.</li>
+  <li>Ajout de la variable <code>client_script</code> qui permet de forcer
+    l'endroit du script client. A utiliser lorsque le processus
+    d'auto-detection échoue (pour les configurations spéciales non
+    supportés par pfc).</li>
+  <li>Bug fix : Le processus d'auto-detection du scripte client échouait
+    pour le cas de PHP en mode CGI. (merci à Wendy Novianto pour le
+  rapport)</li>
+  <li>Quellques clarifications au niveau de l'interface des conteneurs (merci
+    à Bernhard J. M. Grün pour le rapport)</li>
+  <li>Ajout du paramètre <code>$return</code> aux méthodes
+    <code>print*</code> qui permettent de retourner la chaîne plutôt que de
+    l'afficher (Merci à Wendy Novianto pour la contribution).</li>
+  <li>phpFreeChat utilise maintenant un système de template fait maison,
+    simple et en php. Ceci permet de supprimer la dépendance avec Smarty et
+    de gérer plus facilement l'internationnalisation.</li>
+  <li>Bug fix: Lorsque l'on clique dans la zone de chat, le focus est rendu
+    à la zone de saisie seulement si la souris n'a pas bougé entre les
+    événements <code>onmousedown</code> et <code>onmouseup</code>.</li>
+  <li>Utilisation de <a
+    href="http://csstidy.sourceforge.net/index.php/">CSSTidy</a> pour
+    optimiser la feuille de style générée. (merci à <a
+    href="http://www.nemako.net/">Nemako</a> pour sa contribution)</li>
+  <li>Rend le repertoire des templates paramétrable (variables
+    <code>tplpath</code> et <code>tpltheme</code>) en suivant le model des
+    smiley. (merci à Wendy Novianto pour la sugestion)</li>
+  <li>Bug fix : sur les serveurs windows, le path relatif était incorrect
+    (merci à <a href="http://www.elvenstar.de/">bsemf</a> pour le patch)</li>
+  <li>Ajoute une protection au niveau des paramètres passés au chat. Si un
+    paramètre n'est pas reconnu alors on refuse de lancer le chat : ce
+    paramètre est alors soit inconnu, soit obsolete, soit mal écrit. Ceci
+    permettra d'éviter les erreurs d'étourderies.</li>
+  <li>Ajoute l'attribut <code>title</code> sur les smileys pour
+    prévisualiser le raccourci clavier (merci à BenXbox pour l'idée)</li>
+</ul>
+
+<h3 id="v0.6">v0.6 le 07/02/2006</h3>
+<ul>
+  <li>Nouveau bouton permettant de minimiser et de maximiser la fenêtre de
+    chat. Pratique pour intégrer votre chat dans un weblog ou un forum !</li>
+  <li>Option <code>connect_at_startup</code> ajoutée à la configuration.
+    Désactiver cette option aura pour effet d'éviter de connecter
+    automatiquement les utilisateurs au premier chargement de la page.</li>
+  <li>Option <code>nickmarker</code> ajoutée à la configuration.
+    Désactiver cette option aura pour effet de ne pas colorier les
+    pseudonymes.</li>
+  <li>Option <code>clock</code> ajoutée à la configuration. Désactiver
+    cette option aura pour effet de ne pas afficher les dates et heures dans
+    les messages.</li>
+  <li>Réordonne la liste des smileys et ajout des smileys tux et gnu (Merci
+    beaucoup à <a href="http://www.yanncochard.com/">Kaella</a> pour ces 3
+    jolis smileys!)</li>
+  <li>Bug fix : Quand le <code>rootpath</code> était vide, l'ensemble des
+    path qui en dépendaient pointaient alors sur la racine du serveur ce qui
+    était incorrect ! (Thanks to <a
+    href="http://www.yanncochard.com/">Kaella</a> for reporting this bug)</li>
+  <li>Bug fix : Lorsque deux chats étaient configurés avec les même
+    options, il partagaient le même identifiant de cache.</li>
+  <li>Bug fix : L'option <code>active</code> ne doit pas être utilisée
+    pour connecter automatiquement les utilisateurs car lorsqu'un utilisateur
+    quitte et revient il ne sera pas connecté automatiquement. L'option
+    <code>connect_at_startup</code> la remplace.</li>
+  <li>Bug fix : La liste des couleurs que l'on associe aux pseudonymes est
+    limité à 15 couleurs. Lorsque le 16ème utilisateur se connecte aucune
+    couleur ne lui est assigné. De plus, les utilisateurs listés dans
+    l'historique des messages étaient coloriés alors qu'ils ne devrait pas
+    l'être (seulement les utilisateurs connectés doivent l'être)</li>
+  <li>Bug fix: Sur les serveurs où php est configuré en mode cgi, la
+    variable SCRIPT_FILENAME ne pointe pas sur le fichier du script mais sur
+    celui du cgi de php. Ceci posait donc problème pour calculer les paths
+    relatifs dans phpfreechat. Maintenant la variable PATH_TRANSLATED est
+    utilisée dans le cas d'une configuration cgi.</li>
+</ul>
+
+<h3 id="v0.5">v0.5 le 04/02/2006</h3>
+<ul>
+  <li>Colorisation des pseudonymes permettant une meilleur lisibilité. Les
+    pseudonymes sont coloriés à partir d'une liste de couleurs prédéfinie
+    (la même qu'utilise XChat). C'est également possible
+    d'activer/désactiver la colorisation des pseudonymes en cliquant sur un
+    bouton à deux états.</li>
+  <li>Ajout d'un bouton permettant de montrer/cacher les dates et heures dans
+    la liste des messages.</li>
+  <li>Bug fix: Empêche le curseur de changer de forme (Wait-cursor) lorsque
+    les messages du chat se mettent à jour.</li>
+  <li>Bug fix: Résoud des problèmes liés aux pseudonymes UFT8 / UNICODE
+    (pseudonymes arabes, russes ...) et au caractere '\'.</li>
+  <li>Reorganisation du système d'installation des librairies internes
+    (xajax, ie7, javascript-libs).</li>
+  <li>Bug fix: Quand le dernier utilisateur quittait le chat, son pseudonyme
+    n'était pas déconnecté tant qu'un autre utilisateur ne se connectait
+    pas, il n'était donc pas possible de se connecter de nouveau et de
+    prendre le même pseudonyme.</li>
+</ul>
+
+<h3 id="v0.4">v0.4 le 24/01/2006</h3>
+<ul>
+  <li>Ajout d'un joli bouton permettant de se connecter/déconnecter
+    manuellement.</li>
+  <li>Bug fix : Les pseudonymes avec des caractères spéciaux (ex: &lt;
+    &gt;) n'étaient pas affichés correctement dans la liste des pseudo et
+    dans les notices.</li>
+  <li>Bug fix : L'option <code>shownotice</code> ne fonctionnait pas (0 pour
+    supprimer toutes les notices, 1 pour ne montrer que les changement de
+    pseudonymes, 2 pour montrer 1 et les notices de
+  connexion/deconnexion)</li>
+  <li>Bug fix : A la première connexion, l'historique des message était
+    affiché deux fois.</li>
+  <li>Remplacement des smileys png en gif pour eviter les fond noirs sous
+  IE.</li>
+  <li>Bug fix : Des warnings bloquants étaient présents lorsque
+    <code>E_ALL</code> était activé dans les options de php. Ceci rendait
+    le chat inutilisable!</li>
+  <li>Bug fix : Ajout d'une fonction equivalente à
+    <code>file_get_contents</code> qui n'était pas définit pour les version
+    de php &lt; 4.3.0</li>
+  <li>Bug fix : Le smiley <code>:'(</code> ne s'affichait pas
+  correctement.</li>
+  <li>Bug fix : La surbrillance des pseudonymes ne fonctionnait pas
+    correctement.</li>
+</ul>
+
+<h3 id="v0.3">v0.3 le 19/01/2006</h3>
+<ul>
+  <li>Ajoute une variable coté client (clientid) permettant de différencier
+    chaque fenêtre. Ceci permet de résoudre les problèmes liés à
+    l'ouverture de deux fenêtres simultanées sur le même chat.</li>
+  <li>Ajout des fichiers README et INSTALL en français et anglais.</li>
+  <li>Bug fix : Les smileys n'étaient pas affichés avec les commandes
+    <code>/notice</code> et <code>/me</code>.</li>
+  <li>Bug fix : Parfois les pseudonymes n'étaient pas filtrés, on pouvait
+    se retrouver avec des pseudos constitués d'espaces ou avec des pseudos
+    très grands.</li>
+  <li>Bug fix : Sous IE, la première fois que le chat était affiché, la
+    liste des pseudos était cachée.</li>
+  <li>Bug fix : L'identificateur interne du chat était mal calculé et
+    provoquait des erreurs aléatoires.</li>
+</ul>
+
+<h3 id="v0.2">v0.2 le 15/01/2006</h3>
+<ul>
+  <li>Optimisation de la mise à jour de la liste des pseudonymes. La liste
+    est maintenant envoyée seulement quand un utilisateur joint ou quitte le
+    chat.</li>
+  <li>Bug fix : Ajout des scriptes <a
+    href="http://dean.edwards.name/IE7/">IE7</a> pour un meilleur affichage
+    chez les utilisateurs de IE. Cette option peux être désactivée dans
+    les paramètres.</li>
+  <li>Bug fix : L'hébergeur OVH ne supporte pas les variables
+    <code>$_SERVER["PATH_TRANSLATED"]</code> (merci à <a
+    href="http://www.nemako.net/">Daffys</a> pour le rapport)</li>
+  <li>Ne pas afficher <code>Error: the XML response that was returned from
+    the server is invalid !!</code> lorsque l'une commande n'est pas
+    reconnue. Mais afficher un message plus compréhensible. (merci à <a
+    href="http://www.nemako.net/">Daffys</a> pour le rapport)</li>
+  <li>Bug fix : L'encoding html n'était pas spécifié dans les pages de
+    démonstrations.</li>
+  <li>Bug fix : La console de debug ne fonctionnait pas et le lien qui
+    s'affichait lorsque le debug était activé sur un chat était
+  mauvais.</li>
+</ul>
+
+<h3 id="v0.1">v0.1 le 13/01/2006 (première version)</h3>
+<ul>
+  <li>L'interface propose une zone d'affichage des messages, une zone
+    d'affichage des utilisateurs en ligne, une zone pour la saisie de son
+    message, et une zone pour afficher et changer le pseudonyme de
+    l'utilisateur connecté. (paramétrable par un système de modèle en
+  css)</li>
+  <li>Support des commandes suivantes : <code>/nick</code>,
+  <code>/me</code></li>
+  <li>Support des smileys (paramétrable)</li>
+  <li>Support des filtres permettant de : censurer des mots, mettre en gras
+    des parties de la phrase ... (paramétrable)</li>
+</ul>
+</body>
+</html>

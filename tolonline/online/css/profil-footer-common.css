@@ -1,0 +1,23 @@
+#footer{
+  background:url(/imagerie/commun/footer/bg_footer.gif) repeat-x 0px 20px;
+  height:50px;
+	clear:both;
+	margin-top:20px;
+	padding-top:30px;
+}
+
+#footer #footer-content{
+	width:890px;
+	font-size:10px;
+	color:#9aa7b8;
+	padding-left:10px;
+}
+
+#footer #footer-content a{
+	text-decoration: none;
+	color:#9aa7b8;
+}
+
+#footer #footer-content a:hover{
+	text-decoration: underline;
+}

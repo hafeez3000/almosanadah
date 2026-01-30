@@ -1,0 +1,156 @@
+<html>
+
+<head>
+
+
+  <title>Dar Al Manasek Tourism & Umrah - Its pleasure to serve you</title>
+
+  <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+  <meta name="author" content="dheyafataj.com" />
+  <meta name="keywords" content="Dar Al Manasek, Online reservation system, Saudi Arabia Hotels, Hotels, Cars, Umrah, Hajj" />
+  <meta name="description" content="Leading tourism and pilgrimage service provider in Kingdom of Saudi Arabia, at our site, Go virtual anywhere in Kingdom of Saudi Arabia - Hotels, Cars, Umrah, Hajj, Tourism! – Dar Al Manasek Tourism and Umrah – Its pleasure to serve you" />
+  <meta name="robots" content="index, follow, noarchive" />
+  <meta name="googlebot" content="noarchive" />
+
+  <link rel="stylesheet" type="text/css" href="css/html.css" media="screen, projection, tv " />
+  <link rel="stylesheet" type="text/css" href="css/layout.css" media="screen, projection, tv" />
+  <link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+
+</head>
+
+
+<body>
+
+<!-- CONTENT: Holds all site content except for the footer.  This is what causes the footer to stick to the bottom -->
+<div id="content">
+
+
+
+  <!-- HEADER: Holds title, subtitle and header images -->
+  <? include 'headerm.php' ?>
+
+
+  <!-- MAIN MENU: Top horizontal menu of the site.  Use class="here" to turn the current page tab on -->
+  <div id="mainMenu">
+    <ul class="floatRight">
+      <li><a href="index.php" title="Dar Al Manasek" class="here">Intro</a></li>
+      <li><a href="hotels.php" title="Online Reservation for 165+ hotels in Saudi Arabia">Hotels</a></li>
+      <li><a href="umrah.php" title="Serving Allah's Guests for Umrah piligrimage">Umrah</a></li>
+      <li><a href="hajj.php" title="Serving Allah's Guests for Hajj Pilgrimage">Hajj</a></li>
+      <li><a href="contactus.php" title="Reach us at any time" class="last">Contact Us</a></li>
+    </ul>
+  </div>
+
+
+
+
+  <!-- PAGE CONTENT BEGINS: This is where you would define the columns (number, width and alignment) -->
+  <div id="page">
+
+
+    <!-- 25 percent width column, aligned to the left -->
+    <div class="width25 floatLeft leftColumn">
+
+      <h1>Intro</h1>
+
+      <ul class="sideMenu">
+        <li class="here">
+          Sign Up
+            <ul>
+            <li><a href="online/newreg.php" title="New Registration">New Registration</a></li>
+            <li><a href="online/login.php" title="Login now for Bookings">Already User!, Login </a></li>
+          </ul>
+        </li>
+        <li><a href="online/onlineres.php" title="New Booking">New Booking</a></li>
+        <li><a href="online/login.php" title="User Menu">User Menu</a></li>
+      </ul>
+
+      <p align="center">
+        <img src="images/atm07.jpg"  align="middle"><br>
+		Dar Al Manasek at Arabian Travel Market 2007, DUBAI
+      </p>
+
+     
+
+      
+
+    </div>
+
+
+
+
+    <!-- 75 percent width column, aligned to the right -->
+    <div class="width75 floatRight">
+
+
+      <!-- Gives the gradient block -->
+      <div class="gradient">
+
+        <a name="fluidity"></a>
+
+        <h1>GM' s Message  </h1>
+        <h2>
+		
+		By the grace of ALMIGHTY ALLAH and love to serve his guests, Dar Al Manasek Tourism & Umrah Services Co. Ltd Since 1991, rendering its high quality services to the visitors of Allah and the Mosque of his Prophet Mohammed (S.A.A.W) by a skillful Management and professional staff. 
+</h2>
+
+        <p>
+          
+	    <div align="center"><img src="images/gmsml72.jpg" ></div>
+	    <br>
+	    
+     </p>
+		
+	<p>
+	Dar al manasek Tourism and Umrah Co. Ltd have it own hotels, transportation, Umrah Operator  and Hotel Reservation department dedicated to provide its  best service to the (MUATAMREEN):<br><br>
+1. Reservation Department<br>
+2. Hotel Management<br>
+3. Umrah Department<br>
+4.Transportation Department<br>
+5.Hajj Department<br><br>
+We have our own in-houses I.T. [Information Technology Department] And it’s our pleasure to present for you a small explanation for the rule of each section in providing the service for the pilgrims, the visitors of Allah and the Mosque of his Prophet Mohammed (S.A.A.W) as we have keep our motto in all our employees hearts and our flyers - Its our pleasure to serve you.	</p>	
+
+        <blockquote class="go">
+          <p>
+            A part from Hotel Booking, Dar al manasek tourism and umrah has its own hotels in Makkah and Madinah.  With high class premium services our hotels makes you to feel more comfort as you are staying at your home.  <a href="darmh/index.html" title="Makkah Dar Al Manasek Hotel">Click here</a> to go to our hotels site.          </p>
+        </blockquote>
+
+        
+      </div>
+
+
+
+
+
+      
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- FOOTER: Site footer for links, copyright, etc. -->
+<div id="footer">
+
+  <div id="width">
+      <span class="floatLeft">
+         design <a href="http://www.dheyafataj.com" title="Goto Dar Al Manasek">dors team</a> <span class="grey">|</span>
+      Send us <a href="feedback.php" title="Validate XHTML">Feedback</a> <span class="grey">|</span>
+      Get Latest by  <a href="rsslink.php" title="Validate CSS">RSS</a> </span>
+	  
+	  
+
+    <span class="floatRight">
+      <a href="index.php" title="Introduction">Intro</a> <span class="grey">|</span>
+      <a href="hotels.php" title="Hotel Booking">Hotels</a> <span class="grey">|</span>
+      <a href="umrah.php" title="Umrah">Umrah</a> <span class="grey">|</span>
+      <a href="hajj.php" title="Hajj">Hajj</a> <span class="grey">|</span>
+      <a href="contactus.php" title="Contact Us">Contact Us</a>    </span>  </div>
+
+</div>
+
+</body>
+
+</html>

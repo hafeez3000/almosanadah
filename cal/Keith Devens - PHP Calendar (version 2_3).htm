@@ -1,0 +1,1117 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0044)http://keithdevens.com/software/php_calendar -->
+<HTML xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>Keith Devens - PHP Calendar (version 2.3)</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=UTF-8">
+<META http-equiv=Content-Style-Type content=text/css>
+<META http-equiv=Content-Script-Type content=text/javascript><LINK 
+href="Keith Devens - PHP Calendar (version 2_3)_files/css.css" type=text/css 
+rel=stylesheet>
+<META content="PHP Calendar, PHP, Calendar, source, code, script" name=keywords>
+<META 
+content="A simple PHP script to print out a calendar. It can optionally link specific days to a web page of your choice." 
+name=description>
+<STYLE type=text/css>.comment-form-fields INPUT {
+	WIDTH: 170px
+}
+</STYLE>
+
+<META content="MSHTML 6.00.2900.2769" name=GENERATOR></HEAD>
+<BODY>
+<TABLE class="header no-print" style="HEIGHT: 48px" cellSpacing=0 
+  cellPadding=0><TBODY>
+  <TR class=header-top>
+    <TD><A href="http://keithdevens.com/"><IMG alt=KBD 
+      src="Keith Devens - PHP Calendar (version 2_3)_files/kbd.gif"></A> 
+      <H1 
+      style="DISPLAY: inline; FONT-WEIGHT: normal; FONT-SIZE: 25pt; MARGIN-LEFT: 7px; VERTICAL-ALIGN: top; COLOR: white">Keith 
+      Devens .com</H1></TD>
+    <TD 
+    style="FONT-WEIGHT: bold; VERTICAL-ALIGN: top; COLOR: white; TEXT-ALIGN: right">Monday, 
+      December 5, 2005</TD>
+    <TD align=right rowSpan=2><IMG alt="Flag waving" 
+      src="Keith Devens - PHP Calendar (version 2_3)_files/us_flag_waving.gif"></TD></TR>
+  <TR class=header-top>
+    <TD class=small style="COLOR: white" vAlign=bottom align=right 
+      colSpan=2><A href="http://keithdevens.com/quotes/Perlis.Lisp.cost">A Lisp 
+      programmer knows the value of everything, but the cost of nothing. – Alan 
+      Perlis</A></TD></TR>
+  <TR>
+    <TD class=layout-separator colSpan=3></TD></TR>
+  <TR class=header-bottom>
+    <TD colSpan=3>
+      <UL class=tab-navigation>
+        <LI><A title="Keith Devens .com Weblog" 
+        href="http://keithdevens.com/weblog">Weblog</A></LI>
+        <LI><A title=Wiki href="http://keithdevens.com/wiki">Wiki</A></LI>
+        <LI><A title="About me" 
+        href="http://keithdevens.com/about">About</A></LI>
+        <LI><A class=active title="Software I've written" 
+        href="http://keithdevens.com/software">Software</A></LI>
+        <LI><A title="Programming Resources" 
+        href="http://keithdevens.com/programming">Programming</A></LI>
+        <LI><A title="Useful Downloads and Software" 
+        href="http://keithdevens.com/downloads">Downloads</A></LI>
+        <LI><A title="Miscellaneous Links" 
+        href="http://keithdevens.com/links">Links</A></LI>
+        <LI><A title="Christian Resources" 
+        href="http://keithdevens.com/Christianity">Christianity</A></LI>
+        <LI><A title=Pictures! 
+        href="http://keithdevens.com/pictures">Pictures</A></LI>
+        <LI><A title="E-mail me!" href="http://keithdevens.com/mail">E-mail 
+        me</A></LI>
+        <LI><A title="Website administration" 
+        href="http://keithdevens.com/admin">Admin</A></LI></UL></TD></TR>
+  <TR class=layout-separator>
+    <TD colSpan=3></TD></TR></TBODY></TABLE>
+<TABLE class=content-main cellSpacing=0 cellPadding=0>
+  <TBODY>
+  <TR vAlign=top>
+    <TD class=content-middle>
+      <H1>PHP Calendar (version 2.3)</H1>
+      <STYLE type=text/css>TR {
+	VERTICAL-ALIGN: top
+}
+DIV.example {
+	BORDER-RIGHT: #ccf 3px dashed; BORDER-TOP: #ccf 3px dashed; PADDING-LEFT: 1em; MARGIN-BOTTOM: 3px; MARGIN-LEFT: 1em; BORDER-LEFT: #ccf 3px dashed; BORDER-BOTTOM: #ccf 3px dashed
+}
+DIV.example TABLE {
+	WIDTH: 100%
+}
+H4 {
+	MARGIN: 0px; TEXT-ALIGN: center
+}
+</STYLE>
+
+      <UL>
+        <LI><A 
+        href="http://keithdevens.com/software/php_calendar#introduction">Introduction</A> 
+
+        <LI><A 
+        href="http://keithdevens.com/software/php_calendar#functions">Functions</A> 
+
+        <LI><A 
+        href="http://keithdevens.com/software/php_calendar#examples">Examples</A> 
+
+        <LI><A 
+        href="http://keithdevens.com/software/php_calendar#notes">Notes</A> 
+        <LI><A 
+        href="http://keithdevens.com/software/php_calendar#source">Download the 
+        source</A> 
+        <LI><A 
+        href="http://keithdevens.com/software/php_calendar#contact">Support</A> 
+        <LI><A 
+        href="http://keithdevens.com/software/php_calendar#history">Release 
+        notes</A> </LI></UL>
+      <H2 id=introduction>Introduction</H2>
+      <DIV style="FLOAT: right">
+      <TABLE class=calendar>
+        <CAPTION class=calendar-month>December&nbsp;2005</CAPTION>
+        <TBODY>
+        <TR>
+          <TH abbr=Sunday>Sun</TH>
+          <TH abbr=Monday>Mon</TH>
+          <TH abbr=Tuesday>Tue</TH>
+          <TH abbr=Wednesday>Wed</TH>
+          <TH abbr=Thursday>Thu</TH>
+          <TH abbr=Friday>Fri</TH>
+          <TH abbr=Saturday>Sat</TH></TR>
+        <TR>
+          <TD colSpan=4>&nbsp;</TD>
+          <TD>1</TD>
+          <TD>2</TD>
+          <TD>3</TD></TR>
+        <TR>
+          <TD>4</TD>
+          <TD>5</TD>
+          <TD>6</TD>
+          <TD>7</TD>
+          <TD>8</TD>
+          <TD>9</TD>
+          <TD>10</TD></TR>
+        <TR>
+          <TD>11</TD>
+          <TD>12</TD>
+          <TD>13</TD>
+          <TD>14</TD>
+          <TD>15</TD>
+          <TD>16</TD>
+          <TD>17</TD></TR>
+        <TR>
+          <TD>18</TD>
+          <TD>19</TD>
+          <TD>20</TD>
+          <TD>21</TD>
+          <TD>22</TD>
+          <TD>23</TD>
+          <TD>24</TD></TR>
+        <TR>
+          <TD>25</TD>
+          <TD>26</TD>
+          <TD>27</TD>
+          <TD>28</TD>
+          <TD>29</TD>
+          <TD>30</TD>
+          <TD>31</TD></TR></TBODY></TABLE></DIV>
+      <P>Here's a very simple, but very complete, PHP script to print out a 
+      calendar. It does one thing, but does it well (which is how it should be). 
+      Neat bonus features include the ability to link certain days in the 
+      calendar to a web page - useful for a weblog. You can also assign 
+      stylesheet classes to specific days, and provide content for an individual 
+      day.</P>
+      <P>To use this code, just save the script to your server, include() it in 
+      your code, and display the output of generate_calendar().</P>
+      <P><STRONG>New features</STRONG>: Version 2.1 is now locale-aware. All day 
+      and month names are automatically generated specific to your locale. 
+      Version 2.2 allows you to choose what day your weeks start on. See 
+      examples in the <A 
+      href="http://keithdevens.com/software/php_calendar#examples">examples 
+      section</A>.</P>
+      <H2 id=functions>Functions</H2>
+      <P>Just one:</P><CODE>function generate_calendar($year, $month, $days = 
+      array(), $day_name_length = 3, $month_href = NULL, $first_day = 0, $pn = 
+      array())</CODE> 
+      <P><KBD>generate_calendar</KBD> returns a string containing the output 
+      HTML. <KBD>$year</KBD> and <KBD>$month</KBD> are obvious. However, a neat 
+      side effect of using PHP's <KBD>mktime</KBD> function internally is that 
+      <KBD>generate_calendar</KBD> does "date rounding". So, basically, if you 
+      try to do month 13 of 2002, it'll round to January of 2003. See the <A 
+      href="http://php.net/mktime">documentation for <KBD>mktime</KBD></A>.</P>
+      <P><KBD>$days</KBD> is an optional array that can contain information you 
+      want to specify for each day, including a location to link that day to, a 
+      stylesheet class for that day, and any content you want to appear for that 
+      day of the calendar. For example, an array passed for the days parameter 
+      might look something like this:</P><CODE><SPAN 
+      style="COLOR: #000000"><SPAN style="COLOR: #0000bb">&lt;?php <BR>$days 
+      </SPAN><SPAN style="COLOR: #007700">= array( 
+      <BR>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+      style="COLOR: #0000bb">2</SPAN><SPAN 
+      style="COLOR: #007700">=&gt;array(</SPAN><SPAN 
+      style="COLOR: #dd0000">'/weblog/archive/2004/Jan/02'</SPAN><SPAN 
+      style="COLOR: #007700">,</SPAN><SPAN 
+      style="COLOR: #dd0000">'linked-day'</SPAN><SPAN style="COLOR: #007700">), 
+      <BR>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+      style="COLOR: #0000bb">3</SPAN><SPAN 
+      style="COLOR: #007700">=&gt;array(</SPAN><SPAN 
+      style="COLOR: #dd0000">'/weblog/archive/2004/Jan/03'</SPAN><SPAN 
+      style="COLOR: #007700">,</SPAN><SPAN 
+      style="COLOR: #dd0000">'linked-day'</SPAN><SPAN style="COLOR: #007700">), 
+      <BR>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+      style="COLOR: #0000bb">8</SPAN><SPAN 
+      style="COLOR: #007700">=&gt;array(</SPAN><SPAN 
+      style="COLOR: #dd0000">'/weblog/archive/2004/Jan/08'</SPAN><SPAN 
+      style="COLOR: #007700">,</SPAN><SPAN 
+      style="COLOR: #dd0000">'linked-day'</SPAN><SPAN style="COLOR: #007700">), 
+      <BR>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+      style="COLOR: #0000bb">22</SPAN><SPAN 
+      style="COLOR: #007700">=&gt;array(</SPAN><SPAN 
+      style="COLOR: #dd0000">'/weblog/archive/2004/Jan/22'</SPAN><SPAN 
+      style="COLOR: #007700">,</SPAN><SPAN 
+      style="COLOR: #dd0000">'linked-day'</SPAN><SPAN style="COLOR: #007700">), 
+      <BR>); <BR></SPAN><SPAN style="COLOR: #0000bb">?&gt;</SPAN> </SPAN></CODE>
+      <P>Each key corresponds to the day of the month, and each value is an 
+      array containing one to three elements. The first element is the location 
+      you want the day to link to, the second element is a space-separated list 
+      of classes (for stylesheets), and the third element is content that you 
+      want to appear in that day's cell, instead of just the day's number.</P>
+      <P><KBD>$day_name_length</KBD> (optional, defaults to 3) is the number of 
+      characters to show for the day name ("Monday", "Tuesday", etc.). If you 
+      choose zero, the day headings don't display at all, and if you choose 
+      &gt;3 it displays the whole name of the day.</P>
+      <P><KBD>$month_href</KBD> is the location you'd like the month to be a 
+      link to (optional).</P>
+      <P><KBD>$first day</KBD> is the number of the day you want your weeks to 
+      start on. Sunday is 0, Monday is 1, etc. Defaults to 0, hence Sunday.</P>
+      <P><KBD>$pn</KBD> contains the links for the previous and next months to 
+      link to (hence, 'pn'). It should be in the following format: <KBD>$pn = 
+      array('&amp;lt;'=&gt;'prev-link','&amp;gt;'=&gt;'next-link');</KBD> Note 
+      that it's not necessary that the key for next and previous be 
+      <KBD>&lt;</KBD> (<KBD>&amp;lt</KBD>) and <KBD>&gt;</KBD> 
+      (<KBD>&amp;gt;</KBD>). They could also be things like ← 
+      (<KBD>&amp;larr;</KBD>) and → (<KBD>&amp;rarr;</KBD>) or « 
+      (<KBD>&amp;laquo;</KBD>) and » (<KBD>&amp;raquo;</KBD>). In addition, it's 
+      important that you define them in the order just shown (previous before 
+      next in the array). If you just want to have a previous link, just define 
+      the first. If you just want to have a next link, you must define the first 
+      with a NULL key and then define the second. If one of the "directions" is 
+      defined but the link field is blank, the key (such as &lt; or &gt;) will 
+      still be shown, but it won't be a link.</P>
+      <H2 id=examples>Examples</H2>
+      <DIV class=example>
+      <H3>Show the current month</H3>
+      <TABLE>
+        <TBODY>
+        <TR>
+          <TD style="WIDTH: 15%">
+            <TABLE class=calendar>
+              <CAPTION class=calendar-month>December&nbsp;2005</CAPTION>
+              <TBODY>
+              <TR>
+                <TH abbr=Sunday>Sun</TH>
+                <TH abbr=Monday>Mon</TH>
+                <TH abbr=Tuesday>Tue</TH>
+                <TH abbr=Wednesday>Wed</TH>
+                <TH abbr=Thursday>Thu</TH>
+                <TH abbr=Friday>Fri</TH>
+                <TH abbr=Saturday>Sat</TH></TR>
+              <TR>
+                <TD colSpan=4>&nbsp;</TD>
+                <TD>1</TD>
+                <TD>2</TD>
+                <TD>3</TD></TR>
+              <TR>
+                <TD>4</TD>
+                <TD>5</TD>
+                <TD>6</TD>
+                <TD>7</TD>
+                <TD>8</TD>
+                <TD>9</TD>
+                <TD>10</TD></TR>
+              <TR>
+                <TD>11</TD>
+                <TD>12</TD>
+                <TD>13</TD>
+                <TD>14</TD>
+                <TD>15</TD>
+                <TD>16</TD>
+                <TD>17</TD></TR>
+              <TR>
+                <TD>18</TD>
+                <TD>19</TD>
+                <TD>20</TD>
+                <TD>21</TD>
+                <TD>22</TD>
+                <TD>23</TD>
+                <TD>24</TD></TR>
+              <TR>
+                <TD>25</TD>
+                <TD>26</TD>
+                <TD>27</TD>
+                <TD>28</TD>
+                <TD>29</TD>
+                <TD>30</TD>
+                <TD>31</TD></TR></TBODY></TABLE></TD>
+          <TD>
+            <H4>Code</H4><CODE><SPAN style="COLOR: #000000"><SPAN 
+            style="COLOR: #0000bb">&lt;?php <BR>&nbsp;&nbsp;&nbsp;&nbsp;$time 
+            </SPAN><SPAN style="COLOR: #007700">= </SPAN><SPAN 
+            style="COLOR: #0000bb">time</SPAN><SPAN style="COLOR: #007700">(); 
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;echo </SPAN><SPAN 
+            style="COLOR: #0000bb">generate_calendar</SPAN><SPAN 
+            style="COLOR: #007700">(</SPAN><SPAN 
+            style="COLOR: #0000bb">date</SPAN><SPAN 
+            style="COLOR: #007700">(</SPAN><SPAN 
+            style="COLOR: #dd0000">'Y'</SPAN><SPAN style="COLOR: #007700">, 
+            </SPAN><SPAN style="COLOR: #0000bb">$time</SPAN><SPAN 
+            style="COLOR: #007700">), </SPAN><SPAN 
+            style="COLOR: #0000bb">date</SPAN><SPAN 
+            style="COLOR: #007700">(</SPAN><SPAN 
+            style="COLOR: #dd0000">'n'</SPAN><SPAN style="COLOR: #007700">, 
+            </SPAN><SPAN style="COLOR: #0000bb">$time</SPAN><SPAN 
+            style="COLOR: #007700">)); <BR></SPAN><SPAN 
+            style="COLOR: #0000bb">?&gt;</SPAN> 
+      </SPAN></CODE></TD></TR></TBODY></TABLE>
+      <P>All color and style information is configurable with 
+      stylesheets.</P></DIV>
+      <DIV class=example>
+      <H3>Specify the number of characters to show for day name</H3>
+      <TABLE>
+        <TBODY>
+        <TR>
+          <TD style="WIDTH: 15%">
+            <TABLE class=calendar>
+              <CAPTION class=calendar-month>December&nbsp;2005</CAPTION>
+              <TBODY>
+              <TR>
+                <TH abbr=Sunday>Su</TH>
+                <TH abbr=Monday>Mo</TH>
+                <TH abbr=Tuesday>Tu</TH>
+                <TH abbr=Wednesday>We</TH>
+                <TH abbr=Thursday>Th</TH>
+                <TH abbr=Friday>Fr</TH>
+                <TH abbr=Saturday>Sa</TH></TR>
+              <TR>
+                <TD colSpan=4>&nbsp;</TD>
+                <TD>1</TD>
+                <TD>2</TD>
+                <TD>3</TD></TR>
+              <TR>
+                <TD>4</TD>
+                <TD>5</TD>
+                <TD>6</TD>
+                <TD>7</TD>
+                <TD>8</TD>
+                <TD>9</TD>
+                <TD>10</TD></TR>
+              <TR>
+                <TD>11</TD>
+                <TD>12</TD>
+                <TD>13</TD>
+                <TD>14</TD>
+                <TD>15</TD>
+                <TD>16</TD>
+                <TD>17</TD></TR>
+              <TR>
+                <TD>18</TD>
+                <TD>19</TD>
+                <TD>20</TD>
+                <TD>21</TD>
+                <TD>22</TD>
+                <TD>23</TD>
+                <TD>24</TD></TR>
+              <TR>
+                <TD>25</TD>
+                <TD>26</TD>
+                <TD>27</TD>
+                <TD>28</TD>
+                <TD>29</TD>
+                <TD>30</TD>
+                <TD>31</TD></TR></TBODY></TABLE></TD>
+          <TD>
+            <H4>Code</H4><CODE><SPAN style="COLOR: #000000"><SPAN 
+            style="COLOR: #0000bb">&lt;?php <BR>&nbsp;&nbsp;&nbsp;&nbsp;$time 
+            </SPAN><SPAN style="COLOR: #007700">= </SPAN><SPAN 
+            style="COLOR: #0000bb">time</SPAN><SPAN style="COLOR: #007700">(); 
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;echo </SPAN><SPAN 
+            style="COLOR: #0000bb">generate_calendar</SPAN><SPAN 
+            style="COLOR: #007700">(</SPAN><SPAN 
+            style="COLOR: #0000bb">date</SPAN><SPAN 
+            style="COLOR: #007700">(</SPAN><SPAN 
+            style="COLOR: #dd0000">'Y'</SPAN><SPAN style="COLOR: #007700">, 
+            </SPAN><SPAN style="COLOR: #0000bb">$time</SPAN><SPAN 
+            style="COLOR: #007700">), </SPAN><SPAN 
+            style="COLOR: #0000bb">date</SPAN><SPAN 
+            style="COLOR: #007700">(</SPAN><SPAN 
+            style="COLOR: #dd0000">'n'</SPAN><SPAN style="COLOR: #007700">, 
+            </SPAN><SPAN style="COLOR: #0000bb">$time</SPAN><SPAN 
+            style="COLOR: #007700">), </SPAN><SPAN 
+            style="COLOR: #0000bb">NULL</SPAN><SPAN style="COLOR: #007700">, 
+            </SPAN><SPAN style="COLOR: #0000bb">2</SPAN><SPAN 
+            style="COLOR: #007700">); <BR></SPAN><SPAN 
+            style="COLOR: #0000bb">?&gt;</SPAN> 
+      </SPAN></CODE></TD></TR></TBODY></TABLE>
+      <P>As you can see, it only shows the first two letters of each day 
+      heading.</P></DIV>
+      <DIV class=example>
+      <H3>Highlight the current day</H3>
+      <P>A few people have asked if it is possible to do this. The code is built 
+      to be extensible so you can do whatever you want with it.</P>
+      <TABLE>
+        <TBODY>
+        <TR>
+          <TD style="WIDTH: 15%">
+            <TABLE class=calendar>
+              <CAPTION class=calendar-month>December&nbsp;2005</CAPTION>
+              <TBODY>
+              <TR>
+                <TH abbr=Sunday>Sun</TH>
+                <TH abbr=Monday>Mon</TH>
+                <TH abbr=Tuesday>Tue</TH>
+                <TH abbr=Wednesday>Wed</TH>
+                <TH abbr=Thursday>Thu</TH>
+                <TH abbr=Friday>Fri</TH>
+                <TH abbr=Saturday>Sat</TH></TR>
+              <TR>
+                <TD colSpan=4>&nbsp;</TD>
+                <TD>1</TD>
+                <TD>2</TD>
+                <TD>3</TD></TR>
+              <TR>
+                <TD>4</TD>
+                <TD><SPAN 
+                  style="FONT-WEIGHT: bold; FONT-SIZE: larger; COLOR: red; TEXT-DECORATION: blink">5</SPAN></TD>
+                <TD>6</TD>
+                <TD>7</TD>
+                <TD>8</TD>
+                <TD>9</TD>
+                <TD>10</TD></TR>
+              <TR>
+                <TD>11</TD>
+                <TD>12</TD>
+                <TD>13</TD>
+                <TD>14</TD>
+                <TD>15</TD>
+                <TD>16</TD>
+                <TD>17</TD></TR>
+              <TR>
+                <TD>18</TD>
+                <TD>19</TD>
+                <TD>20</TD>
+                <TD>21</TD>
+                <TD>22</TD>
+                <TD>23</TD>
+                <TD>24</TD></TR>
+              <TR>
+                <TD>25</TD>
+                <TD>26</TD>
+                <TD>27</TD>
+                <TD>28</TD>
+                <TD>29</TD>
+                <TD>30</TD>
+                <TD>31</TD></TR></TBODY></TABLE></TD>
+          <TD>
+            <H4>Code</H4><CODE><SPAN style="COLOR: #000000"><SPAN 
+            style="COLOR: #0000bb">&lt;?php <BR>$time </SPAN><SPAN 
+            style="COLOR: #007700">= </SPAN><SPAN 
+            style="COLOR: #0000bb">time</SPAN><SPAN style="COLOR: #007700">(); 
+            <BR></SPAN><SPAN style="COLOR: #0000bb">$today </SPAN><SPAN 
+            style="COLOR: #007700">= </SPAN><SPAN 
+            style="COLOR: #0000bb">date</SPAN><SPAN 
+            style="COLOR: #007700">(</SPAN><SPAN 
+            style="COLOR: #dd0000">'j'</SPAN><SPAN 
+            style="COLOR: #007700">,</SPAN><SPAN 
+            style="COLOR: #0000bb">$time</SPAN><SPAN style="COLOR: #007700">); 
+            <BR></SPAN><SPAN style="COLOR: #0000bb">$days </SPAN><SPAN 
+            style="COLOR: #007700">= array(</SPAN><SPAN 
+            style="COLOR: #0000bb">$today</SPAN><SPAN 
+            style="COLOR: #007700">=&gt;array(</SPAN><SPAN 
+            style="COLOR: #0000bb">NULL</SPAN><SPAN 
+            style="COLOR: #007700">,</SPAN><SPAN 
+            style="COLOR: #0000bb">NULL</SPAN><SPAN 
+            style="COLOR: #007700">,</SPAN><SPAN 
+            style="COLOR: #dd0000">'&lt;span style="color: red; font-weight: 
+            bold; font-size: larger; text-decoration: blink;"&gt;'</SPAN><SPAN 
+            style="COLOR: #007700">.</SPAN><SPAN 
+            style="COLOR: #0000bb">$today</SPAN><SPAN 
+            style="COLOR: #007700">.</SPAN><SPAN 
+            style="COLOR: #dd0000">'&lt;/span&gt;'</SPAN><SPAN 
+            style="COLOR: #007700">)); <BR>echo </SPAN><SPAN 
+            style="COLOR: #0000bb">generate_calendar</SPAN><SPAN 
+            style="COLOR: #007700">(</SPAN><SPAN 
+            style="COLOR: #0000bb">date</SPAN><SPAN 
+            style="COLOR: #007700">(</SPAN><SPAN 
+            style="COLOR: #dd0000">'Y'</SPAN><SPAN style="COLOR: #007700">, 
+            </SPAN><SPAN style="COLOR: #0000bb">$time</SPAN><SPAN 
+            style="COLOR: #007700">), </SPAN><SPAN 
+            style="COLOR: #0000bb">date</SPAN><SPAN 
+            style="COLOR: #007700">(</SPAN><SPAN 
+            style="COLOR: #dd0000">'n'</SPAN><SPAN style="COLOR: #007700">, 
+            </SPAN><SPAN style="COLOR: #0000bb">$time</SPAN><SPAN 
+            style="COLOR: #007700">), </SPAN><SPAN 
+            style="COLOR: #0000bb">$days</SPAN><SPAN style="COLOR: #007700">); 
+            <BR></SPAN><SPAN style="COLOR: #0000bb">?&gt;</SPAN> 
+          </SPAN></CODE></TD></TR></TBODY></TABLE></DIV>
+      <DIV class=example>
+      <H3>Link or provide content for certain days</H3>
+      <TABLE>
+        <TBODY>
+        <TR>
+          <TD style="WIDTH: 15%">
+            <TABLE class=calendar>
+              <CAPTION class=calendar-month><A 
+              href="http://keithdevens.com/weblog/archive/2004/Jan">January&nbsp;2004</A></CAPTION>
+              <TBODY>
+              <TR>
+                <TH abbr=Sunday>Sun</TH>
+                <TH abbr=Monday>Mon</TH>
+                <TH abbr=Tuesday>Tue</TH>
+                <TH abbr=Wednesday>Wed</TH>
+                <TH abbr=Thursday>Thu</TH>
+                <TH abbr=Friday>Fri</TH>
+                <TH abbr=Saturday>Sat</TH></TR>
+              <TR>
+                <TD colSpan=4>&nbsp;</TD>
+                <TD>1</TD>
+                <TD class=linked-day><A 
+                  href="http://keithdevens.com/weblog/archive/2004/Jan/02">2</A></TD>
+                <TD class=linked-day><A 
+                  href="http://keithdevens.com/weblog/archive/2004/Jan/03">3</A></TD></TR>
+              <TR>
+                <TD>4</TD>
+                <TD>5</TD>
+                <TD>6</TD>
+                <TD>7</TD>
+                <TD class=linked-day><A 
+                  href="http://keithdevens.com/weblog/archive/2004/Jan/08">8</A></TD>
+                <TD>9</TD>
+                <TD>10</TD></TR>
+              <TR>
+                <TD>11</TD>
+                <TD>12</TD>
+                <TD>13</TD>
+                <TD>14</TD>
+                <TD>15</TD>
+                <TD>16</TD>
+                <TD>17</TD></TR>
+              <TR>
+                <TD>18</TD>
+                <TD>19</TD>
+                <TD>20</TD>
+                <TD>21</TD>
+                <TD class=linked-day><A 
+                  href="http://keithdevens.com/weblog/archive/2004/Jan/22">22</A></TD>
+                <TD>23</TD>
+                <TD>24</TD></TR>
+              <TR>
+                <TD>25</TD>
+                <TD class=textual>twenty-six</TD>
+                <TD>27</TD>
+                <TD>28</TD>
+                <TD>29</TD>
+                <TD>30</TD>
+                <TD>31</TD></TR></TBODY></TABLE></TD>
+          <TD>
+            <H4>Code</H4><CODE><SPAN style="COLOR: #000000"><SPAN 
+            style="COLOR: #0000bb">&lt;?php <BR>&nbsp;&nbsp;&nbsp;&nbsp;$days 
+            </SPAN><SPAN style="COLOR: #007700">= array( 
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+            style="COLOR: #0000bb">2</SPAN><SPAN 
+            style="COLOR: #007700">=&gt;array(</SPAN><SPAN 
+            style="COLOR: #dd0000">'/weblog/archive/2004/Jan/02'</SPAN><SPAN 
+            style="COLOR: #007700">,</SPAN><SPAN 
+            style="COLOR: #dd0000">'linked-day'</SPAN><SPAN 
+            style="COLOR: #007700">), 
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+            style="COLOR: #0000bb">3</SPAN><SPAN 
+            style="COLOR: #007700">=&gt;array(</SPAN><SPAN 
+            style="COLOR: #dd0000">'/weblog/archive/2004/Jan/03'</SPAN><SPAN 
+            style="COLOR: #007700">,</SPAN><SPAN 
+            style="COLOR: #dd0000">'linked-day'</SPAN><SPAN 
+            style="COLOR: #007700">), 
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+            style="COLOR: #0000bb">8</SPAN><SPAN 
+            style="COLOR: #007700">=&gt;array(</SPAN><SPAN 
+            style="COLOR: #dd0000">'/weblog/archive/2004/Jan/08'</SPAN><SPAN 
+            style="COLOR: #007700">,</SPAN><SPAN 
+            style="COLOR: #dd0000">'linked-day'</SPAN><SPAN 
+            style="COLOR: #007700">), 
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+            style="COLOR: #0000bb">22</SPAN><SPAN 
+            style="COLOR: #007700">=&gt;array(</SPAN><SPAN 
+            style="COLOR: #dd0000">'/weblog/archive/2004/Jan/22'</SPAN><SPAN 
+            style="COLOR: #007700">,</SPAN><SPAN 
+            style="COLOR: #dd0000">'linked-day'</SPAN><SPAN 
+            style="COLOR: #007700">), 
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+            style="COLOR: #0000bb">26</SPAN><SPAN 
+            style="COLOR: #007700">=&gt;array(</SPAN><SPAN 
+            style="COLOR: #0000bb">NULL</SPAN><SPAN 
+            style="COLOR: #007700">,</SPAN><SPAN 
+            style="COLOR: #dd0000">'linked-day textual'</SPAN><SPAN 
+            style="COLOR: #007700">,</SPAN><SPAN 
+            style="COLOR: #dd0000">'twenty-six'</SPAN><SPAN 
+            style="COLOR: #007700">), <BR>&nbsp;&nbsp;&nbsp;&nbsp;); 
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;echo </SPAN><SPAN 
+            style="COLOR: #0000bb">generate_calendar</SPAN><SPAN 
+            style="COLOR: #007700">(</SPAN><SPAN 
+            style="COLOR: #0000bb">2004</SPAN><SPAN style="COLOR: #007700">, 
+            </SPAN><SPAN style="COLOR: #0000bb">1</SPAN><SPAN 
+            style="COLOR: #007700">, </SPAN><SPAN 
+            style="COLOR: #0000bb">$days</SPAN><SPAN style="COLOR: #007700">, 
+            </SPAN><SPAN style="COLOR: #0000bb">3</SPAN><SPAN 
+            style="COLOR: #007700">, </SPAN><SPAN 
+            style="COLOR: #dd0000">'/weblog/archive/2004/Jan'</SPAN><SPAN 
+            style="COLOR: #007700">); <BR></SPAN><SPAN 
+            style="COLOR: #0000bb">?&gt;</SPAN> 
+      </SPAN></CODE></TD></TR></TBODY></TABLE>
+      <P>I added the "twenty-six" so I could show how the content field works. 
+      I've used the content field as part of a task manager script I wrote. 
+      Using this feature it was easy to give myself a month's view of my tasks. 
+      The content for each day was just the text of that day's tasks. In another 
+      view, using the stylesheet classes I was able to have each day be 
+      highlighted to be a certain color depending on the highest priority task 
+      for that day. So I've gotten a lot of use out of this code.</P>
+      <P>It's important to note, however, that the content field will not be 
+      automatically HTML-escaped for you, while the link and CSS classes fields 
+      will be. That's to give you the most flexibility while putting content in 
+      your calendar, but you must make sure you escape your HTML yourself for 
+      that field.</P></DIV>
+      <DIV class=example>
+      <H3>Locale-awareness (new in 2.1): Dutch</H3>
+      <P>As of version 2.1, this code is completely locale-aware. The day and 
+      month names are generated from your locale.</P>
+      <TABLE>
+        <TBODY>
+        <TR>
+          <TD style="WIDTH: 15%">
+            <TABLE class=calendar>
+              <CAPTION class=calendar-month>December&nbsp;2005</CAPTION>
+              <TBODY>
+              <TR>
+                <TH abbr=Sunday>Sun</TH>
+                <TH abbr=Monday>Mon</TH>
+                <TH abbr=Tuesday>Tue</TH>
+                <TH abbr=Wednesday>Wed</TH>
+                <TH abbr=Thursday>Thu</TH>
+                <TH abbr=Friday>Fri</TH>
+                <TH abbr=Saturday>Sat</TH></TR>
+              <TR>
+                <TD colSpan=4>&nbsp;</TD>
+                <TD>1</TD>
+                <TD>2</TD>
+                <TD>3</TD></TR>
+              <TR>
+                <TD>4</TD>
+                <TD>5</TD>
+                <TD>6</TD>
+                <TD>7</TD>
+                <TD>8</TD>
+                <TD>9</TD>
+                <TD>10</TD></TR>
+              <TR>
+                <TD>11</TD>
+                <TD>12</TD>
+                <TD>13</TD>
+                <TD>14</TD>
+                <TD>15</TD>
+                <TD>16</TD>
+                <TD>17</TD></TR>
+              <TR>
+                <TD>18</TD>
+                <TD>19</TD>
+                <TD>20</TD>
+                <TD>21</TD>
+                <TD>22</TD>
+                <TD>23</TD>
+                <TD>24</TD></TR>
+              <TR>
+                <TD>25</TD>
+                <TD>26</TD>
+                <TD>27</TD>
+                <TD>28</TD>
+                <TD>29</TD>
+                <TD>30</TD>
+                <TD>31</TD></TR></TBODY></TABLE></TD>
+          <TD>
+            <H4>Code</H4><CODE><SPAN style="COLOR: #000000"><SPAN 
+            style="COLOR: #0000bb">&lt;?php <BR>&nbsp;&nbsp;&nbsp;&nbsp;$time 
+            </SPAN><SPAN style="COLOR: #007700">= </SPAN><SPAN 
+            style="COLOR: #0000bb">time</SPAN><SPAN style="COLOR: #007700">(); 
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+            style="COLOR: #0000bb">$oldlocale </SPAN><SPAN 
+            style="COLOR: #007700">= </SPAN><SPAN 
+            style="COLOR: #0000bb">setlocale</SPAN><SPAN 
+            style="COLOR: #007700">(</SPAN><SPAN 
+            style="COLOR: #0000bb">LC_TIME</SPAN><SPAN style="COLOR: #007700">, 
+            </SPAN><SPAN style="COLOR: #0000bb">NULL</SPAN><SPAN 
+            style="COLOR: #007700">); </SPAN><SPAN style="COLOR: #ff8000">#save 
+            current locale <BR>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+            style="COLOR: #0000bb">setlocale</SPAN><SPAN 
+            style="COLOR: #007700">(</SPAN><SPAN 
+            style="COLOR: #0000bb">LC_TIME</SPAN><SPAN style="COLOR: #007700">, 
+            </SPAN><SPAN style="COLOR: #dd0000">'nl_NL'</SPAN><SPAN 
+            style="COLOR: #007700">); </SPAN><SPAN style="COLOR: #ff8000">#dutch 
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN style="COLOR: #007700">echo 
+            </SPAN><SPAN style="COLOR: #0000bb">generate_calendar</SPAN><SPAN 
+            style="COLOR: #007700">(</SPAN><SPAN 
+            style="COLOR: #0000bb">date</SPAN><SPAN 
+            style="COLOR: #007700">(</SPAN><SPAN 
+            style="COLOR: #dd0000">'Y'</SPAN><SPAN style="COLOR: #007700">, 
+            </SPAN><SPAN style="COLOR: #0000bb">$time</SPAN><SPAN 
+            style="COLOR: #007700">), </SPAN><SPAN 
+            style="COLOR: #0000bb">date</SPAN><SPAN 
+            style="COLOR: #007700">(</SPAN><SPAN 
+            style="COLOR: #dd0000">'n'</SPAN><SPAN style="COLOR: #007700">, 
+            </SPAN><SPAN style="COLOR: #0000bb">$time</SPAN><SPAN 
+            style="COLOR: #007700">)); <BR>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+            style="COLOR: #0000bb">setlocale</SPAN><SPAN 
+            style="COLOR: #007700">(</SPAN><SPAN 
+            style="COLOR: #0000bb">LC_TIME</SPAN><SPAN style="COLOR: #007700">, 
+            </SPAN><SPAN style="COLOR: #0000bb">$oldlocale</SPAN><SPAN 
+            style="COLOR: #007700">); <BR></SPAN><SPAN 
+            style="COLOR: #0000bb">?&gt;</SPAN> 
+      </SPAN></CODE></TD></TR></TBODY></TABLE></DIV>
+      <DIV class=example>
+      <H3>Spanish, weeks start on Monday (new in 2.2)</H3>
+      <TABLE>
+        <TBODY>
+        <TR>
+          <TD style="WIDTH: 15%">
+            <TABLE class=calendar>
+              <CAPTION class=calendar-month>December&nbsp;2005</CAPTION>
+              <TBODY>
+              <TR>
+                <TH abbr=Monday>Mon</TH>
+                <TH abbr=Tuesday>Tue</TH>
+                <TH abbr=Wednesday>Wed</TH>
+                <TH abbr=Thursday>Thu</TH>
+                <TH abbr=Friday>Fri</TH>
+                <TH abbr=Saturday>Sat</TH>
+                <TH abbr=Sunday>Sun</TH></TR>
+              <TR>
+                <TD colSpan=3>&nbsp;</TD>
+                <TD>1</TD>
+                <TD>2</TD>
+                <TD>3</TD>
+                <TD>4</TD></TR>
+              <TR>
+                <TD>5</TD>
+                <TD>6</TD>
+                <TD>7</TD>
+                <TD>8</TD>
+                <TD>9</TD>
+                <TD>10</TD>
+                <TD>11</TD></TR>
+              <TR>
+                <TD>12</TD>
+                <TD>13</TD>
+                <TD>14</TD>
+                <TD>15</TD>
+                <TD>16</TD>
+                <TD>17</TD>
+                <TD>18</TD></TR>
+              <TR>
+                <TD>19</TD>
+                <TD>20</TD>
+                <TD>21</TD>
+                <TD>22</TD>
+                <TD>23</TD>
+                <TD>24</TD>
+                <TD>25</TD></TR>
+              <TR>
+                <TD>26</TD>
+                <TD>27</TD>
+                <TD>28</TD>
+                <TD>29</TD>
+                <TD>30</TD>
+                <TD>31</TD>
+                <TD>&nbsp;</TD></TR></TBODY></TABLE></TD>
+          <TD>
+            <H4>Code</H4><CODE><SPAN style="COLOR: #000000"><SPAN 
+            style="COLOR: #0000bb">&lt;?php <BR>&nbsp;&nbsp;&nbsp;&nbsp;$time 
+            </SPAN><SPAN style="COLOR: #007700">= </SPAN><SPAN 
+            style="COLOR: #0000bb">time</SPAN><SPAN style="COLOR: #007700">(); 
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+            style="COLOR: #0000bb">$oldlocale </SPAN><SPAN 
+            style="COLOR: #007700">= </SPAN><SPAN 
+            style="COLOR: #0000bb">setlocale</SPAN><SPAN 
+            style="COLOR: #007700">(</SPAN><SPAN 
+            style="COLOR: #0000bb">LC_TIME</SPAN><SPAN style="COLOR: #007700">, 
+            </SPAN><SPAN style="COLOR: #0000bb">NULL</SPAN><SPAN 
+            style="COLOR: #007700">); </SPAN><SPAN style="COLOR: #ff8000">#save 
+            current locale <BR>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+            style="COLOR: #0000bb">setlocale</SPAN><SPAN 
+            style="COLOR: #007700">(</SPAN><SPAN 
+            style="COLOR: #0000bb">LC_TIME</SPAN><SPAN style="COLOR: #007700">, 
+            </SPAN><SPAN style="COLOR: #dd0000">'es_ES'</SPAN><SPAN 
+            style="COLOR: #007700">); </SPAN><SPAN 
+            style="COLOR: #ff8000">#Spanish 
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN style="COLOR: #007700">echo 
+            </SPAN><SPAN style="COLOR: #0000bb">generate_calendar</SPAN><SPAN 
+            style="COLOR: #007700">(</SPAN><SPAN 
+            style="COLOR: #0000bb">date</SPAN><SPAN 
+            style="COLOR: #007700">(</SPAN><SPAN 
+            style="COLOR: #dd0000">'Y'</SPAN><SPAN style="COLOR: #007700">, 
+            </SPAN><SPAN style="COLOR: #0000bb">$time</SPAN><SPAN 
+            style="COLOR: #007700">), </SPAN><SPAN 
+            style="COLOR: #0000bb">date</SPAN><SPAN 
+            style="COLOR: #007700">(</SPAN><SPAN 
+            style="COLOR: #dd0000">'n'</SPAN><SPAN style="COLOR: #007700">, 
+            </SPAN><SPAN style="COLOR: #0000bb">$time</SPAN><SPAN 
+            style="COLOR: #007700">), </SPAN><SPAN 
+            style="COLOR: #0000bb">NULL</SPAN><SPAN style="COLOR: #007700">, 
+            </SPAN><SPAN style="COLOR: #0000bb">3</SPAN><SPAN 
+            style="COLOR: #007700">, </SPAN><SPAN 
+            style="COLOR: #0000bb">NULL</SPAN><SPAN style="COLOR: #007700">, 
+            </SPAN><SPAN style="COLOR: #0000bb">1</SPAN><SPAN 
+            style="COLOR: #007700">); <BR>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+            style="COLOR: #0000bb">setlocale</SPAN><SPAN 
+            style="COLOR: #007700">(</SPAN><SPAN 
+            style="COLOR: #0000bb">LC_TIME</SPAN><SPAN style="COLOR: #007700">, 
+            </SPAN><SPAN style="COLOR: #0000bb">$oldlocale</SPAN><SPAN 
+            style="COLOR: #007700">); <BR></SPAN><SPAN 
+            style="COLOR: #0000bb">?&gt;</SPAN> 
+      </SPAN></CODE></TD></TR></TBODY></TABLE></DIV>
+      <DIV class=example>
+      <H3>With previous and next links (new in 2.3)</H3>
+      <TABLE>
+        <TBODY>
+        <TR>
+          <TD style="WIDTH: 15%">
+            <TABLE class=calendar>
+              <CAPTION class=calendar-month><SPAN class=calendar-prev><A 
+              href="http://keithdevens.com/weblog/archive/2004/Jul">«</A></SPAN>&nbsp;August&nbsp;2004&nbsp;<SPAN 
+              class=calendar-next><A 
+              href="http://keithdevens.com/weblog/archive/2004/Sep">»</A></SPAN></CAPTION>
+              <TBODY>
+              <TR>
+                <TH abbr=Sunday>Sun</TH>
+                <TH abbr=Monday>Mon</TH>
+                <TH abbr=Tuesday>Tue</TH>
+                <TH abbr=Wednesday>Wed</TH>
+                <TH abbr=Thursday>Thu</TH>
+                <TH abbr=Friday>Fri</TH>
+                <TH abbr=Saturday>Sat</TH></TR>
+              <TR>
+                <TD>1</TD>
+                <TD>2</TD>
+                <TD>3</TD>
+                <TD>4</TD>
+                <TD>5</TD>
+                <TD>6</TD>
+                <TD>7</TD></TR>
+              <TR>
+                <TD>8</TD>
+                <TD>9</TD>
+                <TD>10</TD>
+                <TD>11</TD>
+                <TD>12</TD>
+                <TD>13</TD>
+                <TD>14</TD></TR>
+              <TR>
+                <TD>15</TD>
+                <TD>16</TD>
+                <TD>17</TD>
+                <TD>18</TD>
+                <TD>19</TD>
+                <TD>20</TD>
+                <TD>21</TD></TR>
+              <TR>
+                <TD>22</TD>
+                <TD>23</TD>
+                <TD>24</TD>
+                <TD>25</TD>
+                <TD>26</TD>
+                <TD>27</TD>
+                <TD>28</TD></TR>
+              <TR>
+                <TD>29</TD>
+                <TD>30</TD>
+                <TD>31</TD>
+                <TD colSpan=4>&nbsp;</TD></TR></TBODY></TABLE></TD>
+          <TD>
+            <H4>Code</H4><CODE><SPAN style="COLOR: #000000"><SPAN 
+            style="COLOR: #0000bb">&lt;?php <BR>&nbsp;&nbsp;&nbsp;&nbsp;$pn 
+            </SPAN><SPAN style="COLOR: #007700">= array(</SPAN><SPAN 
+            style="COLOR: #dd0000">'&amp;laquo;'</SPAN><SPAN 
+            style="COLOR: #007700">=&gt;</SPAN><SPAN 
+            style="COLOR: #dd0000">'/weblog/archive/2004/Jul'</SPAN><SPAN 
+            style="COLOR: #007700">, </SPAN><SPAN 
+            style="COLOR: #dd0000">'&amp;raquo;'</SPAN><SPAN 
+            style="COLOR: #007700">=&gt;</SPAN><SPAN 
+            style="COLOR: #dd0000">'/weblog/archive/2004/Sep'</SPAN><SPAN 
+            style="COLOR: #007700">); <BR>&nbsp;&nbsp;&nbsp;&nbsp;echo 
+            </SPAN><SPAN style="COLOR: #0000bb">generate_calendar</SPAN><SPAN 
+            style="COLOR: #007700">(</SPAN><SPAN 
+            style="COLOR: #0000bb">2004</SPAN><SPAN style="COLOR: #007700">, 
+            </SPAN><SPAN style="COLOR: #0000bb">8</SPAN><SPAN 
+            style="COLOR: #007700">, </SPAN><SPAN 
+            style="COLOR: #0000bb">NULL</SPAN><SPAN style="COLOR: #007700">, 
+            </SPAN><SPAN style="COLOR: #0000bb">3</SPAN><SPAN 
+            style="COLOR: #007700">, </SPAN><SPAN 
+            style="COLOR: #0000bb">NULL</SPAN><SPAN style="COLOR: #007700">, 
+            </SPAN><SPAN style="COLOR: #0000bb">0</SPAN><SPAN 
+            style="COLOR: #007700">, </SPAN><SPAN 
+            style="COLOR: #0000bb">$pn</SPAN><SPAN style="COLOR: #007700">); 
+            <BR></SPAN><SPAN style="COLOR: #0000bb">?&gt;</SPAN> 
+          </SPAN></CODE></TD></TR></TBODY></TABLE>
+      <P>Note that the arrows inherit whatever style you set for your caption 
+      (css class 'calendar-month'), but you can set styles for them 
+      specifically. They're in <KBD>&lt;span&gt;</KBD> tags with classes of 
+      "calendar-prev" and "calendar-next".</P></DIV>
+      <H2 id=notes>Notes</H2>
+      <P>Some calendar scripts will print out an entire year for you. I found 
+      that kind of unnecessary, since it's real easy to do yourself, and if you 
+      do it yourself you can format it any way you want. Here's (basically) the 
+      code I use to print the year in my <A 
+      href="http://www.keithdevens.com/weblog/archive/2002">weblog 
+      archive</A>:</P><CODE><SPAN style="COLOR: #000000">&lt;table 
+      style="margin: auto"&gt; <BR>&lt;tr&gt; <BR>&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+      style="COLOR: #0000bb">&lt;?php </SPAN><SPAN 
+      style="COLOR: #007700">for(</SPAN><SPAN 
+      style="COLOR: #0000bb">$month</SPAN><SPAN 
+      style="COLOR: #007700">=</SPAN><SPAN style="COLOR: #0000bb">1</SPAN><SPAN 
+      style="COLOR: #007700">; </SPAN><SPAN 
+      style="COLOR: #0000bb">$month</SPAN><SPAN 
+      style="COLOR: #007700">&lt;=</SPAN><SPAN 
+      style="COLOR: #0000bb">12</SPAN><SPAN style="COLOR: #007700">; 
+      </SPAN><SPAN style="COLOR: #0000bb">$month</SPAN><SPAN 
+      style="COLOR: #007700">++){ </SPAN><SPAN style="COLOR: #0000bb">?&gt; 
+      <BR></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td 
+      style="vertical-align: top"&gt; 
+      <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+      style="COLOR: #0000bb">&lt;?php $weblog</SPAN><SPAN 
+      style="COLOR: #007700">-&gt;</SPAN><SPAN 
+      style="COLOR: #0000bb">printCalendar</SPAN><SPAN 
+      style="COLOR: #007700">(</SPAN><SPAN 
+      style="COLOR: #0000bb">$year</SPAN><SPAN style="COLOR: #007700">, 
+      </SPAN><SPAN style="COLOR: #0000bb">$month</SPAN><SPAN 
+      style="COLOR: #007700">); </SPAN><SPAN style="COLOR: #0000bb">?&gt; 
+      <BR></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/td&gt; 
+      <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+      style="COLOR: #0000bb">&lt;?php </SPAN><SPAN 
+      style="COLOR: #007700">if(</SPAN><SPAN 
+      style="COLOR: #0000bb">$month</SPAN><SPAN 
+      style="COLOR: #007700">%</SPAN><SPAN style="COLOR: #0000bb">3 </SPAN><SPAN 
+      style="COLOR: #007700">== </SPAN><SPAN style="COLOR: #0000bb">0 
+      </SPAN><SPAN style="COLOR: #007700">and </SPAN><SPAN 
+      style="COLOR: #0000bb">$month</SPAN><SPAN 
+      style="COLOR: #007700">&lt;</SPAN><SPAN 
+      style="COLOR: #0000bb">12</SPAN><SPAN style="COLOR: #007700">){ 
+      </SPAN><SPAN style="COLOR: #0000bb">?&gt; 
+      <BR></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;&lt;tr&gt; 
+      <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+      style="COLOR: #0000bb">&lt;?php </SPAN><SPAN style="COLOR: #007700">} 
+      </SPAN><SPAN style="COLOR: #0000bb">?&gt; 
+      <BR></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;<SPAN style="COLOR: #0000bb">&lt;?php 
+      </SPAN><SPAN style="COLOR: #007700">} </SPAN><SPAN 
+      style="COLOR: #0000bb">?&gt; <BR></SPAN>&lt;/tr&gt; 
+      <BR>&lt;/table&gt;</SPAN> </CODE>
+      <P><KBD>$weblog-&gt;printCalendar()</KBD> does some things like retrieve 
+      the list of days that have entries before it calls 
+      <KBD>generate_calendar</KBD> to print out the calendar.</P>
+      <P>Note that the function must be given a date on or after 1970 due to 
+      limitations in underlying libraries.</P>
+      <H2 id=source>Download the source</H2>
+      <P>Get the <A 
+      href="http://keithdevens.com/software/php_calendar/source">plain source 
+      code</A> or view the <A 
+      href="http://keithdevens.com/software/php_calendar/colorsource">colorized 
+      source code</A> if you want pretty colors.</P>
+      <H2 id=contact>Support</H2>
+      <P>No support is provided for this code, as I get too many e-mails from 
+      either PHP newbies who want me to teach them PHP, or from people who don't 
+      bother to try the examples I've provided. It's a shame I have to do this 
+      because most people who e-mail are genuinely polite. However, if you think 
+      there's a problem with the code (there is a known problem with character 
+      encodings with some non-English locale settings) or you'd just like to 
+      drop me a line, please <A href="http://keithdevens.com/mail">feel 
+      free</A>.</P>
+      <H2 id=history>History</H2>
+      <P>Version 2 released on Jan 10, 2004.</P>
+      <P>Version 2.1 released on May 28, 2004. Made it completely locale-aware. 
+      Also updated the code to make it simpler and reflect my current coding 
+      style, which made it 12 lines shorter. Version 2.1b, released the same 
+      day, removes the unneccessary "dayofweek" class on the day headings.</P>
+      <P>Version 2.2 released on July 12, 2004. You can now choose what day of 
+      the week your calendar considers the first day. The code now uses %w 
+      instead of %u in strftime() for compatibility with Windows, and uses 
+      htmlentities() to handle encoding issues with non-English locales. The 
+      code is also 15 lines shorter, yet does more! :)</P>
+      <P>Version 2.3 released on Aug 22, 2004. You can now provide links for the 
+      previous and next months. Also, one important change is that the CSS class 
+      of the "Month Year" caption has changed from "month" to "calendar-month". 
+      Change your CSS appropriately.</P></TD>
+    <TD class="content-right no-print">
+      <H3>Recently changed pages</H3><A 
+      href="http://keithdevens.com/wiki/radio">Internet radio stations</A><BR><A 
+      href="http://keithdevens.com/wiki/cars">Cars I want to consider</A><BR><A 
+      href="http://keithdevens.com/wiki/Postmillenialism">Postmillenialism</A><BR><A 
+      href="http://keithdevens.com/wiki/Theonomy">Theonomy</A><BR><A 
+      href="http://keithdevens.com/wiki/Programs">My essential 
+      programs</A><BR><A href="http://keithdevens.com/wiki/File+extensions">File 
+      extensions</A><BR>
+      <H3>All pages</H3><A href="http://keithdevens.com/about">About</A><BR><A 
+      href="http://keithdevens.com/wiki/Acno's+Energizer">Acno's 
+      Energizer</A><BR><A 
+      href="http://keithdevens.com/wiki/Artificial+Intelligence">Artificial 
+      Intelligence</A><BR><A 
+      href="http://keithdevens.com/wiki/Atom">Atom</A><BR><A 
+      href="http://keithdevens.com/wiki/Bash">Bash</A><BR><A 
+      href="http://keithdevens.com/wiki/Belief+systems">Belief systems</A><BR><A 
+      href="http://keithdevens.com/wiki/C">C and C++</A><BR><A 
+      href="http://keithdevens.com/wiki/C+++Reference">C++ Reference</A><BR><A 
+      href="http://keithdevens.com/wiki/Calvinism">Calvinism</A><BR><A 
+      href="http://keithdevens.com/wiki/cars">Cars I want to consider</A><BR><A 
+      href="http://keithdevens.com/wiki/character+sets">character sets</A><BR><A 
+      href="http://keithdevens.com/Christianity">Christian Resources</A><BR><A 
+      href="http://keithdevens.com/wiki/Color+tools">Color tools</A><BR><A 
+      href="http://keithdevens.com/wiki/CSSTabs">CSSTabs</A><BR><A 
+      href="http://keithdevens.com/wiki/Documentation+standards">Documentation 
+      standards</A><BR><A 
+      href="http://keithdevens.com/downloads">Downloads</A><BR><A 
+      href="http://keithdevens.com/wiki/DVDs">DVDs</A><BR><A 
+      href="http://keithdevens.com/wiki/Dvorak">Dvorak keyboard</A><BR><A 
+      href="http://keithdevens.com/mail">E-mail me</A><BR><A 
+      href="http://keithdevens.com/wiki/Eclipse">Eclipse</A><BR><A 
+      href="http://keithdevens.com/wiki/Eiffel">Eiffel</A><BR><A 
+      href="http://keithdevens.com/wiki/Evolution">Evolution</A><BR><A 
+      href="http://keithdevens.com/wiki/Extension+languages">Extension 
+      languages</A><BR><A 
+      href="http://keithdevens.com/wiki/File+extensions">File 
+      extensions</A><BR><A 
+      href="http://keithdevens.com/wiki/Firefox">Firefox</A><BR><A 
+      href="http://keithdevens.com/software/Formation">Formation: web form 
+      automation library for PHP</A><BR><A 
+      href="http://keithdevens.com/wiki/Greg+Bahnsen">Greg Bahnsen</A><BR><A 
+      href="http://keithdevens.com/wiki/Guns">Guns</A><BR><A 
+      href="http://keithdevens.com/wiki/Important+articles+or+essays">Important 
+      articles or essays</A><BR><A 
+      href="http://keithdevens.com/wiki/radio">Internet radio stations</A><BR><A 
+      href="http://keithdevens.com/wiki/Java">Java</A><BR><A 
+      href="http://keithdevens.com/wiki/Javascript">Javascript</A><BR><A 
+      href="http://keithdevens.com/wiki/jEdit">jEdit</A><BR><A 
+      href="http://keithdevens.com/wiki/Linux">Linux</A><BR><A 
+      href="http://keithdevens.com/wiki/Logical+fallacies">Logical 
+      fallacies</A><BR><A 
+      href="http://keithdevens.com/wiki/Markup">Markup</A><BR><A 
+      href="http://keithdevens.com/links">Miscellaneous Links</A><BR><A 
+      href="http://keithdevens.com/wiki/mod_rewrite">mod_rewrite</A><BR><A 
+      href="http://keithdevens.com/wiki/theaters">Movie theaters</A><BR><A 
+      href="http://keithdevens.com/weblog/comment-policy">My comment 
+      policy</A><BR><A href="http://keithdevens.com/wiki/Programs">My essential 
+      programs</A><BR><A href="http://keithdevens.com/resume">My 
+      resume</A><BR><A 
+      href="http://keithdevens.com/wiki/Namespaces">Namespaces</A><BR><A 
+      href="http://keithdevens.com/wiki/Naming+conventions">Naming 
+      conventions</A><BR><A 
+      href="http://keithdevens.com/friends/newyears2000.php3">New Years 
+      2000</A><BR><A 
+      href="http://keithdevens.com/wiki/n-squared-sort-comparison">N^2 sort 
+      comparison</A><BR><A href="http://keithdevens.com/software/license">Open 
+      Source License</A><BR><A 
+      href="http://keithdevens.com/wiki/Perl">Perl</A><BR><A 
+      href="http://keithdevens.com/wiki/Philosophy">Philosophy</A><BR><A 
+      href="http://keithdevens.com/wiki/PHP">PHP</A><BR><A 
+      href="http://keithdevens.com/software/php_calendar">PHP Calendar (version 
+      2.3)</A><BR><A href="http://keithdevens.com/software/phpxml">PHP XML 
+      Library, version 1.2b</A><BR><A 
+      href="http://keithdevens.com/pictures">Pictures</A><BR><A 
+      href="http://keithdevens.com/wiki/Postmillenialism">Postmillenialism</A><BR><A 
+      href="http://keithdevens.com/wiki/Presuppositionalism">Presuppositionalism</A><BR><A 
+      href="http://keithdevens.com/wiki/ProgrammerFonts">Programmer 
+      Fonts</A><BR><A 
+      href="http://keithdevens.com/wiki/Programming+languages">Programming 
+      languages</A><BR><A href="http://keithdevens.com/programming">Programming 
+      Resources</A><BR><A href="http://keithdevens.com/puntacana">Punta 
+      Cana</A><BR><A href="http://keithdevens.com/wiki/Python">Python</A><BR><A 
+      href="http://keithdevens.com/wiki/RDF">RDF</A><BR><A 
+      href="http://keithdevens.com/wiki/REBOL">REBOL</A><BR><A 
+      href="http://keithdevens.com/wiki/Reflex+game">Reflex game</A><BR><A 
+      href="http://keithdevens.com/wiki/Regular+expressions">Regular 
+      expressions</A><BR><A 
+      href="http://keithdevens.com/wiki/Robot+Exclusions">Robot 
+      Exclusions</A><BR><A 
+      href="http://keithdevens.com/wiki/Roman+Catholicism">Roman 
+      Catholicism</A><BR><A 
+      href="http://keithdevens.com/wiki/Ruby">Ruby</A><BR><A 
+      href="http://keithdevens.com/wiki/Shorthand">Shorthand</A><BR><A 
+      href="http://keithdevens.com/skydiving">Skydiving, August 28, 
+      2000</A><BR><A href="http://keithdevens.com/software">Software I've 
+      written</A><BR><A href="http://keithdevens.com/wiki/SPAM">SPAM</A><BR><A 
+      href="http://keithdevens.com/wiki/StructuredText">StructuredText</A><BR><A 
+      href="http://keithdevens.com/wiki/Tcl">Tcl/Tk</A><BR><A 
+      href="http://keithdevens.com/wiki/Tea">Tea</A><BR><A 
+      href="http://keithdevens.com/wiki/Text+Editors">Text Editors</A><BR><A 
+      href="http://keithdevens.com/wiki/TextDrive">TextDrive</A><BR><A 
+      href="http://keithdevens.com/wiki/Theonomy">Theonomy</A><BR><A 
+      href="http://keithdevens.com/wiki/Tools+of+communication">Tools of 
+      communication</A><BR><A 
+      href="http://keithdevens.com/wiki/Unicode">Unicode</A><BR><A 
+      href="http://keithdevens.com/wiki/URL+Design">URL Design</A><BR><A 
+      href="http://keithdevens.com/wiki/Virtual+machines">Virtual 
+      machines</A><BR><A 
+      href="http://keithdevens.com/wiki/WeblogUrls">WeblogUrls</A><BR><A 
+      href="http://keithdevens.com/wiki">Wiki</A><BR><A 
+      href="http://keithdevens.com/wiki/WikiBlogIntegration">WikiBlogIntegration</A><BR><A 
+      href="http://keithdevens.com/wiki/wxWidgets">wxWidgets</A><BR><A 
+      href="http://keithdevens.com/wiki/XHTML">XHTML</A><BR><A 
+      href="http://keithdevens.com/wiki/XML">XML</A><BR><A 
+      href="http://keithdevens.com/software/phpxml/xml-to-php">XML to PHP 
+      translator</A><BR><A href="http://keithdevens.com/software/xmlrpc">XML-RPC 
+      Library for PHP (v 2.5)</A><BR>
+      <P style="FONT-SIZE: smaller">Generated in about 0.033s.</P>
+      <P style="MARGIN-TOP: -1em; FONT-SIZE: 8pt">(Used 4 db 
+  queries)</P></TD></TR></TBODY></TABLE>
+<TABLE class="footer no-print" style="FONT-SIZE: smaller" cellSpacing=0 
+cellPadding=0>
+  <TBODY>
+  <TR>
+    <TD class=layout-separator colSpan=7></TD></TR>
+  <TR class=footer-top>
+    <TD vAlign=bottom align=right colSpan=7>&nbsp;</TD></TR>
+  <TR>
+    <TD class=layout-separator colSpan=7></TD></TR>
+  <TR class=footer-bottom>
+    <TD colSpan=7>&nbsp;</TD></TR>
+  <TR>
+    <TD class=layout-separator colSpan=7></TD></TR></TBODY></TABLE></BODY></HTML>

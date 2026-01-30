@@ -1,0 +1,423 @@
+/* search */
+#search,#core{
+	float:left;
+} 
+#search{
+	background: url("../images/bg_search_t.jpg") no-repeat left top;
+	width:240px;	
+	padding: 8px 21px 20px 21px;
+	margin-right:6px;
+
+}
+#search.interne{
+	background: url("../images/bg_search_t_interne.jpg") no-repeat left top;
+}
+
+#search .fieldset{
+   
+}
+
+#search .facultatif{
+    color:white;
+    /*position:absolute;
+    z-index:50;
+    top:-10px;
+    */
+    margin-top:-20px;
+    display:block;
+    width:240px;
+    text-align:center;
+}
+
+* html     #search .facultatif{
+    position:relative;
+}
+#search .facultatif span{
+  background:#6fd4f1;
+  padding:0 5px;
+ }
+ #search #c_hotel_ou_ville1 {
+    
+ }
+				#searchForm{
+				margin-bottom:20px;
+				}
+				#searchForm h2 {
+					color:white;
+					font-size:1em;
+					font-weight:bold;
+					display:block;
+					margin-bottom:10px;
+				}
+				#searchForm ul {
+					width:240px;
+					margin:0 auto;
+				}
+				#searchForm ul:after {
+					content: ".";
+					display:block;
+					visibility:hidden;
+					clear:both;
+					height:0;
+				}
+                #searchForm form{
+                    padding-top:7px;
+                }
+                        #searchForm .ligne{
+                            padding:0 20px;
+                            clear:both;
+                            /overflow:hidden;
+                            zoom:1;
+                        }
+                        #searchForm #bloc_bar{
+                            overflow:hidden;
+                            zoom:1;
+                        }
+						#searchForm #classicLink {
+							float:left;
+						}
+						#searchForm #expressLink{
+							float:right;
+						}
+                        #searchForm form p {
+							line-height:1em;
+                        }	
+                        #searchForm label{
+							color:#005B93;
+                            font-size:1em;
+                            font-weight:bold;
+                        }	     
+                        #searchForm .fieldset {
+                            border-bottom:1px solid #79b6e1;
+                            border-top:1px solid #d1e6f3;
+                            padding:10px 0;
+                        }
+                        #searchForm .fieldset.first {
+                            border-top:0;
+                            padding-top:0;
+                        }
+                        #searchForm .fieldset.last {
+                            border-bottom:0;
+                            padding-bottom:0;
+                        }
+                        #searchForm  .actions {
+                            border-top:1px solid #D1E6F3;   
+                            padding:10px 20px 0 20px;
+                        }
+                       #searchForm .hidden {
+                            display:none;                     
+                        }
+                
+                        
+                         #searchForm #s_devise {
+                            float:right;
+                            margin-right:3px;
+                         }
+                          #searchForm #bloc_bar #bar_but{
+                            margin:10px 0;
+                         }
+                         
+                         #searchForm #bt_express{
+                            margin-top:30px;
+							clear:both;
+                         }
+                         #searchForm #bt_classic, #searchForm #bar_but, #searchForm #bt_classic, #searchForm #bt_express,#searchForm #bouton_validation{
+                            border:0;
+                            background-image:url(../images/formElements.png);
+                            background-position:0 -92px;
+                            width:198px;
+                            height:31px;
+                            color:#005B93;
+                            text-align:center;
+                            font-weight:bold;
+                            clear:both;
+							background-color:transparent;
+                        }
+                        #bt_classic{
+                            margin-bottom:5px;
+                        }
+                        #action_consulter{
+                            background: url(../images/puce_fleche_bleu.gif) no-repeat 0 6px;
+                            padding-left:8px;
+                        }
+                      
+                        
+                            /* pos X,Y + width FIELDS*/
+                            #searchForm #hotel_ou_ville1{
+                                width:184px;
+                            }
+                            #searchForm #l_hotel_ou_ville1,#searchForm #l_nom_ville{
+                               font-size:1.4em;
+							   display:block;
+                            }
+                             #searchForm #l_hotel_ou_ville2{
+                                margin-top:7px;
+								clear:both;
+                                display:block;
+                             }
+                               #searchForm #bloc_date{
+                               padding:0 20px;
+                               margin-bottom:7px;
+							   position:relative;
+                               overflow:hidden;
+                               zoom:1;
+                            }
+                             #searchForm #bloc_date .ligne{
+                                height:40px;
+                             }
+                            #searchForm #bloc_date #bloc_date_arrivee_img1{
+                                margin-right:4px;
+                                z-index:15;
+								margin-top:15px;
+								position:relative;
+								line-height:20px;
+								height:20px;
+                            }
+                            #searchForm #bloc_date .ligne{
+                               padding:0;
+                               clear:none;
+                            }
+                            #searchForm #bloc_date select{
+                               width:80px;
+                               position:relative;
+                            }
+                            #searchForm #c_arrivee1,#searchForm #c_arrivee2{
+                                background-position:0 -22px;
+                                width:75px;
+                                margin-right:4px;
+								float:left;
+								display:inline;
+                            }
+                            #l_arrivee2{
+                                display:block;
+                            }
+							#searchForm #c_arrivee2{
+								float:left;
+								display:inline;
+							}
+                            #l_code_avantage,#l_code_avantage2{
+                                float:left;
+                            }
+                           #searchForm   #l_code_avantage,#searchForm   #l_code_avantage2{
+                                padding-top:2px;
+                                margin-right:6px;
+                            }
+                            * html     #searchForm   #l_code_avantage,   * html  #searchForm   #l_code_avantage2{
+                                margin-right:3px;
+                           }
+                           #searchForm   #c_code_avantage,#searchForm   #c_avantage2{
+                                width:58px;
+                                background-position:100% -22px;
+								float:left;
+								padding-left:5px;		
+								padding-right:5px;
+                            }
+							  #searchForm  #c_avantage2{
+								float:left;
+								clear:none;
+							  }
+                            #searchForm  #date_arrivee_img2{
+                                vertical-align:top;
+                            }
+                           #searchForm   #affich_bar{
+                                    font-size:1.6em;
+                                    margin-right:8px;                          
+                                    float:right;
+                              }
+                            #searchForm #errorMessage,#searchForm #errorMessage_ETP_BOOKING_EXPRESS,#searchForm #errorMessage_ETP_BOOKING_CLASSIC , #searchForm #errorRechGeo{
+                                color:#a01600;
+                                font-size:1em;
+                                padding:0 10px 0 20px;
+                                line-height:1.1em;
+                            }
+                            #searchForm label.label_ko, #errorMessage {
+                                color:#a01600 !important;
+                            }
+                            #searchForm #errorMessage{
+                                margin-top:7px;
+                            }
+                            
+                            
+                            
+                            
+                                   
+
+								#searchForm li a {
+									display:block;
+									background-image:url(../images/searchTabs.gif);
+									background-repeat:no-repeat;
+									height:22px;
+									padding-top:10px;
+									text-decoration:none;
+									font-weight:bold;
+								}
+								#search.interne #classicLink  a {
+									background-image:url(../images/searchTabs_interne.gif);
+									width:218px;
+								}
+								#searchForm #classicLink a {
+									width:92px;
+									padding-left:22px;
+									background-position:0 -32px;
+								}
+								
+								#searchForm #expressLink a {
+									width:126px;
+									text-align:center;
+									background-position:100% 0;
+								}
+                                
+                                /* bloc date */
+                                #bloc_date label {
+                                    display:block;
+									line-height:1.4em;
+                                   }     
+                                 #bloc_date .ligne {
+                                    float:left;
+                                   }                                
+								                                   
+								
+                                 /* bloc personne */
+                                #bloc_personne label {
+                                    display:block;
+                                   }     
+                                 #searchForm #bloc_personne .ligne {
+                                    float:left;
+                                    clear:none;
+                                    margin-right:7px;
+                                    padding:0;
+                                 }     
+                                 #searchForm #bloc_personne {
+                                   padding:0 20px;
+								   clear:both;
+                                 }       
+                                 #searchForm #bloc_personne select {
+                                    width:80px;
+                                 }                                      
+								 #bloc_personne label{
+                                   padding:1px;
+                                    width:80px;                                    
+                                }
+                                
+								/* hover and active states */
+								#searchForm .activeItem a {
+									color:#005b93;
+								}
+								
+								#searchForm .activeItem a {
+									cursor:default;
+								}
+								#searchForm #classicLink a:hover {
+									background-position:0 -32px;
+								}
+								#searchForm #classicLink.activeItem a ,#searchForm #classicLink a:hover {
+									background-position:0 0;
+								}
+								#searchForm #expressLink a:hover , #searchForm #expressLink.activeItem a {
+									background-position:100% -32px;
+								}
+								#searchForm #c_nom_ville  {
+									background-position:0 -165px;
+									width:155px;
+									float:left;							
+								}
+
+								
+
+			
+				#searchForm input,
+				#searchForm select {
+					line-height:1em;
+				}
+                 #searchForm .c_text input, #searchForm select{
+    				color:black;
+				}
+				#searchForm .c_text {
+					background:url(../images/formElements.png) no-repeat;
+					padding:2px 8px  2px 8px;	
+                    height:17px;
+				}	
+				#searchForm  .c_text input{
+					border:none;
+					width:100%;
+					background:none;
+					height:15px;
+					font-size:1em;
+				}
+                 #searchForm .jour, #searchForm .date{
+                    display:none;
+                 }
+                #searchForm input[disabled="true"]  , #searchForm input[disabled="disabled"]   , #searchForm input[disabled=""] 
+                                {       
+                    color:#919191 !important;
+                  }
+                  #searchForm #code2{
+                    margin-top:7px;
+                  }
+				#searchForm  select {
+                    font-size:1em;
+                    display:block;
+                    clear:none;
+                    height:17px;  
+                    line-height:17px;    
+                    /height:20px;  
+                    /line-height:20px;                     
+				}
+				#searchForm #hotel_ou_ville2{
+					width:200px;
+				}
+				#searchForm #form_classic,#searchForm  #bookingEngine {
+					background:url(../images/bg_reservation.jpg) no-repeat left top;
+					min-height:261px;
+					_height:261px;
+				}
+				#searchForm #form_express {
+					background:url(../images/bg_reservation_express.jpg) no-repeat left top;
+					min-height:429px;
+					_height:429px;
+				}
+				#searchForm #geo_search {
+					background:url(../images/btn_submit_ok.gif) no-repeat left top;
+					width:24px;
+					height:18px;
+					border:0;
+					text-align:center;
+					float:left;
+					margin-left:3px;
+					font-size:1em;
+					font-weight:bold;
+					color:#005B93;
+				}
+				#searchForm .bulle_aide{
+					float:right;
+				}
+				#searchForm #facultatif_2{
+					background:#41c7ec;
+				}
+				.tooltip{
+					width:143px !important;
+					margin-top:-20px;
+				}
+				.tooltip .bg{
+					background:url(../images/bg_moteur_tooltip.gif) no-repeat left top;
+					height:24px;
+					width:143px;
+					float:left;
+					font-size:0;
+					line-height:0;
+					position:relative;
+					display:block;
+				}
+				.tooltip .bloc{
+					background:url(../images/bg_moteur_tooltip.gif) no-repeat -143px 100%;
+					color:#707070;
+					font-size:0.8em;
+					line-height:1.4em;
+					margin-left:12px;
+                    margin-top:21px;
+					padding:0 5px 15px 5px;
+					position:relative;
+                    width:123px;
+					/top:-3px;
+                    /margin-top:0;
+				}

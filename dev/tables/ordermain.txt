@@ -1,0 +1,40 @@
+# [root@192.167.1.209:3306] Query Window
+# Connection: root@192.167.1.209:3306
+# Host: 192.167.1.209
+# Saved: 2005-12-04 10:32:35
+# 
+# Query:
+# desc `ordermain`
+# 
+'Field','Type','Null','Key','Default','Extra'
+'sno','bigint(11)','YES','','0',''
+'userid','varchar(100)','YES','','',''
+'ocode','varchar(100)','YES','','[NULL]',''
+'guesttitle','varchar(100)','YES','','[NULL]',''
+'guestname','varchar(100)','YES','','[NULL]',''
+'guesttel','varchar(100)','YES','','0',''
+'guestflightdet','varchar(100)','YES','','[NULL]',''
+'hoteltp','double','YES','','0',''
+'transtp','double','YES','','0',''
+'gtp','double','YES','','0',''
+'bamount','double','YES','','0',''
+'orderdate','date','YES','','[NULL]',''
+'ordertime','time','YES','','[NULL]',''
+'refcname','varchar(100)','YES','','',''
+'reftitle','varchar(100)','YES','','[NULL]',''
+'refname','varchar(100)','YES','','',''
+'refnum','varchar(100)','YES','','[NULL]',''
+'refnotes','mediumtext','YES','','[NULL]',''
+'refacc','int(11)','YES','','0',''
+'acountry','varchar(100)','YES','','[NULL]',''
+'optdate','datetime','YES','','0000-00-00 00:00:00',''
+'amendbull','int(11)','YES','','0',''
+'paymenttype','varchar(100)','YES','','',''
+'cvoucher','varchar(100)','YES','','[NULL]',''
+'reciptvoucher','varchar(100)','YES','','[NULL]',''
+'status','varchar(100)','YES','','',''
+'lastmes','mediumtext','YES','','[NULL]',''
+'lasttou','varchar(100)','YES','','[NULL]',''
+'lastaccess','datetime','YES','','[NULL]',''
+'notes','mediumtext','YES','','[NULL]',''
+'remarks','mediumtext','YES','','[NULL]',''

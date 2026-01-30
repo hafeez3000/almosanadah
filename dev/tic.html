@@ -1,0 +1,175 @@
+<script language="javascript">
+// Location of this script:
+// http://www.qiksearch.com/javascripts/ticker13.htm
+//*********************************************
+//* JavaScript Ticker 1.3                     *
+//* Ticks a number of messages                *
+//* (c) Premshree Pillai,                     *
+//* http://www.qiksearch.com                  *
+//* E-mail : premshree@hotmail.com            *
+//* Created on 02/26/02                       *
+//* Use the script freely as long as this     *
+//* message is intact                         *
+//* Visit www.qiksearch.com/javascripts.htm   *
+//*                    for more FREE scripts  *
+//*********************************************
+
+window.onerror = null;
+ var bName = navigator.appName;
+ var bVer = parseInt(navigator.appVersion);
+ var NS4 = (bName == "Netscape" && bVer >= 4);
+ var IE4 = (bName == "Microsoft Internet Explorer" 
+ && bVer >= 4);
+ var NS3 = (bName == "Netscape" && bVer < 4);
+ var IE3 = (bName == "Microsoft Internet Explorer" 
+ && bVer < 4);
+ var i=0;
+ var top_pos = 60;
+ var left_pos = 190;
+ var time_length = 1000;
+ var div_name = "qiksearch";
+ var ticker_msg = new Array(
+     "Welcome to Qiksearch",
+     "Intellisearch Bar NOW!",
+     "Premshree Pillai",
+     "Meta Tag Generator Online",
+     "Free JavaScripts" );
+
+ var ticker_url = new Array(
+     "http://www.qiksearch.com",
+     "http://intellisearch.cjb.net",
+     "http://premshree.qik.cjb.net",
+     "http://metataggen.qik.cjb.net",
+     "http://www.qiksearch.com/javascripts.htm" );
+
+var ticker_len = ticker_msg.length;
+
+for(var l=0; l<ticker_len; l++)
+{
+document.write('<div id="' + div_name + l + '" style="position:absolute; visibility:hidden; top:' + top_pos + '; left:' + left_pos + '">' + '<table bgcolor="#000000" cellspacing="0" cellpadding="1" width="400"><tr><td><table width="100%" id="ticker_container" style="background:#EFEFFF"><tr><td width="100%"><center><a href="' + ticker_url[l] + '" class="tick">' + ticker_msg[l] + '</center></a></td>');
+document.write('<td align="right"><table class="tickerFX1" cellspacing="0" cellpadding="0" onclick="tickerFX_listAll('all_news_div'); hideLayer('change_speed_div')" title="List All News"><tr><td align="middle">LIST ALL</td></tr></table></td>');
+document.write('<td align="right"><table class="tickerFX2" cellspacing="0" cellpadding="0" onclick="tickerFX_changeSpeed('change_speed_div'); hideLayer('all_news_div')" title="Change Ticker Speed"><tr><td align="middle">SPEED</td></tr></table></td>');
+document.write('</tr></table></td></tr></table>' + '</div>');
+}
+
+ document.write('<div id="all_news_div" style="position:absolute; top:' + (top_pos+21) + '; left:' + left_pos + '; visibility:hidden">');
+ document.write('<table width="400" align="center" style="background:#EFEFFF; border:1px solid #000000; border-top-width:0"><tr><td>');
+ for(var l=0; l<ticker_len; l++)
+ {
+  document.write('<b><font face="verdana,arial,helvetica">»</font></b> <a href="' + ticker_url[l] + '" class="tick_news_all">' + ticker_msg[l] + '</a><br>'); 
+ }
+ document.write('</td></tr></table>');
+ document.write('</div>');
+
+ document.write('<div id="change_speed_div" style="position:absolute; top:' + (top_pos+21) + '; left:' + left_pos + '; visibility:hidden">');
+ document.write('<table width="400" align="center" style="background:#EFEFFF; border:1px solid #000000; border-top-width:0"><tr><td>');
+ document.write('<font face="verdana,arial,helvetica" color="#000000"><b><a href="javascript:changeSpeed(5);" class="speed">5</a> | <a href="javascript:changeSpeed(4);" class="speed">4</a> | <a href="javascript:changeSpeed(3);" class="speed">3</a> | <a href="javascript:changeSpeed(2);" class="speed">2</a> | <a href="javascript:changeSpeed(1);" class="speed">1</a>');
+ document.write('</td></tr></table>');
+ document.write('</div>');
+
+if (NS4 || IE4) {
+ if (navigator.appName == "Netscape") {
+ layerStyleRef="layer.";
+ layerRef="document.layers";
+ styleSwitch="";
+ }else{
+ layerStyleRef="layer.style.";
+ layerRef="document.all";
+ styleSwitch=".style";
+ }
+}
+
+//SCROLL
+function tick(){
+if (NS4 || IE4) {
+ if(i<ticker_len)
+ {
+  if(i==0)
+  { 
+   eval(layerRef+'["'+div_name+(ticker_len-1)+'"]'+
+   styleSwitch+'.visibility="hidden"');
+  }
+  if(i>0)
+  { 
+   eval(layerRef+'["'+div_name+(i-1)+'"]'+
+   styleSwitch+'.visibility="hidden"');
+  }
+ eval(layerRef+'["'+div_name+i+'"]'+
+ styleSwitch+'.visibility="visible"');
+ }
+ if(i<ticker_len-1)
+ {
+  i++;
+ }
+ else
+ {
+  i=0;
+ }
+ setTimeout("tick()",time_length);
+ }
+}
+
+var list_news_flag=0;
+var change_speed_flag=0;
+
+function tickerFX_listAll(layerName)
+{
+ if(list_news_flag==0)
+ {
+  list_news_flag=1;
+  if(NS4 || IE4)
+  {
+   eval(layerRef+'["'+layerName+'"]'+
+   styleSwitch+'.visibility="visible"');
+  }
+ }
+ else
+ {
+  list_news_flag=0;
+  if(NS4 || IE4)
+  {
+   eval(layerRef+'["'+layerName+'"]'+
+   styleSwitch+'.visibility="hidden"');
+  }
+ }
+}
+
+function tickerFX_changeSpeed(layerName)
+{
+ if(change_speed_flag==0)
+ {
+  change_speed_flag=1;
+  if(NS4 || IE4)
+  {
+   eval(layerRef+'["'+layerName+'"]'+
+   styleSwitch+'.visibility="visible"');
+  }
+ }
+ else
+ {
+  change_speed_flag=0;
+  if(NS4 || IE4)
+  {
+   eval(layerRef+'["'+layerName+'"]'+
+   styleSwitch+'.visibility="hidden"');
+  }
+ }
+}
+
+function hideLayer(layerName)
+{
+ if(NS4 || IE4)
+ {
+  eval(layerRef+'["'+layerName+'"]'+
+  styleSwitch+'.visibility="hidden"');
+ }
+}
+
+function changeSpeed(n)
+{
+ time_length=n*1000;
+}
+
+tick();
+
+</script>

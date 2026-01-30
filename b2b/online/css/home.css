@@ -1,0 +1,375 @@
+
+		#content .col1,#content .col2{
+			float:left;
+		}
+		#content .col1{
+			width:393px;
+			margin-right:3px;
+		}
+		#content .col2{
+			width:276px;
+		}
+		#content h2 {
+            height:18px;
+		}
+
+        #content h2  a:hover{
+            text-decoration:none;
+		}
+		#pushFlash,#actus-noh,#espFormule1-noh {
+			margin-bottom:7px;
+		}
+        #pushFlash{
+            margin-left:3px;
+         }
+        
+	
+		/* bloc new */
+		#listeNouveuxHotels-noh{
+			background:url("../images/bg_list-new.jpg") no-repeat left top;
+			min-height:101px;
+			padding-left:21px;
+			_height:101px;
+			clear:both;
+			position:relative;
+		}
+		#listeNouveuxHotels-noh .titre-noh{
+			width:110px;
+		}
+		#listeNouveuxHotels-noh h2{
+			float:left;
+			padding-top:21px;
+		}
+		#listeNouveuxHotels-noh h2,#listeNouveuxHotels-noh h3{
+			color:#005b93;
+			font-weight:bold;
+			font-size:1.2em;
+		}
+		#listeNouveuxHotels-noh h3{
+			font-weight:normal;
+			font-size:1.1em;
+		}
+		#listeNouveuxHotels-noh .col{
+			width:140px;
+			margin-left:35px;
+			float:left;
+			padding-top:7px;
+		}
+		#listeNouveuxHotels-noh .lienAll-noh{
+			font-weight:bold;
+			position:absolute;
+			bottom:10px;
+			left:21px;
+			background-position:0 0;
+            width:110px;
+            line-height:1.3em;
+            font-weight:bold;
+			background:url("../images/puce_fleche_bleu.gif") no-repeat 0 4px;
+			padding-left:8px;
+		}	      
+		#listeNouveuxHotels-noh .col_1-5{
+			margin-right:15px;
+		}
+		#listeNouveuxHotels-noh li{
+			font-weight:bold;
+			background:url("../images/puce_fleche_bleu.gif") no-repeat left 5px;
+			padding-left:8px;
+		}
+		
+
+		/* push animation */
+		#pushFlash img{
+			display:block;
+		}
+			
+		/* fralme bons plans */
+		#frameEspaceBonsPlans {
+			border:0;
+			width:276px;
+			height:222px;
+			overflow:hidden;
+			margin:0;
+			padding:0;
+			margin-bottom:4px;
+		}
+		
+		/* actus,promo */
+		#frameEspaceActus {
+			border:0;
+			width:395px;
+			_width:393px;
+			height:181px;
+			overflow:hidden;
+			margin:0;
+			padding:0;			
+		}
+		
+		#actus-noh  h2, #espFormule1-noh  h2{
+			padding: 6px 15px 7px 15px;
+			color:white;
+			font-weight:bold;
+			font-size:1.2em;
+			background: url("../images/bg_titre-bloc_orange.gif") no-repeat left top;
+            
+		}     
+		#actus-noh .affichage1,#actus-noh .affichage2 {
+			background:url("../images/bg_promo.jpg") no-repeat 0 31px;
+		}
+        /*
+        #espFormule1-noh .affichage1 h2 a,#espFormule1-noh .affichage2   h2 a,#espFormule1-noh .affichage3 h2 a{
+			color:white;
+		}
+         #espFormule1-noh h2 a:hover{
+            text-decoration:none;
+		}
+        */
+		
+		
+			/* affichage1 */
+			#actus-noh .affichage1{
+				position:relative;
+				height:181px;
+			}
+			#actus-noh .affichage1 ul {
+				position:absolute;
+				top:47px;
+				left:16px;
+			}
+			#actus-noh .affichage1 ul li{
+				display:block;
+				float:left;
+				width:103px;
+				border-right:1px solid #b2c9de;
+				margin-right:12px;
+				padding-right:12px;
+				position:relative;
+				height:120px;
+			}
+			#actus-noh .affichage1 .last{
+				border:0;
+				margin-right:0;
+				padding-right:0;
+			}
+			#actus-noh .affichage1 h3 {
+				font-size:1em;
+			}
+			#actus-noh .affichage1 h3 a{
+				text-align:center;
+				display:block;
+				font-weight:bold;
+				font-size:1em;
+			}
+			#actus-noh .affichage1 p{
+				font-style:italic;
+				text-align:center;
+				display:block;
+				color:#005b93;
+			}	
+			#actus-noh .affichage1 .encart-noh{
+				color:white;
+				display:block;
+				background:url("../images/bg_promo_encart.jpg") no-repeat left top;
+				width:103px;
+				height:73px;
+				position:absolute;
+				bottom:-5px;
+				left:0;
+			}	
+			#actus-noh .affichage1 .encart-noh span{
+				font-size:1em;
+				padding-top:10px;
+				display:block;
+				text-align:center;
+			}	
+			#actus-noh .affichage1 .prix-noh{
+				font-weight:bold;
+				font-style:normal;
+				letter-spacing:-0.05em;
+				padding-top:0;
+				text-align:center;
+				display:block;
+			}	
+			#actus-noh .affichage1 .prix-noh.EUR {
+				font-size:2.2em;
+			}	
+			#actus-noh .affichage1 .prix-noh.IDR, #actus-noh .affichage1 .prix-noh.PLN, #actus-noh .affichage1 .prix-noh.CHF, #actus-noh .affichage1 .prix-noh.JPY, #actus-noh .affichage1 .prix-noh.ZAR, #actus-noh .affichage1 .prix-noh.AUD, #actus-noh .affichage1 .prix-noh.BRL, #actus-noh .affichage1 .prix-noh.NZD, #actus-noh .affichage1 .prix-noh.GBP {
+				font-size:1.5em;
+				margin-top:3px;
+			}	
+			#actus-noh .affichage1 .encart-noh a{
+				color:white;
+			}	
+		
+			
+			
+			/* affichage2 */
+			#actus-noh .affichage2{
+				background:url("../images/bg_promo.jpg") no-repeat 0 31px;
+				position:relative;
+				height:181px;
+			}
+			#actus-noh .affichage2  img{
+				float:left;
+				width:200px;
+				height:147px;
+                margin-left:4px;
+			}
+			#actus-noh .affichage2 .texte-noh{
+				width:170px;
+				float:right;
+				padding:15px 10px 0 0;		
+			}
+			#actus-noh .affichage2 .description-noh {
+				color:#005b93;
+				line-height:1.2em;
+                padding-top:12px;
+			}
+			#actus-noh .affichage2  h3{
+				font-size:1.8em;
+				color:#f47600;
+				line-height:1.2em;
+			}
+			#actus-noh .affichage2  .accroche-noh{
+				font-weight:bold;
+				font-size:1.1em;
+				color:#f47600;
+				line-height:1em;
+			}
+			#actus-noh .affichage2  .texte-noh a{
+				background: url("../images/puce_fleche_bleu.gif") no-repeat  0 5px;
+                 padding-left:8px;
+                 float:left;
+                 line-height:1.1em;
+                 margin-top: 2px;
+			}
+			
+		
+		/* espFormule1-noh */
+		#espFormule1-noh  .affichage1,#espFormule1-noh  .affichage2,#espFormule1-noh  .affichage3 {
+			background:url("../images/bg_bloc_formule1.jpg") no-repeat 0 31px;
+			min-height:106px;
+			_height:106px;
+            position:relative;
+		}
+		#espFormule1-noh .affichage1 thead,#espFormule1-noh .affichage1 caption{
+			display:none;
+		}
+		#espFormule1-noh img{
+			float:left;
+		}
+		#espFormule1-noh  .affichage1 img,#espFormule1-noh  .affichage2 img {
+			margin-left:3px;
+		}		
+		#espFormule1-noh h2 {
+			background:url("../images/bg_titre-bloc_bleu.gif") no-repeat left top;
+		}
+		#espFormule1-noh h3{
+			color:#005B93;
+			font-weight:bold;
+			font-size:1em;
+		}
+		
+        
+			/* affichage1 */
+			#espFormule1-noh .affichage1 table{
+				margin:15px 0 0 20px;
+				width:355px;
+			}
+			#espFormule1-noh .affichage1 table td{
+				vertical-align:top;
+			}
+			#espFormule1-noh  .affichage1 a{
+				font-weight:bold;
+			}
+			#espFormule1-noh  .affichage1 .prix-noh{
+				text-align:center;
+			}
+			
+			/* affichage2 */
+			#espFormule1-noh .affichage2 .texte-noh{
+				padding: 10px 10px 0 2px;
+				margin-left:3px;
+				width:260px;
+				float:right;
+			}
+			#espFormule1-noh .affichage2 img{
+				width:100px;
+				height:72px;
+			}
+			#espFormule1-noh .affichage2 .description-noh {
+				line-height:1.2em;
+			}
+			#espFormule1-noh .affichage2  .texte-noh a{
+				background: url("../images/puce_fleche_bleu.gif") no-repeat  left center;
+				padding-left:8px;
+                float:left;
+			}
+	
+			/* affichage3 */
+			#espFormule1-noh .affichage3 img{
+				width:143px;
+				height:33px;
+			}
+			#espFormule1-noh .affichage3 .f1-noh{
+				border-right:1px solid #b4cadf;
+				float:left;
+				padding:0 12px 0 16px;
+				margin-top:16px;
+				width:143px;
+			}
+			#espFormule1-noh .affichage3 .f1-noh p{
+				text-align:center;
+			}
+			#espFormule1-noh .affichage3 .f1-noh p a,#espFormule1-noh .affichage3 .liste-noh li a{
+				background: url("../images/puce_fleche_bleu.gif") no-repeat  left center;
+				padding-left:8px;
+				font-weight:bold;
+			}
+            #espFormule1-noh .affichage3 .f1-noh p a {
+              float:left;   
+              }
+			#espFormule1-noh .affichage3 .liste-noh{
+				float:left;
+				padding:0 0 0 12px;
+				margin-top:16px;
+			}
+
+			
+		
+			
+		
+
+		/* inscription newsletter */
+		#insNewsletter{
+			background:url("../images/bg_insNewsletter.jpg") no-repeat  left top;
+			min-height:68px;
+			_height:68px;
+		}
+		#insNewsletter form{
+			padding: 10px 8px 0 60px;
+		}
+		#insNewsletter  label{
+			color:#626262;
+			font-size:1em;
+		}
+		#insNewsletter  #c_insNewsletter{
+			color:#868686;
+			width:169px;
+			padding:0 4px 2px 4px;
+			border:0;
+			font-size:1em;
+			background: url("../images/bg_input_insNewsletter.gif") no-repeat  left top;
+            height:16px;
+		}
+		#insNewsletter  #btn_insNewsletter{
+			color:#005b93;
+			font-weight:bold;
+			font-size:1em;
+			width:24px;
+			height:18px;
+			border:0;
+			background: url("../images/btn_submit_ok.gif") no-repeat  left top;
+			vertical-align:top;
+			text-align:center;		
+			cursor:pointer;
+		}

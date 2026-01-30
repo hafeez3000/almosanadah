@@ -1,0 +1,5 @@
+AuthType Basic
+AuthUserFile  c:/apachessl/passwd/.htpasswd
+AuthName Tariff
+require valid-user
+satisfy any

@@ -1,0 +1,27 @@
+@import url("profil-global-couleur.css");
+
+#page #profil-overture #profil-change-access-bg{background-color:#ffc72f;	filter:alpha(opacity=20);	-moz-opacity: 0.2;	opacity: 0.2;}
+#page #profil-overture #profil-change-access{background:none;	color:white;	border: 1px solid #97b372;	font-weight:bold;}
+/*#page #bloc-abonnements h2{background: url(/imagerie/profil/enveloppe.png) no-repeat;}
+#page #bloc-abonnements-pro h2{background: url(/imagerie/profil/enveloppe.png) no-repeat;}
+#page #bloc-abonnements-pro h2 span{color:#ffffff;font-size:11px;	font-weight:normal;}*/
+#page .fieldset-container #bloc-cartes .etiquette{background: url(../images/profil/img-etiquette-carte.png) no-repeat;}
+.btn-action a{color:white;	text-decoration:none;}
+#page #bloc-security a {color:#315d95; font-style:italic;}
+
+/* Aclub*/
+#page #profil-content input.readonly{
+border:1px solid #ccc;
+background-color:#f4f4f4;
+color:#999;
+}
+
+/* Style Pro */
+#page.pro #profil-overture #profil-change-access{border: 1px solid white;}
+#page.pro #bloc-abonnements, #page.pro #bloc-cartes{color:#ffffff;}
+#page.pro #bloc-security a {color:#315D95;font-style:italic;}
+.pro #bloc-abonnements-pro h2, .pro #bloc-abonnements-pro label, .pro #bloc-cartes h2, .pro #bloc-cartes label{color:#525a60;}
+.pro #bloc-cartes .validatorInvalidState label{color:red;}
+.pro #companyName{color:#315D95;}
+.pro #user-mobileNumber-container .user-infos{color:#315D95;}
+/* Fin Style Pro */

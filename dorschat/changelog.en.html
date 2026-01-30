@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+       "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <title>Change Log</title>
+</head>
+
+<body xml:lang="en">
+<h2>ChangeLog</h2>
+
+<h3>1.x</h3>
+
+<h3>0.9.x</h3>
+<ul>
+  <li>Change the directory and file creation rights to 0700 (thanks to Thomas
+    Lußnig for the notice)</li>
+  <li>New Bulgarian <code>bg_BG</code> translation (thanks to Marko
+  Nikolov)</li>
+  <li>Bug fix: URL parsing breaks when an URL contains a semicolon (thanks to
+    Shimodax)</li>
+</ul>
+
+<h3 id="v1.0-beta6">1.0-beta6 on 09/23/2006</h3>
+<ul>
+  <li>Makes possible to use <code>frozen_nick</code> with a empty nick
+    parameter. So it's possible to choose the nick at beginning of the
+    session then it's impossible to change it.</li>
+  <li>Make possible to change dynamicaly the user nickname using the
+    parameter array (however, <code>frozen_nick</code> must be on)</li>
+  <li>Bug fix: the <code>width</code> parameters was broken</li>
+  <li>New <code>checktimeout</code> proxy used to disconnect timeouted users
+    before playing a command</li>
+  <li>Bug fix: the nickname TAB completion was broken.</li>
+  <li>Bug fix: the % charactere was not allowed in the url format.</li>
+  <li>Bug fix: the proxy allowed path check was broken.</li>
+  <li>Add a new <code>/version</code> command used to get the current
+    phpfreechat version.</li>
+  <li>New <code>/help</code> command use to list available commands (in
+    future, it's planned to display command syntax/description)</li>
+  <li>Bug fix: two users with same nick at same time (thanks to wjwlsn, SF
+    bug <a
+    href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1555160&amp;group_id=158880&amp;atid=809601">1555160</a>)</li>
+  <li>Bug fix: on some servers (free.fr) the <code>realpath()</code> php
+    function is not returning FALSE when the file is missing.</li>
+  <li>New feature: when a new message is posted, the unactive window title is
+    prefixed by the number of new messages (this can be disabled by setting
+    to false the <code>notify_window</code> parameter).</li>
+  <li>Bug fix: the <code>max_text_len</code> parameter didn't work with utf8
+    (non us-ascii) strings.</li>
+  <li>Bug fix: add a references counter in order to know when the user is
+    really disconnecter (no more '<code>* quit (timeout)</code>').</li>
+  <li>Remove the <code>rm_r</code> and <code>copy_r</code> verification
+    because since refactoring I do not copy full directories anymore.</li>
+  <li>Bug fix: no more blank screen on IE6!</li>
+  <li>Make <code>frozen_channels</code> a dynamic parameter. So it's a way to
+    allow/forbid channels depending on external users rights.</li>
+  <li>Proxies refactoring : I removed the '<code>proxy</code>' parameter. I
+    added '<code>skip_proxys</code>' used to disable a system proxy (ex:
+    <code>censor</code>). I added '<code>post_proxys</code>' used to append
+    your own proxy to the proxy chaine. I added '<code>pre_proxys</code>'
+    used to prepend your own proxy to the proxy chaine. I added
+    '<code>proxys_path</code>' used to define the location of your customized
+    proxies. I also created demo48 to illustrate this powerfull proxy
+  feature.</li>
+  <li>Now the commands name are case unsensitive.</li>
+  <li>Big containers refactoring: this make possible to handle easily user's
+    metadata, fix a bug related to undisconnected but timeouted users and fix
+    some memory leak in the default file container.</li>
+  <li>Portuguese translation (<code>pt_PT</code>) update (thanks to David
+    Pinheiro)</li>
+  <li>Bug fix: the proxy.php loading was very long with gzhandler enabled
+    (thanks to <a href="http://www.freakboard.de">Alexander Blach and Andreas
+    May</a>)</li>
+  <li>New parameters: '<code>max_channels</code>' used to limit the number of
+    channels tabs, '<code>max_privmsg</code>' used to limit the number of
+    private messages tabs (sponsored by Johnny Philavanh : $30 USD) [1h].</li>
+  <li>Rename bad spelled parameters name : '<code>skip_proxys</code>' to
+    '<code>skip_proxies</code>', '<code>post_proxys</code>' to
+    '<code>post_proxies</code>', '<code>pre_proxys</code>' to
+    '<code>pre_proxies</code>', '<code>proxys_cfg</code>' to
+    '<code>proxies_cfg</code>', '<code>proxys_path</code>' to
+    '<code>proxies_path</code>', and '<code>proxys_path_default</code>' to
+    '<code>proxies_path_default</code>'.</li>
+  <li>CPU Optimization: since the new data model some operation were useless
+    and CPU consuming.</li>
+  <li>Bug fix: the <code>/leave</code> command was broken</li>
+  <li>Improve <code>noflood</code> proxy algorithme: now it takes into
+    account the number of posted characteres and the number of posted
+    messages.</li>
+  <li>Add a 'Send' button right to the messages input box (sponsored by
+    Johnny Philavanh : $25 USD) [2h].</li>
+  <li>Disk space optimization: when the last user quit a channel or a private
+    room, the messages history is purged in the container. [1h15]</li>
+  <li>Bug fix: when a user was disconnected by timeout because of his bad
+    connection, when hi comes back he was not correctly reconnected. So,
+    private messages were broken. [1h15]</li>
+  <li>BBCode colors are now more flexible : I just added a transparent image
+    with variable background colors. [45min]</li>
+</ul>
+
+<h3 id="v1.0-beta5">1.0-beta5 on 09/04/2006</h3>
+<ul>
+  <li>Big refactoring:
+    <ul>
+      <li>Set the <code>prefix</code> parameter value to <code>"pfc_"</code>.
+        Now this parameter can't be changed because it simplify the new
+        developments.</li>
+      <li>Change the manner how resources are manager. Resources were copied
+        into a public directory. Now resources are just delivered by the
+        <code>proxy.php</code> file which is placed into the publix
+      directory.</li>
+      <li>Remove php code into each resources files (javascript, css). So now
+        the chat page size is lighter from -50% (80ko to 30ko).</li>
+      <li>No more <code>chat-post.js.tpl.php</code>,
+        <code>chat-pre.js.tpl.php</code>, and
+        <code>pfcclient-custo.js.tpl.php</code>. All these redundant files
+        are now merged into one unique file : <code>customize.js</code>.</li>
+      <li>The chat is now generated by Javascript routines.</li>
+    </ul>
+  </li>
+  <li>Redesign the default skin (it's nicer for me, maybe for you too ?).</li>
+  <li>Remove the <code>contrib</code> directory from the ziped archive when a
+    release is done in order to generate smalled archives.</li>
+  <li>Bug fix: When <code>/rehash</code> command was run, sometime a js alert
+    showing php errors poped up.</li>
+  <li>Bug fix: the <code>/ban</code> command was broken (see, <a
+    href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1532838&amp;group_id=158880&amp;atid=809601">sourceforge
+    bug1532838</a>)</li>
+  <li>Russian translation update (thanks to Kamashev Maim)</li>
+  <li>Japanese translation update (thanks to elf2000)</li>
+  <li>Bug fix: URL parsing breaks when an URL contains a semicolon (thanks to
+    Shimodax)</li>
+  <li>Bug fix: the proxy parameters should not be passed with a &amp; because
+    in php pass-by-reference is setup in the methode prototype. (thanks to
+    John Mario Cano)</li>
+  <li>New Polish <code>pl_PL</code> translation (thanks to Pawel and
+  Jusuff)</li>
+  <li>Bug fix: the phpfreechat logo was hidden on IE6</li>
+  <li>Add an error message in the static html if no javascript is loaded.
+    This error message is just removed by the javascript code if the chat is
+    created correctly.</li>
+  <li>Try to set <code>quit_on_closedwindow</code> parameter to
+    <code>true</code> by default. This could be annoying because on each page
+    reload or on each page close a notice will be generated (but can be
+    disabled with <code>shownotice</code> parameter).</li>
+  <li>Bug fix: the nickname encoding was not correctly converted according to
+    the <code>output_encoding</code> parameter (cf demo8).</li>
+  <li>Bug fix: don't notify (icon blink) the tabs when old message are posted
+    (when history is shown at first load)</li>
+  <li>Add a popup dialog to ask some text for the bbcode buttons (thanks to
+    <a
+    href="http://www.phpfreechat.net/forum/viewtopic.php?id=532">Mephisto</a>).</li>
+  <li>Add a basic log proxy which store all chat messages into a simple file
+    (chat.log)</li>
+  <li>Bug fix: fix an infinit loop on windows platform when calculating
+    relative path.</li>
+  <li>Bug fix: nicknames colors list were not correctly reloaded when al lwas
+    assigned.</li>
+  <li>New parameters to easily customize the nickname color list and the
+    bbcode text colors: <code>nickname_colorlist</code> and
+    <code>bbcode_colorlist</code>.</li>
+  <li>Bug fix: in the default file container, the old messages were never
+    deleted. (thanks to dan_m2k, thehermit and AkS for the bug report)</li>
+  <li>Bug fix: each commands which displayed an info message
+    (<code>/identify</code>, <code>/rehash</code> ...) just cleared the
+    screen on IE6. I found a workaround by moving the info message into the
+    red error box.</li>
+  <li>Bug fix: on IE6 when chinese characteres were typed, the screen goes
+    blank. The workeround is to force use of serif (or monospace) font family
+    for the chat area (sans-serif will not work).</li>
+  <li>Code cleaning: remove the unused csstidy library.</li>
+  <li>Bug fix: if <code>preg_*</code> module is not compiled with utf8
+    support, a warning occurs.</li>
+  <li>Now the online documentation is automaticaly packaged by the release
+    script (no more documentation misses).</li>
+  <li>Now display the errors when messages can't be written in the default
+    file container.</li>
+  <li>Replace <code>utf8_substr</code> code by a less system dependant one
+    coming from typo3 code.</li>
+  <li>Check all parameters types at init step.</li>
+</ul>
+
+<h3 id="v1.0-beta4">1.0-beta4 on 08/01/2006</h3>
+<ul>
+  <li>Remove <a href="http://prototype.conio.net/">prototype</a>
+    dependencies. Why ? because prototype override some default javascript
+    behaviors (Array) and break compatibility with others javascript
+    libraries (example: ie7)</li>
+  <li>New proxy: the <code>lock</code> proxy can be used to lock the chat and
+    redirect all the online users to a given url (use the
+    <code>$params["islocked"]</code> and <code>$params["lockurl"]</code>
+    parameters).</li>
+  <li>Bug fix: the <code>admins</code> parameter in now dynamic</li>
+  <li>Bug fix: it was possible to use <code>frozen_nick</code> parameter with
+    a empty nickname.</li>
+  <li>Bug fix: the <code>nick</code> parameter was broken</li>
+  <li>Bug fix: <code>connect_at_startup</code> and
+    <code>start_minimized</code> options were broken</li>
+  <li>Bug fix: some extra javascript inclusions were broken - <a
+    href="https://sourceforge.net/support/tracker.php?aid=1523826">https://sourceforge.net/support/tracker.php?aid=1523826</a>
+    (thanks to macinta)</li>
+  <li>Bug fix: some paths were wrongly calculated - <a
+    href="https://sourceforge.net/support/tracker.php?aid=1523821">https://sourceforge.net/support/tracker.php?aid=1523821</a>
+    (thanks to macinta)</li>
+  <li>Bug fix: the <code>/identify</code> command was broken</li>
+  <li>In the default chat index, everybody is admin in order to test easialy
+    every chat features</li>
+  <li>Refactoring + Bug fix : the <code>shownotice</code> parameter was
+    broken, this refactoring fixes it. I moved the commands parameters list
+    into a indexed array in order to be able to add a new parameter easily
+    (example: the flag parameter for the notice command).</li>
+</ul>
+
+<h3 id="v1.0-beta3">1.0-beta3 on 07/07/2006</h3>
+<ul>
+  <li>Bug fix: the nickname list borders were badly displayed on IE6</li>
+  <li>Show the corrupted files at the beginning of the list</li>
+  <li>New API used to query the chat infos from external scripts (who is
+    online, N last posted messages)</li>
+  <li>Optimization: don't initialize parameters when the cache file
+  exists.</li>
+  <li>Bug fix: if the user is not present on the channel, call the createNick
+    function in order to update the user metadata which are maybe nonexistent
+    (no more ghost users).</li>
+  <li>Change the default directory creation rights to 755 in order to allow
+    incorrect configured web servers to access to these directories.</li>
+  <li>New proxy: a <code>censor</code> proxy used to filter bad words in
+    posted messages</li>
+  <li>Bug fix: the <code>displayMsg</code> javascript function was broken</li>
+  <li>Fix a javascript warning</li>
+  <li>Show the join notice each time the channel is joined (even if the page
+    is reloaded)</li>
+  <li>Bug fix: Don't allow to send a message when the user is not
+  connected</li>
+  <li>Bug fix: Now <code>/quit</code> will leave the joined channels</li>
+  <li>Bug fix: after two clicks on channels tabs, the page was reloaded</li>
+  <li>New hungarian translation <code>hu_HU</code> (thanks to Keratomi)</li>
+  <li>Check if the <code>channels</code> parameter value is really an array
+    of strings</li>
+  <li>New command: <code>/identify {password}</code> (used to take admin
+    rights)</li>
+  <li>Bug fix: the smiley box was hidden at first launch</li>
+  <li>Bug fix: Now the flooders are kicked</li>
+  <li>Bug fix: by default the <code>copy_r</code> function must give 644
+    rights to files</li>
+</ul>
+
+<h3 id="v1.0-beta2">1.0-beta2 on 06/17/2006</h3>
+<ul>
+  <li>Bug fix: channels were not joined in the correct order (last channel in
+    the parameter array must be the last joined channel and the active
+  one)</li>
+  <li>Bug fix: the <code>/me</code> command was broken (thanks to Eury)</li>
+  <li>Bug fix: the <code>/me</code> and <code>/notice</code> display italic
+    style was broken</li>
+  <li>Bug fix: add a lock process when running the <code>/rehash</code>
+    command in order to avoid run simultaneously two global config init
+  step.</li>
+  <li>Bug fix: when reloading the page, the previously joined channels were
+    not joined again as expected.</li>
+  <li>Remove the crosshair cursor from the default theme (thanks to mkoch for
+    the suggestion).</li>
+  <li>Now the first connected user gets automatically the server admin
+  rights.</li>
+  <li>Optimizations: now the default file containers stores nicknames in the
+    metadata and use nickid for the files names (thanks to Thomas Lußnig for
+    the idea) and the metadata are now cached.</li>
+  <li>Bug fix: when new messages were received in a background tab, the
+    corresponding scrollbar was not scrolled as expected.</li>
+  <li>Add a test in the initialization step to be sure the
+    <code>copy_r</code> and <code>rm_r</code> function works.</li>
+</ul>
+
+<p></p>
+
+<h3 id="v1.0-beta">1.0-beta on 06/14/2006</h3>
+<ul>
+  <li>Private messages support.</li>
+  <li>Multi-channels support (<code>/join</code> command).</li>
+  <li>Moderation support (<code>/kick</code> and <code>/ban</code>
+  commands).</li>
+  <li>Highlight the tab icon when a something occurs in hidden tabs in order
+    to catch the attention.</li>
+  <li>Clicking on the nickname in the user list, write the nickname +
+    <code>', '</code> to the text input area (thanks to void).</li>
+</ul>
+
+<h3 id="v0.9.3">0.9.3 on 04/28/2006</h3>
+<ul>
+  <li>New traditional Chinese <code>zh_TW</code> translation (many thanks to
+    Alex Wu)</li>
+  <li>Bug fix: the <code>oldmsg</code> style was not set correctly to old
+    message elements (limit is set with <code>max_msg</code>)</li>
+  <li>Bux fix: remove the http error popup in the compressed
+    <code>xajax.js</code></li>
+  <li>Bug fix: some php include paths were wrong
+    (<code>chat-pre.js.tpl.php</code> and <code>chat-post.js.tpl.php</code>
+    were not correctly included in some cases)</li>
+  <li>Bug fix: IE doesn't support <code>white-space:pre</code> CSS rule, a
+    workaround is to use <code>&lt;nobr&gt;</code> element. This is not XHTML
+    complient but it's just a workeround for this crappy IE... (thanks to
+    Rhialto for the tip)</li>
+</ul>
+
+<h3 id="v0.9.2">0.9.2 on 04/17/2006</h3>
+<ul>
+  <li>New turkish <code>tr_TR</code> translation (many thanks to mesut)</li>
+  <li>New greek <code>el_GR</code> translation (many thanks to Speedy)</li>
+  <li>Bug fix: a path was broken with php's safe_mode enable in xajax
+  0.2.3</li>
+  <li>Bug fix: <code>openlinknewwindow</code> parameter was ignored on
+  Firefox</li>
+  <li>Bug fix: very long text with colors were truncated (thanks to Kachel
+    for the report)</li>
+  <li>Bug fix: a cleaner workaround (based on <code>document.recalc()</code>
+    function from <a href="http://dean.edwards.name/IE7/">ie7</a>
+    <a>library</a>) for IE6 smileys/nicklist resize bug</li>
+</ul>
+
+<h3 id="v0.9.1">0.9.1 on 04/03/2006</h3>
+<ul>
+  <li>Bug fix: When a empty text is typed, nothing should be sent. Only a
+    error message must be shown.</li>
+  <li>Bug fix: Links auto-detections didn't work</li>
+  <li>Bug fix: Now <code>openlinknewwindow</code> parameter is used also for
+    the phpfreechat logo link.</li>
+  <li>Bug fix: When the connection to the server is bad,
+    <code>refresh_delay</code> is automaticaly adjusted (multiplied by 2 when
+    it fails).</li>
+  <li>Bug fix: If you write something that is as long as your set maximum
+    message length, the color code is shown in chat not the actual chosen
+    text color it self.</li>
+  <li>Bug fix: There is no line break in chat. If you send long messages they
+    just continue in one row, and a horizontal scroll list appears. (this
+    doesn't work with the crappy IE).</li>
+  <li>Bug fix: do not send message containing only spaces.</li>
+  <li>Bug fix: remove the annoying "HTTP status 12002" popup dialog</li>
+  <li>Bug fix: Using <code>width</code> parameter in not a good idea because
+    of a display bug in IE6. I just removed temporary the width parameter.
+    Please refere to this topic for a workeround <a
+    href="forum/viewtopic.php?pid=867#p867">http://www.phpfreechat.net/forum/viewtopic.php?pid=867#p867</a></li>
+  <li>Bug fix: setting showsmileys parameter to false and btn_sh_smileys to
+    false didn't work (thanks to Yusuke for the bug report).</li>
+  <li>Improve HTTP URL parsing : now long urls are splited with '...'
+    (doesn't work on IE6)</li>
+  <li>Now <code>shownotice</code> uses a flag system : 0 = show nothing, 1 =
+    shows nicknames change, 2 = shows connect/disconnect, 3 = (2+1) shows
+    nicknames change and connect/disconnect</li>
+  <li>New <code>focus_on_connect</code> parameter: Setting this to true will
+    give the focus to the input text box when connecting to the chat. It can
+    be usefull not touch the focus when integrating the chat into an existing
+    website because when the focus is changed, the viewport follows the focus
+    location.</li>
+  <li>New <code>quit_on_closedwindow</code> parameter: Setting this to true
+    will send a <code>/quit</code> command when the user close his window.
+    It's not set to true by default because on IE and Konqueror/Safari, when
+    the user reload his page this event occurs.</li>
+  <li>New bosnian <code>ba_BA</code> translation (many thanks to Emin
+    Jasarevic)</li>
+</ul>
+
+<h3 id="v0.9">0.9 on 03/24/2006</h3>
+<ul>
+  <li>Handle correctly (on FF, IE, Konqueror) the TAB key and use it for
+    basic nicknames completion like on IRC.</li>
+  <li>Make possible to change the written text color permanently. (internaly
+    it uses the bbcode colors)</li>
+  <li>Bug fix: On IE6 when showing/hiding the nickname list and the smileys
+    list, these boxes disappeared curiously. The workeround is to load an
+    image with a very long (&gt;4550 characteres) src url. Why ? I don't know
+    !</li>
+  <li>Bug fix: When the chat window was leaved open, Internet Explorer could
+    crash. This was caused by a memory leak in the xajax v0.2 library. The
+    xajax upgrade fix the problem.</li>
+  <li>Bug fix: Nickname are case sensitive, so in the same chat there can be
+    both a "BOB" and a "bob". This is a bug. it should be doing a
+    case-insensitive compare so that BOB and bob register as the same
+    username.</li>
+  <li>Bug fix: nicknames didn't render correctly in Firefox (nowrap CSS rule
+    don't work as expected), I noticed the "white-space: pre" rulez works on
+    IE and FF. (thanks to JoeHaley for the report)</li>
+  <li>Bug fix : email tag won't work if email address starts with letter s
+    when use the email syntax [email]email address[/email], if type in an
+    email address starting with letter 's', it will print out
+  incorrectly.</li>
+  <li>New ukrainian translation <code>ua_UA</code> (thanks to <a
+    href="http://www.relax-info.com/">Ivan Kravets aka X-MAN</a>)</li>
+  <li>New dutch from netherlands <code>nl_NL</code> translation (many thanks
+    to Robert de Ruiter)</li>
+  <li>New norwegian <code>no_NO</code> translation (many thanks to Anders
+    Bondehagen)</li>
+</ul>
+
+<h3 id="v0.8">0.8 on 03/03/2006</h3>
+<ul>
+  <li>Add themes support : a theme is a directory containing all the
+    necessary ressources (smileys, templates, images) to completly customize
+    the chat appearance. When a new theme is created, only the wanted
+    ressources can be changed, the default theme is allways the fallback, it
+    means a empty theme will work because the default theme will be the
+    fallback for the all the ressources.</li>
+  <li>Now a command is a class in a file. So, it's very easy to define your
+    own commands (see the demo27 for a quick example).</li>
+  <li>Bug fix: Using a none default value for <code>prefix</code> makes
+    problems with session.</li>
+  <li>Bug fix: The <code>clock</code> variable doesn't work as expected.</li>
+  <li>Bug fix: it was impossible to create multiple rooms using url
+    parameters because <code>server_script_url</code> and
+    <code>client_script_url</code> didn't take into account the url query
+    string.</li>
+  <li>Rename all the i18n directories to match the unix locales standards :
+    fr_FR, en_US, ja_JP, ar_LB ... Don't forget to update your config file
+  !</li>
+  <li>New brazilian portuguese <code>pt_BR</code> translation (many thanks to
+    fredcosta)</li>
+  <li>New japanese <code>ja_JP</code> translation (many thanks to
+  elf2000)</li>
+  <li>New smiley theme : phpbb2 + Eusa (thanks to bsemf for the
+  contribution)</li>
+  <li>New smiley theme : cerutti (thanks to Victor Cerutti for the
+    contribution)</li>
+  <li>Bug fix: on iis6/win2003 webserver, the WINDIR variable is
+  lowercase.</li>
+  <li>Add a demo to explain how to use <code>server_script_url</code>,
+    <code>client_script_url</code> and <code>smileyurl</code> parameters,
+    very useful for strange server configurations.</li>
+  <li>New serbian / croatian <code>sr_CS</code> translation (many thanks to
+    Smilie)</li>
+  <li>Add a <code>timeout</code> parameter to the $params array uses to tune
+    the time of inactivity to wait before to considere to disconnecte
+  user.</li>
+  <li>Optimize bandwidth : let the client launch each refresh step</li>
+  <li>New italian <code>it_IT</code> translation (many thanks to
+  bellakioma)</li>
+  <li>Refactoring of Javascript code (pfcClient class) : new code is now
+    based on <a href="http://prototype.conio.net/">prototype</a> library.</li>
+  <li>New spanish <code>es_ES</code> translation (many thanks to drjoju)</li>
+  <li>New indonesian <code>id_ID</code> translation (many thanks to Wendy
+    Novianto)</li>
+  <li>New swedish <code>sv_SE</code> translation (many thanks to Pär
+  Smårs)</li>
+  <li><code>openlinknewwindow</code> parameter added. Setting this option to
+    <code>true</code> will open the followed link in a new window.</li>
+  <li>Bug fix: Changing nickname to <code>alt</code>, <code>img</code> or
+    anything contained into the smiley html image code will make problems
+    because the nickname colorization parse also the html smiley code.</li>
+  <li>Move smileys, link and nickname highlight parsing to client side (done
+    with JavaScript RegExp)</li>
+  <li>Integrate bbcode syntaxe. Use <code>[b]text[/b]</code> to bold the
+    text, use <code>[i]text[/i]</code> for italic, use
+    <code>[u]text[/u]</code> for underline, use <code>[s]text[/s]</code> for
+    line-through, use <code>[email]myemail@mydomain.com[/email]</code> or
+    <code>[email=myemail@mydomain.com]text[/email]</code> for emails, and
+    <code>[color=mycolor]text[/color]</code> for colorize your text (thanks
+    to Nemako for this contribution)</li>
+  <li><code>usecsstidy</code> parameter added. Setting this option to
+    <code>true</code> will use the CSSTidy library to optimize the CSS output
+    (by default this parameter is <code>false</code> because it make problems
+    on strange server configurations).</li>
+  <li><code>showwhosonline</code> parameter added. Used to show/hide online
+    users. (thanks to Nemako for the contribution)</li>
+  <li><code>showsmileys</code> parameter added. Used to show/hide the smiley
+    list. (thanks to Nemako for the contribution)</li>
+  <li>Bug fix: the <code>max_msg</code> parameter could make problem when a
+    low value is used because this parameter was used to purge the history
+    file.</li>
+  <li>New russian <code>ru_RU</code> translation (many thanks to Stanislav
+    Kondratyuk)</li>
+  <li>Bug fix: it was possible to takeover a nickname and it was possible to
+    read messages although no nickname was choosen (thanks to softwareNerd
+    and Nemako for the detailed bug report)</li>
+  <li>Add <code>btn_sh_whosonline</code> and <code>btn_sh_smileys</code>
+    parameters use to show/hide the showsmileys and showwhosonline buttons
+    (Thanks to Bernhard J. M. Grün for the contribution)</li>
+  <li>New Portuguese from Portugal <code>pt_PT</code> translation (many
+    thanks to Paulo Bras)</li>
+  <li>New shared memory container based on PEAR::SharedMemory package (many
+    thanks to Bernhard J. M. Grün for this great contribution)</li>
+</ul>
+
+<h3 id="v0.7">0.7 on 02/15/2006</h3>
+<ul>
+  <li>Implement a simple i18n system and add French/English translation of
+    all the messages (<a href="forum/">contributions</a> are welcomed for
+    other translations).</li>
+  <li>Add the chinese translations (thanks to guoxianghao)</li>
+  <li>Add the formal and informal german translation (thanks to <a
+    href="http://www.elvenstar.de/">bsemf</a>)</li>
+  <li>Add the arabic translation (thanks to <a
+    href="http://www.zeitoun.net/">sandra rizk</a>)</li>
+  <li>Bug fix: add dirname(__FILE__) to xajax require_once to avoid problems
+    on badly configured php servers.</li>
+  <li>Switch minimize and maximize icon.</li>
+  <li>Add "phoenity" smiley theme. These smileys have been developed by Lim
+    Chee Aun and ported to PHPFreeChat by Robin Monks.</li>
+  <li>Add a function existance check into intialization step. The aim is to
+    have a better control on why phpFreeChat doesn't work on such server
+    configuration.</li>
+  <li>Add "famfamfam" smiley theme based on the icons at <a
+    href="http://www.famfamfam.com/lab/icons/silk/">www.famfamfam.com</a>.
+    Ported to PHPFreeChat by Robin Monks.</li>
+  <li>Add <code>client_script</code> option which can be used to force the
+    script location if the autodetection doesn't work well.</li>
+  <li>Bug fix: on php cgi installation, the automatic script filename
+    detection didn't work. (thanks to Wendy Novianto for the report)</li>
+  <li>Few container's interface clarifications. (thanks to Bernhard J. M.
+    Grün for the report)</li>
+  <li>Add the <code>$return</code> parameter to <code>print*</code> methods.
+    Setting this paraméter to true will return result instead of printing it
+    (thanks to Wendy Novianto for the contribution).</li>
+  <li>phpFreeChat now uses a simple php based template engine in order to
+    handle easily i18n translations. This modification removes Smarty library
+    dependency.</li>
+  <li>Bug fix: Clicking on the message list area will set focus to input box
+    only if the mouse didn't move after the mousedown event (stay
+  static).</li>
+  <li>Use <a href="http://csstidy.sourceforge.net/index.php/">CSSTidy</a> to
+    optimise and to parse the CSS code. (thanks to <a
+    href="http://www.nemako.net/">Nemako</a> for this contribution)</li>
+  <li>Make template directory configurable (vars <code>tplpath</code> and
+    <code>tpltheme</code>) like smileys directories (thanks to Wendy Novianto
+    for the suggestion)</li>
+  <li>Bug fix: on windows servers, the relativepath was incorrect (thanks to
+    <a href="http://www.elvenstar.de/">bsemf</a> for the patch)</li>
+  <li>Add a shield for unreconized parameters. These parameters can be
+    obsolete or not well written.</li>
+  <li>Add the <code>title</code> attribute on smileys (thanks to BenXbox for
+    the idea)</li>
+</ul>
+
+<h3 id="v0.6">v0.6 on 02/07/2006</h3>
+<ul>
+  <li>New minimize/maximize button. Then you can easily integrate your chat
+    to weblogs or forums !</li>
+  <li><code>connect_at_startup</code> option added. Turning off this option
+    will not connect user at startup, to connect he shall click on the login
+    button.</li>
+  <li><code>nickmarker</code> option added. Turning off this option disable
+    nickname colorization.</li>
+  <li><code>clock</code> option added. Turning off this option will disable
+    date/hour display.</li>
+  <li>Reorder smileys and add tux and gnu smileys (Thanks to <a
+    href="http://www.yanncochard.com/">Kaella</a> for the nice tux and gnu
+    smileys!)</li>
+  <li>Bug fix: When the <code>rootpath</code> was empty, it was not set to
+    '.'. The xajax relative path (and other depending on this path) was
+    broken! (Thanks to <a href="http://www.yanncochard.com/">Kaella</a> for
+    reporting this bug)</li>
+  <li>Bug fix: When setting same config parameters in two scripts, it makes
+    problems because the two script share the same cache id.</li>
+  <li>Bug fix: The <code>active</code> option should not be used to
+    initialize the auto-connect state because when a user quit, the
+    <code>active</code> option is set to false and is stored in session.
+    Then, when the user come back, he wasn' auto-connected as it should. This
+    option is replaced by <code>connect_at_startup</code>.</li>
+  <li>Bug fix: The nicknames colors are limited to 15. So when a 16th user
+    connect, his nickname is not colorized. Moreover, the disconnected users
+    listed in the message history was colorized.</li>
+  <li>Bug fix: On servers where php is executed as cgi, the SCRIPT_FILENAME
+    variable doesn't point on the script filename but on thhhe php.cgi file.
+    It made problems to calculate relative paths in phpfreechat. Now the
+    PATH_TRANSLATED variable is used for cgi configuration.</li>
+</ul>
+
+<h3 id="v0.5">v0.5 on 02/04/2006</h3>
+<ul>
+  <li>Nickname's colorization for a better readability. Nicknames are
+    colorized using a predefined color list (same as XChat). It's also
+    possible to toggle enable/disable colorization using a button.</li>
+  <li>Add the ability to show/hide the dates/hours by pressing a simple
+    toggle button.</li>
+  <li>Bug fix: Remove wait cursor when an update occures.</li>
+  <li>Bug fix: Fix problems with UTF8 / UNICODE nicknames and '\'
+  charactere.</li>
+  <li>Refactoring of internal libraries install process (xajax, ie7,
+    javascript-libs).</li>
+  <li>Bug fix: When the last user quit the chat, his nickname was not
+    disconnected as long as next user connect, so it was not possible to
+    connect again and take the same nick.</li>
+</ul>
+
+<h3 id="v0.4">v0.4 on 01/24/2006</h3>
+<ul>
+  <li>New feature: Add a nice connect/disconnect icon used to manualy connect
+    or disconnect from the chat.</li>
+  <li>Bug fix: Nicknames with special caracteres (ex: &lt; &gt;) are not
+    displayed correctly in the nickname list and in the notice messages.</li>
+  <li>Bug fix: <code>shownotice</code> option didn't work (set it to 0 to
+    remove every notice, set it to 1 to show only nicknames changes, set it
+    to 2 to show 1+ connect/disconnect notice)</li>
+  <li>Bug fix: At first connexion, messages history was shown twice.</li>
+  <li>Replace png smileys by gif smileys to avoid black background on th
+    crappy IE.</li>
+  <li>Bug fix: Blocking warning could happen when <code>E_ALL</code> was set
+    in php parameters, it made the chat unworkable!</li>
+  <li>Bug fix: Add an alternative to <code>file_get_contents</code> which is
+    used by phpfreechat but was not defined on php version &lt; 4.3.0</li>
+  <li>Bug fix: <code>:'(</code> smiley was not correctly displayed.</li>
+  <li>Bug fix: Nicknames highlighting did not work as excepted.</li>
+</ul>
+
+<h3 id="v0.3">v0.3 on 01/19/2006</h3>
+<ul>
+  <li>Add a clientid JS variable used to identify each open window. This
+    makes possible to open 2 windows on the same chat without any conflicts
+    or strange behaviours.</li>
+  <li>Add english and french README and INSTALL files.</li>
+  <li>Bug fix: Smileys was not displayed in <code>/notice</code> and
+    <code>/me</code> commands.</li>
+  <li>Bug fix: Nicknames were not filtered everywhere so nicknames could be
+    too long or with only spaces.</li>
+  <li>Bug fix: On IE, first time the chat was displayed, the nicknames list
+    was hidden.</li>
+  <li>Bug fix: the internal chat identifier was badly calculated and threw
+    randomly strange errors.</li>
+</ul>
+
+<h3 id="v0.2">v0.2 on 01/15/2006</h3>
+<ul>
+  <li>Nicknames list update optimizations. The list is updated only when a
+    user login or logout.</li>
+  <li>Bug fix: Add <a href="http://dean.edwards.name/IE7/">IE7</a> scripts to
+    improve display on poor IE browsers. This option can be desactivated in
+    parameters.</li>
+  <li>Bug fix: OVH hosts can't use <code>$_SERVER["PATH_TRANSLATED"]</code>
+    variable (thanks to <a href="http://www.nemako.net/">Daffys</a> for the
+    bug report)</li>
+  <li>Bug fix: When an unknown command was handled, <code>Error: the XML
+    response that was returned from the server is invalid !!</code>
+    unexplicite popup message was shown. Now a simple explicite message is
+    shown. (thanks to <a href="http://www.nemako.net/">Daffys</a> for the
+    report)</li>
+  <li>Bug fix: I forgot to insert HTML encoding into demo pages.</li>
+  <li>Bug fix: Debuging console didn't work and the link to open it was
+    broken.</li>
+</ul>
+
+<h3 id="v0.1">v0.1 on 01/13/2006 (first release)</h3>
+<ul>
+  <li>The interface suggests a messages display zone, an online users display
+    zone, a zone to type your messages, and a zone to display and change the
+    nickname of the online user (customizable by a system of CSS model).</li>
+  <li>Support of the following commands : <code>/nick</code>,
+  <code>/me</code></li>
+  <li>Support of smileys (customizable)</li>
+  <li>Support of filters allowing : censor words, bold a part of the sentence
+    ... (customizable)</li>
+</ul>
+</body>
+</html>

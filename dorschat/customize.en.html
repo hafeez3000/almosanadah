@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+       "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <title>Customize</title>
+</head>
+
+<body>
+<h2>Customizing</h2>
+
+<p>phpFreeChat was developped with an aim of simplicity and flexibilty.</p>
+
+<p>Setting it up is relatively simple. All parameters are centralized in an
+array and passed as parameters on the instantiation of the phpFreeChat
+object.</p>
+
+<p>We can thus :</p>
+
+<div class="toc">
+<ul>
+  <li><a href="#cust-theme">Customization of the overall appearance (colors,
+    sizes ...)</a></li>
+  <li><a href="#cust-smileys">Customization of the smileys list</a></li>
+  <li><a href="#cust-cmd">Write a new command</a></li>
+  <li><a href="#cust-container">Write your own container</a></li>
+</ul>
+</div>
+
+<h3 id="cust-theme">Customization of the overall appearance (colors, sizes
+...)</h3>
+
+<p>You need to create a new theme (for example <code>mytheme</code>) :</p>
+<ol>
+  <li>Create a directory: <code>phpfreechat/themes/mytheme/</code></li>
+  <li>Create a new CSS stylesheet:
+    <code>phpfreechat/themes/mytheme/style.css</code></li>
+  <li>Now insert CSS rules into this file, for example, to change the
+    date/hours color to red:
+    <pre>span.pfc_heure, span.pfc_date {
+  color: red;
+}</pre>
+  </li>
+  <li>Setup the <code>theme</code> parameter in your chat script:
+    <pre>$params["theme"] = "mytheme";</pre>
+  </li>
+</ol>
+
+<p>As an examples, see these demos: <a
+href="http://www.phpfreechat.net/demo/pfc-1.x/demo/demo28_blune_theme.php">1</a>,
+<a
+href="http://www.phpfreechat.net/demo/pfc-1.x/demo/demo28_mini_blune_theme.php">2</a></p>
+
+<h3 id="cust-smileys">Customization of the smileys list</h3>
+
+<p>Follow the above instructions for the theme creation. Then I suppose you
+have a directory <code>phpfreechat/themes/mytheme/</code>.</p>
+<ol>
+  <li>Create a new smileys directory:
+    <code>phpfreechat/themes/mytheme/smileys/</code></li>
+  <li>Insert ping, jpeg or gif smileys images in the folder for example :
+    <code>smiley1.png</code>, <code>smiley2.gif</code>, and
+    <code>smiley3.jpg</code></li>
+  <li>Create a file <code>phpfreechat/themes/mytheme/smileys/theme</code> and
+    enter the keyboard to image mapping smileys' description, for example :
+    <pre>smiley1.png :) :-)
+smiley2.gif :( :-(
+smiley3.jpg :D :-D :o)</pre>
+    <p>Each line begins with the image filename followed by the list of the
+    string characters to replace by that image. Only use spaces to separate
+    the smileys string matches.</p>
+  </li>
+  <li>Setup the <code>theme</code> parameter in your chat script:
+    <pre>$params["theme"] = "mytheme";</pre>
+  </li>
+</ol>
+
+<p>As an examples, see these demos: <a
+href="http://www.phpfreechat.net/demo/pfc-1.x/demo/demo11_famfamfam_smiley_theme.php">1</a>,
+<a
+href="http://www.phpfreechat.net/demo/pfc-1.x/demo/demo12_phoenity_smiley_theme.php">2</a>,
+<a
+href="http://www.phpfreechat.net/demo/pfc-1.x/demo/demo17_cerutti_smiley_theme.php">3</a>,
+<a
+href="http://www.phpfreechat.net/demo/pfc-1.x/demo/demo18_phpbb2_smiley_theme.php">4</a></p>
+
+<h3 id="cust-cmd">Write a new command</h3>
+
+<p>A command is a php classe. So, to write your own command, you need to
+write a new php classe (as an example look at the
+<code>src/commands/nick.class.php</code> file).</p>
+
+<p>Each command class inherite from a virtual <code>pfcCommand</code> class.
+This virtual class define the command interface. Currently the only virtual
+method to implement is: <code>function run(...)</code></p>
+
+<p>You have some API you can use to write your command:</p>
+<ul>
+  <li>xajax response</li>
+  <li>container (see <code>pfccontainer.class.php</code>)</li>
+  <li>tools (see <code>pfctools.php</code>)</li>
+</ul>
+
+<p>@todo : to write</p>
+
+<p>As an examples, have a look to this demo: <a
+href="http://www.phpfreechat.net/demo/pfc-1.x/demo/demo27_customized_command.php">1</a>
+(try to type <code>/roll 2d6</code>)</p>
+
+<h3 id="cust-container">Write your own container</h3>
+
+<p>@todo : to write</p>
+
+<p>As an examples, have a look to the default <a
+href="http://svn.sourceforge.net/viewvc/phpfreechat/trunk/src/containers/file.class.php?view=markup">file
+container source code</a>.</p>
+
+<p></p>
+</body>
+</html>

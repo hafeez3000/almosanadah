@@ -1,0 +1,15 @@
+1,US,US,Umrah Sales,Debit to Umrah Agent ,Credit to Umrah Sales
+2,UP,UP,Umrah Purchases,Debit to Umrah Purchases,Credit to Hotels or Suppliers
+3,CS,CR,Credit Sales Reservation,Debit To Resarvation Agent,Credit To Resarvation Sales
+4,PV,PV,Credit Purchases Resarvation,Debit To Purchases Res,"Credit To Suplier , Hotels"
+5,HJ,HJ,Hajj Sales,Debit To Hajj Agent ,Credit To Hajj Sales
+6,HP,HP,Hajj Purchases,Debit To Hajj Purchase ,"Credit To Suplier , Hotels"
+7,TS,TS,Transportation Sales,Debit To Agents,Credit To Transport Sales
+8,TP,TP,Transportation Purchases,Debit To Purchases,Credit To Transportation Companys
+9,CP,CV,Cash Payment Voucher ,Debit To Suplier ,Credit To Petty Cash
+10,CT,CT,Cash Receiving  From Travel Agent ,Debit To Petty Cash ,Credit To Travel Agent
+11,RC,RV,Cheque Receiving Voucher ,Debit To Bank ,Credit To Agent 
+12,BV,BV,Bank Voucher,Debit to Supplier,Credit To Bank
+13,JV,JV,Journal Voucher ,Debit To Bank ,Credit To Agent
+14,CN,CN,Credit Note,Debit to Refund Accounts,Credit to Agent
+15,ST,ST,Settlement,Debit To Settlement,Credit to Agent

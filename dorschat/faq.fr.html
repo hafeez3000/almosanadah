@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+       "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="fr">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <title>Foire aux questions (FAQ)</title>
+  <link href="../../style/faq.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body xml:lang="fr">
+<h2>Foire aux questions (FAQ)</h2>
+
+<div class="toc">
+<ul>
+  <li><a href="#free-sessions">Pourquoi phpFreeChat ne fonctionne pas chez
+    Free.fr ?</a></li>
+  <li><a href="#tmpfs">Mon système de fichier est lent, est il possible
+    d'améliorer les performances ? (pour les utilisateur de Linux)</a></li>
+  <li><a href="#multiple-channels">Comment créer plusieurs salons
+    indépendants (channels) ? (seulement pour la branche 0.x)</a></li>
+  <li><a href="#rehash">Comment rafraîchir (rehash) la configuration du chat
+    ? (seulement pour la branche 1.x)</a></li>
+  <li><a href="#setup-admins">Comment changer le mot de passe administrateur
+    du chat ? (seulement pour la branche 1.x)</a></li>
+</ul>
+</div>
+
+<div class="section">
+<h3 id="free-sessions" class="query">Pourquoi phpFreeChat ne fonctionne pas
+chez Free.fr ?</h3>
+
+<div class="answer">
+<p>Le chat utilise les sessions pour fonctionner. Pour utiliser les sessions
+chez Free.fr il suffit de créer un répertoire <code>sessions</code> à la
+racine du site.</p>
+
+<p>La commande ftp pour créer les répertoire est : <code>mkdir
+sessions</code></p>
+</div>
+</div>
+
+<div class="section">
+<h3 id="tmpfs" class="query">Mon système de fichier est lent, est il
+possible d'améliorer les performances ? (pour les utilisateur de Linux)</h3>
+
+<div class="answer">
+<p>Pour ceux qui utilisent windows, jetez un oeil à <a
+href="http://www.jurixt.com/xp/xp_18.htm">ce lien</a> ou <a
+href="http://www.generation-nt.com/astuces/imprimer/124/">ce lien</a>.</p>
+
+<p>Par défaut, les données du chat (les messages et les pseudonymes) sont
+stockées dans <code>phpfreechat/data/private/chat/</code> mais ce
+répertoire est paramétrable.</p>
+
+<p>Linux permet , par le biais de <em>tmpfs</em>, de monter des disque dur
+sur de la mémoire vive. Les lecture/écriture sur un tel système de fichier
+seront accélérées de façon impressionnante mais vos données sont alors
+volatiles, c'est à dire qu'à chaque redémarrage de la machine elle
+disparaissent.</p>
+
+<p>Sur ma machine personnelle (Linux debian, kernel-2.6.x), un système de
+fichier <em>tmpfs</em> est monté par défaut sur le répertoire
+<code>/dev/shm</code>. Je vous suggère donc de paramétrer phpfreechat pour
+qu'il stock les données dans ce répertoire, par exemple :</p>
+<pre>$params["serverid"] = md5(__FILE__);
+<strong>$params["data_private_path"] = "/dev/shm/mychat";</strong>
+$chat = new phpFreeChat($params);
+[...]</pre>
+
+<p>Pour avoir un ordre d'idée des performances, j'ai fait un petit test qui
+parle de lui même :</p>
+<dl>
+  <dt>Sans tmpfs (HD) :</dt>
+    <dd><ul>
+        <li>10000 écritures = <strong>9.07 sec (82.49%)</strong></li>
+        <li>10000 lectures = 0.38 sec (3.49%)</li>
+        <li>10000 suppressions = 0.31 sec (2.84%)</li>
+      </ul>
+    </dd>
+  <dt>Avec tmpfs (RAM) :</dt>
+    <dd><ul>
+        <li>10000 écritures = <strong>0.70 sec (6.37%)</strong></li>
+        <li>10000 lectures = 0.40 sec (3.64%)</li>
+        <li>10000 suppressions = 0.12 sec (1.16%)</li>
+      </ul>
+    </dd>
+</dl>
+</div>
+</div>
+
+<div class="section">
+<h3 id="multiple-channels" class="query">Comment créer plusieurs salons
+indépendants (channels) ? (seulement pour la branche 0.x)</h3>
+
+<div class="answer">
+<p>Par défaut, le paramètre <code>channel</code> est assigné
+automatiquement à partir du paramètre <code>title</code> (titre), mais il
+est tout à fait possible de le spécifier pour ainsi créer des salons
+complètement indépendants.</p>
+
+<p>Exemple : pour gérer plusieurs salons indépendants en passant le nom du
+salon en paramètre de l'URL, il suffit de configurer son scripte comme ceci
+:</p>
+<pre>$params["serverid"] = md5(__FILE__);
+<strong>$params["channel"] = $_GET["channel"];</strong>
+$chat = new phpFreeChat($params);
+[...]</pre>
+
+<p>En accédant le scripte avec une URL de cette forme
+<code>http://.../monchat.php?channel=monsalon</code>, un salon totalement
+indépendant des autres sera alors créé. Les données de ce salon seront
+alors stockées dans le répertoire
+<code>phpfreechat/data/private/chat/monsalon/</code>.</p>
+</div>
+</div>
+
+<div class="section">
+<h3 id="rehash" class="query">Comment rafraîchir (rehash) la configuration
+du chat ? (seulement pour la branche 1.x)</h3>
+
+<div class="answer">
+<p>Le rehash est necessaire lorsque vous changez une valeur d'un paramètre
+du chat. Si vous ne rehashez pas le chat, alors la vielles valeur de votre
+paramètre sera prise en compte car le chat utilise un cache.</p>
+
+<p>Pour rehasher le chat, vous devez lancer la commande suivante:</p>
+<pre>/rehash</pre>
+
+<p>Par contre, il se peut que vous n'ayez pas le droit de la lancer si vous
+n'êtes pas administrateur. Pour vous donner les droits administrateurs, par
+défaut (si vous n'avez pas changé le mot de passe admin) voila les
+commandes à lancer:</p>
+<pre>/nick admin
+/identify</pre>
+
+<p>(par défaut l'utilisateur admin a un mot de passe vide, mais vous pouvez
+<a href="#setup-admins">le changer</a>)</p>
+</div>
+</div>
+
+<div class="section">
+<h3 id="setup-admins" class="query">Comment changer le mot de passe
+administrateur du chat ? (seulement pour la branche 1.x)</h3>
+
+<div class="answer">
+<p>La liste des administrateurs (pseudonyme/mot de passe) est définie dans
+le paramètre <code>admins</code> (qui est un tableau).</p>
+
+<p>Exemple : supposons que je veuille créer deux administrateurs nommés
+<code>bob</code> et <code>boby</code> avec les mots de passes respectifs
+<code>bob1</code> et <code>boby1</code>. Voila le paramètre que je dois
+ajouter :</p>
+<pre>$params['admins'] = array('bob'  =&gt; 'bob1',
+                          'boby' =&gt; 'boby1');</pre>
+
+<p>(Attention, n'oubliez pas de <a href="#rehash">rehasher</a> votre chat)</p>
+</div>
+</div>
+
+<p></p>
+</body>
+</html>

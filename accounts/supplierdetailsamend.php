@@ -1,0 +1,79 @@
+<?
+include ("header.php");
+?>
+
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-bottom: 3px solid #006600; border-right: 3px solid #006600;border-left: 3px solid #006600 ">
+  <tr>
+    <td width="20%" style="border-right: 1px solid #999999"  valign="top"> <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td valign="top"><div align="left"> 
+              <?include ("umenu.php"); ?>
+            </div></td>
+        </tr>
+      </table></td>
+    <td width="80%" valign="top"  > <table width="100%" border="0" cellpadding="0" cellspacing="1">
+        <tr>
+          <td valign="top"> 
+
+<table cellpadding="0" cellspacing="0" width="100%" style="border-top: 1px solid #999999; border-bottom: 1px solid #999999"><tr>
+                      <td bgcolor="#CCCCCC"><strong> <font size="2" face="Verdana, Arial, Helvetica, sans-serif">Supplier Details</font></td>
+                    </tr></table>
+<?
+include ("gprocessing.html");  ?>
+
+
+									  <?
+
+
+$supp_sno	    = isset($_POST['supp_sno']) ? $_POST['supp_sno'] : '';
+$supp_id	    = isset($_POST['supp_id']) ? $_POST['supp_id'] : '';
+$supp_name	    = isset($_POST['supp_name']) ? $_POST['supp_name'] : '';
+$supp_desc	    = isset($_POST['supp_desc']) ? $_POST['supp_desc'] : '';
+$account_code	    = isset($_POST['account_code']) ? $_POST['account_code'] : '';
+$city		    = isset($_POST['city']) ? $_POST['city'] : '';
+$payment_type	    = isset($_POST['payment_type']) ? $_POST['payment_type'] : '';
+$contact_p_title    = isset($_POST['contact_p_title']) ? $_POST['contact_p_title'] : '';
+$contact_p_name	    = isset($_POST['contact_p_name']) ? $_POST['contact_p_name'] : '';
+$tel		    = isset($_POST['tel']) ? $_POST['tel'] : '';
+$fax		    = isset($_POST['fax']) ? $_POST['fax'] : '';
+$email		    = isset($_POST['email']) ? $_POST['email'] : '';
+$mobile		    = isset($_POST['mobile']) ? $_POST['mobile'] : '';
+$bank_account_name  = isset($_POST['bank_account_name']) ? $_POST['bank_account_name'] : '';
+$bank_account_number= isset($_POST['bank_account_number']) ? $_POST['bank_account_number'] : '';
+$bank_name	    = isset($_POST['bank_name']) ? $_POST['bank_name'] : '';
+$bank_branch	    = isset($_POST['bank_branch']) ? $_POST['bank_branch'] : '';
+$bank_city	    = isset($_POST['bank_city']) ? $_POST['bank_city'] : '';
+$notes		    = isset($_POST['notes']) ? $_POST['notes'] : '';
+
+        
+
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+} 
+$hotel_ids = $_SESSION['hotel_id'] ; 
+
+		
+$query_hotel ="update suppliers set  supp_id='$supp_id',supp_name='$supp_name',supp_desc='$supp_desc',account_code='$account_code',city='$city',payment_type='$payment_type',contact_p_title='$contact_p_title',contact_p_name='$contact_p_name',tel='$tel',fax='$fax',email='$email',mobile='$mobile',bank_account_name='$bank_account_name',bank_account_number='$bank_account_number',bank_name='$bank_name',bank_branch='$bank_branch',bank_city='$bank_city',notes='$notes'  where supp_id='$hotel_ids'";
+
+pg_query($conn, $query_hotel);
+									
+
+									  ?>
+
+									  
+	
+
+
+
+     </td></tr></table> 
+
+</td></tr></table> 
+
+</td></tr></table> 
+
+</td></tr></table> 
+
+
+
+<?  echo "<script>document.location.href=\"supplierdetailsa.php?hotid=$supp_id\"</script>";  ?>

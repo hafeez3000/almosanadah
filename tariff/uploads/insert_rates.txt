@@ -1,0 +1,1 @@
+update rates set gross_rate=300,net_rate=300,sell_rate=340,service_charges=0,agent_commission=0,breakfast='included',breakfast_rate=0, halfboard='available', halfboard_rate=100, fullboard='available', fullboard_rate=200, sahoor='not_available',sahoor_rate=0, iftar='not_available',iftar_rate=0 where rate_date between '2006-01-01' and '2006-01-05' and room_id='1110111';

@@ -1,0 +1,42 @@
+================================================================================
+                         SOFTWARE LICENSE AGREEMENT
+
+LICENSE:
+* This Software License Agreement (the "Agreement") is a legal 
+  agreement between you, the end-user ("Licensee"), and Gokhan Dagli .
+  By using this software or storing this program ("DHTML News Ticker Wizard")
+  on a computer hard drive (or other media), you are agreeing to be bound by 
+  the terms of this Agreement.  
+  If you do not agree to the terms of this Agreement,  delete the software from all storage media. 
+
+* This software may be distributed freely on online services, bulletin boards,
+  or other electronic media, as long as the files are distributed in their 
+  entirety.  This software may be distributed on CD-ROM, disk, or other 
+  physical media.  
+
+* This software ("DHTML News Ticker Wizard") is a shareware.
+
+* The user must assume the entire risk of using the program.
+
+* Note that Gokhan Dagli doesn't take any responsibility against damage this 
+applet may do to your system or another.
+
+* You may not alter this software in any way, including changing or removing
+  any messages or windows.  
+
+* You may not decompile, reverse engineer, disassemble or otherwise reduce 
+  this software to a human perceivable form.  You may not modify, rent or 
+  resell for profit this software, or create derivative works based upon 
+  this software.  You may not publicize or distribute any registration code  
+  algorithms, information, or registration codes used by this software without 
+  permission of Gokhan Dagli.
+
+* LIMITATION OF LIABILITY: THE MATERIALS ARE PROVIDED "AS IS" WITHOUT ANY EXPRESS OR IMPLIED WARRANTY OF ANY KIND INCLUDING WARRANTIES OF MERCHANTABILITY, NONINFRINGEMENT OF THIRD-PARTY INTELLECTUAL PROPERTY, OR FITNESS FOR ANY PARTICULAR PURPOSE. IN NO EVENT SHALL Gokhan Dagli OR ITS SUPPLIERS BE LIABLE FOR ANY DAMAGES WHATSOEVER (INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF PROFITS, BUSINESS INTERRUPTION, LOSS OF INFORMATION) ARISING OUT OF THE USE OF OR INABILITY TO USE THE MATERIALS, EVEN IF Gokhan Dagli
+  HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. BECAUSE SOME JURISDICTIONS PROHIBIT THE EXCLUSION OR LIMITATION OF LIABILITY FOR CONSEQUENTIAL OR INCIDENTAL DAMAGES, THE ABOVE LIMITATION MAY NOT APPLY TO YOU. 
+
+* TERMINATION OF THIS LICENSE: Gokhan Dagli may terminate this license at any time if you are reach of the terms of this Agreement. Upon termination, you will immediately destroy the Materials. 
+
+COPYRIGHT:
+*DHTML News Ticker Wizard is Copyright Gokhan Dagli.  You must treat the Software like 
+  any other copyrighted material.
+================================================================================

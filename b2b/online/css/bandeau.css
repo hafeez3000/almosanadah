@@ -1,0 +1,78 @@
+/* header */ 
+#header{
+	background: url("../images/bg_header.jpg") no-repeat left top;
+	padding-top:12px;
+	position:relative;
+	height:101px;
+}
+#header.interne{
+	background: url("../images/bg_header_interne.jpg") no-repeat left top;
+}
+#header .col_1-3{
+}
+#header .logo{
+	padding: 0 17px 0 25px; 
+	float:left;
+}
+
+
+	#header #languageSelection {
+		position:absolute;
+		right:0;
+		top:12px;
+	}
+	#header #languageSelection li {
+		float:left;
+		margin-right:5px;
+	}
+	#header #languageSelection li a {
+		border:1px solid #1F4679;
+		display:block;
+	}
+	#header #languageSelection li a:hover {
+		border-color:white;
+	}
+	
+	
+	#header #account{
+		position:absolute;
+		bottom:20px;
+		right:0;
+		padding-right:48px;
+		background: url("../images/bg_account.gif") no-repeat right 5px;
+	}
+	#header #account h2{
+		text-align:right;
+		color:#005b93;
+		font-size:1.4em;
+		font-weight:bold;
+	}
+	#header #account li{
+		display:inline;
+		margin-left:8px;
+		padding-left:6px;
+		background: url("../images/puce_fleche_bleu.gif") no-repeat 0 5px;
+	}
+    #header #account #header_profil{
+        background:none;
+        padding-left:0;
+    }
+    #header #header_profil span{
+        color:#005B93;
+        font-size:1.2em;
+    }
+	#header #account li a{
+		color:#005b93;
+		font-weight:bold;
+		font-size:1.2em;
+	}
+	#header .slogan{
+		float:left;
+		padding-top:5px;
+	}
+	
+	#header .slogan strong{
+		font-size:1.8em;
+    font-style:italic;
+    color:#005B93;
+	}

@@ -1,0 +1,9 @@
+/* Page Registration */
+#page #profil-titre-page{
+	background: url(/fr/images/profil/titre-page-registration.gif) no-repeat;
+	width: 186px;
+}
+
+#page.pro #profil-titre-page{
+	background: url(/fr/images/profil/titre-page-registration-pro.gif) no-repeat;
+}

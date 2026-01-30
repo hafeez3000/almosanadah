@@ -1,0 +1,178 @@
+sno,hotelid,hotelname,htype,city
+1,19101,Intercontinental Hotel - Abha,5A Star,Abha
+2,19102,Abha Palace Hotels(Al-Sooda-Habala-Faraa-Airport),5A Star,Abha
+3,19103,New Abha Resorts Hotel Abha,5A Star,Abha
+4,19104,Abha Palace Airport Hotel (Al-Sooda-Habala-Faraa),5A Star,Abha
+5,19105,Al-Bouhaira Hotel Abha ( Standard ),3A Star,Abha
+6,19106,Al-Bouhaira Hotel Abha Villa,5A Star,Abha
+7,18101,Al-Hayat Gizan Hotel,5 Star,Jizan
+8,23101,Intercontinental - Al - Jubail,5A Star,Jubail
+9,20101,Le Gulf Meridien Al-Khobar,5A Star,Khobar
+10,20102,Ramada Hotel Al-Khobar,4A Star,Khobar
+11,20103,Andalusia Al-Khobar Furnished Suite & Apartments,4A Star,Khobar
+12,20104,Al-Janadriah Suites,4A Star,Khobar
+13,20105,Al-Nimran Hotel - South Wings,3A Star,Khobar
+14,20106,Al Gosaibi Hotel,4A Star,Khobar
+15,20107,Park Hotel,4A Star,Khobar
+16,25101,Al Baha Flamingo Palace Hotel,4A Star,Baha
+17,25102,Al-Hokair Resort Al-Baha Hotel Baha,2 Star,Baha
+18,17101,Dahran International Hotel,5A Star,Dharan
+19,17102,Dahran Palace Hotel,4A Star,Dharan
+20,15101,Al-Hamra Holiday Inn Dammam,4A Star,Dammam
+21,15102,Al-Arifi Hotel Dammam,3A Star,Dammam
+22,15103,Sheraton Dammam,5A Star,Dammam
+23,14101,Hilton Jeddah,5A Star,Jeddah
+24,14102,Intercontinental Jeddah,5A Star,Jeddah
+25,14103,Le Meridien Jeddah,5A Star,Jeddah
+26,14104,Sheraton Jeddah,5A Star,Jeddah
+27,14105,Westin Jeddah,5A Star,Jeddah
+28,14106,Marriott Jeddah,5A Star,Jeddah
+29,14107,Crowne Plaza Jeddah,5A Star,Jeddah
+30,14108,Hyatt Regency Jeddah ( Radisson SAS ),5A Star,Jeddah
+31,14109,Al-Hamra Sofitel,5 Star,Jeddah
+32,14110,Red Sea Palace,5 Star,Jeddah
+33,14111,Casablanca Jeddah,4A Star,Jeddah
+34,14112,Al-Bilad Hotel,4A Star,Jeddah
+35,14113,Al-Salam Holiday Inn Jeddah,4A Star,Jeddah
+36,14114,Kaki Hotel Jeddah,4A Star,Jeddah
+37,14115,Trident Hotel Jeddah,4A Star,Jeddah
+38,14116,Al Boustan Mercure Hotel,4A Star,Jeddah
+39,14117,Al-Harthy Hotel Jeddah,4A Star,Jeddah
+40,14118,Kandra Palace Hotel,3A Star,Jeddah
+41,14119,Sands Hotel Jeddah,3A Star,Jeddah
+42,14120,Al-Baia Hotel Jeddah,3 Star,Jeddah
+43,14121,Al-Taj Palace Apartments,3 Star,Jeddah
+44,14122,Topaz Suites Jeddah,3 Star,Jeddah
+45,14123,Abu Ziad Apartments Jeddah,3A Star,Jeddah
+46,14124,Al-Jawad Al-Abyad Residence Jeddah,4A Star,Jeddah
+47,14125,Sunset Jeddah Hotel,4A Star,Jeddah
+48,14126,Durrah Beach Resort Abduljadayel Jeddah Hotel,4A Star,Jeddah
+49,14127,Rotana Residence,5A Star,Jeddah
+50,14128,Ambassador Suites Jeddah,4 Star,Jeddah
+51,14129,Jeddah Orchid,4A Star,Jeddah
+52,12101,Medinah Oberoi Hotel,5A Star,Madinah
+53,12102,Madinah Hilton Hotel,5A Star,Madinah
+54,12103,Dar Al-Taqwa Intercontinental,5A Star,Madinah
+55,12104,Dar Al-Iman Intercontinental,5A Star,Madinah
+56,12105,Dar Al-Hijra Intercontinental,5A Star,Madinah
+57,12106,Al-Harithyah,5A Star,Madinah
+58,12107,Karam Sheraton Madinah,5A Star,Madinah
+59,12108,Elaf Taibah Hotel,4A Star,Madinah
+60,12109,Green Palace Hotel,4A Star,Madinah
+61,12110,Al-Haram Plaza Hotel,4A Star,Madinah
+62,12111,Taba Hotel,4A Star,Madinah
+63,12112,Dallah Taibah Hotel,4A Star,Madinah
+64,12113,Dallah Taibah Hotel Executive Floors,3A Star,Madinah
+65,12114,Dallah Madinah Hotel,2A Star,Madinah
+66,12115,Al-Ansar Golden (Al-Ansar Group),4A Star,Madinah
+67,12116,Al-Ansar Silver (Al-Ansar Group),3A Star,Madinah
+68,12117,Al-Ansar Hotel ( Al-Ansar Group ),3A Star,Madinah
+69,12118,Al-Ansar Palace (Al-Ansar Group),3A Star,Madinah
+70,12119,Al-Medinah Residential Center ( Al-Ansar Group ),2A Star,Madinah
+71,12120,New Al Ansar Palace Hotel,3 Star,Madinah
+72,12121,Luxurious Rawadah Suites (Al-Ansar Group),4A Star,Madinah
+73,12122,Al-Ansar Diamod (Al-Ansar Group),4A Star,Madinah
+74,12123,Shourfah Medinah Hotel ( Al-Ansar Group ),2A Star,Madinah
+75,12124,Taibah Residential Suites West Tower,4A Star,Madinah
+76,12125,Taibah Resident Suites East Tower,4A Star,Madinah
+77,12126,Dar Al-Salam Hotel ( Bourj Al-Wadi ),3 Star,Madinah
+78,12127,Sheraton Madinah Hotel,5A Star,Madinah
+79,12128,Safer Al-Saha Hotel Medinah,4A Star,Madinah
+80,12129,Marriott Madinah Hotel,4A Star,Madinah
+81,12130,Sanabel Al-Medinah Hotel,3 Star,Madinah
+82,12131,Anwar Al Madinah MoveNpick,5A Star,Madinah
+83,12132,Bahauddin Hotel,3 Star,Madinah
+84,12133,Warda Al Mubarak,3 Star,Madinah
+85,12134,New Al Habib Palace,2 Star,Madinah
+86,12135,Al Habib Palace,2 Star,Madinah
+87,12136,Al Ashraq Hotel,4 Star,Madinah
+88,12137,Rawhaht Mubarak Hotel,4 Star,Madinah
+89,12138,Mubarak Al Salam Hotel,3 Star,Madinah
+90,12139,Wardat Mubarak Hotel,3 Star,Madinah
+91,12140,Mubarak Golden Hotel,3 Star,Madinah
+92,12141,Najmat Mubarak Hotel,3 Star,Madinah
+93,12142,Jawhrat Mubarak Hotel,2 Star,Madinah
+94,12143,Mubarak Palace,2 Star,Madinah
+95,12144,Royal Andalus Hotel,4 Star,Madinah
+96,12145,Durat Al Andalus Hotel,2 Star,Madinah
+97,12146,Al Andalus Deluxe Suites,4 Star,Madinah
+98,12147,Zawar Al Salam Hotel,2 Star,Madinah
+99,11101,Dar Al Tawhid Intercontinental,5A Star,Makkah
+100,11102,Makkah Hilton,5A Star,Makkah
+101,11103,Sofitel Makkah,5A Star,Makkah
+102,11104,Sheraton Makkah,5A Star,Makkah
+103,11105,Dallah Ajyad,4 Star,Makkah
+104,11106,Sofitel Elaf Kindah,5A Star,Makkah
+105,11107,Makkah Hilton Towers,5 Star,Makkah
+106,11108,Metropolitan Palace Makkah,5A Star,Makkah
+107,11109,Metropolitan Apartments,5A Star,Makkah
+108,11110,Al-Shohada Hotel,5A Star,Makkah
+109,11111,Ajyad Makkah Main Building,5A Star,Makkah
+110,11112,Al-Rawasi (Ghaza),4A Star,Makkah
+111,11113,Elaf Ajyad,4A Star,Makkah
+112,11114,Al-Rawassi ( Rub Attla ),3 Star,Makkah
+113,11115,Elaf Novitel Al-Huda,4A Star,Makkah
+114,11116,Al-Murjan ( Al-Osoul Groups ),4A Star,Makkah
+115,11117,New Safa,4A Star,Makkah
+116,11118,White Palace Hotel,4A Star,Makkah
+117,11119,Dallah Shubaika,3A Star,Makkah
+118,11120,Dallah Al-Salam,3A Star,Makkah
+119,11121,Al-Marwa Hotel,3A Star,Makkah
+120,11122,AL-Maasah Hotel ( Al-Maasah Group),4 Star,Makkah
+121,11123,Al-Qadesia Hotel ( Al-Maasah Group),3A Star,Makkah
+122,11124,Hawazen Hotel ( Al-Maasah Group),3A Star,Makkah
+123,11125,Makkah Hotel,3A Star,Makkah
+124,11126,Anwar Al-Medinah Palace,3A Star,Makkah
+125,11127,Flower White Palace,2A Star,Makkah
+126,11128,Rehab Al Firdous Hotel,2A Star,Makkah
+127,11129,Dar Al-Rawasi  ( Al-Misflaha ),2A Star,Makkah
+128,11130,Ohod hotel ( Al-Maasah Group),2A Star,Makkah
+129,11131,Khibar Hotel ( Al-Maasah Group),2A Star,Makkah
+130,11132,Mouta hotel ( Al-Maasah Group),3 Star,Makkah
+131,11133,Al -Khandaq Hotel ( Al-Maasah Group),3A Star,Makkah
+132,11134,Al-Hadeel hotel ( Al-Maasah Group),3 Star,Makkah
+133,11135,Badr Hotel ( Al-Maasah Group),3A Star,Makkah
+134,11136,Dar Al-Salam Hotel,4A Star,Makkah
+135,11137,Al-Firdous Makkah  Hotel,3 Star,Makkah
+136,11138,Al-Bustan Golden Hotel Makkah,3A Star,Makkah
+137,11139,Al-Olian Hotel Makkah,3A Star,Makkah
+138,11140,Shobra Hotel Makkah,3A Star,Makkah
+139,11141,Rafadath Al Haram,3A Star,Makkah
+140,11142,Dar Al Nadwa (Dar Al Arqam),4 Star,Makkah
+141,11143,Wahat Al Deafah Oasis,4A Star,Makkah
+142,11144,Le Meridien Makkah,5 Star,Makkah
+143,11145,Al Massara Hotel,4 Star,Makkah
+144,11146,Haneen Al Zahabi,3 Star,Makkah
+145,11147,Makkah Baity No 5,3 Star,Makkah
+146,11148,Makkah Baity No 1,3 Star,Makkah
+147,11149,Makkah Baity No 2,3 Star,Makkah
+148,11150,Burj Al Jawar Hotel,2 Star,Makkah
+149,11151,Grand Makkah Hotel,5 Star,Makkah
+150,11152,Al Aqsa Tower Hotel,4 Star,Makkah
+151,13101,Four Seasons Hotel Riyadh,5A Star,Riyadh
+152,13102,Al-Faisaliah Hotel Riyadh,5A Star,Riyadh
+153,13103,Sheraton Riyadh,5A Star,Riyadh
+154,13104,Riyadh Intercontinental Hotel,5A Star,Riyadh
+155,13105,Howard Johnson Plaza - Olaya Palace,4A Star,Riyadh
+156,13106,Minhal Holiday Inn Riyadh,5A Star,Riyadh
+157,13107,Radisson SAS Hotel ( Hyatt Regency Hotel ),5A Star,Riyadh
+158,13108,Marriott Hotel Riyadh,5A Star,Riyadh
+159,13109,Riyadh Palace Hotel,4 Star,Riyadh
+160,13110,Salahedin Hotel,4A Star,Riyadh
+161,13111,Golden Tulip Andalusia Hotel Riyadh,4A Star,Riyadh
+162,13112,Al-Mutlaq Hotel Riyadh,4A Star,Riyadh
+163,13113,Golden Tulip Ansalusia Htl Riyadh( Executive ),4 Star,Riyadh
+164,13114,Zahrat Al-Shark Hotel Riyadh,3 Star,Riyadh
+165,13115,Ramad East Hotel Riyadh,4 Star,Riyadh
+166,13116,Al-Khosama Hotel,4A Star,Riyadh
+167,13117,Sahara Riyadh Airport Hotel,4A Star,Riyadh
+168,13118,Olaya Hotel Holiday Inn Riyadh,4A Star,Riyadh
+169,13119,Al-Yamama Resort Riyadh,4 Star,Riyadh
+170,21101,Tabouk Sahara Hotel Tabouk,5A Star,Tabouk
+171,21102,Royal Tower Furnished Suite Tabouk,4 Star,Tabouk
+172,16101,Le Meridien  Al-Hada Taif,5A Star,Taif
+173,16102,Intercontinental Hotel Taif,5A Star,Taif
+174,16103,Al-Bustan Resort  Al-Tiaf,4A Star,Taif
+175,16104,Casablanca Hotel Al-Taif,4A Star,Taif
+176,16105,Bahadar Plaza Resort - El-Hada Taif,4A Star,Taif
+177,16106,Sheraton Al Huda,5 Star,Taif

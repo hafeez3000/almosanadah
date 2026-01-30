@@ -1,0 +1,27 @@
+# [root@192.167.1.209:3306] Query Window
+# Connection: root@192.167.1.209:3306
+# Host: 192.167.1.209
+# Saved: 2005-12-04 10:32:18
+# 
+# Query:
+# desc `ordermeals`
+# 
+'Field','Type','Null','Key','Default','Extra'
+'sno','bigint(20)','','','0',''
+'userid','varchar(100)','','','',''
+'ocode','varchar(100)','','','',''
+'reqdate','date','','','0000-00-00',''
+'roomid','int(11)','','','0',''
+'avper','int(11)','','','0',''
+'daytot','double','','','0',''
+'dayntot','double','','','0',''
+'noofpax','int(11)','','','0',''
+'noofrooms','int(11)','','','0',''
+'nrate','double','','','0',''
+'srate','double','','','0',''
+'breakfast','varchar(100)','','','',''
+'halfboard','varchar(100)','','','',''
+'fullboard','varchar(100)','','','',''
+'sahoor','varchar(100)','','','',''
+'iftar','varchar(100)','','','',''
+'usno','bigint(20)','','','0',''

@@ -1,0 +1,61 @@
+body, input, form{padding:0; margin:0; font-family: Verdana,Arial,Helvetica,sans-serif; font-size:11px; color:#335f90;}
+a{text-decoration:none; color:#335f90;}
+a:hover{text-decoration:underline;}
+fieldset{border:none; margin:0; padding:0;}
+h1{margin:0; padding:0;}
+
+
+.eLogin{position:relative; background: transparent; width:260px;}
+.eForm{position:relative;}
+h1{margin-bottom:10px;}
+
+/* Identification */
+.identification input{padding:2px; border:0px;}
+.identification label{display:none;}
+.login{padding-bottom:23px;}
+.login input{width:256px;}
+.pwd input{width:216px;}
+.pwd{float:left; margin-top:2px;}
+.submit{float:right;}
+.submit input{background: url(../images/submit.gif) no-repeat; width:35px; height:21px; color:white; padding:0; padding-bottom:2px; font-weight:bold; cursor: pointer;}
+
+/*Identified*/
+#logged-hello {margin-bottom:9px;}
+#logged-hello span{font-weight:bold;}
+#logout-submit {display:none;}
+/* Tools */
+#remember-me{position:absolute; top:23px; left:0px;}
+#remember-me input{position:absolute; left:0px; vertical-align:top; top:0px; }
+#remember-me label{margin-left:17px;}
+#forgot-pwd{padding:6px 0px;}
+#forgot-pwd a, #create-account a ,#logout-submit-lnk,#logged-profile-lnk {background:url(../images/puce.gif) no-repeat 0px 4px; padding-left:10px;}
+#logout-form{margin-top:5px;}
+
+* html #remember-me{top:25px;}
+* html #remember-me input{left:-3px;top:-4px;}
+* html #remember-me label {margin-left:19px;}
+
+*+html #remember-me{top:25px; left:-3px;}
+*+html #remember-me input{top:-4px;}
+*+html #remember-me label {margin-left:20px;}
+
+/* Error Message */
+#msg-error{
+	left:0px;
+	line-height:13px;
+	padding:2px;
+	position:absolute;
+	text-align:center;
+	top:-300px;
+	z-index:2000;	
+	background-color:white;
+	border:1px solid red;
+	font-size:10px;
+	height:0px;
+	width:0px;
+	color:red;
+}
+
+#close-error{position:absolute; bottom:1px; right:2px;}
+
+.stark {font-size:7px;}

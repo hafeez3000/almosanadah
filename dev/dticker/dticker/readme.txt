@@ -1,0 +1,1 @@
+Please do not drag&drop files from the zip file. If you do this, you will destroy directory structure. Please use winzip's "extract" button to unzip this zip file. 

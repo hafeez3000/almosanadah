@@ -1,0 +1,157 @@
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	/*vertical-align: baseline;*/
+	color: inherit;	
+}
+
+ol, ul {list-style: none;}
+/* End CSS Reset */
+
+body{line-height:1.4;	margin:0;}
+#page{height:100%;}
+#page #profil-mainContainer{width:900px;}
+#page #profil-overture{position:relative;	text-indent: -9999px;	width:899px;	height:164px; margin-bottom:20px;}
+#page #profil-titre-page{position: absolute;	text-indent:-9999px;	height:17px;	top: 54px;	left: 47px;}
+#page #profil-content{margin-left:10px;	width: 880px;	position:relative;	padding-bottom:30px;}
+#page #profil-content h1{margin-bottom:15px;}
+#page #profil-content h2{margin-bottom:10px;}
+#page div.contour-simple-small{width:393px;	padding:8px 10px 25px 10px;	position:relative;}
+#page span.contour-simple-top-small{position:absolute;	top:0;	left:0;	width:413px;	height:5px;}
+#page div.contour-simple2{width:839px;	padding:8px 10px 10px 10px;	position:relative;}
+#page span.contour-simple-top2{position:absolute;	top:0;	left:0;	width:859px;	height: 11px;}
+#page div.contour-double-small{width:395px; padding:8px 10px 25px 10px; position:relative;}
+#page span.contour-double-top-small{position:absolute;	top:0;	left:0;	width:415px;	height: 6px;}
+#page div.contour-double-large{width:770px;	padding:14px 10px 25px 10px;	position:relative;}
+#page span.contour-double-top-large{position:absolute;	top:0;	left:0;	width:790px;	height: 5px;}
+#page .clear-left{clear:left;}
+
+/* Bouton Encadre */
+#page span.btn{position:absolute; padding:10px 13px 10px 2px;	margin-left:15px;}
+#page span.btn a{height:15px;	line-height:15px;}
+#page span.btn_left{position:absolute;	height:35px;	width:11px;	top:0px;	left:-11px;	z-index:1;}
+/* End Bouton Encadre */
+
+/* Bouton Submit */
+span.btn-submit{position:absolute; padding:1px 13px 0 4px;	margin-left:15px;	letter-spacing:1px; height:18px;}
+span.btn-submit a{height:15px;	line-height:15px;}
+span.btn-submit-left{position:absolute;	height: 19px;	width:11px;	top:0px;	left:-8px;	z-index:1;}
+/* End Bouton Submit */
+
+/* Bouton Action */
+span.btn-action{position:absolute;	padding:2px 13px 4px 4px;	margin-left:15px;	letter-spacing:1px;}
+span.btn-action-left{	position:absolute;	height: 19px;	width:11px;	top:0px;	left:-8px;	z-index:1;}
+/* End Bouton Action */
+
+#page div.submit-button-container{position:relative;	height:25px; margin-top: 25px;}
+span.bottom-right{bottom:-16px;	right:15px;}
+#page span.top-right{top:0px;	right:0px;}
+#page span.top-left{top:0px;	left:-6px;}
+#page div.separateur{height:5px; margin-bottom:15px; line-height:0px;}
+#page fieldset.fieldset-container{position:relative;	width:870px;	padding-left: 10px;	overflow:hidden;	zoom:1;}
+#page fieldset.fieldset-container div.left-col{width:430px;	float:left;}
+#page fieldset.fieldset-container div.right-col{width:430px; float:right;}
+#page fieldset.fieldset-container dl{padding-top:8px;	padding-bottom:10px; overflow:hidden;	zoom:1;}
+#page fieldset.fieldset-container dt{float:left;	width:140px;	margin-bottom:12px;	line-height:17px;}
+#page fieldset.fieldset-container dd{float:left; width:290px;	margin-bottom:12px;	line-height:17px;}
+#page fieldset.fieldset-container input.text{width:215px;}
+
+#page input.radio,
+#page input.checkbox{border:0px;	margin-bottom:0px;	margin-top:0px;}
+#page input.radio{vertical-align:bottom; margin-bottom:1px;}
+a.tooltipLink{cursor:help;}
+div.tooltipAH{
+	position: absolute;
+	top:0px;
+	left:-2000px;
+	padding: 7px;
+	text-align: left;
+	line-height: 13px;
+	z-index: 2000;
+}
+
+.hide{display:none;}
+
+#page label.liste{margin-right:20px;}
+#page .errorMsg{padding-top:10px;}
+#page table{width:100%;}
+#page table td{padding-top:4px; padding-bottom:4px;}
+#page table td.libelle{width:200px; padding-right:10px; }
+
+#page #destination_update{z-index:1000;}
+
+/* Style Pro */
+#page.pro #profil-titre-page{top: 35px; left:47px;}
+#page.pro span#bt-offers{display:none;}
+/* Fin Style Pro */
+
+/* new deisgn */
+#profil-overture{
+    text-indent:0 !important;
+}
+#page #profil-titre-page {
+    background:none !important;
+    color:#FFC72F;
+	/*left:680px;*/
+    text-indent:0 !important;
+    top:82px !important;
+    width:auto !important;
+    font-size:1em !important;
+    line-height:1.1em;
+}
+
+
+
+
+#page #profil-mainContainer{
+    margin: 0 auto;
+}
+#profil-bandeau{
+    margin-bottom:1px;
+    margin:0 auto;
+    margin-bottom:1px;
+}
+#profil-bandeau #bandeau_cr .navigation {
+    margin-left:0;
+    right:-2px;
+}
+#page #bandeau_cr{
+    margin:0 auto;
+    width:900px;
+}
+/*#page #profil-overture{
+    height:258px;
+}*/
+body{
+   margin: 0 auto !important;
+   width:900px;
+}
+
+
+
+
+#advantages{width:561px; height:570px; position:relative; padding-top:225px; color:#1e78ba;}
+#logo{position:absolute; top:30px; left:40px; width:188px; height:17px;}
+#titre{height:15px; position:absolute; top:55px; left:40px;}
+#content{position:relative; width:479px; padding:10px; margin-left:40px; padding-bottom:20px;}
+#extra-top{position:absolute; top:-12px; left:0px; height:12px; width:499px;}
+p{margin-bottom:15px;}
+span.note{font-size:9px;}
+span.bottom-right{bottom:-7px;}
+span.bottom-left{bottom:-10px; left:11px;}
+
+#advantages.pro #logo{display:none;}
+#advantages.pro #titre{position:absolute; top:35px;}

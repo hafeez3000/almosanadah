@@ -1,0 +1,273 @@
+/* header */ 
+#main-wrapper  #header{
+    padding-top:0;
+}
+body{
+    background:white;
+    padding-bottom:0 !important;
+    padding:0;
+    margin:0;
+}
+#erreur,#faq{
+background: url(../images/commun/bg_body.jpg) repeat-x  left top
+}
+#main-wrapper #header{
+	background: none;
+}
+#header_cr{
+	background: none;
+	padding-top:12px;
+	position:relative;
+	height:101px;
+    background: url("../images/commun/bg_body.jpg") repeat-x left top;
+}
+#header_cr .logo_cr{
+	padding: 0 17px 0 25px; 
+	float:left;
+}
+#header_cr .logo_cr {
+	display:block;
+}
+#header #header_cr  a span{
+    font-size:11px;
+    font-family:"Trebuchet MS",tahoma,tahoma,sans-serif;
+}
+
+    #header_cr a{
+        font-family:"Trebuchet MS",tahoma,tahoma,sans-serif;
+        font-size:11px;
+    }
+	#header_cr #languageSelection_cr {
+		position:absolute;
+		right:0;
+		top:12px;
+	}
+	#header_cr #languageSelection_cr li {
+		float:left;
+		margin-right:5px;
+        list-style:none;
+	}
+	#header_cr #languageSelection_cr li a {
+		border:1px solid #1F4679;
+		display:block;
+	}
+	#header_cr #languageSelection_cr li a:hover {
+		border-color:white;
+	}
+	
+	
+	#header_cr #account_cr{
+		position:absolute;
+		bottom:20px;
+		right:0;
+		padding-right:48px;
+		background: url("../images/bg_account.gif") no-repeat right 5px;
+	}
+	#header_cr #account_cr h2{
+		text-align:right;
+		color:#005b93;
+		font-size:1.4em;
+		font-weight:bold;
+	}
+	#header_cr #account_cr li{
+		display:inline;
+		margin-left:8px;
+		padding-left:6px;
+		background: url("../images/picto_fleche.gif") no-repeat 0 5px;
+	}
+	#header_cr #account_cr li a{
+		color:#005b93;
+		font-weight:bold;
+		font-size:1.2em;
+	}
+    #header_cr  a img{
+        border:0;
+    }
+	#header_cr .slogan_cr{
+		float:left;
+		/*width:136px;
+		height:15px;*/
+		padding-top:5px;
+        background-repeat:no-repeat;
+        background-position:center;
+	}
+	#header_cr .slogan_cr strong{
+		font-size:18px;
+        font-style:italic;
+        color:#005B93;
+        font-family:"Trebuchet MS",tahoma,tahoma,sans-serif;
+	}
+
+    
+    #header_cr #navigation_cr {
+        position:absolute;
+        right:0;
+        bottom:0;
+        margin:0;
+    }
+    #header_cr #languageSelection_cr li a img{
+		display:block;
+	}
+    
+    
+    
+    /* navigation */
+		.navigation{
+			height:37px;
+			margin-left:3px;
+			width:670px;
+		}
+		.navigation li {
+			display:block;
+		}
+		.navigation li {
+			padding-right:1px;		
+			vertical-align:bottom;
+			float:left;
+		}
+		.navigation.items4 li{
+			width:166px;
+		}
+		.navigation.items5 li{
+			width:132.5px;
+		}
+	
+								
+								.navigation li ul{
+									display:block;
+									position:absolute;
+									left:0;
+									top:38px;
+									width:647px;
+									padding:10px;
+									background:#065094;
+								}	
+								#navigation li ul li{
+									border-right:1px solid #83a8ca;
+									width:auto;
+									height:40px;
+								}
+								#navigation li ul li.first{
+									padding-left:0;
+								}
+								#navigation li ul li.last{
+									border-right:0;
+								}									
+								#navigation li ul a,#navigation li ul strong{
+									font-weight:bold;
+									color:white;
+									background:none;
+									line-height:1.1em;
+									padding-left:0;
+									display:block;
+									float:left;
+								}
+								#core #navigation li ul strong{
+									background:none;
+                                    display:block;
+                                    float:left;
+                                    padding-left:8px;
+                                    padding-right:0;
+                                    text-align:center;
+								}
+								#navigation li ul a:hover span,#navigation ul .active a span{
+									text-decoration:underline;
+								}	
+                                
+                                
+								#navigation ul .active a span,#navigation ul .active strong span{
+									color:#60dbff;	
+									text-decoration:none;
+								}
+								#navigation li ul a span{
+									background:none;
+									padding:0 0 0 8px;
+									text-align:center; 
+									background:url(../images/picto_fleche_nav_N2.gif) no-repeat 0 6px;
+									display:block;
+									float:left;
+								}
+								#navigation li ul li.active span{
+									background:none;
+									padding-left:0;
+									cursor:default;
+								}
+                                .navigation li a, .navigation li strong {
+                                    background-position:0 -37px;
+                                    line-height:37px;
+                                    padding-left:5px;
+                                    text-decoration:none;
+                                    }
+								#navigation li ul li.active a:hover,#navigation li ul li.active a:hover span,#navigation li ul li.active strong{
+									text-decoration:none;
+								}
+								#navigation li ul .deuxLignes a{
+									line-height:1.1em;
+								}	
+								#navigation li ul a:hover{
+									text-decoration:underline;
+								}								
+								#navigation{
+									position:relative;
+								}
+								.navigation li a,
+								.navigation li span ,
+								.navigation li strong {
+									background-image:url(../images/bg_onglets-nav.jpg);
+									background-repeat:no-repeat;
+									text-align:center;
+									color:#654d18;
+									display:block;
+									height:37px;	
+								}					
+								.navigation li a ,.navigation li strong{
+									background-position:-0 -37px;
+									padding-left:5px;
+									line-height:37px;	
+									background-position:0 -37px;
+									padding-left:5px;
+									line-height:37px;
+                                    text-decoration:none;    
+								}
+								.navigation li span {
+									background-position:100% -37px;
+									padding:0 7px 0 0;
+									font-weight:bold;
+									color:white;	
+									font-size:1.1em;	
+								}
+								.navigation .deuxLignes  span{		
+									padding-top:5px;
+									height:32px;
+									line-height:1.1em;
+								}
+								/* hover and active states */
+								.navigation li a:hover {
+									background-position:0 0;
+									text-decoration:none;
+								}
+								.navigation li a:hover span {
+									background-position:100% 0;
+									cursor:pointer;
+								}
+								#navigation #itemNavBonsPlans {
+									padding-right:0;
+								}
+								#navigation #itemNavBonsPlans  a:hover,#navigation #itemNavBonsPlans.activeItem strong{
+									background-position:0 -74px;					
+								}
+								#navigation #itemNavBonsPlans  a:hover span,#navigation #itemNavBonsPlans.activeItem  span{
+									background-position:100% -74px;
+									color:white;
+								}
+		
+								.navigation .activeItem strong,.navigation .activeItem a{
+									background-position:0 0;
+								}
+								.navigation .activeItem span {
+									background-position:100% 0;
+									cursor:default;
+									color:white;
+								}
+						
+   

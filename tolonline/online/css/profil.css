@@ -1,0 +1,173 @@
+/* Focused windows */
+.overlay_accor {
+	background-color: #85BBEF;
+	filter:alpha(opacity=60);
+	-moz-opacity: 0.6;
+	opacity: 0.6;
+}
+.accor_nw {
+	background: transparent url("/imagerie/profil/window/tl_main.png") no-repeat 0 0;			
+  width:19px;
+  height:13px;
+}
+
+.accor_n {
+  background: transparent url("/imagerie/profil/window/top_main.png") repeat-x 0 0;			
+  height:13px;
+}
+
+.accor_ne {
+  background: transparent url("/imagerie/profil/window/tr_main.png") no-repeat 0 0;			
+  width:19px;	  
+  height:13px;
+}
+
+.accor_w {
+  background: transparent url("/imagerie/profil/window/left_main.png") repeat-y top left;	
+  width:19px;
+}
+
+.accor_e {
+  background: transparent url("/imagerie/profil/window/right_main.png") repeat-y top right;			
+  width:19px;	  
+}
+
+.accor_sw {
+  background: transparent url("/imagerie/profil/window/bl_main.png") no-repeat 0 0;			
+  width:19px;
+  height:16px;
+}
+
+.accor_s {
+  background: transparent url("/imagerie/profil/window/bottom_main.png") repeat-x 0 0;			
+  height:16px;
+}
+
+.accor_se, .accor_sizer {
+  background: transparent url("/imagerie/profil/window/br_main.png") no-repeat 0 0;			
+  width:19px;
+  height:16px;
+}
+
+.accor_sizer {
+	cursor:se-resize;	
+}
+
+.dialog
+{
+  padding-bottom: 20px;
+}
+table.mid.table_window td
+  {
+    /*padding-bottom: 20px;*/
+  }
+.accor_close {
+	
+	width: 19px;
+	height: 19px;
+	background: transparent url("/imagerie/profil/window/close.png") no-repeat 100% 0;			
+	position:absolute;
+	top: 13px;
+	right:15px;
+	cursor:pointer;
+	z-index:1000;
+	color:#FFFFFF;
+	font-size:0px;
+	
+}
+
+.accor_title {
+	float:left;
+	height:11px;
+	font-family: Tahoma, Arial, sans-serif;
+	font-size:8px;
+	text-align:center;
+	margin-top: 0px;
+	width:100%;
+	color:#000;
+}
+
+.accor_content {
+	overflow:auto;
+	color:#315D95;
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	font-size: 11px;
+	background:#FFFFFF;
+	/*overflow: visible;*/
+}
+.accor_content img{
+  display: none;
+}
+.accor_s .status_bar {
+  /*padding-bottom:14px;*/
+}
+
+#chambre-et-tarif .accor_close{
+	width:30px;
+}
+
+/* FOR IE */
+* html .accor_nw {
+	background-color: transparent;
+	background-image: none;
+	height:15px;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/imagerie/profil/window/tl_main.png", sizingMethod="crop");
+}
+
+* html .accor_n {
+	background-color: transparent;
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/imagerie/profil/window/top_main.png", sizingMethod="scale");
+}
+
+* html .accor_ne {
+	background-color: transparent;
+	background-image: none;
+	height:15px;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/imagerie/profil/window/tr_main.png", sizingMethod="crop");
+}
+
+* html .accor_w {
+	background-color: transparent;
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/imagerie/profil/window/left_main.png", sizingMethod="scale");
+}
+
+* html .accor_e {
+	background-color: transparent;
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/imagerie/profil/window/right_main.png", sizingMethod="scale");
+}
+
+* html .accor_sw {
+	background-color: transparent;
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/imagerie/profil/window/bl_main.png", sizingMethod="crop");
+}
+
+* html .accor_s {
+	background-color: transparent;
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/imagerie/profil/window/bottom_main_ie.png", sizingMethod="scale");
+	
+}
+
+* html .accor_se {
+	background-color: transparent;
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/imagerie/profil/window/br_main.png", sizingMethod="crop");
+}
+
+* html .accor_sizer {
+	background-color: transparent;
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/imagerie/profil/window/br_main.png", sizingMethod="crop");
+}
+
+
+td.accor_content {
+
+	padding-bottom: 5px;
+  background-color:#FFFFFF;
+  padding-top:10px !important;
+}

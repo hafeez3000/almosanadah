@@ -1,0 +1,31 @@
+a.head:link { color: red; text-decoration: none; }
+a.head:visited { color: red; text-decoration: none; } 
+a.head:hover { color: blue; text-decoration: underline;} 
+
+a.pb { color: blue; text-decoration: underline; }
+
+/*======================================*/
+
+.header-logo-img { height:70px }
+.header-arabic-logo { margin-top:9px }
+
+
+/*Dashboard tables*/
+/*-------------------------------------------------*/
+
+.dashboard-hotel {
+background: rgb(245, 245, 245);
+}
+table.dashboard-hotel  {
+border: 1px solid #ccc;
+}
+table.dashboard-hotel tr.dashboard-hotel-tr-head  {
+background:  rgb(218, 218, 218);
+font-weight: bold;
+color: rgb(60, 60, 60);
+}
+table.dashboard-hotel td {
+border: 1px solid #ccc;
+}
+
+

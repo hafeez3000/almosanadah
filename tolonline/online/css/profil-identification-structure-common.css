@@ -1,0 +1,27 @@
+@import url("profil-global-structure.css");
+
+#page #profil-content{height:300px;}
+#page #non-inscrit{float:left;}
+#page #inscrit{float:right;}
+#page #non-inscrit ul{padding-top:8px;	padding-bottom:8px;}
+#page #inscrit dl{padding-top:8px;	padding-bottom:10px;	overflow:hidden;	zoom:1;}
+#page #inscrit dt{float:left;	width:100px;	margin-bottom:4px;}
+#page #inscrit dd{float:left;	width:290px;	margin-bottom:4px;}
+#page #inscrit input{width:215px;}
+
+#iframe-login{border:0px; width:280px; height:130px; background-color:transparent;}
+/** cadre iframe Login **/
+.contour-double-small{
+		padding:8px 10px 15px;
+		position:relative;
+		width:395px;
+	}
+.contour-double-top-small{
+		height:6px;
+		left:0px;
+		position:absolute;
+		top:0px;
+		width:415px;
+	}
+	
+* html .contour-double-top-small{top:-13px;}

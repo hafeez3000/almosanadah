@@ -1,0 +1,45 @@
+@import url("profil-global-structure-common.css");
+
+/* new deisgn */
+#profil-overture{
+    text-indent:0 !important;
+}
+#page #profil-titre-page {
+    background:none !important;
+    color:#FFC72F;
+	/*left:680px;*/
+    text-indent:0 !important;
+    top:82px !important;
+    width:auto !important;
+    font-size:1em !important;
+    line-height:1.1em;
+}
+
+
+
+
+#page #profil-mainContainer{
+    margin: 0 auto;
+}
+#profil-bandeau{
+    margin-bottom:1px;
+    margin:0 auto;
+    margin-bottom:1px;
+}
+#profil-bandeau #bandeau_cr .navigation {
+    margin-left:0;
+    right:-2px;
+}
+#page #bandeau_cr{
+    margin:0 auto;
+    width:900px;
+}
+/*#page #profil-overture{
+    height:258px;
+}*/
+body{
+   margin: 0 auto !important;
+   width:900px;
+}
+
+
