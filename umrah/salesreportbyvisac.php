@@ -92,15 +92,16 @@ setTimeout('document.location=document.location',240000);
 
 //$hotelid="all";
 ?>
-<table border="1" cellpadding="2" cellspacing="0" width="100%">
+<table align="center" border="1" cellpadding="2" cellspacing="0" width="98%">
   <tr>
       <td><div align="center"><font size="2" face="Arial, Helvetica, sans-serif">Sno</font></div></td>
       <td><div align="center"><font size="2" face="Arial, Helvetica, sans-serif">PNR</font></div></td>
       <td><div align="center"><font size="2" face="Arial, Helvetica, sans-serif">Guest
           Name</font></div></td>
 
-		   <td><div align="center"><font size="2" face="Arial, Helvetica, sans-serif">Travel
-          Agent,Country</font></div></td>
+      <td><div align="center"><font size="2" face="Arial, Helvetica, sans-serif">Travel
+           Agent</font></div></td>
+		   <td><div align="center"><font size="2" face="Arial, Helvetica, sans-serif">Country</font></div></td>
 
       <td><div align="center"><font size="2" face="Arial, Helvetica, sans-serif">Request Date</font></div></td>
       <td><div align="center"><font size="2" face="Arial, Helvetica, sans-serif">Status</font></div></td>
@@ -194,7 +195,9 @@ $s_cus_country = $row_sub["cus_country"];
 
 <td><font size="2" face="Arial, Helvetica, sans-serif"><? echo 	$s_guest_title . ". " . strtoupper($s_guest_name); ?></font></td>
 
-<td><font size="2" face="Arial, Helvetica, sans-serif"><? echo 	strtoupper($s_cus_company_name) . ", " . strtoupper($s_cus_country); ?></font></td>
+<td><font size="2" face="Arial, Helvetica, sans-serif"><? echo 	strtoupper($s_cus_company_name) ?></font></td>
+
+<td><font size="2" face="Arial, Helvetica, sans-serif"><? echo strtoupper($s_cus_country); ?></font></td>
 
 <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"><?echo date('d M, Y H:i', strtotime($row['req_date_time']));  ?></font></td>
 
@@ -244,6 +247,24 @@ $tot_no_i = $tot_no_i+ $row["no_infant"];
 ?>
     </tr>
 
-<tr><td colspan="6" align="center"> Totals </td><td align="center"><? echo $tot_no_a ; ?> </td><td align="center"><? echo $tot_no_c ; ?>  </td><td align="center"><font size="2" face="Arial, Helvetica, sans-serif"><? echo $tot_no_i ; ?> </font> </td><td align="center" colspan="4"><? echo "&nbsp;" ; ?> </td><td align="right"><font size="2" face="Arial, Helvetica, sans-serif"><? echo round($tot_net,2) ; ?> </font></td><td align="right"><? echo round($tot_sell,2) ; ?></td><td align="right"><? echo round(($tot_sell-$tot_net),2); ?></td><td align="right"><font size="2" face="Arial, Helvetica, sans-serif"><? if(!$tot_net) { echo 0; } else { echo round(((($tot_sell-$tot_net)/$tot_net)*100), 2); } ?></font></td></tr></tr>
+<tr><td  align="center"> Totals </td>
+
+    <td align="center" ><? echo "&nbsp;" ; ?> </td>
+    <td align="center" ><? echo "&nbsp;" ; ?> </td>
+    <td align="center" ><? echo "&nbsp;" ; ?> </td>
+    <td align="center" ><? echo "&nbsp;" ; ?> </td>
+    <td align="center" ><? echo "&nbsp;" ; ?> </td>
+    <td align="center" ><? echo "&nbsp;" ; ?> </td>
+<td align="center"><? echo $tot_no_a ; ?> </td>
+    <td align="center"><? echo $tot_no_c ; ?>  </td>
+    <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"><? echo $tot_no_i ; ?> </font> </td>
+    <td align="center" ><? echo "&nbsp;" ; ?> </td>
+    <td align="center" ><? echo "&nbsp;" ; ?> </td>
+    <td align="center" ><? echo "&nbsp;" ; ?> </td>
+    <td align="center" ><? echo "&nbsp;" ; ?> </td>
+    <td align="right"><font size="2" face="Arial, Helvetica, sans-serif"><? echo round($tot_net,2) ; ?> </font></td><td align="right"><? echo round($tot_sell,2) ; ?></td>
+    <td align="right"><? echo round(($tot_sell-$tot_net),2); ?></td>
+    <td align="right"><font size="2" face="Arial, Helvetica, sans-serif"><? if(!$tot_net) { echo 0; } else { echo round(((($tot_sell-$tot_net)/$tot_net)*100), 2); } ?></font></td>
+</tr></tr>
 
   </table>

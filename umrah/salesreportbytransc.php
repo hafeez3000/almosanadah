@@ -94,15 +94,14 @@ setTimeout('document.location=document.location',240000);
       <td><div align="center"><font size="2" face="Arial, Helvetica, sans-serif">Guest
           Name</font></div></td>
 
-          <td><div align="center"><font size="2" face="Arial, Helvetica, sans-serif">Room No</font></div></td>
 		  <td><div align="center"><font size="2" face="Arial, Helvetica, sans-serif">Supplier</font></div></td>
 
-		  <td><div align="center"><font size="2" face="Arial, Helvetica, sans-serif">Driver Details</font></div></td>
       <td><div align="center"><font size="2" face="Arial, Helvetica, sans-serif">Type of Trans</font></div></td>
 
 <td><div align="center"><font size="2" face="Arial, Helvetica, sans-serif">Route</font></div></td>
 		   <td><div align="center"><font size="2" face="Arial, Helvetica, sans-serif">Travel
-          Agent,Country</font></div></td>
+          Agent</font></div></td>
+		   <td><div align="center"><font size="2" face="Arial, Helvetica, sans-serif">Country</font></div></td>
 
       <td><div align="center"><font size="2" face="Arial, Helvetica, sans-serif">Request Date</font></div></td>
 
@@ -207,22 +206,22 @@ $room_type =  $row_sub_room["room_type"];
 	<td ><font size="2" face="Arial, Helvetica, sans-serif"><a href="pnrdet.php?spnr=<?echo $row["ocode"];?>" target='<?echo $row["ocode"];?>' onClick="window.open('','<?echo $row["ocode"];?>', ' width='+(screen.width-10)+' , height='+(screen.height-50)+' , left=0,top=0 ').focus()"  ><?echo $row["ocode"];?></a></font></td>
 
 <td><font size="2" face="Arial, Helvetica, sans-serif"><? echo 	$s_guest_title . ". " . strtoupper((string)$s_guest_name); ?></font></td>
-<td><font size="2" face="Arial, Helvetica, sans-serif"><? echo 	strtoupper((string)$row["room_inhouseno"])?></font></td>
 
 <td><font size="2" face="Arial, Helvetica, sans-serif"><? echo 	strtoupper((string)$trans_c_name)?>, <? echo (string)$trans_city;?></font></td>
-<td><font size="2" face="Arial, Helvetica, sans-serif"><? echo 	strtoupper((string)$driver_name)?>, <? echo (string)$driver_mobile;?></font></td>
 <td><font size="2" face="Arial, Helvetica, sans-serif"><? echo 	strtoupper((string)$row["type_of_trans"])?></font></td>
 
 <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"><?echo $row["f2t"]; ?> </font></td>
 
-<td><font size="2" face="Arial, Helvetica, sans-serif"><? echo 	strtoupper((string)$s_cus_company_name) . ", " . strtoupper((string) $s_cus_country); ?></font></td>
+<td><font size="2" face="Arial, Helvetica, sans-serif"><? echo 	strtoupper((string)$s_cus_company_name); ?></font></td>
+<td><font size="2" face="Arial, Helvetica, sans-serif"><? echo 	 strtoupper((string) $s_cus_country); ?></font></td>
 
 <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"><?echo date('d M, Y H:i', strtotime($row['req_date_time']));  ?></font></td>
 
 <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"><?echo $row["no_of_units"]; ?></font></td>
 
 <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"><?echo $row["no_of_paxs"]; ?> </font></td>
-<td align="center"><font size="2" face="Arial, Helvetica, sans-serif"><?echo $row["flight_det"]; ?> </font></td>
+<td align="center"><font size="2" face="Arial, Helvetica, sans-serif"><? if (empty($row["flight_det"])) {
+            echo 'NA';}   { echo $row["flight_det"]; } ?> </font></td>
 
 
 
@@ -255,6 +254,23 @@ $tot_sell_p = 0;
 ?>
     </tr>
 
-<tr><td colspan="11" align="center"> <font size="2" face="Arial, Helvetica, sans-serif">Totals</font> </td><td align="center"><font size="2" face="Arial, Helvetica, sans-serif"><? echo $total_no_paxs ; ?></font> </td><td colspan="2" align="center"> <font size="2" face="Arial, Helvetica, sans-serif"></font> </td><td align="right"><font size="2" face="Arial, Helvetica, sans-serif"><? echo round($tot_net,2) ; ?></font> </td><td align="right"><font size="2" face="Arial, Helvetica, sans-serif"><? echo round($tot_sell,2) ; ?></font></td><td align="right"><font size="2" face="Arial, Helvetica, sans-serif"><? echo round(($tot_sell-$tot_net),2) ; ?></font></td><td align="right"><font size="2" face="Arial, Helvetica, sans-serif"><? if(!$tot_net) { echo 0;} else { echo round(((($tot_sell-$tot_net)/$tot_net)*100), 2) ; } ?></font></td></tr>
+<tr><td  align="center"> <font size="2" face="Arial, Helvetica, sans-serif">Totals</font> </td>
+    <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"><? echo "&nbsp;" ; ?></font> </td>
+    <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"><? echo "&nbsp;" ; ?></font> </td>
+    <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"><? echo "&nbsp;" ; ?></font> </td>
+    <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"><? echo "&nbsp;" ; ?></font> </td>
+    <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"><? echo "&nbsp;" ; ?></font> </td>
+    <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"><? echo "&nbsp;" ; ?></font> </td>
+    <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"><? echo "&nbsp;" ; ?></font> </td>
+    <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"><? echo "&nbsp;" ; ?></font> </td>
+    <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"><? echo "&nbsp;" ; ?></font> </td>
+    <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"><? echo $total_no_paxs ; ?></font> </td>
+    <td  align="center"> <font size="2" face="Arial, Helvetica, sans-serif"></font> </td>
+    <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"><? echo "&nbsp;" ; ?></font> </td>
+    <td align="right"><font size="2" face="Arial, Helvetica, sans-serif"><? echo round($tot_net,2) ; ?></font> </td>
+    <td align="right"><font size="2" face="Arial, Helvetica, sans-serif"><? echo round($tot_sell,2) ; ?></font></td>
+    <td align="right"><font size="2" face="Arial, Helvetica, sans-serif"><? echo round(($tot_sell-$tot_net),2) ; ?></font></td>
+    <td align="right"><font size="2" face="Arial, Helvetica, sans-serif"><? if(!$tot_net) { echo 0;} else { echo round(((($tot_sell-$tot_net)/$tot_net)*100), 2) ; } ?></font></td>
+</tr>
 
   </table>

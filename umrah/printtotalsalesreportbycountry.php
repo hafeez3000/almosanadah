@@ -25,7 +25,7 @@ const from_year =  window.opener.document.getElementsByName('dYear')[0];
 const to_day =  window.opener.document.getElementsByName('dDay1')[0];
 const to_month =  window.opener.document.getElementsByName('dMonth1')[0];
 const to_year =  window.opener.document.getElementsByName('dYear1')[0];
-const v_hotelname = window.opener.document.getElementById('hotelname');
+const scountry = window.opener.document.getElementById('scountry');
 
 
 
@@ -117,7 +117,7 @@ $ac_det =
 <tr><td><img src="../images/space.jpg"></td></tr>
 <tr>
 <td  align="center" ><font face="Arial, Helvetica, sans-serif"><strong>
-    Visa Report</strong></font></td>
+    Total Sales Report</strong></font></td>
 
     </tr></table>
 
@@ -157,7 +157,7 @@ $for_hotels = "<script>document.write(v_hotelname.value)</script>";
 
 
 
-echo "For Agents(s): " . "<script> document.write(v_hotelname.options[v_hotelname.selectedIndex].text); </script>";
+echo "For Agents(s): " . "<script> document.write(scountry.options[scountry.selectedIndex].text); </script>";
 
 
 echo "</font></td></tr>";
@@ -260,7 +260,6 @@ echo "<br>";
 <script>
 
 
-
 // Access the parent (opener) window
 let parentWindow = window.opener;
 
@@ -316,7 +315,7 @@ function exportTableToCSV() {
   const encodedUri = encodeURI(csvContent);
   const link = document.createElement("a");
   link.setAttribute("href", encodedUri);
-  link.setAttribute("download", "visa_by_country_export.csv");
+  link.setAttribute("download", "total_sales_by_country_export.csv");
   document.body.appendChild(link);
 
   // Trigger download
@@ -337,5 +336,7 @@ document.body.appendChild(exportButton);
 
 
 </script>
+
+
 </body>
 </html>

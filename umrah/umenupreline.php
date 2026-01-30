@@ -693,7 +693,8 @@ function isSelectedMenuItem($url)
                 <div id="hs-visa-and-other-reportstree-collapse-visa-and-other-reports"
                     class="hs-accordion-content <?php if (
                         isActiveMenuItem("/umrah/salesreportbyvc.php") ||
-                        isActiveMenuItem("/umrah/salesreportbyv.php")
+                        isActiveMenuItem("/umrah/salesreportbyv.php") ||
+                        isActiveMenuItem("/umrah/totalsalesreportbycountry.php")
                     ) {
                         echo "";
                     } else {
@@ -758,6 +759,33 @@ function isSelectedMenuItem($url)
                         </div>
                         <!-- End 1st Level Item -->
 
+                        <!-- 1st Level Item -->
+                        <div class="hs-accordion-selectable hs-accordion-selected:bg-gray-100 dark:hs-accordion-selected:bg-neutral-700 px-2 rounded-md cursor-pointer mb-2 <?php echo isSelectedMenuItem(
+                            "/umrah/totalsalesreportbycountry.php",
+                        ); ?>"
+                            role="treeitem">
+                            <div class="flex items-center gap-x-3">
+                                <svg class="shrink-0 size-4 text-gray-500 dark:text-neutral-500"
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+
+                                    <path d="m9 18 6-6-6-6"></path>
+
+                                </svg>
+                                <div class="hs-tree-view-selected:bg-gray-100 dark:hs-tree-view-selected:bg-neutral-700 hs-tree-view-<?php echo isActiveMenuItem(
+                                    "/umrah/totalsalesreportbycountry.php",
+                                ); ?>:opacity-50 <?php echo isActiveMenuItem(
+    "/umrah/totalsalesreportbycountry.php",
+); ?> " data-hs-tree-view-item='{"isDir": false}'>
+                                    <span
+                                        class="text-sm text-gray-800   hover:bg-gray-200 rounded-sm p-1  dark:text-neutral-200">
+                                        <a class="no-underline" href="totalsalesreportbycountry.php">Total Sales By Country</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End 1st Level Item -->
                     </div>
                 </div>
                 <!-- End 1st Level Collapse -->

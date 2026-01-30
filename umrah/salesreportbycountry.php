@@ -13,6 +13,7 @@ setTimeout('document.location=document.location',240000);
   $cout = 0;
 
   $tot_number_nights = 0;
+  $tot_no_paxs = 0;
 
   $s_gs = $_GET["gs"];
 
@@ -81,13 +82,16 @@ setTimeout('document.location=document.location',240000);
       <td><div align="center"><font size="2" face="Arial, Helvetica, sans-serif">PNR</font></div></td>
       <td><div align="center"><font size="2" face="Arial, Helvetica, sans-serif">Guest
           Name</font></div></td>
-      <td><div align="center"><font size="2" face="Arial, Helvetica, sans-serif">Agent, Country</font></div></td>
-		   <td><div align="center"><font size="2" face="Arial, Helvetica, sans-serif">Hotel,City</font></div></td>
+      <td><div align="center"><font size="2" face="Arial, Helvetica, sans-serif">Agent</font></div></td>
+      <td><div align="center"><font size="2" face="Arial, Helvetica, sans-serif">Country</font></div></td>
+		   <td><div align="center"><font size="2" face="Arial, Helvetica, sans-serif">Hotel</font></div></td>
+		   <td><div align="center"><font size="2" face="Arial, Helvetica, sans-serif">City</font></div></td>
 
       <td><div align="center"><font size="2" face="Arial, Helvetica, sans-serif">Cin</font></div></td>
       <td><div align="center"><font size="2" face="Arial, Helvetica, sans-serif">Cout</font></div></td>
 	        <td><div align="center"><font size="2" face="Arial, Helvetica, sans-serif">Nts</font></div></td>
 			<td><div align="center"><font size="2" face="Arial, Helvetica, sans-serif">Room Type</font></div></td>
+			<td><div align="center"><font size="2" face="Arial, Helvetica, sans-serif">Paxs</font></div></td>
 
       <td><div align="center"><font size="2" face="Arial, Helvetica, sans-serif">B.Status</font></div></td>
       <td align="right"><div align="center"><font size="2" face="Arial, Helvetica, sans-serif">NetRate</font></div></td>
@@ -103,7 +107,7 @@ setTimeout('document.location=document.location',240000);
 <?
 
 $query  = "SELECT
-sh.ocode,cin, cout,hotel_id, room_id,no_rooms,no_nights,cus_paid,sh.booking_status,net_rate,sell_rate,room_inhouseno,hotel_confirmation_no,cus_voucher, guest_occ_status, cus_paid from sales_hotels as sh
+sh.ocode,cin, cout,hotel_id, room_id,no_rooms,no_nights,cus_paid,sh.booking_status,no_paxs,net_rate,sell_rate,room_inhouseno,hotel_confirmation_no,cus_voucher, guest_occ_status, cus_paid from sales_hotels as sh
 LEFT JOIN sales_main as sm ON sh.ocode=sm.ocode
 where sh.cin between date '$fromd' and date '$tod' + integer '1' $not_arr  $q_hotel order by sm.cus_country";
 
@@ -183,8 +187,10 @@ $room_type =  $row_sub_room["room_type"];
 	<td ><font size="2" face="Arial, Helvetica, sans-serif"><a href="pnrdet.php?spnr=<?echo $row["ocode"];?>" target='<?echo $row["ocode"];?>' onClick="window.open('','<?echo $row["ocode"];?>', ' width='+(screen.width-10)+' , height='+(screen.height-50)+' , left=0,top=0 ').focus()"  ><?echo $row["ocode"];?></a></font></td>
 
 <td><font size="2" face="Arial, Helvetica, sans-serif"><? echo 	$s_guest_title . ". " . strtoupper($s_guest_name); ?></font></td>
-<td><font size="2" face="Arial, Helvetica, sans-serif"><? echo 	$s_cus_company_name . ", " . strtoupper($s_cus_country); ?></font></td>
-<td><font size="2" face="Arial, Helvetica, sans-serif"><? echo 	strtoupper($hotel_name) . ", " . strtoupper($hotel_city); ?></font></td>
+<td><font size="2" face="Arial, Helvetica, sans-serif"><? echo $s_cus_company_name; ?></font></td>
+<td><font size="2" face="Arial, Helvetica, sans-serif"><? echo 	strtoupper($s_cus_country); ?></font></td>
+<td><font size="2" face="Arial, Helvetica, sans-serif"><? echo strtoupper($hotel_name); ?></font></td>
+<td><font size="2" face="Arial, Helvetica, sans-serif"><? echo 	 strtoupper($hotel_city); ?></font></td>
 
 <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"><?echo date('d', strtotime($row["cin"])); ?><br><?echo date('M', strtotime($row["cin"])); ?></font></td>
 
@@ -193,6 +199,7 @@ $room_type =  $row_sub_room["room_type"];
 <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"><?echo $row["no_nights"]; ?> </font></td>
 
 <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"><?echo $room_type; ?> </font></td>
+<td align="center"><font size="2" face="Arial, Helvetica, sans-serif"><?echo $row["no_paxs"]; ?> </font></td>
 <td><font size="2" face="Arial, Helvetica, sans-serif"><? echo $row["booking_status"];  ?> </font></td>
 <td align="right"><font size="2" face="Arial, Helvetica, sans-serif"><? if($row["net_rate"]=="") { echo "&nbsp;" ; $tot_net_p=0;} else { echo round($row["net_rate"], 2); $tot_net_p=$row["net_rate"]; } ?> </font></td>
 <td align="right"><font size="2" face="Arial, Helvetica, sans-serif"><? if($row["sell_rate"]=="") { echo "&nbsp;" ; $tot_sell_p=0;} else { echo round($row["sell_rate"], 2); $tot_sell_p=$row["sell_rate"];}   ?> </font></td>
@@ -202,6 +209,7 @@ $room_type =  $row_sub_room["room_type"];
     <?
 
 $tot_number_nights = $tot_number_nights + $row["no_nights"];
+$tot_no_paxs = $tot_no_paxs + $row["no_paxs"];
 
 
 $b_sno++;
@@ -222,6 +230,23 @@ $tot_sell_p = 0;
 ?>
     </tr>
 
-<tr><td colspan="7" align="center"> <font size="2" face="Arial, Helvetica, sans-serif">Totals </font></td><td align="center"><font size="2" face="Arial, Helvetica, sans-serif"><? echo $tot_number_nights ; ?></font> </td><td colspan="2" align="center"><font size="2" face="Arial, Helvetica, sans-serif"></font> </td></font> </td><td align="right"><font size="2" face="Arial, Helvetica, sans-serif"><? echo round($tot_net,2) ; ?></font> </td><td align="right"><font size="2" face="Arial, Helvetica, sans-serif"><? echo round($tot_sell,2) ; ?></font></td><td align="right"><font size="2" face="Arial, Helvetica, sans-serif"><? echo round(($tot_sell-$tot_net),2) ; ?></font></td><td align="right"><font size="2" face="Arial, Helvetica, sans-serif"><? echo (isset($tot_net) && ($tot_net != 0) ? round(((($tot_sell-$tot_net)/$tot_net)*100), 2) : 0); ?></font></td></tr>
+<tr><td align="center"> <font size="2" face="Arial, Helvetica, sans-serif">Totals </font></td>
+    <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"></font> <? echo "&nbsp" ; ?></td>
+    <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"></font> <? echo "&nbsp" ; ?></td>
+    <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"></font> <? echo "&nbsp" ; ?></td>
+    <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"></font> <? echo "&nbsp" ; ?></td>
+    <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"></font> <? echo "&nbsp" ; ?></td>
+    <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"></font> <? echo "&nbsp" ; ?></td>
+    <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"></font> <? echo "&nbsp" ; ?></td>
+    <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"></font> <? echo "&nbsp" ; ?></td>
+    <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"><? echo $tot_number_nights ; ?></font> </td>
+    <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"></font> <? echo "&nbsp" ; ?></td>
+    <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"><? echo $tot_no_paxs ; ?></font> </td>
+    <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"></font><? echo "&nbsp" ; ?> </font> </td>
+    <td align="right"><font size="2" face="Arial, Helvetica, sans-serif"><? echo round($tot_net,2) ; ?></font> </td>
+    <td align="right"><font size="2" face="Arial, Helvetica, sans-serif"><? echo round($tot_sell,2) ; ?></font></td>
+    <td align="right"><font size="2" face="Arial, Helvetica, sans-serif"><? echo round(($tot_sell-$tot_net),2) ; ?></font></td>
+    <td align="right"><font size="2" face="Arial, Helvetica, sans-serif"><? echo (isset($tot_net) && ($tot_net != 0) ? round(((($tot_sell-$tot_net)/$tot_net)*100), 2) : 0); ?></font></td>
+</tr>
 
   </table>

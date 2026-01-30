@@ -1,11 +1,10 @@
 <?php
 
-include ("header.php");
-?>
+include "header.php"; ?>
 
 <script src="../javascripts/cBoxes.js"></script>
-<script src="salesreportbyajs.js"></script> 
-<? $vy=$vm=$vd=0; 
+<script src="salesreportbyajs.js"></script>
+<? $vy=$vm=$vd=0;
 $vy1=$vm1=$vd1=0;
 ?>
 
@@ -42,73 +41,73 @@ pg_free_result($result_trans);
 <link rel="stylesheet" type="text/css" href="../calendar/css.css" />
 <head>
 <script>
- var winl = (screen.width - 700) / 2; 
+ var winl = (screen.width - 700) / 2;
  var wint = (screen.height - 500) / 2;
 </script>
 </head>
 <body leftmargin="0" topmargin="0" rightmargin="0">
 <table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-bottom: 1px solid #999999 ;border-left: 3px solid #006600;border-right: 3px solid #006600"><tr>
-    <td bgcolor="#CCCCCC"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;You 
+    <td bgcolor="#CCCCCC"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;You
       are here: <a href="uhome.php">Home</a> &raquo;  Reports &raquo; Sales Reports by Hotel</font></td>
   </tr></table>
-  
+
 <table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-bottom: 3px solid #006600; border-right: 3px solid #006600;border-left: 3px solid #006600 ">
   <tr>
     <td width="20%" style="border-right: 1px solid #999999"  valign="top"> <table width="100%" border="0" cellpadding="0" cellspacing="0">
         <tr>
-          <td valign="top"><div align="left"> 
-              <?php include  ("umenupreline.php"); ?>
+          <td valign="top"><div align="left">
+              <?php include "umenupreline.php"; ?>
             </div></td>
         </tr>
       </table></td>
     <td width="80%" valign="top"  > <table width="100%" border="0" cellpadding="0" cellspacing="1" >
         <tr>
-          <td valign="top"> 
-           
-			
+          <td valign="top">
 
 
-			
-            <table width="100%" cellpadding="0" cellspacing="0" ><tr><td width="85%" valign="top" > 
+
+
+
+            <table width="100%" cellpadding="0" cellspacing="0" ><tr><td width="85%" valign="top" >
 			<table cellpadding="0" cellspacing="0" width="100%" style="border-top: 1px solid #999999; border-bottom: 1px solid #999999" ><tr>
                       <td bgcolor="#CCCCCC"><strong>Sales Reports by Agents</strong></td>
                     </tr></table>
 <table width="100%" cellpadding="1" cellspacing="0" ><tr>
-                      <td> 
+                      <td>
                           <table width="100%" border="0" cellspacing="0" style=" border-bottom: 1px solid #999999">
                           <form name="bbyod" method="post" action="#">
-                            
-                            <tr> 
-                              <td><div align="right"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Select 
+
+                            <tr>
+                              <td><div align="right"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Select
                                   Date</font></div></td>
-                              <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+                              <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">
                                 <select name="dDay" class="selBox">
                                 </select>
-                                </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+                                </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif">
                                 <select name="dMonth" class="selBox">
                                 </select>
-                                </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+                                </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif">
                                 <select name="dYear" class="selBox">
                                 </select>
                                 </font></td> <td>&nbsp;<img src="../images/print_icon.gif""> <a href="printhotelreportbyagent.php" target="hotreportpopbyagent" onclick="window.open('', 'hotreportpopbyagent','width=775,height=450,menubar=yes,scrollbars=yes, top='+wint+',left='+winl+' ').focus()">Print</a></td>
                             </tr>
-                            <tr> 
-                              <td><div align="right"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Select 
+                            <tr>
+                              <td><div align="right"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Select
                                   Date</font></div></td>
-                              <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+                              <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">
                                 <select name="dDay1" class="selBox">
                                 </select>
-                                </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+                                </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif">
                                 <select name="dMonth1" class="selBox">
                                 </select>
-                                </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+                                </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif">
                                 <select name="dYear1" class="selBox">
                                 </select>
                                 </font></td>
                             </tr>
-                            <tr> 
+                            <tr>
                               <td><div align="right"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Booking Status</font></div></td>
-                              <td><font size="2" face="Arial, Helvetica, sans-serif"> 
+                              <td><font size="2" face="Arial, Helvetica, sans-serif">
                                 <font size="2" face="Arial, Helvetica, sans-serif">
 
 					<select  id="gueststatus" name="gueststatus">
@@ -122,13 +121,13 @@ pg_free_result($result_trans);
                                 </font> </font></td>
                             </tr>
 
-							<tr> 
-                              <td><div align="right"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Select 
+							<tr>
+                              <td><div align="right"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Select
                                   Agent</font></div></td>
-                              <td><font size="2" face="Arial, Helvetica, sans-serif"> 
-                                <font size="2" face="Arial, Helvetica, sans-serif"><strong> 
+                              <td><font size="2" face="Arial, Helvetica, sans-serif">
+                                <font size="2" face="Arial, Helvetica, sans-serif"><strong>
   		  <select  name="hotelname" id="hotelname">
-        
+
 		<option value="all">All Agents</option>
 
         <?
@@ -138,8 +137,8 @@ pg_free_result($result_trans);
 	?>
     </select>                              </strong></font> </font></td>
                             </tr>
-                            <tr> 
-                              <td colspan="2"><div align="left"> 
+                            <tr>
+                              <td colspan="2"><div align="left">
                                   <input type="button" name="get_rl" id="get_rl" value="Get Sales Report >>>"  onClick="s_h();" >
                                 </div></td>
 
@@ -147,7 +146,7 @@ pg_free_result($result_trans);
 
                             </tr>
 
-							
+
 
                           </form>
 
@@ -156,7 +155,7 @@ pg_free_result($result_trans);
 
 
 <script>
-function s_h(){ 
+function s_h(){
 
 
 var fv = document.getElementById("hotelname").value;
@@ -182,29 +181,29 @@ showHint(fv, from_d, to_d, gs);
 	}
 </script>
                         </table>
-	  
-	
 
 
 
-      </table> 
-</table>	
-	
-	
+
+
+      </table>
+</table>
+
+
 
 	</tr></table>
 
-<p><span id="txtHint"></span></p> 
+<p><span id="txtHint"></span></p>
 
 <script>
-    
+
 	var tdddate = new Date();
- 
+
     var dvy = <?php echo $vy; ?>; if (dvy==0) dvy=tdddate.getYear()
 	var dvm = <?php echo $vm; ?>; if (dvm==0) dvm=tdddate.getMonth()
 	var dnd = <?php echo $vd; ?>; if (dnd==0) dnd=tdddate.getDate()
 
-   if (dvy < 2000) dvy += 1900;	
+   if (dvy < 2000) dvy += 1900;
 
 
 	var now_date = new Date(dvy,dvm,dnd);
@@ -226,14 +225,14 @@ showHint(fv, from_d, to_d, gs);
 
 	var now_year1 = now_date1.getYear();
 
-	
+
 	var d1 = new dateObj(document.bbyod.dDay, document.bbyod.dMonth, document.bbyod.dYear);
 	initDates(dvy-1, dvy+1, dvy, now_month, now_day, d1);
 
 	var d2 = new dateObj(document.bbyod.dDay1, document.bbyod.dMonth1, document.bbyod.dYear1);
 	initDates(dvy-1, dvy+1, dvy, now_month, now_day1, d2);
 
- 	
+
 </script>
 
 
@@ -256,5 +255,5 @@ function fun2(theForm){
 }
 </script>
 
-</body>				
+</body>
 </html>
