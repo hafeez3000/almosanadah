@@ -12,7 +12,7 @@ $s_expenses = "E";
 $s_equity = "Q";
 
 
-$query_trans ="select acccode, acc_name,acc_desc,parent_acc,acc_type,op_bal from accmast where lower(acc_name) like '%$hn%' order by acccode";
+$query_trans ="select acccode, acc_name,acc_desc,parent_acc,acc_type,op_bal from accmast where lower(acc_name) ilike '%$hn%' order by acccode";
 
 $result_trans = pg_query($conn, $query_trans);
 
@@ -57,7 +57,7 @@ if($s_acc_type==$s_expenses){  $s_acc_type_b="Expenses"; }
 if($s_acc_type==$s_equity){  $s_acc_type_b="Equity"; }
 
 echo "<td><font size=\"2\" face=\"Verdana, Arial, Helvetica, sans-serif\">" .$s_acc_type_b. "</font></td>";
- 
+
 echo "<td><font size=\"2\" face=\"Verdana, Arial, Helvetica, sans-serif\">" .$rows_trans["parent_acc"]. "</font></td>";
 
 echo "<td><font size=\"2\" face=\"Verdana, Arial, Helvetica, sans-serif\">" .$rows_trans["op_bal"]. "</font></td></tr>";
@@ -81,26 +81,26 @@ pg_free_result($result_trans);
 function updateParent() {
    if(document.childForm.nor.value==1){
       if (document.childForm.tem.checked)
-	 {      
-	opener.document.selhotel.ac.value = document.childForm.tems.value; 
+	 {
+	opener.document.selhotel.ac.value = document.childForm.tems.value;
 	opener.document.selhotel.submit();
 	self.close();
-	return false; 
+	return false;
 	 }
    }
 	else{
   for ( var i=0 ; i<document.childForm.nor.value; i++){
-   
+
 	 if (document.childForm.tem[i].checked)
 	 {
     opener.document.selhotel.ac.value = document.childForm.tems[i].value;
    	opener.document.selhotel.submit();
  	self.close();
-	return false; 
+	return false;
 	 }
   }
     }
-	
+
 }
 
 </SCRIPT>

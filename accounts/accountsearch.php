@@ -12,7 +12,7 @@ $s_expenses = "E";
 $s_equity = "Q";
 
 
-$query_trans ="select acccode, acc_name,acc_desc,parent_acc,acc_type from accmast where lower(acc_name) like '%$hn%' order by acc_name";
+$query_trans ="select acccode, acc_name,acc_desc,parent_acc,acc_type from accmast where lower(acc_name) ilike '%$hn%' order by acc_name";
 
 $result_trans = pg_query($conn, $query_trans);
 
@@ -57,7 +57,7 @@ if($s_acc_type==$s_expenses){  $s_acc_type_b="Expenses"; }
 if($s_acc_type==$s_equity){  $s_acc_type_b="Equity"; }
 
 echo "<td><font size=\"2\" face=\"Verdana, Arial, Helvetica, sans-serif\">" .$s_acc_type_b. "</font></td>";
- 
+
 echo "<td><font size=\"2\" face=\"Verdana, Arial, Helvetica, sans-serif\">" .$rows_trans["parent_acc"]. "</font></td></tr>";
 
 
@@ -69,7 +69,7 @@ pg_free_result($result_trans);
 ?>
 <br>
 
-<input type="submit" name="submit" value="Ok, I have Selected" > 
+<input type="submit" name="submit" value="Ok, I have Selected" >
 <input type="hidden" name="nor" value="<? echo $nrows; ?>">
 </form>
 
@@ -78,27 +78,27 @@ pg_free_result($result_trans);
 function updateParent() {
    if(document.childForm.nor.value==1){
       if (document.childForm.tem.checked)
-	 {      
-	opener.document.selhotel.accode.value = document.childForm.tems.value; 
+	 {
+	opener.document.selhotel.accode.value = document.childForm.tems.value;
     opener.document.selhotel.accode.focus();
 
 	self.close();
-	return false; 
+	return false;
 	 }
    }
 	else{
   for ( var i=0 ; i<document.childForm.nor.value; i++){
-   
+
 	 if (document.childForm.tem[i].checked)
 	 {
     opener.document.selhotel.accode.value = document.childForm.tems[i].value;
-    opener.document.selhotel.accode.focus();	
+    opener.document.selhotel.accode.focus();
  	self.close();
-	return false; 
+	return false;
 	 }
   }
     }
-	
+
 }
 
 </SCRIPT>

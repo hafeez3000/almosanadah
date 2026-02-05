@@ -7,7 +7,7 @@
 include("../db/db.php");
 $hn = $_GET['hn'];
 
-$query_trans ="select sno,  mandoop_id,  mandoop_name,  mandoop_bathaka,  designation,  branch_name,  bravo_number,  mobile_number,  joing_date,  termination_date,  is_active from mandoop where lower(mandoop_name) like '%$hn%' order by mandoop_name";
+$query_trans ="select sno,  mandoop_id,  mandoop_name,  mandoop_bathaka,  designation,  branch_name,  bravo_number,  mobile_number,  joing_date,  termination_date,  is_active from mandoop where lower(mandoop_name) ilike '%$hn%' order by mandoop_name";
 
 $result_trans = pg_query($conn, $query_trans);
 
@@ -45,7 +45,7 @@ echo "<td><font size=\"2\" face=\"Verdana, Arial, Helvetica, sans-serif\">";
 if($rows_trans["is_active"]=="t"){ echo "Yes" ;} else { echo "No" ; }
 
 echo "</font></font></td></tr>";
- 
+
 
 
 }
@@ -55,7 +55,7 @@ pg_free_result($result_trans);
 
 ?>
 <br>
-<input type="submit" name="submit" value="Ok, I have Selected" > 
+<input type="submit" name="submit" value="Ok, I have Selected" >
 <input type="hidden" name="nor" value="<? echo $nrows; ?>">
 </form>
 
@@ -64,16 +64,16 @@ pg_free_result($result_trans);
 function updateParent() {
    if(document.childForm.nor.value==1){
       if (document.childForm.tem.checked)
-	 {      
-	opener.document.selhotel.hotelv.value = document.childForm.tems.value; 
+	 {
+	opener.document.selhotel.hotelv.value = document.childForm.tems.value;
     opener.document.selhotel.submit();
 	self.close();
-	return false; 
+	return false;
 	 }
    }
 	else{
   for ( var i=0 ; i<document.childForm.nor.value; i++){
-   
+
 	 if (document.childForm.tem[i].checked)
 	 {
     opener.document.selhotel.hotelv.value = document.childForm.tems[i].value;
@@ -81,11 +81,11 @@ function updateParent() {
     opener.document.selhotel.submit();
 
 	self.close();
-	return false; 
+	return false;
 	 }
   }
     }
-	
+
 }
 
 </SCRIPT>

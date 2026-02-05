@@ -29,9 +29,9 @@ document.selhotel.hotelv.value = document.selhotel.hotel.options[document.selhot
 </script>
 <script type="text/javascript">
       function OpenWindow(){
-     
+
 		var rr = "hotelsearchdet.php?hn="+document.selhotel.hotelname.value;
-		
+
         var winPop = window.open(rr,"winPop",'scrollbars=yes,toolbar=no,resizable=yes,width=550,height=300' ).focus();
       }
     </script>
@@ -48,19 +48,19 @@ document.selhotel.hotelv.value = document.selhotel.hotel.options[document.selhot
 }
 -->
     </style>
-    
+
 <table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-bottom: 3px solid #006600; border-right: 3px solid #006600;border-left: 3px solid #006600 ">
   <tr>
     <td width="20%" style="border-right: 1px solid #999999"  valign="top"> <table width="100%" border="0" cellpadding="0" cellspacing="0">
         <tr>
-          <td valign="top"><div align="left"> 
+          <td valign="top"><div align="left">
               <?include ("umenu.php"); ?>
             </div></td>
         </tr>
       </table></td>
     <td width="80%" valign="top"  > <table width="100%" border="0" cellpadding="0" cellspacing="1">
         <tr>
-          <td valign="top"> 
+          <td valign="top">
 
 <table cellpadding="0" cellspacing="0" width="100%" style="border-top: 1px solid #999999; border-bottom: 1px solid #999999"><tr>
                       <td bgcolor="#CCCCCC"><strong> <font size="2" face="Verdana, Arial, Helvetica, sans-serif">Hotel Details</font></td>
@@ -109,36 +109,36 @@ $array_hotel_id[] = $rows_hotel["hotel_id"];
 pg_free_result($result_hotel);
 
 ?>
-		  
+
 
  <table width="100%" border="0" cellspacing="0">
 						  <tr><td colspan="4">&nbsp;</td></tr>
-  						 
-						  <tr bgcolor="#CCCCCC"><td colspan="4"> 
+
+						  <tr bgcolor="#CCCCCC"><td colspan="4">
 						  <form name="selhotel" method="post" action="hoteldetailsa.php" >
 
 
   <tr bgcolor="#EFEFEF">
   <td colspan="3">
   <table align="center">
-   
 
-  </table> 
-  
+
+  </table>
+
   </td>
   </tr>
 
-    <tr> 
-     
+    <tr>
+
       <td bgcolor="#DFDFFF" ><div align="center"><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif">City</font></strong></div></td>
       <td bgcolor="#DFFFDF" ><div align="center"><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Hotel</font></strong></div></td>
     </tr>
-    <tr align="center"> 
-      <td valign="top" bgcolor="#EFEFEF"> 
-	  
+    <tr align="center">
+      <td valign="top" bgcolor="#EFEFEF">
+
 	  <select id="city" name="city" onFocus="suben()">
         <option value="select">Select City...</option>
-       
+
         <?
 		for($i=0;$i<count($array_city);$i++){
   echo  "<option value=\"$array_city_id[$i]\">$array_city[$i]</option>";
@@ -147,15 +147,15 @@ pg_free_result($result_hotel);
     </select></td>
 
 <td bgcolor="#EFEFEF">
-  
+
     <select id="hotel" name="hotel"  onFocus="assv();" onBlur="assv();" onChange="assv();">
         <option class="select" value="select">Select Hotel...</option>
-     
-    
+
+
 	     <?
 		for($i=0;$i<count($array_hotel);$i++){
-       $cv = substr($array_hotel_id[$i],0,2);
-  
+        $cv = substr($array_hotel_id[$i],0,2);
+
  echo  "<option class=\"$cv\"  value=\"$array_hotel_id[$i]\">$array_hotel[$i]</option>";
 		}
 	?>
@@ -168,17 +168,17 @@ pg_free_result($result_hotel);
 
 
 
-  
+
     <tr>
-	      <td colspan="3" bgcolor="#EFEFEF"><div align="center"> 
-		  
+	      <td colspan="3" bgcolor="#EFEFEF"><div align="center">
+
          <input type="hidden" name="hotelv">
 		  <input type="submit" name="mainsub" value="Get Hotel Details">
         </div></td>
     </tr>
-	<tr><td colspan="4"><div align="center"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">OR</font></div></td></tr>						   
+	<tr><td colspan="4"><div align="center"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">OR</font></div></td></tr>
 	<tr><td colspan="4" bgcolor="#EFEFEF" align="center" ><font size="2" face="Verdana, Arial, Helvetica, sans-serif">   Enter the Hotel Name :</font><input type="text" name="hotelname" onFocus="subdis()" onKeyPress="return noenter()" > <input type="button" name="searchhotel" value="search" onClick="OpenWindow()"></td></tr>
-  
+
 </form></td></tr></table>
 
 
@@ -192,10 +192,10 @@ pg_free_result($result_hotel);
     <tr>
     <td bgcolor="#EFEFEF"><div align="center"><span class="style3"><font face="Verdana, Arial, Helvetica, sans-serif">Have you check the hotel existance ?</font></span></div></td>
   </tr>
-  <tr><td valign="top" bgcolor="#EFEFEF" align="center"> 
-	  
+  <tr><td valign="top" bgcolor="#EFEFEF" align="center">
+
 	  <select id="cityn" name="cityn" >
-             
+
         <?
 		for($i=0;$i<count($array_city);$i++){
   echo  "<option value=\"$array_city_id[$i]\">$array_city[$i]</option>";
@@ -203,23 +203,19 @@ pg_free_result($result_hotel);
 	?>
     </select></td></tr>
   <tr><td bgcolor="#EFEFEF"><div align="center"><span class="style2"><font face="Verdana, Arial, Helvetica, sans-serif">
-   
+
     <input type="submit" name="Submit" value="Create New Hotel" />
-   
+
   </font></span></div></td>
 </tr>
 </table>
 </form>
 
 
-     </td></tr></table> 
+     </td></tr></table>
 
-</td></tr></table> 
+</td></tr></table>
 
-</td></tr></table> 
+</td></tr></table>
 
-</td></tr></table> 
-
-
-
-
+</td></tr></table>

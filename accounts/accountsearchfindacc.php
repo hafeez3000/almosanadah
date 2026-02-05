@@ -16,7 +16,7 @@ $s_expenses = "E";
 $s_equity = "Q";
 
 
-$query_trans ="select acccode, acc_name,acc_desc,parent_acc,acc_type from accmast where lower(acc_name) like '%$hn%' or acccode like '%$hn%' order by acc_name";
+$query_trans ="select acccode, acc_name,acc_desc,parent_acc,acc_type from accmast where lower(acc_name) ilike '%$hn%' or acccode ilike '%$hn%' order by acc_name";
 
 $result_trans = pg_query($conn, $query_trans);
 

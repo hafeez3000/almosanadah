@@ -5,7 +5,7 @@
 include("../db/db.php");
 $hn = $_GET['hn'];
 
-$query_hotel ="select hotel_id, hotel_name,hotel_type,city from hotels where lower(hotel_name) like '%$hn%' order by hotel_name";
+$query_hotel ="select hotel_id, hotel_name,hotel_type,city from hotels where lower(hotel_name) ilike '%$hn%' order by hotel_name";
 
 $result_hotel = pg_query($conn, $query_hotel);
 
@@ -40,7 +40,7 @@ pg_free_result($result_hotel);
 
 ?>
 <br>
-<input type="submit" name="submit" value="Ok, I have Selected" > 
+<input type="submit" name="submit" value="Ok, I have Selected" >
 <input type="hidden" name="nor" value="<? echo $nrows; ?>">
 </form>
 
@@ -49,16 +49,16 @@ pg_free_result($result_hotel);
 function updateParent() {
    if(document.childForm.nor.value==1){
       if (document.childForm.tem.checked)
-	 {      
-	opener.document.selhotel.hotelv.value = document.childForm.tems.value; 
+	 {
+	opener.document.selhotel.hotelv.value = document.childForm.tems.value;
     opener.document.selhotel.submit();
 	self.close();
-	return false; 
+	return false;
 	 }
    }
 	else{
   for ( var i=0 ; i<document.childForm.nor.value; i++){
-   
+
 	 if (document.childForm.tem[i].checked)
 	 {
     opener.document.selhotel.hotelv.value = document.childForm.tems[i].value;
@@ -66,11 +66,11 @@ function updateParent() {
     opener.document.selhotel.submit();
 
 	self.close();
-	return false; 
+	return false;
 	 }
   }
     }
-	
+
 }
 
 </SCRIPT>
