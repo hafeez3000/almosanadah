@@ -4,7 +4,7 @@ services:
     image: "postgres:17"
     restart: unless-stopped
     networks:
-      eosa-public: null
+      almosanadah-public: null
       internal: null
     ports:
       - "${FORWARD_DB_PORT:-5432}:5432"
@@ -41,22 +41,22 @@ services:
         condition: service_started
     image: "nginx:alpine"
     labels:
-      traefik.docker.network: traefik-public
+      traefik.docker.network: almosanadah-traefik-public
       traefik.enable: "true"
-      traefik.http.routers.eosa-one-http.entrypoints: http
-      # traefik.http.routers.eosa-one-http.middlewares: https-redirect
-      traefik.http.routers.eosa-one-http.rule: Host(`dorslocal.kohinur.in`)
-      traefik.http.routers.eosa-one-http.service: eosa-one
-      # traefik.http.routers.eosa-one-https.entrypoints: https
-      # traefik.http.routers.eosa-one-https.rule: Host(`dors.kohinur.in`)
-      # traefik.http.routers.eosa-one-https.service: eosa-one
-      # traefik.http.routers.eosa-one-https.tls: "true"
-      # traefik.http.routers.eosa-one-https.tls.certresolver: le
-      traefik.http.services.eosa-one.loadbalancer.server.port: "80"
+      traefik.http.routers.almosanadah-one-http.entrypoints: http
+      # traefik.http.routers.almosanadah-one-http.middlewares: https-redirect
+      traefik.http.routers.almosanadah-one-http.rule: Host(`dorslocal.kohinur.in`)
+      traefik.http.routers.almosanadah-one-http.service: almosanadah-one
+      # traefik.http.routers.almosanadah-one-https.entrypoints: https
+      # traefik.http.routers.almosanadah-one-https.rule: Host(`dors.kohinur.in`)
+      # traefik.http.routers.almosanadah-one-https.service: almosanadah-one
+      # traefik.http.routers.almosanadah-one-https.tls: "true"
+      # traefik.http.routers.almosanadah-one-https.tls.certresolver: le
+      traefik.http.services.almosanadah-one.loadbalancer.server.port: "80"
     networks:
-      eosa-public: null
+      almosanadah-public: null
       internal: null
-      traefik-public: null
+      almosanadah-traefik-public: null
     links:
       - almosanadah-php
     volumes:
@@ -67,9 +67,9 @@ volumes:
   almosanadah_db_data:
     driver: local
 networks:
-  traefik-public:
+  almosanadah-traefik-public:
     external: true
-  eosa-public:
+  almosanadah-public:
     external: false
   internal:
     external: false
