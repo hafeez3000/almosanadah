@@ -1,6 +1,6 @@
 version: "3"
 services:
-  musanidah-db:
+  almosanadah-db:
     image: "postgres:17"
     restart: unless-stopped
     networks:
@@ -9,7 +9,7 @@ services:
     ports:
       - "${FORWARD_DB_PORT:-5432}:5432"
     volumes:
-      - "musanidah_db_data:/var/lib/postgresql/data"
+      - "almosanadah_db_data:/var/lib/postgresql/data"
       - "./config/postgresdb/pg_hba.conf:/etc/postgresql/pg_hba.conf"
       - "./config/postgresdb/postgresql.conf:/etc/postgresql/postgresql.conf"
     environment:
@@ -19,14 +19,14 @@ services:
       TZ: ${TIME_ZONE}
       POSTGRES_INITDB_ARGS: "--auth-host=scram-sha-256 --auth-local=scram-sha-256" # Specifies SCRAM-SHA-256 for host and local connections
 
-  musanidah-php:
+  almosanadah-php:
     build:
       context: ./php-image
       args: [http_proxy, https_proxy, ftp_proxy]
     networks:
       internal: null
     links:
-      - "musanidah-db:postgres"
+      - "almosanadah-db:postgres"
     volumes:
       - "./config/php/php.ini:/usr/local/etc/php/php.ini"
       - "./config/php/php-fpm.conf:/usr/local/etc/php-fpm.conf"
@@ -35,9 +35,9 @@ services:
     user: www-data
     environment:
       DEBUG: "True"
-  musanidah-front:
+  almosanadah-front:
     depends_on:
-      musanidah-php:
+      almosanadah-php:
         condition: service_started
     image: "nginx:alpine"
     labels:
@@ -58,13 +58,13 @@ services:
       internal: null
       traefik-public: null
     links:
-      - musanidah-php
+      - almosanadah-php
     volumes:
       - "./config/nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf"
       - "./config/nginx/nginx.conf:/etc/nginx/nginx.conf"
       - ".:/var/www/html"
 volumes:
-  musanidah_db_data:
+  almosanadah_db_data:
     driver: local
 networks:
   traefik-public:
