@@ -41,7 +41,7 @@ services:
         condition: service_started
     image: "nginx:alpine"
     labels:
-      traefik.docker.network: almosanadah-traefik-public
+      traefik.docker.network: traefik-public
       traefik.enable: "true"
       traefik.http.routers.almosanadah-one-http.entrypoints: http
       # traefik.http.routers.almosanadah-one-http.middlewares: https-redirect
@@ -56,7 +56,7 @@ services:
     networks:
       almosanadah-public: null
       internal: null
-      almosanadah-traefik-public: null
+      traefik-public: null
     links:
       - almosanadah-php
     volumes:
@@ -67,7 +67,7 @@ volumes:
   almosanadah_db_data:
     driver: local
 networks:
-  almosanadah-traefik-public:
+  traefik-public:
     external: true
   almosanadah-public:
     external: false
