@@ -6,7 +6,7 @@ include("../db/db.php");
 $hn = strtolower($_GET['hn']);
 
 
-$query_trans ="select acccode, aname, country from agentsdet where lower(aname)  like '%$hn%' and acccode!='0' and acccode!='' order by aname";
+$query_trans ="select acccode, aname, country from agentsdet where lower(aname)  ilike '%$hn%' and acccode!='0' and acccode!='' order by aname";
 
 $result_trans = pg_query($conn, $query_trans);
 
@@ -41,7 +41,7 @@ echo "<td><font size=\"2\" face=\"Verdana, Arial, Helvetica, sans-serif\">".$row
 
 echo "<td><font size=\"2\" face=\"Verdana, Arial, Helvetica, sans-serif\">" .$rows_trans["aname"] . "</font></td>";
 echo "<td><font size=\"2\" face=\"Verdana, Arial, Helvetica, sans-serif\">" . $rows_trans["country"] . "</font></td>";
- 
+
 
 
 }
@@ -52,7 +52,7 @@ pg_free_result($result_trans);
 ?>
 <br>
 
-<input type="submit" name="submit" value="Ok, I have Selected" > 
+<input type="submit" name="submit" value="Ok, I have Selected" >
 <input type="hidden" name="nor" value="<? echo $nrows; ?>">
 </form>
 
@@ -61,27 +61,27 @@ pg_free_result($result_trans);
 function updateParent() {
    if(document.childForm.nor.value==1){
       if (document.childForm.tem.checked)
-	 {      
-	opener.document.finalize.agentname.value = document.childForm.tems.value; 
+	 {
+	opener.document.finalize.agentname.value = document.childForm.tems.value;
     opener.document.finalize.agentname.focus();
 
 	self.close();
-	return false; 
+	return false;
 	 }
    }
 	else{
   for ( var i=0 ; i<document.childForm.nor.value; i++){
-   
+
 	 if (document.childForm.tem[i].checked)
 	 {
     opener.document.finalize.agentname.value = document.childForm.tems[i].value;
-    opener.document.finalize.agentname.focus();	
+    opener.document.finalize.agentname.focus();
  	self.close();
-	return false; 
+	return false;
 	 }
   }
     }
-	
+
 }
 
 </SCRIPT>

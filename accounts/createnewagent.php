@@ -7,14 +7,14 @@ include ("header.php");
   <tr>
     <td width="20%" style="border-right: 1px solid #999999"  valign="top"> <table width="100%" border="0" cellpadding="0" cellspacing="0">
         <tr>
-          <td valign="top"><div align="left"> 
+          <td valign="top"><div align="left">
               <?include ("umenu.php"); ?>
             </div></td>
         </tr>
       </table></td>
     <td width="80%" valign="top"  > <table width="100%" border="0" cellpadding="0" cellspacing="1">
         <tr>
-          <td valign="top"> 
+          <td valign="top">
 
 <table cellpadding="0" cellspacing="0" width="100%" style="border-top: 1px solid #999999; border-bottom: 1px solid #999999"><tr>
                       <td bgcolor="#CCCCCC" width="100%"><strong> <font size="2" face="Verdana, Arial, Helvetica, sans-serif">New Travel Agent Creation</font></td>
@@ -28,9 +28,13 @@ include ("header.php");
 									  <?
 
 
+$array_hotel_id = array();
+
 $query_hotel ="select agentid, aname from agentsdet  order by agentid";
 
+
 $result_hotel = pg_query($conn, $query_hotel);
+
 
 if (!$result_hotel) {
 	echo "An error occured.\n";
@@ -44,19 +48,21 @@ $array_hotel_id[] = $rows_hotel["agentid"];
 
 pg_free_result($result_hotel);
 $hc = count($array_hotel_id);
+if($hc==0){ $hotel_id=100000;}else {
 $hotel_id = $array_hotel_id[$hc-1];
+}
 $hotel_id++;
 
 						$qb_str = "Agent Id,Account Code,Agent Name,Title,Contact Person,Designation,Address1,Address2,PO Box,City,Country,Telphone 1,Telephone 2,Fax Number,Mobile,Email,Website,Remarks,Mode of Payment,Priority,Extra Details,Select country";
 
 						$q_str = "agentid,acccode,aname,title,cname,desig,addr1,addr2,pobox,city,country,tel1,tel2,fax,mobile,email,wsite,remarks,mpay,priority,others,scountry";
-						
+
 						$a_q_str = explode(",", $q_str);
 
 						$a_qb_str = explode(",", $qb_str);
 
 
-									  
+
 
 for($i=0; $i<count($a_q_str)-1; $i++){
 
@@ -85,7 +91,7 @@ echo "</tr>";
 
 <tr><td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Select Country</font></td><td>
   <select id="scountry" name="scountry">
-   
+
               <option value="Afghanistan">Afghanistan</option>
               <option value="Albania">Albania</option>
               <option value="Algeria">Algeria</option>
@@ -307,23 +313,19 @@ echo "</tr>";
 echo "</table>";
 
 
-									
+
 
 									  ?>
 
- <input type="submit" name="submit" id="submit" value=" Create New Travel Agent >>> ">									  
-	</form>		
+ <input type="submit" name="submit" id="submit" value=" Create New Travel Agent >>> ">
+	</form>
 
 
 
-     </td></tr></table> 
+     </td></tr></table>
 
-</td></tr></table> 
+</td></tr></table>
 
-</td></tr></table> 
+</td></tr></table>
 
-</td></tr></table> 
-
-
-
-
+</td></tr></table>
