@@ -7,14 +7,14 @@ include ("header.php");
   <tr>
     <td width="20%" style="border-right: 1px solid #999999"  valign="top"> <table width="100%" border="0" cellpadding="0" cellspacing="0">
         <tr>
-          <td valign="top"><div align="left"> 
+          <td valign="top"><div align="left">
               <?include ("umenu.php"); ?>
             </div></td>
         </tr>
       </table></td>
     <td width="80%" valign="top"  > <table width="100%" border="0" cellpadding="0" cellspacing="1">
         <tr>
-          <td valign="top"> 
+          <td valign="top">
 
 <table cellpadding="0" cellspacing="0" width="100%" style="border-top: 1px solid #999999; border-bottom: 1px solid #999999"><tr>
                       <td bgcolor="#CCCCCC" width="100%"><strong> <font size="2" face="Verdana, Arial, Helvetica, sans-serif">New suppliers Creation</font></td>
@@ -27,7 +27,7 @@ include ("header.php");
 
 									  <?
 
-
+$array_hotel_id = array();
 $query_hotel ="select supp_id, supp_name from suppliers  order by supp_id";
 
 $result_hotel = pg_query($conn, $query_hotel);
@@ -44,19 +44,21 @@ $array_hotel_id[] = $rows_hotel["supp_id"];
 
 pg_free_result($result_hotel);
 $hc = count($array_hotel_id);
+if($hc==0){ $hotel_id=100000;}else {
 $hotel_id = $array_hotel_id[$hc-1];
+}
 $hotel_id++;
 
 						$qb_str = "Supplier Id,Supplier Name,Supplier Description,Account Code,City,Payment Type,Title,Contact Person,Telephone,Fax,Email,Mobile,Bank Account Name,Account Number,Bank Name,Bank Branch,Bank City,Notes";
 
 						$q_str = "supp_id,supp_name,supp_desc,account_code,city,payment_type,contact_p_title,contact_p_name,tel,fax,email,mobile,bank_account_name,bank_account_number,bank_name,bank_branch,bank_city,notes";
-						
+
 						$a_q_str = explode(",", $q_str);
 
 						$a_qb_str = explode(",", $qb_str);
 
 
-									  
+
 
 for($i=0; $i<count($a_q_str)-1; $i++){
 
@@ -89,23 +91,19 @@ echo "</tr>";
 echo "</table>";
 
 
-									
+
 
 									  ?>
 
- <input type="submit" name="submit" id="submit" value=" Create New suppliers >>> ">									  
-	</form>		
+ <input type="submit" name="submit" id="submit" value=" Create New suppliers >>> ">
+	</form>
 
 
 
-     </td></tr></table> 
+     </td></tr></table>
 
-</td></tr></table> 
+</td></tr></table>
 
-</td></tr></table> 
+</td></tr></table>
 
-</td></tr></table> 
-
-
-
-
+</td></tr></table>

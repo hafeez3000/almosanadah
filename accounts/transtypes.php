@@ -27,7 +27,7 @@ $s_hotelsb = isset($_POST["hotelsb"]) ? $_POST["hotelsb"] : '';
 
 $array_room_id = array();
 
-
+$array_hotel_id = array();
 $query_hotel ="select trans_id, trans_c_name,city from s_trans order by trans_c_name";
 
 $result_hotel = pg_query($conn, $query_hotel);
